@@ -1,0 +1,863 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="viscous_arm_dry_cad_v1">
+  <!--CAD-zero model. Encoder calibration, gripper mapping and estimated physical properties require validation. No hardware control configuration.-->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-6.401087327e-08 1.12100775e-07 0.02433352901" rpy="0 0 0" />
+      <mass value="0.6018924309" />
+      <inertia ixx="0.000774376502184" ixy="-1.38189620676e-08" ixz="1.19828224046e-09" iyy="0.000416854227173" iyz="2.4491968301e-09" izz="0.000712043680835" />
+    </inertial>
+    <visual name="part_000">
+      <geometry>
+        <mesh filename="meshes/part_000.stl" />
+      </geometry>
+      <material name="material_0">
+        <color rgba="0.12 0.15 0.18 1" />
+      </material>
+    </visual>
+    <visual name="part_001">
+      <geometry>
+        <mesh filename="meshes/part_001.stl" />
+      </geometry>
+      <material name="material_1">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_002">
+      <geometry>
+        <mesh filename="meshes/part_002.stl" />
+      </geometry>
+      <material name="material_2">
+        <color rgba="0.2 0.24 0.28 1" />
+      </material>
+    </visual>
+    <visual name="part_014">
+      <geometry>
+        <mesh filename="meshes/part_014.stl" />
+      </geometry>
+      <material name="material_14">
+        <color rgba="0.2 0.24 0.28 1" />
+      </material>
+    </visual>
+    <visual name="part_015">
+      <geometry>
+        <mesh filename="meshes/part_015.stl" />
+      </geometry>
+      <material name="material_15">
+        <color rgba="0.2 0.24 0.28 1" />
+      </material>
+    </visual>
+    <visual name="part_016">
+      <geometry>
+        <mesh filename="meshes/part_016.stl" />
+      </geometry>
+      <material name="material_16">
+        <color rgba="0.2 0.24 0.28 1" />
+      </material>
+    </visual>
+    <collision name="part_000">
+      <geometry>
+        <mesh filename="meshes/collision_000.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_002">
+      <geometry>
+        <mesh filename="meshes/collision_002.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_014">
+      <geometry>
+        <mesh filename="meshes/collision_014.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_015">
+      <geometry>
+        <mesh filename="meshes/collision_015.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_016">
+      <geometry>
+        <mesh filename="meshes/collision_016.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="yaw_link">
+    <inertial>
+      <origin xyz="-0.0001283362007 -0.001185059039 0.04582404242" rpy="0 0 0" />
+      <mass value="0.4498705878" />
+      <inertia ixx="0.00032796560427" ixy="6.80145683342e-08" ixz="-1.37248630227e-06" iyy="0.000278232746431" iyz="3.80261037427e-06" izz="0.000232044290727" />
+    </inertial>
+    <visual name="part_003">
+      <geometry>
+        <mesh filename="meshes/part_003.stl" />
+      </geometry>
+      <material name="material_3">
+        <color rgba="0.7 0.74 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_004">
+      <geometry>
+        <mesh filename="meshes/part_004.stl" />
+      </geometry>
+      <material name="material_4">
+        <color rgba="0.7 0.74 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_005">
+      <geometry>
+        <mesh filename="meshes/part_005.stl" />
+      </geometry>
+      <material name="material_5">
+        <color rgba="0.7 0.74 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_006">
+      <geometry>
+        <mesh filename="meshes/part_006.stl" />
+      </geometry>
+      <material name="material_6">
+        <color rgba="0.7 0.74 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_007">
+      <geometry>
+        <mesh filename="meshes/part_007.stl" />
+      </geometry>
+      <material name="material_7">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_019">
+      <geometry>
+        <mesh filename="meshes/part_019.stl" />
+      </geometry>
+      <material name="material_19">
+        <color rgba="0.12 0.15 0.18 1" />
+      </material>
+    </visual>
+    <collision name="part_003">
+      <geometry>
+        <mesh filename="meshes/collision_003.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_004">
+      <geometry>
+        <mesh filename="meshes/collision_004.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_005">
+      <geometry>
+        <mesh filename="meshes/collision_005.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_006">
+      <geometry>
+        <mesh filename="meshes/collision_006.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_019">
+      <geometry>
+        <mesh filename="meshes/collision_019.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="upper_arm_link">
+    <inertial>
+      <origin xyz="-0.1297417904 -0.0005667737532 -7.814054393e-08" rpy="0 0 0" />
+      <mass value="0.4865935929" />
+      <inertia ixx="0.000344506255212" ixy="-4.7898150481e-05" ixz="-1.51515204264e-07" iyy="0.00168790946116" iyz="9.41442218691e-10" izz="0.00184151527413" />
+    </inertial>
+    <visual name="part_008">
+      <geometry>
+        <mesh filename="meshes/part_008.stl" />
+      </geometry>
+      <material name="material_8">
+        <color rgba="0.69 0.74 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_009">
+      <geometry>
+        <mesh filename="meshes/part_009.stl" />
+      </geometry>
+      <material name="material_9">
+        <color rgba="0.69 0.74 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_010">
+      <geometry>
+        <mesh filename="meshes/part_010.stl" />
+      </geometry>
+      <material name="material_10">
+        <color rgba="0.69 0.74 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_011">
+      <geometry>
+        <mesh filename="meshes/part_011.stl" />
+      </geometry>
+      <material name="material_11">
+        <color rgba="0.69 0.74 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_012">
+      <geometry>
+        <mesh filename="meshes/part_012.stl" />
+      </geometry>
+      <material name="material_12">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_018">
+      <geometry>
+        <mesh filename="meshes/part_018.stl" />
+      </geometry>
+      <material name="material_18">
+        <color rgba="0.12 0.15 0.18 1" />
+      </material>
+    </visual>
+    <collision name="part_008">
+      <geometry>
+        <mesh filename="meshes/collision_008.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_009">
+      <geometry>
+        <mesh filename="meshes/collision_009.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_010">
+      <geometry>
+        <mesh filename="meshes/collision_010.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_011">
+      <geometry>
+        <mesh filename="meshes/collision_011.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_018">
+      <geometry>
+        <mesh filename="meshes/collision_018.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="forearm_link">
+    <inertial>
+      <origin xyz="0.103351869 7.696701705e-05 0.05265050552" rpy="0 0 0" />
+      <mass value="0.5232968102" />
+      <inertia ixx="0.000498589907182" ixy="3.72447943969e-05" ixz="-0.000315553372162" iyy="0.00173137825684" iyz="1.62160859004e-05" izz="0.0017482479131" />
+    </inertial>
+    <visual name="part_013">
+      <geometry>
+        <mesh filename="meshes/part_013.stl" />
+      </geometry>
+      <material name="material_13">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_017">
+      <geometry>
+        <mesh filename="meshes/part_017.stl" />
+      </geometry>
+      <material name="material_17">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_058">
+      <geometry>
+        <mesh filename="meshes/part_058.stl" />
+      </geometry>
+      <material name="material_58">
+        <color rgba="0.12 0.15 0.18 1" />
+      </material>
+    </visual>
+    <visual name="part_060">
+      <geometry>
+        <mesh filename="meshes/part_060.stl" />
+      </geometry>
+      <material name="material_60">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_061">
+      <geometry>
+        <mesh filename="meshes/part_061.stl" />
+      </geometry>
+      <material name="material_61">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_062">
+      <geometry>
+        <mesh filename="meshes/part_062.stl" />
+      </geometry>
+      <material name="material_62">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_063">
+      <geometry>
+        <mesh filename="meshes/part_063.stl" />
+      </geometry>
+      <material name="material_63">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_064">
+      <geometry>
+        <mesh filename="meshes/part_064.stl" />
+      </geometry>
+      <material name="material_64">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_065">
+      <geometry>
+        <mesh filename="meshes/part_065.stl" />
+      </geometry>
+      <material name="material_65">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_066">
+      <geometry>
+        <mesh filename="meshes/part_066.stl" />
+      </geometry>
+      <material name="material_66">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_067">
+      <geometry>
+        <mesh filename="meshes/part_067.stl" />
+      </geometry>
+      <material name="material_67">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_068">
+      <geometry>
+        <mesh filename="meshes/part_068.stl" />
+      </geometry>
+      <material name="material_68">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <visual name="part_069">
+      <geometry>
+        <mesh filename="meshes/part_069.stl" />
+      </geometry>
+      <material name="material_69">
+        <color rgba="0.67 0.73 0.77 1" />
+      </material>
+    </visual>
+    <collision name="part_013">
+      <geometry>
+        <mesh filename="meshes/collision_013.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_017">
+      <geometry>
+        <mesh filename="meshes/collision_017.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_058">
+      <geometry>
+        <mesh filename="meshes/collision_058.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_060">
+      <geometry>
+        <mesh filename="meshes/collision_060.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_061">
+      <geometry>
+        <mesh filename="meshes/collision_061.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_062">
+      <geometry>
+        <mesh filename="meshes/collision_062.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_063">
+      <geometry>
+        <mesh filename="meshes/collision_063.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_064">
+      <geometry>
+        <mesh filename="meshes/collision_064.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_065">
+      <geometry>
+        <mesh filename="meshes/collision_065.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_066">
+      <geometry>
+        <mesh filename="meshes/collision_066.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_067">
+      <geometry>
+        <mesh filename="meshes/collision_067.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_068">
+      <geometry>
+        <mesh filename="meshes/collision_068.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_069">
+      <geometry>
+        <mesh filename="meshes/collision_069.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wrist_pitch_link">
+    <inertial>
+      <origin xyz="0.07369040039 9.436990185e-08 0.05071396429" rpy="0 0 0" />
+      <mass value="0.4049855642" />
+      <inertia ixx="0.000317020106609" ixy="-1.27236376116e-08" ixz="-0.000145472110861" iyy="0.000478693120364" iyz="1.01257343307e-08" izz="0.000441394493776" />
+    </inertial>
+    <visual name="part_053">
+      <geometry>
+        <mesh filename="meshes/part_053.stl" />
+      </geometry>
+      <material name="material_53">
+        <color rgba="0.12 0.15 0.18 1" />
+      </material>
+    </visual>
+    <visual name="part_054">
+      <geometry>
+        <mesh filename="meshes/part_054.stl" />
+      </geometry>
+      <material name="material_54">
+        <color rgba="0.66 0.72 0.76 1" />
+      </material>
+    </visual>
+    <visual name="part_055">
+      <geometry>
+        <mesh filename="meshes/part_055.stl" />
+      </geometry>
+      <material name="material_55">
+        <color rgba="0.66 0.72 0.76 1" />
+      </material>
+    </visual>
+    <visual name="part_056">
+      <geometry>
+        <mesh filename="meshes/part_056.stl" />
+      </geometry>
+      <material name="material_56">
+        <color rgba="0.66 0.72 0.76 1" />
+      </material>
+    </visual>
+    <visual name="part_057">
+      <geometry>
+        <mesh filename="meshes/part_057.stl" />
+      </geometry>
+      <material name="material_57">
+        <color rgba="0.66 0.72 0.76 1" />
+      </material>
+    </visual>
+    <collision name="part_053">
+      <geometry>
+        <mesh filename="meshes/collision_053.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_054">
+      <geometry>
+        <mesh filename="meshes/collision_054.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_055">
+      <geometry>
+        <mesh filename="meshes/collision_055.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_056">
+      <geometry>
+        <mesh filename="meshes/collision_056.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_057">
+      <geometry>
+        <mesh filename="meshes/collision_057.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wrist_yaw_link">
+    <inertial>
+      <origin xyz="-0.0007747424644 3.573218185e-05 -0.04181155592" rpy="0 0 0" />
+      <mass value="0.3975882203" />
+      <inertia ixx="0.000215433375245" ixy="-4.73600586491e-07" ixz="-2.00359479786e-05" iyy="0.000242402985729" iyz="-1.72208651652e-07" izz="0.00019362994161" />
+    </inertial>
+    <visual name="part_049">
+      <geometry>
+        <mesh filename="meshes/part_049.stl" />
+      </geometry>
+      <material name="material_49">
+        <color rgba="0.12 0.15 0.18 1" />
+      </material>
+    </visual>
+    <visual name="part_050">
+      <geometry>
+        <mesh filename="meshes/part_050.stl" />
+      </geometry>
+      <material name="material_50">
+        <color rgba="0.65 0.7 0.74 1" />
+      </material>
+    </visual>
+    <visual name="part_051">
+      <geometry>
+        <mesh filename="meshes/part_051.stl" />
+      </geometry>
+      <material name="material_51">
+        <color rgba="0.65 0.7 0.74 1" />
+      </material>
+    </visual>
+    <visual name="part_052">
+      <geometry>
+        <mesh filename="meshes/part_052.stl" />
+      </geometry>
+      <material name="material_52">
+        <color rgba="0.65 0.7 0.74 1" />
+      </material>
+    </visual>
+    <visual name="part_059">
+      <geometry>
+        <mesh filename="meshes/part_059.stl" />
+      </geometry>
+      <material name="material_59">
+        <color rgba="0.65 0.7 0.74 1" />
+      </material>
+    </visual>
+    <collision name="part_049">
+      <geometry>
+        <mesh filename="meshes/collision_049.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_050">
+      <geometry>
+        <mesh filename="meshes/collision_050.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_051">
+      <geometry>
+        <mesh filename="meshes/collision_051.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_052">
+      <geometry>
+        <mesh filename="meshes/collision_052.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_059">
+      <geometry>
+        <mesh filename="meshes/collision_059.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wrist_roll_link">
+    <inertial>
+      <origin xyz="0.03815095424 -8.222341694e-05 -0.001075892237" rpy="0 0 0" />
+      <mass value="0.5645111321" />
+      <inertia ixx="0.000599711133899" ixy="1.18052890445e-06" ixz="3.62563392753e-05" iyy="0.000646815548227" iyz="-4.7804342683e-06" izz="0.000607615117469" />
+    </inertial>
+    <visual name="part_020">
+      <geometry>
+        <mesh filename="meshes/part_020.stl" />
+      </geometry>
+      <material name="material_20">
+        <color rgba="0.12 0.15 0.18 1" />
+      </material>
+    </visual>
+    <visual name="part_024">
+      <geometry>
+        <mesh filename="meshes/part_024.stl" />
+      </geometry>
+      <material name="material_24">
+        <color rgba="0.65 0.71 0.76 1" />
+      </material>
+    </visual>
+    <visual name="part_025">
+      <geometry>
+        <mesh filename="meshes/part_025.stl" />
+      </geometry>
+      <material name="material_25">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_046">
+      <geometry>
+        <mesh filename="meshes/part_046.stl" />
+      </geometry>
+      <material name="material_46">
+        <color rgba="0.65 0.71 0.76 1" />
+      </material>
+    </visual>
+    <visual name="part_047">
+      <geometry>
+        <mesh filename="meshes/part_047.stl" />
+      </geometry>
+      <material name="material_47">
+        <color rgba="0.65 0.71 0.76 1" />
+      </material>
+    </visual>
+    <visual name="part_048">
+      <geometry>
+        <mesh filename="meshes/part_048.stl" />
+      </geometry>
+      <material name="material_48">
+        <color rgba="0.65 0.71 0.76 1" />
+      </material>
+    </visual>
+    <visual name="part_070">
+      <geometry>
+        <mesh filename="meshes/part_070.stl" />
+      </geometry>
+      <material name="material_70">
+        <color rgba="0.65 0.71 0.76 1" />
+      </material>
+    </visual>
+    <visual name="part_071">
+      <geometry>
+        <mesh filename="meshes/part_071.stl" />
+      </geometry>
+      <material name="material_71">
+        <color rgba="0.1 0.13 0.16 1" />
+      </material>
+    </visual>
+    <collision name="part_020">
+      <geometry>
+        <mesh filename="meshes/collision_020.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_024">
+      <geometry>
+        <mesh filename="meshes/collision_024.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_046">
+      <geometry>
+        <mesh filename="meshes/collision_046.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_047">
+      <geometry>
+        <mesh filename="meshes/collision_047.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_048">
+      <geometry>
+        <mesh filename="meshes/collision_048.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_070">
+      <geometry>
+        <mesh filename="meshes/collision_070.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_071">
+      <geometry>
+        <mesh filename="meshes/collision_071.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="gripper_left">
+    <inertial>
+      <origin xyz="0.08926845852 0.01601100422 -0.01671956948" rpy="0 0 0" />
+      <mass value="0.04069358133" />
+      <inertia ixx="5.3014351803e-06" ixy="2.14725551376e-06" ixz="4.03841338943e-07" iyy="1.59896590211e-05" iyz="-2.28246078983e-07" izz="1.44901436764e-05" />
+    </inertial>
+    <visual name="part_029">
+      <geometry>
+        <mesh filename="meshes/part_029.stl" />
+      </geometry>
+      <material name="material_29">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_030">
+      <geometry>
+        <mesh filename="meshes/part_030.stl" />
+      </geometry>
+      <material name="material_30">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_031">
+      <geometry>
+        <mesh filename="meshes/part_031.stl" />
+      </geometry>
+      <material name="material_31">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_032">
+      <geometry>
+        <mesh filename="meshes/part_032.stl" />
+      </geometry>
+      <material name="material_32">
+        <color rgba="0.16 0.2 0.23 1" />
+      </material>
+    </visual>
+    <visual name="part_041">
+      <geometry>
+        <mesh filename="meshes/part_041.stl" />
+      </geometry>
+      <material name="material_41">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_043">
+      <geometry>
+        <mesh filename="meshes/part_043.stl" />
+      </geometry>
+      <material name="material_43">
+        <color rgba="0.16 0.2 0.23 1" />
+      </material>
+    </visual>
+    <collision name="part_032">
+      <geometry>
+        <mesh filename="meshes/collision_032.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_043">
+      <geometry>
+        <mesh filename="meshes/collision_043.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="gripper_right">
+    <inertial>
+      <origin xyz="0.0905860361 -0.01594446495 -0.01325220052" rpy="0 0 0" />
+      <mass value="0.03881005909" />
+      <inertia ixx="5.45794507381e-06" ixy="-2.07374426577e-06" ixz="2.03143316018e-06" iyy="1.51147921446e-05" iyz="4.21700053103e-07" izz="1.34435047414e-05" />
+    </inertial>
+    <visual name="part_036">
+      <geometry>
+        <mesh filename="meshes/part_036.stl" />
+      </geometry>
+      <material name="material_36">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_037">
+      <geometry>
+        <mesh filename="meshes/part_037.stl" />
+      </geometry>
+      <material name="material_37">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_038">
+      <geometry>
+        <mesh filename="meshes/part_038.stl" />
+      </geometry>
+      <material name="material_38">
+        <color rgba="0.38 0.42 0.45 1" />
+      </material>
+    </visual>
+    <visual name="part_039">
+      <geometry>
+        <mesh filename="meshes/part_039.stl" />
+      </geometry>
+      <material name="material_39">
+        <color rgba="0.16 0.2 0.23 1" />
+      </material>
+    </visual>
+    <visual name="part_042">
+      <geometry>
+        <mesh filename="meshes/part_042.stl" />
+      </geometry>
+      <material name="material_42">
+        <color rgba="0.16 0.2 0.23 1" />
+      </material>
+    </visual>
+    <collision name="part_039">
+      <geometry>
+        <mesh filename="meshes/collision_039.stl" />
+      </geometry>
+    </collision>
+    <collision name="part_042">
+      <geometry>
+        <mesh filename="meshes/collision_042.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="tool0" />
+  <joint name="shoulder_pan" type="revolute">
+    <parent link="base_link" />
+    <child link="yaw_link" />
+    <origin xyz="0 0 0.0574" rpy="0 0 0" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-3.235" upper="2.227" effort="5.0" velocity="2.0" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="shoulder_lift" type="revolute">
+    <parent link="yaw_link" />
+    <child link="upper_arm_link" />
+    <origin xyz="9.115024117e-10 0 0.0536" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-3.078" upper="0" effort="5.0" velocity="2.0" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="elbow_flex" type="revolute">
+    <parent link="upper_arm_link" />
+    <child link="forearm_link" />
+    <origin xyz="-0.1599999985 0 1.411534427e-09" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="4.383" effort="5.0" velocity="2.0" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="wrist_flex" type="revolute">
+    <parent link="forearm_link" />
+    <child link="wrist_pitch_link" />
+    <origin xyz="0.1379999958 0 0.05878775653" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-2.109" upper="1.606" effort="5.0" velocity="2.0" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="wrist_yaw" type="revolute">
+    <parent link="wrist_pitch_link" />
+    <child link="wrist_yaw_link" />
+    <origin xyz="0.08036869072 -3.015010629e-15 0.03310941788" rpy="0 0 0" />
+    <axis xyz="-0.1607753136 2.880465013e-14 -0.9869910327" />
+    <limit lower="-1.556" upper="1.505" effort="5.0" velocity="2.0" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="wrist_roll" type="revolute">
+    <parent link="wrist_yaw_link" />
+    <child link="wrist_roll_link" />
+    <origin xyz="0.03155609239 1.996725876e-15 -0.05134133844" rpy="0 0 0" />
+    <axis xyz="-0.9869910327 -3.073678032e-15 0.1607753136" />
+    <limit lower="-2.641" upper="2.68" effort="5.0" velocity="2.0" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="gripper_left_joint" type="prismatic">
+    <parent link="wrist_roll_link" />
+    <child link="gripper_left" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="0.0" upper="0.0524125" effort="10.0" velocity="0.05" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="gripper_right_joint" type="prismatic">
+    <parent link="wrist_roll_link" />
+    <child link="gripper_right" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0.0" upper="0.0524125" effort="10.0" velocity="0.05" />
+    <dynamics damping="0" friction="0" />
+    <mimic joint="gripper_left_joint" multiplier="1" offset="0" />
+  </joint>
+  <joint name="tool_fixed" type="fixed">
+    <parent link="wrist_roll_link" />
+    <child link="tool0" />
+    <origin xyz="0.1324247135 -7.428512e-12 -0.02157124552" rpy="1.732272462 -4.440892099e-16 1.570796327" />
+  </joint>
+</robot>

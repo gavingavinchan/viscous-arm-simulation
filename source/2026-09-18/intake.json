@@ -1,0 +1,32 @@
+{
+  "source": "Gavin uploads to Viscous Robotics Telegram bot, 2026-09-18",
+  "scope": "Dry operation in air first; visualization, IK, collision checking, physics simulation",
+  "structure_material": {
+    "material": "CNC aluminium",
+    "alloy": "6061",
+    "alloy_status": "provisional, Gavin said likely 6061"
+  },
+  "geometry_changes_reported": [
+    "J2-J3 linkage shorter than Maker Arm",
+    "J3-J4 linkage shorter than Maker Arm",
+    "J2 and J3 actuators differ",
+    "J4-J7 reported identical to Maker Arm"
+  ],
+  "baseline_urdf": "reference/maker-urdf/robot.urdf",
+  "open_questions": [
+    "Exact mapping from exported CAD pose to calibrated motor zero",
+    "Physical components or added masses omitted from CAD"
+  ],
+  "expected_sha256": {
+    "maker arm cnc装配.step": "3c375f41702958ddd5586fa65e4a26df0340ae77f06e5ab0aa07092e01d02d43",
+    "maker arm cnc装配.f3z": "678c8afae8d43c612163e79f601ff948932897db7bdd2d6bd67f7b0e03b71c08"
+  },
+  "assembly_identity": "Gavin confirmed uploaded files are already the Viscous version",
+  "exported_pose": "Gavin says near calibrated zero, not necessarily exact; do not assume CAD pose equals zero",
+  "gripper_material_update": {
+    "absent_parts": "finger loops",
+    "fingers_and_camera_bracket": "PLA+",
+    "effective_solid_fraction": 0.3,
+    "source": "Gavin in conversation2026-09-18; real infill likely15%but allowanceforperimeters"
+  }
+}

@@ -1,0 +1,2282 @@
+{
+  "schema": 1,
+  "review_date": "2026-09-18",
+  "scope": "Independent dry-air initial rigid-body physics recommendations; no hardware interaction; no edits to model builder.",
+  "status": "Plausible simulation initial parameters, not experimentally identified or hardware-qualified.",
+  "sources": [
+    {
+      "id": "RS00-official-web",
+      "url": "https://robstride.com/products/robStride00",
+      "accessed": "2026-09-18",
+      "supports": "310g +/-10g, 5Nm rated at100rpm, 14Nm peak, 10:1, 48V, 315rpm no-load +/-10%, 57x57x51mm"
+    },
+    {
+      "id": "RS00-manufacturer-20260713",
+      "url": "https://github.com/RobStride/Product_Information",
+      "accessed": "2026-09-18",
+      "supports": "2026-07-13 manufacturer selection table:310g +/-3g, 5Nm at100rpm; rated torque conditional on specified aluminum heatsink. Exact RS00 heatsink dimensions not independently extracted."
+    },
+    {
+      "id": "RS00-manual-pointer",
+      "url": "https://github.com/RobStride/Product_Information/blob/main/Product%20Literature/RS00/RS00User%20Manual260713.pdf",
+      "status": "Official linked manual located; PDF contents not used as verified evidence"
+    },
+    {
+      "id": "6061-density",
+      "url": "https://srd.nist.gov/NSRDS/NSRDS-NBS-61-V.pdf",
+      "supports": "NIST 6061-T6 property table reports2.7g/cm3; alloy identity remains user-provisional"
+    },
+    {
+      "id": "local-part-data",
+      "path": "inspection/parts.json",
+      "supports": "72 CAD solids, exact BREP volume/COM/central inertia in assembly coordinates"
+    },
+    {
+      "id": "local-baseline-caveats",
+      "path": "reference/maker-urdf/revision_report.json",
+      "supports": "Inherited masses/limits/efforts unverified; old gripper translational effort20N and speed0.1m/s placeholders"
+    }
+  ],
+  "environment": {
+    "gravity_m_s2": 9.80665,
+    "gravity_direction": "World down after choosing mounting orientation; CAD world axes are not automatically world gravity axes.",
+    "medium": "dry air",
+    "buoyancy": "omit at this fidelity",
+    "hydrodynamic_drag": "disabled; no water parameters carried into dry-air model",
+    "mount": "Fixed base only if physically clamped; free base requires stand/support mass and ground contacts"
+  },
+  "actuator": {
+    "model": "RobStride RS00",
+    "count": 7,
+    "motor_part_ids": [
+      0,
+      18,
+      19,
+      20,
+      49,
+      53,
+      58
+    ],
+    "mass_each_kg": 0.31,
+    "total_motor_mass_kg": 2.17,
+    "mass_tolerance_kg": {
+      "official_website": 0.01,
+      "20260713_manufacturer_table": 0.003,
+      "recommended_initial_sensitivity": 0.01
+    },
+    "rated_output_torque_Nm": 5.0,
+    "peak_output_torque_Nm": 14.0,
+    "rated_speed_rad_s": 10.471975511965978,
+    "no_load_speed_rad_s": 32.98672286269283,
+    "rated_voltage_V": 48,
+    "voltage_range_V": [
+      24,
+      60
+    ],
+    "reduction_ratio": 10,
+    "limits_recommendation": "Use <=5Nm output torque as initial rated simulation ceiling, explicitly conditional on manufacturer cooling and supply conditions. This is not a guarantee of sustainable holding torque on this arm. Keep14Nm only as a labeled transient specification; disable boosted peak simulation until duration/thermal envelope is known. No-load33rad/s is not a usable loaded speed guarantee. A1rad/s initial simulation speed cap is a chosen conservative demo setting, not hardware evidence.",
+    "transmission": "Published torque/speed are actuator output values. Apply ratio exactly once if modeling internal rotor; do not multiply14Nm or5Nm by10 again.",
+    "thermal_unknowns": [
+      "Installed heatsink/contact and airflow",
+      "Delivered hardware revision",
+      "Power supply voltage/current and regenerative behavior",
+      "Peak duration and cooldown",
+      "Zero-speed continuous holding limit"
+    ],
+    "mass_distribution": "For first rigid-body model assign each full0.310kg envelope to body carrying its housing. CAD normalized COM/inertia approximates motor interior. Do not duplicate full mass on output side. Internal rotor and rotating output inertia are unknown; reflected rotor inertia would be N^2*Jrotor, separate from stator housing spatial inertia. Leave explicit unmodeled/zero-proxy flag rather than invent measured rotor inertia.",
+    "friction_damping": "Unknown. Prefer zero physical friction/damping in transparent ideal baseline; numerical damping if needed must be separately labeled. Perform sensitivity sweeps and later fit Coulomb, viscous, deadband, backlash, compliance from data.",
+    "control": "Use torque-limited controllers with finite stiffness and damping. Tune gains against modeled effective inertia and timestep; do not use infinitely stiff position constraints as an actuator-physics claim."
+  },
+  "mass_model": {
+    "structural_density_kg_m3": 2700,
+    "structural_material": "CNC aluminum; likely6061, provisional",
+    "steel_hardware_density_kg_m3": 7850,
+    "steel_density_status": "Conventional generic steel proxy; CAD bearing/guide envelopes may contain voids, seals and balls and are not reliable fully-solid masses.",
+    "steel_part_ids": [
+      1,
+      7,
+      12,
+      25,
+      26,
+      27,
+      29,
+      30,
+      31,
+      33,
+      34,
+      36,
+      37,
+      38,
+      40,
+      41
+    ],
+    "aluminum_part_ids": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      21,
+      22,
+      23,
+      24,
+      28,
+      32,
+      35,
+      39,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      50,
+      51,
+      52,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+    ],
+    "camera_part_id": 71,
+    "camera_mass_kg": null,
+    "camera_recommendation": "Parameterize camera mass and normalized geometry inertia independently. Weigh or identify before mass accuracy claims. If runnable model requires a nominal value, choose and expose an explicit engineering placeholder (e.g.0.025kg); it is not a measured estimate or manufacturer specification.",
+    "cad_known_assumptions_subtotal_without_camera_kg": 3.6995623450457833,
+    "subtotal_breakdown_kg": {
+      "motors": 2.17,
+      "aluminum": 1.4135056453368227,
+      "steel": 0.11605669970895978
+    },
+    "missing_mass": "Cables, connectors, fasteners absent from CAD, payload, external supports and any unmodeled internals remain unknown. Do not inflate density across all links to hide missing mass; add located mass items when known.",
+    "ambiguous_components": "Jaw fingers42/43, finger rings44/45, cuff59 and camera support70 are NOT confirmed6061. Initial2700kg/m3 is only a provisional engineering proxy. User confirmation or weighing takes priority. Primary structural brackets holding actuators use user-provided likely6061 assumption.",
+    "part_records": [
+      {
+        "id": 0,
+        "name": "maker arm cnc装配/RS00:1/solid_0",
+        "category": "manufacturer_mass_normalized_CAD_envelope",
+        "mass_kg": 0.31,
+        "com_world_m": [
+          0.03128812145494056,
+          1.2428277458704018e-07,
+          -2.1765357283773944e-07
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.00012591083443176145,
+            -9.303380664576609e-10,
+            -2.9184413098386782e-09
+          ],
+          [
+            -9.303380664576609e-10,
+            0.00012894193863309623,
+            -1.3818966137712629e-08
+          ],
+          [
+            -2.9184413098386782e-09,
+            -1.3818966137712629e-08,
+            0.00012825149497706028
+          ]
+        ],
+        "confidence": "mass high; COM/inertia approximate"
+      },
+      {
+        "id": 1,
+        "name": "maker arm cnc装配/深沟球35*44*5:1/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.021917910196391735,
+        "com_world_m": [
+          0.0625,
+          -5.634720357161817e-17,
+          5.817250054106274e-17
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            8.66031426634933e-06,
+            -4.640696715796366e-23,
+            1.3565113476943224e-22
+          ],
+          [
+            -4.640696715796366e-23,
+            4.37581944608378e-06,
+            -2.4074506654869764e-20
+          ],
+          [
+            1.3565113476943224e-22,
+            -2.4074506654869764e-20,
+            4.375819446083854e-06
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 2,
+        "name": "maker arm cnc装配/底板cnc:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.19152162988885924,
+        "com_world_m": [
+          0.0030049494071894027,
+          -5.256903021590239e-18,
+          -1.8465593084786848e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.00045722667751552825,
+            6.875061501353513e-22,
+            -6.462725894871679e-22
+          ],
+          [
+            6.875061501353513e-22,
+            0.0003563186779717386,
+            3.328960275439387e-18
+          ],
+          [
+            -6.462725894871679e-22,
+            3.328960275439387e-18,
+            0.00010205455568414565
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 3,
+        "name": "maker arm cnc装配/yaw输出cnc:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.028862365233572523,
+        "com_world_m": [
+          0.06463530436082014,
+          -9.031728513216269e-18,
+          0.0002837606512635507
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            5.871330523285666e-06,
+            1.2616098281850852e-22,
+            -3.984187458220263e-08
+          ],
+          [
+            1.2616098281850852e-22,
+            3.4741703479275496e-06,
+            3.4998008951874413e-23
+          ],
+          [
+            -3.984187458220263e-08,
+            3.4998008951874413e-23,
+            3.2972557752941813e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 4,
+        "name": "maker arm cnc装配/L2电机固定底板:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.031520627206136964,
+        "com_world_m": [
+          0.07395320834376197,
+          -1.5322113607275316e-17,
+          4.732514913102635e-17
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.3472321995695368e-05,
+            3.4197440778370337e-22,
+            5.61242282423313e-22
+          ],
+          [
+            3.4197440778370337e-22,
+            7.640944910121105e-06,
+            1.198738658664775e-21
+          ],
+          [
+            5.61242282423313e-22,
+            1.198738658664775e-21,
+            6.02368284786218e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 5,
+        "name": "maker arm cnc装配/l2电机固定前:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.031524447114933504,
+        "com_world_m": [
+          0.09526305720670816,
+          0.0009147107551618868,
+          -0.028729581653460668
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            9.073766439846969e-06,
+            3.291412889253557e-07,
+            -6.865106816015183e-07
+          ],
+          [
+            3.291412889253557e-07,
+            1.4079657370036737e-05,
+            1.0872297048492812e-07
+          ],
+          [
+            -6.865106816015183e-07,
+            1.0872297048492812e-07,
+            2.275578115237508e-05
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 6,
+        "name": "maker arm cnc装配/l2电机固定后:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.03943889994925859,
+        "com_world_m": [
+          0.09842108859835613,
+          0.0007311507357905051,
+          0.028475485474238362
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.0350914505401457e-05,
+            4.2020556876662294e-07,
+            8.125674085286442e-07
+          ],
+          [
+            4.2020556876662294e-07,
+            1.6918206654500955e-05,
+            -1.1605001789408039e-07
+          ],
+          [
+            8.125674085286442e-07,
+            -1.1605001789408039e-07,
+            2.682926059016381e-05
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 7,
+        "name": "maker arm cnc装配/深沟球20，27，4:1/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.008524248280599502,
+        "com_world_m": [
+          0.111,
+          -8.97058887269187e-19,
+          0.028377072182844017
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.239126112417208e-07,
+            1.5390156704597755e-21,
+            -2.6210618284234715e-22
+          ],
+          [
+            1.5390156704597755e-21,
+            6.239126112417084e-07,
+            -2.7700515645673e-23
+          ],
+          [
+            -2.6210618284234715e-22,
+            -2.7700515645673e-23,
+            1.2241439919985414e-06
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 8,
+        "name": "maker arm cnc装配/L2输出侧臂:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.06986021794887436,
+        "com_world_m": [
+          0.1110000011539104,
+          0.07816536087998362,
+          -0.03271074381459209
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.0002568024560210191,
+            6.827079109394253e-08,
+            1.317283943295479e-13
+          ],
+          [
+            6.827079109394253e-08,
+            1.561002026981791e-05,
+            -1.2826681984854056e-05
+          ],
+          [
+            1.317283943295479e-13,
+            -1.2826681984854056e-05,
+            0.00027029916047924393
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 9,
+        "name": "maker arm cnc装配/L2侧臂-2:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.07857396741543195,
+        "com_world_m": [
+          0.11099999999999974,
+          0.08535986006516204,
+          0.03224241502412285
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.0003094838591400591,
+            6.827041002305405e-08,
+            -4.146038701432482e-19
+          ],
+          [
+            6.827041002305405e-08,
+            1.7107363538451462e-05,
+            1.598640610613352e-05
+          ],
+          [
+            -4.146038701432482e-19,
+            1.598640610613352e-05,
+            0.000324059295675839
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 10,
+        "name": "maker arm cnc装配/输出轴垫块---2:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.014674922152128463,
+        "com_world_m": [
+          0.11099999909898055,
+          7.513720497486491e-10,
+          -0.0297000000000015
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.5658631100391413e-06,
+            -8.114220909677633e-20,
+            -4.023006571624022e-20
+          ],
+          [
+            -8.114220909677633e-20,
+            1.5658631100392214e-06,
+            -1.4196643860486798e-23
+          ],
+          [
+            -4.023006571624022e-20,
+            -1.4196643860486798e-23,
+            2.990455636160539e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 11,
+        "name": "maker arm cnc装配/小轴承压紧轴cnc:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.004960237078808023,
+        "com_world_m": [
+          0.111,
+          -1.4750279108595465e-17,
+          0.03141449275362309
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            3.5273146715917606e-07,
+            -3.3741201832526718e-21,
+            3.978663659401481e-23
+          ],
+          [
+            -3.3741201832526718e-21,
+            3.5273146715917314e-07,
+            1.0790116626278325e-23
+          ],
+          [
+            3.978663659401481e-23,
+            1.0790116626278325e-23,
+            6.759270320507647e-07
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 12,
+        "name": "maker arm cnc装配/深沟球20，27，4:2/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.008524248280599504,
+        "com_world_m": [
+          0.11099999999999995,
+          0.15999999999999998,
+          0.02837707218284312
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.239126112417149e-07,
+            3.0253772820287925e-21,
+            -1.5348625053496274e-20
+          ],
+          [
+            3.0253772820287925e-21,
+            6.239126112417197e-07,
+            -3.534276624021301e-22
+          ],
+          [
+            -1.5348625053496274e-20,
+            -3.534276624021301e-22,
+            1.2241439919985469e-06
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 13,
+        "name": "maker arm cnc装配/小轴承压紧轴cnc:2/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.0049602370788080245,
+        "com_world_m": [
+          0.11099999999999989,
+          0.16,
+          0.03141449275362249
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            3.527314671591748e-07,
+            3.414561433601195e-21,
+            -8.344133982024252e-21
+          ],
+          [
+            3.414561433601195e-21,
+            3.527314671591745e-07,
+            -3.348815346765585e-22
+          ],
+          [
+            -8.344133982024252e-21,
+            -3.348815346765585e-22,
+            6.759270320507649e-07
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 14,
+        "name": "maker arm cnc装配/yaw电机固定板:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.019643330531088854,
+        "com_world_m": [
+          0.058491401468210184,
+          -9.461914148899423e-18,
+          4.709536462137624e-18
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.8458494429546443e-05,
+            -1.5327094240226705e-24,
+            4.168312916218372e-23
+          ],
+          [
+            -1.5327094240226705e-24,
+            1.3908756418034474e-05,
+            4.911271389573813e-22
+          ],
+          [
+            4.168312916218372e-23,
+            4.911271389573813e-22,
+            4.579059826620207e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 15,
+        "name": "maker arm cnc装配/电机支撑:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.029404780138553875,
+        "com_world_m": [
+          0.0315,
+          -1.7763568394002505e-18,
+          0.04066075581014916
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            2.2788434481999186e-06,
+            0.0,
+            -1.885928213596344e-21
+          ],
+          [
+            0.0,
+            6.808249075303717e-06,
+            3.1432136893272398e-22
+          ],
+          [
+            -1.885928213596344e-21,
+            3.1432136893272398e-22,
+            8.804079482559361e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 16,
+        "name": "maker arm cnc装配/电机支撑:2/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.029404780138553875,
+        "com_world_m": [
+          0.0315,
+          -3.019806626980426e-17,
+          -0.04066075581015092
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            2.27884344819992e-06,
+            0.0,
+            1.2572854757308959e-21
+          ],
+          [
+            0.0,
+            6.808249075303732e-06,
+            1.2635719031095505e-19
+          ],
+          [
+            1.2572854757308959e-21,
+            1.2635719031095505e-19,
+            8.804079482559361e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 17,
+        "name": "maker arm cnc装配/输出轴垫块---2:2/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.014674922152128466,
+        "com_world_m": [
+          0.11100000117892542,
+          0.15999999526131414,
+          -0.029700000000000903
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.565863110039172e-06,
+            -8.873955510337972e-20,
+            -3.776829089474631e-20
+          ],
+          [
+            -8.873955510337972e-20,
+            1.5658631100391923e-06,
+            -8.46871997528531e-22
+          ],
+          [
+            -3.776829089474631e-20,
+            -8.46871997528531e-22,
+            2.9904556361605424e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 18,
+        "name": "maker arm cnc装配/RS00:5/solid_0",
+        "category": "manufacturer_mass_normalized_CAD_envelope",
+        "mass_kg": 0.31,
+        "com_world_m": [
+          0.11099987712878051,
+          0.15999977990156833,
+          0.00021187854505844684
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.0001289419386304707,
+            1.3819031728576592e-08,
+            -9.303383436279655e-10
+          ],
+          [
+            1.3819031728576592e-08,
+            0.00012825149497968594,
+            2.918441221466088e-09
+          ],
+          [
+            -9.303383436279655e-10,
+            2.918441221466088e-09,
+            0.00012591083443176158
+          ]
+        ],
+        "confidence": "mass high; COM/inertia approximate"
+      },
+      {
+        "id": 19,
+        "name": "maker arm cnc装配/RS00:6/solid_0",
+        "category": "manufacturer_mass_normalized_CAD_envelope",
+        "mass_kg": 0.31,
+        "com_world_m": [
+          0.11099985526303299,
+          2.0371131209205248e-07,
+          0.00021187854505807025
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.00012836422652617274,
+            2.5557258182290357e-07,
+            3.038183959188961e-09
+          ],
+          [
+            2.5557258182290357e-07,
+            0.00012882920708398376,
+            -3.9021382218089916e-10
+          ],
+          [
+            3.038183959188961e-09,
+            -3.9021382218089916e-10,
+            0.0001259108344317616
+          ]
+        ],
+        "confidence": "mass high; COM/inertia approximate"
+      },
+      {
+        "id": 20,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/RS00:1/solid_0",
+        "category": "manufacturer_mass_normalized_CAD_envelope",
+        "mass_kg": 0.31,
+        "com_world_m": [
+          0.1458825949478782,
+          -0.12475387817516645,
+          1.232853214385641e-07
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.00012819007897836183,
+            -3.741792503252656e-07,
+            1.3794527453873028e-08
+          ],
+          [
+            -3.741792503252656e-07,
+            0.0001259722660287876,
+            -1.3119655086375926e-09
+          ],
+          [
+            1.3794527453873028e-08,
+            -1.3119655086375926e-09,
+            0.00012894195616981136
+          ]
+        ],
+        "confidence": "mass high; COM/inertia approximate"
+      },
+      {
+        "id": 21,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/夹爪连杆底座:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.025614539205843296,
+        "com_world_m": [
+          0.14066962189464097,
+          -0.1567546747015327,
+          8.464706573974701e-16
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            3.95966980084324e-06,
+            3.963413591846221e-07,
+            1.0563586771474533e-06
+          ],
+          [
+            3.963413591846221e-07,
+            6.328226372551198e-06,
+            -1.7207491453436952e-07
+          ],
+          [
+            1.0563586771474533e-06,
+            -1.7207491453436952e-07,
+            3.1083443162043465e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 22,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/夹爪连杆底座:1/solid_1",
+        "category": "aluminum_structure",
+        "mass_kg": 3.9760782021995824e-05,
+        "com_world_m": [
+          0.15661967652252592,
+          -0.16562368625954269,
+          -0.0246016936152292
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            8.28928815437448e-11,
+            1.1797248014286516e-11,
+            4.911271389573812e-24
+          ],
+          [
+            1.1797248014286516e-11,
+            1.5339384911822817e-10,
+            0.0
+          ],
+          [
+            4.911271389573812e-24,
+            0.0,
+            8.097117588855663e-11
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 23,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/夹爪连杆底座:1/solid_2",
+        "category": "aluminum_structure",
+        "mass_kg": 3.976078202199585e-05,
+        "com_world_m": [
+          0.12272940688282946,
+          -0.16010315106827103,
+          0.024601693615230864
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            8.289288154374972e-11,
+            1.1797248014280377e-11,
+            -4.911271389573812e-24
+          ],
+          [
+            1.1797248014280377e-11,
+            1.5339384911821343e-10,
+            3.683453542180359e-24
+          ],
+          [
+            -4.911271389573812e-24,
+            3.683453542180359e-24,
+            8.097117588854435e-11
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 24,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/滑轨底座:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.050900621906473,
+        "com_world_m": [
+          0.14083809665889577,
+          -0.1557215524643724,
+          8.005018034522226e-07
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.0001105752912888746,
+            5.473612430898357e-07,
+            8.583290127066338e-08
+          ],
+          [
+            5.473612430898357e-07,
+            0.00011384620231841118,
+            -1.3876979618880068e-08
+          ],
+          [
+            8.583290127066338e-08,
+            -1.3876979618880068e-08,
+            5.345381942969582e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 25,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/7mm直线滑轨:1/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.03628826235159964,
+        "com_world_m": [
+          0.13896543864091881,
+          -0.1672035605877338,
+          -2.105481352784251e-10
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            7.705196060043904e-05,
+            1.2471394857316463e-08,
+            9.909467266864299e-16
+          ],
+          [
+            1.2471394857316463e-08,
+            7.712545242073766e-05,
+            1.5432321920406398e-15
+          ],
+          [
+            9.909467266864299e-16,
+            1.5432321920406398e-15,
+            2.1801319421310123e-07
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 26,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:1/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.0009641660951202429,
+        "com_world_m": [
+          0.12242313435173316,
+          -0.16198334172052944,
+          0.02460169361523038
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.030963148538335e-09,
+            6.948746219300527e-10,
+            1.7103568306655075e-24
+          ],
+          [
+            6.948746219300527e-10,
+            1.0183570021743348e-08,
+            -3.59468380581642e-24
+          ],
+          [
+            1.7103568306655075e-24,
+            -3.59468380581642e-24,
+            5.917771962847988e-09
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 27,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:1/solid_1",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.000964166095120242,
+        "com_world_m": [
+          0.12187809715602313,
+          -0.16532929585111464,
+          0.024601693615230374
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.030963148538351e-09,
+            6.948746219300488e-10,
+            8.651712879692713e-24
+          ],
+          [
+            6.948746219300488e-10,
+            1.0183570021743338e-08,
+            4.276438901040449e-25
+          ],
+          [
+            8.651712879692713e-24,
+            4.276438901040449e-25,
+            5.9177719628480155e-09
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 28,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/连杆:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.005075249340183086,
+        "com_world_m": [
+          0.12272725506175292,
+          -0.16375025010078795,
+          0.0036098222356544377
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.0609794023301806e-06,
+            4.920532091589264e-09,
+            2.7711490770105544e-08
+          ],
+          [
+            4.920532091589264e-09,
+            1.0903847579706066e-06,
+            -4.514046705006774e-09
+          ],
+          [
+            2.7711490770105544e-08,
+            -4.514046705006774e-09,
+            5.215528215190739e-08
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 29,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:3/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.0009641660951202429,
+        "com_world_m": [
+          0.12303137577177926,
+          -0.165517158481047,
+          -0.017382049143921597
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.0309631485383e-09,
+            6.948746219298645e-10,
+            -4.1766362309605974e-24
+          ],
+          [
+            6.948746219298645e-10,
+            1.0183570021743411e-08,
+            5.9629707861080005e-24
+          ],
+          [
+            -4.1766362309605974e-24,
+            5.9629707861080005e-24,
+            5.917771962848018e-09
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 30,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:3/solid_1",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.0009641660951202424,
+        "com_world_m": [
+          0.12357641296748914,
+          -0.1621712043504618,
+          -0.017382049143921587
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.030963148538323e-09,
+            6.948746219298609e-10,
+            2.061264659307066e-23
+          ],
+          [
+            6.948746219298609e-10,
+            1.0183570021743414e-08,
+            4.2681814802725055e-23
+          ],
+          [
+            2.061264659307066e-23,
+            4.2681814802725055e-23,
+            5.91777196284804e-09
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 31,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/7mm直线滑块:1/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.014660828678898034,
+        "com_world_m": [
+          0.13853346156817853,
+          -0.1699216676780408,
+          -0.017382049143903983
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.555928069542289e-07,
+            5.821359277956746e-08,
+            2.0470470190048214e-19
+          ],
+          [
+            5.821359277956746e-08,
+            1.0041520925918496e-06,
+            -2.924352884292602e-20
+          ],
+          [
+            2.0470470190048214e-19,
+            -2.924352884292602e-20,
+            4.629789563128836e-07
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 32,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/滑块底座:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.01156223198887327,
+        "com_world_m": [
+          0.13550602647350107,
+          -0.1741319987069812,
+          -0.017382049142818278
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            5.878833648254305e-07,
+            3.019404363968324e-07,
+            -1.410978013845319e-16
+          ],
+          [
+            3.019404363968324e-07,
+            1.957170940965913e-06,
+            -1.687349565471059e-17
+          ],
+          [
+            -1.410978013845319e-16,
+            -1.687349565471059e-17,
+            1.5663116311118652e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 33,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:5/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.0009641660951202424,
+        "com_world_m": [
+          0.1563134039914295,
+          -0.16750387691180108,
+          -0.024601693615228855
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.030963148538384e-09,
+            6.948746219300124e-10,
+            2.670096183080005e-23
+          ],
+          [
+            6.948746219300124e-10,
+            1.018357002174341e-08,
+            -3.173459634268536e-24
+          ],
+          [
+            2.670096183080005e-23,
+            -3.173459634268536e-24,
+            5.917771962847907e-09
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 34,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:5/solid_1",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.0009641660951202429,
+        "com_world_m": [
+          0.15576836679571948,
+          -0.1708498310423863,
+          -0.024601693615228865
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.030963148538458e-09,
+            6.948746219299855e-10,
+            2.6678721324221166e-23
+          ],
+          [
+            6.948746219299855e-10,
+            1.018357002174344e-08,
+            6.0983686707391266e-24
+          ],
+          [
+            2.6678721324221166e-23,
+            6.0983686707391266e-24,
+            5.917771962848006e-09
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 35,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/连杆:2/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.005075249340183089,
+        "com_world_m": [
+          0.15546424640403322,
+          -0.16908292271398315,
+          -0.0036098222266764944
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.0609794031706477e-06,
+            4.920531954681594e-09,
+            2.7711475483836262e-08
+          ],
+          [
+            4.920531954681594e-09,
+            1.0903847579929082e-06,
+            -4.51404421495767e-09
+          ],
+          [
+            2.7711475483836262e-08,
+            -4.51404421495767e-09,
+            5.2155281289138223e-08
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 36,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:7/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.0009641660951202429,
+        "com_world_m": [
+          0.15516012601234638,
+          -0.16731601438558,
+          0.01738204916187592
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.030963148538505e-09,
+            6.948746219300339e-10,
+            5.1884324393144275e-23
+          ],
+          [
+            6.948746219300339e-10,
+            1.0183570021743298e-08,
+            2.4132738226211573e-23
+          ],
+          [
+            5.1884324393144275e-23,
+            2.4132738226211573e-23,
+            5.917771962847902e-09
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 37,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:7/solid_1",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.0009641660951202422,
+        "com_world_m": [
+          0.15461508881663635,
+          -0.1706619685161652,
+          0.01738204916187591
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.03096314853845e-09,
+            6.948746219300111e-10,
+            4.2542683737656627e-23
+          ],
+          [
+            6.948746219300111e-10,
+            1.018357002174336e-08,
+            9.781226595747582e-24
+          ],
+          [
+            4.2542683737656627e-23,
+            9.781226595747582e-24,
+            5.917771962847916e-09
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 38,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/7mm直线滑块:2/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.01466082867889802,
+        "com_world_m": [
+          0.13853346156814067,
+          -0.1699216676780315,
+          0.017382049161856643
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            6.555928069541703e-07,
+            5.821359277962594e-08,
+            2.631917595863342e-19
+          ],
+          [
+            5.821359277962594e-08,
+            1.0041520925917327e-06,
+            -2.924352884292602e-20
+          ],
+          [
+            2.631917595863342e-19,
+            -2.924352884292602e-20,
+            4.629789563120648e-07
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 39,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/滑块底座:2/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.011562231988873276,
+        "com_world_m": [
+          0.14005127411587612,
+          -0.17487239410157557,
+          0.017382049160772576
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            5.440567077180478e-07,
+            1.7098524549619201e-07,
+            -1.2844419145515354e-16
+          ],
+          [
+            1.7098524549619201e-07,
+            2.000997598073297e-06,
+            6.078466727615635e-17
+          ],
+          [
+            -1.2844419145515354e-16,
+            6.078466727615635e-17,
+            1.5663116311118654e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 40,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/M4塞打螺栓:1/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.0018835222405056984,
+        "com_world_m": [
+          0.12182686795177496,
+          -0.16564378919011832,
+          0.024601693615230468
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            3.179434098531455e-08,
+            -3.902459974401146e-09,
+            -1.1423253454267977e-22
+          ],
+          [
+            -3.902459974401146e-09,
+            8.473037255592256e-09,
+            -9.138602763414382e-22
+          ],
+          [
+            -1.1423253454267977e-22,
+            -9.138602763414382e-22,
+            3.2430029867411335e-08
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 41,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/M4塞打螺栓:2/solid_0",
+        "category": "steel_hardware_geometry",
+        "mass_kg": 0.0018835222405056758,
+        "com_world_m": [
+          0.12362764217173716,
+          -0.16185671101145876,
+          -0.017382049143921535
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            3.1794340985314546e-08,
+            -3.902459974400298e-09,
+            -1.3285056509095592e-23
+          ],
+          [
+            -3.902459974400298e-09,
+            8.473037255591616e-09,
+            -8.879375010501582e-23
+          ],
+          [
+            -1.3285056509095592e-23,
+            -8.879375010501582e-23,
+            3.2430029867410905e-08
+          ]
+        ],
+        "confidence": "provisional: named bearings, linear guides/blocks, shoulder bolts"
+      },
+      {
+        "id": 42,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/夹爪:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.07736128713816462,
+        "com_world_m": [
+          0.13309140755380502,
+          -0.20327692835505506,
+          0.012147554804601233
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            3.0648766081688776e-05,
+            -3.4714464677928707e-06,
+            -9.500484200248384e-07
+          ],
+          [
+            -3.4714464677928707e-06,
+            9.903221479886036e-06,
+            -5.832296328159191e-06
+          ],
+          [
+            -9.500484200248384e-07,
+            -5.832296328159191e-06,
+            3.208272932847685e-05
+          ]
+        ],
+        "confidence": "Low: material pending user confirmation;2700kg/m3 engineering proxy only"
+      },
+      {
+        "id": 43,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/夹爪:2/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.07736128713816465,
+        "com_world_m": [
+          0.13309140755389606,
+          -0.20327692835506966,
+          -0.01214755478664758
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            3.0648766081719195e-05,
+            -3.4714464677021903e-06,
+            9.500484200316121e-07
+          ],
+          [
+            -3.4714464677021903e-06,
+            9.903221479855596e-06,
+            5.832296328157858e-06
+          ],
+          [
+            9.500484200316121e-07,
+            5.832296328157858e-06,
+            3.2082729328477e-05
+          ]
+        ],
+        "confidence": "Low: material pending user confirmation;2700kg/m3 engineering proxy only"
+      },
+      {
+        "id": 44,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/指环:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.03116929853668387,
+        "com_world_m": [
+          0.10125955392528851,
+          -0.17037019810224088,
+          0.01738217592978763
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            4.968358156890772e-06,
+            2.319071304780434e-06,
+            4.565172398581797e-11
+          ],
+          [
+            2.319071304780434e-06,
+            5.20558318364484e-06,
+            -1.518178791992601e-11
+          ],
+          [
+            4.565172398581797e-11,
+            -1.518178791992601e-11,
+            6.1397825487898005e-06
+          ]
+        ],
+        "confidence": "Low: material pending user confirmation;2700kg/m3 engineering proxy only"
+      },
+      {
+        "id": 45,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/指环:2/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.03116929853668386,
+        "com_world_m": [
+          0.10125955392532977,
+          -0.17037019810224738,
+          -0.01738192237597202
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            4.9683581568907856e-06,
+            2.3190713047804405e-06,
+            4.565172399016246e-11
+          ],
+          [
+            2.3190713047804405e-06,
+            5.205583183644847e-06,
+            -1.518178792669042e-11
+          ],
+          [
+            4.565172399016246e-11,
+            -1.518178792669042e-11,
+            6.139782548789808e-06
+          ]
+        ],
+        "confidence": "Low: material pending user confirmation;2700kg/m3 engineering proxy only"
+      },
+      {
+        "id": 46,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/J7电机底座-平底:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.03479156957758176,
+        "com_world_m": [
+          0.15601183398002494,
+          -0.09826781736075947,
+          8.614008316435394e-16
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            9.739278550432165e-06,
+            2.3184097697801617e-06,
+            1.7817134679190899e-19
+          ],
+          [
+            2.3184097697801617e-06,
+            2.3616976536300414e-05,
+            2.6309474376283416e-20
+          ],
+          [
+            1.7817134679190899e-19,
+            2.6309474376283416e-20,
+            1.4777362711027226e-05
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 47,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/J6轴头_2:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.03664249053882795,
+        "com_world_m": [
+          0.15115804078387424,
+          -0.0923668333175756,
+          1.0114683458816084e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            9.813518941793335e-06,
+            1.4942622116446758e-06,
+            -3.016856909706428e-19
+          ],
+          [
+            1.4942622116446758e-06,
+            1.874330761821857e-05,
+            7.855467123105815e-20
+          ],
+          [
+            -3.016856909706428e-19,
+            7.855467123105815e-20,
+            9.570111993071351e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 48,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/J6轴头_2:1/solid_1",
+        "category": "aluminum_structure",
+        "mass_kg": 0.02021647081005332,
+        "com_world_m": [
+          0.1514547845609303,
+          -0.08545347502960701,
+          1.0076402524678043e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.8355314185313619e-06,
+            2.555509673008212e-07,
+            -9.587764540051043e-21
+          ],
+          [
+            2.555509673008212e-07,
+            3.6387675596392015e-06,
+            5.251815094144648e-21
+          ],
+          [
+            -9.587764540051043e-21,
+            5.251815094144648e-21,
+            2.147492503770595e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 49,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/RS00:2/solid_0",
+        "category": "manufacturer_mass_normalized_CAD_envelope",
+        "mass_kg": 0.31,
+        "com_world_m": [
+          0.15720071180949932,
+          -0.05526963369536523,
+          3.0118347339920937e-09
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.00012837146787727708,
+            -3.9876866540154946e-07,
+            3.015464206501236e-07
+          ],
+          [
+            -3.9876866540154946e-07,
+            0.00012597546390554645,
+            -5.140126313236445e-08
+          ],
+          [
+            3.015464206501236e-07,
+            -5.140126313236445e-08,
+            0.0001287573693941377
+          ]
+        ],
+        "confidence": "mass high; COM/inertia approximate"
+      },
+      {
+        "id": 50,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/J5-J6-Out:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.03055012777475096,
+        "com_world_m": [
+          0.16351429868667786,
+          -0.08495348696915626,
+          -0.00046506678637575605
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.032775404202591e-05,
+            1.8436428436161115e-06,
+            -1.638507020211908e-07
+          ],
+          [
+            1.8436428436161115e-06,
+            2.1495342813130974e-05,
+            -3.347039984655773e-08
+          ],
+          [
+            -1.638507020211908e-07,
+            -3.347039984655773e-08,
+            1.1907840049618701e-05
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 51,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/J5-J6-In:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.029189411000558916,
+        "com_world_m": [
+          0.18993680159232598,
+          -0.06631772496265005,
+          2.1021636601872e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.2094654682598613e-05,
+            -8.652648661515505e-07,
+            1.8596135620537152e-19
+          ],
+          [
+            -8.652648661515505e-07,
+            7.081293750864419e-06,
+            -6.758785324796055e-20
+          ],
+          [
+            1.8596135620537152e-19,
+            -6.758785324796055e-20,
+            5.6135970947839686e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 52,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/输出轴垫块---2:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.014674922152128466,
+        "com_world_m": [
+          0.19914660959477817,
+          -0.0577577446353207,
+          1.2473288952174888e-10
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            2.9536317692472344e-06,
+            -2.260597452292851e-07,
+            4.1034224379336845e-20
+          ],
+          [
+            -2.260597452292851e-07,
+            1.6026869769525767e-06,
+            -7.861637674839647e-21
+          ],
+          [
+            4.1034224379336845e-20,
+            -7.861637674839647e-21,
+            1.565863110039091e-06
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 53,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/RS00:3/solid_0",
+        "category": "manufacturer_mass_normalized_CAD_envelope",
+        "mass_kg": 0.31,
+        "com_world_m": [
+          0.22866939900253794,
+          -0.06256661738188478,
+          -1.232853167273758e-07
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.00012597042264086161,
+            3.686711592752603e-07,
+            -3.1337955733193e-09
+          ],
+          [
+            3.686711592752603e-07,
+            0.00012819192236628813,
+            -1.3497761535777639e-08
+          ],
+          [
+            -3.1337955733193e-09,
+            -1.3497761535777639e-08,
+            0.00012894195616981136
+          ]
+        ],
+        "confidence": "mass high; COM/inertia approximate"
+      },
+      {
+        "id": 54,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/J4-J5-Out:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.04623975585212018,
+        "com_world_m": [
+          0.20399118624933085,
+          -0.03596805830220163,
+          2.7988095410367556e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            4.5771249250644524e-05,
+            -3.4703795746771017e-06,
+            6.324148255524187e-19
+          ],
+          [
+            -3.4703795746771017e-06,
+            2.2976181734369586e-05,
+            -9.473443835907302e-20
+          ],
+          [
+            6.324148255524187e-19,
+            -9.473443835907302e-20,
+            2.4146058428341008e-05
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 55,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/J4-J5-Out:1/solid_1",
+        "category": "aluminum_structure",
+        "mass_kg": 0.021114016139238953,
+        "com_world_m": [
+          0.18185013463055272,
+          0.006884410363277666,
+          -0.035499999999997874
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            8.621637192223538e-06,
+            4.929319535771982e-06,
+            -1.7099082469940185e-19
+          ],
+          [
+            4.929319535771982e-06,
+            5.85411526577376e-06,
+            1.2069940567016601e-19
+          ],
+          [
+            -1.7099082469940185e-19,
+            1.2069940567016601e-19,
+            1.4419448414959392e-05
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 56,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/J4-J5-Out:1/solid_2",
+        "category": "aluminum_structure",
+        "mass_kg": 0.021114016139238953,
+        "com_world_m": [
+          0.18185987930181707,
+          0.0068828230108834414,
+          0.03550000000000212
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            8.624074409401672e-06,
+            4.925791682209147e-06,
+            -1.634471118450165e-19
+          ],
+          [
+            4.925791682209147e-06,
+            5.852521019834792e-06,
+            1.4081597328186033e-19
+          ],
+          [
+            -1.634471118450165e-19,
+            1.4081597328186033e-19,
+            1.4420291386198418e-05
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 57,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/J4-J5-Out:1/solid_3",
+        "category": "aluminum_structure",
+        "mass_kg": 0.006517776101152843,
+        "com_world_m": [
+          0.19954949773252653,
+          -0.02542910622179113,
+          2.6694147159514677e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.712753098095855e-06,
+            -3.7694335568100213e-10,
+            4.772029130723389e-20
+          ],
+          [
+            -3.7694335568100213e-10,
+            1.7105004650017462e-06,
+            -9.799761657619761e-22
+          ],
+          [
+            4.772029130723389e-20,
+            -9.799761657619761e-22,
+            7.189838209775677e-08
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 58,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/RS00:4/solid_0",
+        "category": "manufacturer_mass_normalized_CAD_envelope",
+        "mass_kg": 0.31,
+        "com_world_m": [
+          0.16978800036784106,
+          0.022000069828572656,
+          0.0002118764282436878
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            0.0001286105559914364,
+            -3.4522620469120654e-07,
+            -1.4009644405082611e-09
+          ],
+          [
+            -3.4522620469120654e-07,
+            0.0001285829039371566,
+            -2.7061723614862832e-09
+          ],
+          [
+            -1.4009644405082611e-09,
+            -2.7061723614862832e-09,
+            0.00012591084124836886
+          ]
+        ],
+        "confidence": "mass high; COM/inertia approximate"
+      },
+      {
+        "id": 59,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/护腕:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.01317375941906174,
+        "com_world_m": [
+          0.14054736725242034,
+          -0.029329716387739888,
+          1.6673966426552468e-08
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            2.5875397428827004e-06,
+            -2.3235131447916076e-07,
+            -1.439182610050225e-12
+          ],
+          [
+            -2.3235131447916076e-07,
+            3.30099983807499e-06,
+            -3.0503808742795717e-13
+          ],
+          [
+            -1.439182610050225e-12,
+            -3.0503808742795717e-13,
+            1.2980345499339957e-06
+          ]
+        ],
+        "confidence": "Low: material pending user confirmation;2700kg/m3 engineering proxy only"
+      },
+      {
+        "id": 60,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/L3:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.042020554511760067,
+        "com_world_m": [
+          0.16978775650075476,
+          0.07013260702821196,
+          -0.027502559372748703
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            7.844431555987261e-05,
+            6.946526515500362e-08,
+            -7.239970354340541e-16
+          ],
+          [
+            6.946526515500362e-08,
+            9.039300137097961e-06,
+            2.4300359521415454e-08
+          ],
+          [
+            -7.239970354340541e-16,
+            2.4300359521415454e-08,
+            8.737212431385854e-05
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 61,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/L3:1/solid_1",
+        "category": "aluminum_structure",
+        "mass_kg": 0.04134186023861683,
+        "com_world_m": [
+          0.14658446463638086,
+          0.13954450517578224,
+          -0.03458150904510544
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.4029439331072567e-05,
+            1.3586748817250763e-05,
+            -8.851345359973473e-07
+          ],
+          [
+            1.3586748817250763e-05,
+            2.953705820798284e-05,
+            5.144198928111209e-07
+          ],
+          [
+            -8.851345359973473e-07,
+            5.144198928111209e-07,
+            4.322051228633321e-05
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 62,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/L3:1/solid_2",
+        "category": "aluminum_structure",
+        "mass_kg": 0.048345386577571425,
+        "com_world_m": [
+          0.16978775668898075,
+          0.06383561228242615,
+          0.027504927736676284
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            9.216277023576502e-05,
+            6.946564585630336e-08,
+            5.802721073590477e-16
+          ],
+          [
+            6.946564585630336e-08,
+            1.0021712904288626e-05,
+            -1.951020430017784e-08
+          ],
+          [
+            5.802721073590477e-16,
+            -1.951020430017784e-08,
+            0.0001020559397093607
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 63,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/L3:1/solid_3",
+        "category": "aluminum_structure",
+        "mass_kg": 0.04134186023861682,
+        "com_world_m": [
+          0.14658446463637886,
+          0.13954450517578224,
+          0.034581509045102314
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.403289196653133e-05,
+            1.3586748817250745e-05,
+            8.851345359956524e-07
+          ],
+          [
+            1.3586748817250745e-05,
+            2.9540510843441826e-05,
+            -5.14419892810256e-07
+          ],
+          [
+            8.851345359956524e-07,
+            -5.14419892810256e-07,
+            4.322741755725146e-05
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 64,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 55mm:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.0031490539361420686,
+        "com_world_m": [
+          0.15478775543612214,
+          0.10600000130497494,
+          -1.3275046294835023e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            8.026807272645465e-07,
+            4.29832023055215e-24,
+            2.2534651163762613e-20
+          ],
+          [
+            4.29832023055215e-24,
+            8.026807272645465e-07,
+            -1.4488250599242745e-22
+          ],
+          [
+            2.2534651163762613e-20,
+            -1.4488250599242745e-22,
+            1.7713428390799332e-08
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 65,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 55mm:1/solid_1",
+        "category": "aluminum_structure",
+        "mass_kg": 0.003149053936142069,
+        "com_world_m": [
+          0.15478775692623833,
+          0.05600000130497495,
+          -1.3220460218470237e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            8.026807272645465e-07,
+            -5.860905760712853e-22,
+            2.2583516309530245e-20
+          ],
+          [
+            -5.860905760712853e-22,
+            8.026807272645465e-07,
+            -1.8908394849859148e-22
+          ],
+          [
+            2.2583516309530245e-20,
+            -1.8908394849859148e-22,
+            1.77134283907989e-08
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 66,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 55mm:1/solid_2",
+        "category": "aluminum_structure",
+        "mass_kg": 0.003149053936142069,
+        "com_world_m": [
+          0.18478775543612214,
+          0.10600000219904468,
+          -4.712830316472751e-16
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            8.026807272645464e-07,
+            -3.0611037454830735e-22,
+            2.252554622828027e-20
+          ],
+          [
+            -3.0611037454830735e-22,
+            8.026807272645477e-07,
+            -1.4733572333347096e-22
+          ],
+          [
+            2.252554622828027e-20,
+            -1.4733572333347096e-22,
+            1.771342839080079e-08
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 67,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 55mm:1/solid_3",
+        "category": "aluminum_structure",
+        "mass_kg": 0.0031490539361420686,
+        "com_world_m": [
+          0.18478775692623833,
+          0.05600000219904468,
+          -4.58026413101541e-16
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            8.026807272645441e-07,
+            0.0,
+            2.255992922080296e-20
+          ],
+          [
+            0.0,
+            8.026807272645477e-07,
+            -3.6588726284580723e-22
+          ],
+          [
+            2.255992922080296e-20,
+            -3.6588726284580723e-22,
+            1.77134283907989e-08
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 68,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 70mm:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.00400788682781718,
+        "com_world_m": [
+          0.14496724685175275,
+          0.12306849445857984,
+          -1.5834573413776249e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.6478259697285843e-06,
+            1.2282015404707632e-22,
+            4.6500531425408544e-20
+          ],
+          [
+            1.2282015404707632e-22,
+            1.6478259697285843e-06,
+            -2.9590410122182217e-22
+          ],
+          [
+            4.6500531425408544e-20,
+            -2.9590410122182217e-22,
+            2.2544363406471772e-08
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 69,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 70mm:1/solid_1",
+        "category": "aluminum_structure",
+        "mass_kg": 0.0040078868278171816,
+        "com_world_m": [
+          0.15996724607746562,
+          0.14904925701914787,
+          -1.1662080576545456e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            1.647825969728586e-06,
+            9.42964106798172e-22,
+            4.670127835433049e-20
+          ],
+          [
+            9.42964106798172e-22,
+            1.6478259697285843e-06,
+            -4.1851359696161914e-23
+          ],
+          [
+            4.670127835433049e-20,
+            -4.1851359696161914e-23,
+            2.2544363406471672e-08
+          ]
+        ],
+        "confidence": "provisional per user CNC aluminum, likely6061; verify ambiguous parts"
+      },
+      {
+        "id": 70,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/Maker Arm 摄像头支架-UW:1/solid_0",
+        "category": "aluminum_structure",
+        "mass_kg": 0.029663498154034174,
+        "com_world_m": [
+          0.20880018494659278,
+          -0.11367000527513857,
+          2.574874026082411e-15
+        ],
+        "inertia_about_com_world_kg_m2": [
+          [
+            3.1709422989009325e-06,
+            2.6779987962736707e-06,
+            -2.0793219688144728e-19
+          ],
+          [
+            2.6779987962736707e-06,
+            1.2554399845820486e-05,
+            7.202034189174495e-20
+          ],
+          [
+            -2.0793219688144728e-19,
+            7.202034189174495e-20,
+            1.1110349234427456e-05
+          ]
+        ],
+        "confidence": "Low: material pending user confirmation;2700kg/m3 engineering proxy only"
+      },
+      {
+        "id": 71,
+        "name": "maker arm cnc装配/MA01-01 (RS00)/摄像头（防水）:1/solid_0",
+        "category": "camera_mass_unknown",
+        "mass_kg": null,
+        "com_world_m": [
+          0.22794661455988927,
+          -0.1321960559993045,
+          -2.53263021843253e-08
+        ],
+        "inertia_about_com_world_kg_m2": null,
+        "confidence": "requires camera identification or weighing; do not silently assume solid aluminum"
+      }
+    ]
+  },
+  "inertia_method": {
+    "from_BREP": "Use per-solid exact closed BREP volume and inertia rather than triangle mesh approximations. Inspection script GProp center-of-mass tensor is expressed in assembly orientation.",
+    "density_conversion": "mass_kg=volume_mm3*rho_kg_m3*1e-9; I_kg_m2=I_mm5*rho_kg_m3*1e-15. For manufacturer mass use I=I_mm5*(mass_kg/volume_mm3)*1e-6.",
+    "aggregation": "Rotate each COM tensor into link frame; link COM=sum(m*c)/sum(m); sum rotated COM tensors plus m*((d dot d)*identity-outer(d,d)) with d from each part COM to combined COM.",
+    "URDF": "Inertial origin at link-frame COM; inertia tensor about that COM, expressed in inertial-frame orientation. If origin rpy=0, store tensor in link axes including off-diagonals.",
+    "checks": [
+      "Every moving physical link has positive mass",
+      "Symmetric positive-definite inertia",
+      "Principal moments obey triangle inequalities within tolerance",
+      "Total mass and global COM conserve across rigid assignments",
+      "Total inertia conserves under fixed-part regrouping",
+      "CAD mm to m scaling applied once",
+      "Avoid duplicate solids from coincident component instances",
+      "Audit meshes only for collision/visuals, not mass replacement"
+    ]
+  },
+  "gripper": {
+    "baseline_warning": "Old reference indices are not valid for this STEP. Current loops44/45, J7 motor base46, J6 shaft47/48, jaws42/43. Reassign by names and rigid kinematics.",
+    "model_choice": "Ideal symmetric two-slider mechanism is acceptable for visual/IK and approximate collision. For physics its jaw travel, motor-to-gap function and effort transmission must be independently defined. Retain mass of omitted drive links; lump into wrist only with stated q-dependent inertia approximation.",
+    "effort_mapping": "Let g(q) be total gap vs motor-output angle. For symmetric fingers with equal opposing contact force F per jaw, virtual work gives tau=F*dg/dq. Thus F=tau/(dg/dq), subject to efficiency, friction and singularity handling. If using one-jaw coordinate x=g/2, generalized force conjugate to x is2F. Do not copy Nm motor torque into a prismatic N effort field.",
+    "calibration": "Two encoder endpoints do not establish intermediate linkage Jacobian; derive closure geometry or sample measured motor-angle vs gap. Existing104.825mm maximum gap and old endpoint calibration are not proof for this STEP.",
+    "collision": "Keep actual loops if physical; omit visual-only pieces only with documented confirmation. Closed-jaw and slider contacts must be distinguished from invalid self-penetration; avoid suppressing all adjacent-link collisions."
+  },
+  "validation_priorities": [
+    "Weigh full arm and link/jaw groups including camera and cables; reconcile CAD bill of mass.",
+    "Verify all seven motor housing ownerships and joint axes/signs; CAD pose is near calibrated zero, not exact.",
+    "Check gravity torque along representative reachable poses and worst horizontal reaches against conditional5Nm rated envelope; report exceedance rather than raising torque.",
+    "Implement joint soft limits from actual mechanism/cable envelope; inherited CAD limits are provisional until checked.",
+    "Perform collision sweeps using convex decompositions/primitives with preserved holes/gaps as needed; single convex hull of a U bracket fills empty space.",
+    "Check timestep/gain sensitivity and passive-energy behavior; quasi-static gravity hold should require predicted torques without unexplained drift.",
+    "Separate mathematical IK success from collision-free, within-limits and torque-feasible success.",
+    "Identify reflected inertia, friction/backlash, motor heating and gripper Jacobian before dynamic fidelity or hardware transfer claims."
+  ]
+}

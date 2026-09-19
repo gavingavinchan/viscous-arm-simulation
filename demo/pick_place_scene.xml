@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="viscous_arm_dry_cad_v1">
+  <compiler angle="radian" meshdir="../model/meshes" autolimits="true" inertiafromgeom="false" fusestatic="false" />
+  <option timestep=".001" gravity="0 0 -9.81" integrator="implicitfast" iterations="100" cone="elliptic" />
+  <size njmax="3000" nconmax="1000" />
+  <visual>
+    <global offwidth="1280" offheight="960" />
+    <headlight diffuse=".7 .7 .7" ambient=".3 .3 .3" />
+  </visual>
+  <default>
+    <joint damping="0" armature="0" />
+    <geom friction=".6 .005 .0001" solref=".005 1" solimp=".95 .99 .001" margin="0" />
+  </default>
+  <asset>
+    <mesh name="visual_000" file="part_000.stl" />
+    <mesh name="visual_001" file="part_001.stl" />
+    <mesh name="visual_002" file="part_002.stl" />
+    <mesh name="visual_014" file="part_014.stl" />
+    <mesh name="visual_015" file="part_015.stl" />
+    <mesh name="visual_016" file="part_016.stl" />
+    <mesh name="collision_000" file="collision_000.stl" />
+    <mesh name="collision_002" file="collision_002.stl" />
+    <mesh name="collision_014" file="collision_014.stl" />
+    <mesh name="collision_015" file="collision_015.stl" />
+    <mesh name="collision_016" file="collision_016.stl" />
+    <mesh name="visual_003" file="part_003.stl" />
+    <mesh name="visual_004" file="part_004.stl" />
+    <mesh name="visual_005" file="part_005.stl" />
+    <mesh name="visual_006" file="part_006.stl" />
+    <mesh name="visual_007" file="part_007.stl" />
+    <mesh name="visual_019" file="part_019.stl" />
+    <mesh name="collision_003" file="collision_003.stl" />
+    <mesh name="collision_004" file="collision_004.stl" />
+    <mesh name="collision_005" file="collision_005.stl" />
+    <mesh name="collision_006" file="collision_006.stl" />
+    <mesh name="collision_019" file="collision_019.stl" />
+    <mesh name="visual_008" file="part_008.stl" />
+    <mesh name="visual_009" file="part_009.stl" />
+    <mesh name="visual_010" file="part_010.stl" />
+    <mesh name="visual_011" file="part_011.stl" />
+    <mesh name="visual_012" file="part_012.stl" />
+    <mesh name="visual_018" file="part_018.stl" />
+    <mesh name="collision_008" file="collision_008.stl" />
+    <mesh name="collision_009" file="collision_009.stl" />
+    <mesh name="collision_010" file="collision_010.stl" />
+    <mesh name="collision_011" file="collision_011.stl" />
+    <mesh name="collision_018" file="collision_018.stl" />
+    <mesh name="visual_013" file="part_013.stl" />
+    <mesh name="visual_017" file="part_017.stl" />
+    <mesh name="visual_058" file="part_058.stl" />
+    <mesh name="visual_060" file="part_060.stl" />
+    <mesh name="visual_061" file="part_061.stl" />
+    <mesh name="visual_062" file="part_062.stl" />
+    <mesh name="visual_063" file="part_063.stl" />
+    <mesh name="visual_064" file="part_064.stl" />
+    <mesh name="visual_065" file="part_065.stl" />
+    <mesh name="visual_066" file="part_066.stl" />
+    <mesh name="visual_067" file="part_067.stl" />
+    <mesh name="visual_068" file="part_068.stl" />
+    <mesh name="visual_069" file="part_069.stl" />
+    <mesh name="collision_013" file="collision_013.stl" />
+    <mesh name="collision_017" file="collision_017.stl" />
+    <mesh name="collision_058" file="collision_058.stl" />
+    <mesh name="collision_060" file="collision_060.stl" />
+    <mesh name="collision_061" file="collision_061.stl" />
+    <mesh name="collision_062" file="collision_062.stl" />
+    <mesh name="collision_063" file="collision_063.stl" />
+    <mesh name="collision_064" file="collision_064.stl" />
+    <mesh name="collision_065" file="collision_065.stl" />
+    <mesh name="collision_066" file="collision_066.stl" />
+    <mesh name="collision_067" file="collision_067.stl" />
+    <mesh name="collision_068" file="collision_068.stl" />
+    <mesh name="collision_069" file="collision_069.stl" />
+    <mesh name="visual_053" file="part_053.stl" />
+    <mesh name="visual_054" file="part_054.stl" />
+    <mesh name="visual_055" file="part_055.stl" />
+    <mesh name="visual_056" file="part_056.stl" />
+    <mesh name="visual_057" file="part_057.stl" />
+    <mesh name="collision_053" file="collision_053.stl" />
+    <mesh name="collision_054" file="collision_054.stl" />
+    <mesh name="collision_055" file="collision_055.stl" />
+    <mesh name="collision_056" file="collision_056.stl" />
+    <mesh name="collision_057" file="collision_057.stl" />
+    <mesh name="visual_049" file="part_049.stl" />
+    <mesh name="visual_050" file="part_050.stl" />
+    <mesh name="visual_051" file="part_051.stl" />
+    <mesh name="visual_052" file="part_052.stl" />
+    <mesh name="visual_059" file="part_059.stl" />
+    <mesh name="collision_049" file="collision_049.stl" />
+    <mesh name="collision_050" file="collision_050.stl" />
+    <mesh name="collision_051" file="collision_051.stl" />
+    <mesh name="collision_052" file="collision_052.stl" />
+    <mesh name="collision_059" file="collision_059.stl" />
+    <mesh name="visual_020" file="part_020.stl" />
+    <mesh name="visual_024" file="part_024.stl" />
+    <mesh name="visual_025" file="part_025.stl" />
+    <mesh name="visual_046" file="part_046.stl" />
+    <mesh name="visual_047" file="part_047.stl" />
+    <mesh name="visual_048" file="part_048.stl" />
+    <mesh name="visual_070" file="part_070.stl" />
+    <mesh name="visual_071" file="part_071.stl" />
+    <mesh name="collision_020" file="collision_020.stl" />
+    <mesh name="collision_024" file="collision_024.stl" />
+    <mesh name="collision_046" file="collision_046.stl" />
+    <mesh name="collision_047" file="collision_047.stl" />
+    <mesh name="collision_048" file="collision_048.stl" />
+    <mesh name="collision_070" file="collision_070.stl" />
+    <mesh name="collision_071" file="collision_071.stl" />
+    <mesh name="visual_029" file="part_029.stl" />
+    <mesh name="visual_030" file="part_030.stl" />
+    <mesh name="visual_031" file="part_031.stl" />
+    <mesh name="visual_032" file="part_032.stl" />
+    <mesh name="visual_041" file="part_041.stl" />
+    <mesh name="visual_043" file="part_043.stl" />
+    <mesh name="collision_032" file="collision_032.stl" />
+    <mesh name="collision_043" file="collision_043.stl" />
+    <mesh name="visual_036" file="part_036.stl" />
+    <mesh name="visual_037" file="part_037.stl" />
+    <mesh name="visual_038" file="part_038.stl" />
+    <mesh name="visual_039" file="part_039.stl" />
+    <mesh name="visual_042" file="part_042.stl" />
+    <mesh name="collision_039" file="collision_039.stl" />
+    <mesh name="collision_042" file="collision_042.stl" />
+  </asset>
+  <worldbody>
+    <light pos="1 -1 2" dir="-1 1 -2" directional="true" />
+    <geom name="floor" type="plane" size="2 2 .01" rgba=".08 .11 .15 1" contype="1" conaffinity="1" />
+    <body name="base_link" pos="0 0 0">
+      <inertial mass="0.6018924308934476" pos="-6.40108732742e-08 1.12100775023e-07 0.0243335290091" fullinertia="0.000774376502184 0.000416854227173 0.000712043680835 -1.38189620676e-08 1.19828224046e-09 2.4491968301e-09" />
+      <geom name="visual_000" type="mesh" mesh="visual_000" rgba="0.12 0.15 0.18 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="visual_001" type="mesh" mesh="visual_001" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="visual_002" type="mesh" mesh="visual_002" rgba="0.2 0.24 0.28 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="visual_014" type="mesh" mesh="visual_014" rgba="0.2 0.24 0.28 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="visual_015" type="mesh" mesh="visual_015" rgba="0.2 0.24 0.28 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="visual_016" type="mesh" mesh="visual_016" rgba="0.2 0.24 0.28 1" contype="0" conaffinity="0" group="2" density="0" />
+      <geom name="collision_000" type="mesh" mesh="collision_000" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+      <geom name="collision_002" type="mesh" mesh="collision_002" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+      <geom name="collision_014" type="mesh" mesh="collision_014" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+      <geom name="collision_015" type="mesh" mesh="collision_015" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+      <geom name="collision_016" type="mesh" mesh="collision_016" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+      <body name="yaw_link" pos="0 0 0.0574">
+        <inertial mass="0.44987058778450106" pos="-0.000128336200716 -0.00118505903902 0.0458240424225" fullinertia="0.00032796560427 0.000278232746431 0.000232044290727 6.80145683342e-08 -1.37248630227e-06 3.80261037427e-06" />
+        <joint name="shoulder_pan" type="hinge" axis="0 0 -1" range="-3.235 2.227" />
+        <geom name="visual_003" type="mesh" mesh="visual_003" rgba="0.7 0.74 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="visual_004" type="mesh" mesh="visual_004" rgba="0.7 0.74 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="visual_005" type="mesh" mesh="visual_005" rgba="0.7 0.74 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="visual_006" type="mesh" mesh="visual_006" rgba="0.7 0.74 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="visual_007" type="mesh" mesh="visual_007" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="visual_019" type="mesh" mesh="visual_019" rgba="0.12 0.15 0.18 1" contype="0" conaffinity="0" group="2" density="0" />
+        <geom name="collision_003" type="mesh" mesh="collision_003" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+        <geom name="collision_004" type="mesh" mesh="collision_004" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+        <geom name="collision_005" type="mesh" mesh="collision_005" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+        <geom name="collision_006" type="mesh" mesh="collision_006" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+        <geom name="collision_019" type="mesh" mesh="collision_019" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+        <body name="upper_arm_link" pos="9.11502411714e-10 0 0.0536">
+          <inertial mass="0.48659359287584225" pos="-0.129741790446 -0.000566773753215 -7.81405439297e-08" fullinertia="0.000344506255212 0.00168790946116 0.00184151527413 -4.7898150481e-05 -1.51515204264e-07 9.41442218691e-10" />
+          <joint name="shoulder_lift" type="hinge" axis="0 -1 0" range="-3.078 0" />
+          <geom name="visual_008" type="mesh" mesh="visual_008" rgba="0.69 0.74 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="visual_009" type="mesh" mesh="visual_009" rgba="0.69 0.74 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="visual_010" type="mesh" mesh="visual_010" rgba="0.69 0.74 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="visual_011" type="mesh" mesh="visual_011" rgba="0.69 0.74 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="visual_012" type="mesh" mesh="visual_012" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="visual_018" type="mesh" mesh="visual_018" rgba="0.12 0.15 0.18 1" contype="0" conaffinity="0" group="2" density="0" />
+          <geom name="collision_008" type="mesh" mesh="collision_008" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+          <geom name="collision_009" type="mesh" mesh="collision_009" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+          <geom name="collision_010" type="mesh" mesh="collision_010" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+          <geom name="collision_011" type="mesh" mesh="collision_011" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+          <geom name="collision_018" type="mesh" mesh="collision_018" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+          <body name="forearm_link" pos="-0.159999998467 0 1.41153442712e-09">
+            <inertial mass="0.5232968101977042" pos="0.103351869044 7.69670170489e-05 0.0526505055156" fullinertia="0.000498589907182 0.00173137825684 0.0017482479131 3.72447943969e-05 -0.000315553372162 1.62160859004e-05" />
+            <joint name="elbow_flex" type="hinge" axis="0 -1 0" range="0 4.383" />
+            <geom name="visual_013" type="mesh" mesh="visual_013" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_017" type="mesh" mesh="visual_017" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_058" type="mesh" mesh="visual_058" rgba="0.12 0.15 0.18 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_060" type="mesh" mesh="visual_060" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_061" type="mesh" mesh="visual_061" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_062" type="mesh" mesh="visual_062" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_063" type="mesh" mesh="visual_063" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_064" type="mesh" mesh="visual_064" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_065" type="mesh" mesh="visual_065" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_066" type="mesh" mesh="visual_066" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_067" type="mesh" mesh="visual_067" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_068" type="mesh" mesh="visual_068" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="visual_069" type="mesh" mesh="visual_069" rgba="0.67 0.73 0.77 1" contype="0" conaffinity="0" group="2" density="0" />
+            <geom name="collision_013" type="mesh" mesh="collision_013" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_017" type="mesh" mesh="collision_017" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_058" type="mesh" mesh="collision_058" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_060" type="mesh" mesh="collision_060" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_061" type="mesh" mesh="collision_061" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_062" type="mesh" mesh="collision_062" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_063" type="mesh" mesh="collision_063" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_064" type="mesh" mesh="collision_064" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_065" type="mesh" mesh="collision_065" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_066" type="mesh" mesh="collision_066" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_067" type="mesh" mesh="collision_067" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_068" type="mesh" mesh="collision_068" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <geom name="collision_069" type="mesh" mesh="collision_069" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+            <body name="wrist_pitch_link" pos="0.137999995803 0 0.058787756528">
+              <inertial mass="0.40498556423175097" pos="0.0736904003854 9.43699018543e-08 0.0507139642881" fullinertia="0.000317020106609 0.000478693120364 0.000441394493776 -1.27236376116e-08 -0.000145472110861 1.01257343307e-08" />
+              <joint name="wrist_flex" type="hinge" axis="0 -1 0" range="-2.109 1.606" />
+              <geom name="visual_053" type="mesh" mesh="visual_053" rgba="0.12 0.15 0.18 1" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="visual_054" type="mesh" mesh="visual_054" rgba="0.66 0.72 0.76 1" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="visual_055" type="mesh" mesh="visual_055" rgba="0.66 0.72 0.76 1" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="visual_056" type="mesh" mesh="visual_056" rgba="0.66 0.72 0.76 1" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="visual_057" type="mesh" mesh="visual_057" rgba="0.66 0.72 0.76 1" contype="0" conaffinity="0" group="2" density="0" />
+              <geom name="collision_053" type="mesh" mesh="collision_053" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+              <geom name="collision_054" type="mesh" mesh="collision_054" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+              <geom name="collision_055" type="mesh" mesh="collision_055" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+              <geom name="collision_056" type="mesh" mesh="collision_056" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+              <geom name="collision_057" type="mesh" mesh="collision_057" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+              <body name="wrist_yaw_link" pos="0.0803686907164 -3.01501062855e-15 0.0331094178828">
+                <inertial mass="0.3975882203465001" pos="-0.000774742464369 3.57321818496e-05 -0.0418115559197" fullinertia="0.000215433375245 0.000242402985729 0.00019362994161 -4.73600586491e-07 -2.00359479786e-05 -1.72208651652e-07" />
+                <joint name="wrist_yaw" type="hinge" axis="-0.160775313598 2.88046501262e-14 -0.986991032653" range="-1.556 1.505" />
+                <geom name="visual_049" type="mesh" mesh="visual_049" rgba="0.12 0.15 0.18 1" contype="0" conaffinity="0" group="2" density="0" />
+                <geom name="visual_050" type="mesh" mesh="visual_050" rgba="0.65 0.7 0.74 1" contype="0" conaffinity="0" group="2" density="0" />
+                <geom name="visual_051" type="mesh" mesh="visual_051" rgba="0.65 0.7 0.74 1" contype="0" conaffinity="0" group="2" density="0" />
+                <geom name="visual_052" type="mesh" mesh="visual_052" rgba="0.65 0.7 0.74 1" contype="0" conaffinity="0" group="2" density="0" />
+                <geom name="visual_059" type="mesh" mesh="visual_059" rgba="0.65 0.7 0.74 1" contype="0" conaffinity="0" group="2" density="0" />
+                <geom name="collision_049" type="mesh" mesh="collision_049" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                <geom name="collision_050" type="mesh" mesh="collision_050" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                <geom name="collision_051" type="mesh" mesh="collision_051" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                <geom name="collision_052" type="mesh" mesh="collision_052" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                <geom name="collision_059" type="mesh" mesh="collision_059" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                <body name="wrist_roll_link" pos="0.0315560923865 1.99672587609e-15 -0.0513413384447">
+                  <inertial mass="0.5645111321125538" pos="0.038150954236 -8.22234169406e-05 -0.00107589223743" fullinertia="0.000599711133899 0.000646815548227 0.000607615117469 1.18052890445e-06 3.62563392753e-05 -4.7804342683e-06" />
+                  <joint name="wrist_roll" type="hinge" axis="-0.986991032653 -3.07367803248e-15 0.160775313598" range="-2.641 2.68" />
+                  <geom name="visual_020" type="mesh" mesh="visual_020" rgba="0.12 0.15 0.18 1" contype="0" conaffinity="0" group="2" density="0" />
+                  <geom name="visual_024" type="mesh" mesh="visual_024" rgba="0.65 0.71 0.76 1" contype="0" conaffinity="0" group="2" density="0" />
+                  <geom name="visual_025" type="mesh" mesh="visual_025" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+                  <geom name="visual_046" type="mesh" mesh="visual_046" rgba="0.65 0.71 0.76 1" contype="0" conaffinity="0" group="2" density="0" />
+                  <geom name="visual_047" type="mesh" mesh="visual_047" rgba="0.65 0.71 0.76 1" contype="0" conaffinity="0" group="2" density="0" />
+                  <geom name="visual_048" type="mesh" mesh="visual_048" rgba="0.65 0.71 0.76 1" contype="0" conaffinity="0" group="2" density="0" />
+                  <geom name="visual_070" type="mesh" mesh="visual_070" rgba="0.65 0.71 0.76 1" contype="0" conaffinity="0" group="2" density="0" />
+                  <geom name="visual_071" type="mesh" mesh="visual_071" rgba="0.1 0.13 0.16 1" contype="0" conaffinity="0" group="2" density="0" />
+                  <geom name="collision_020" type="mesh" mesh="collision_020" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                  <geom name="collision_024" type="mesh" mesh="collision_024" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                  <geom name="collision_046" type="mesh" mesh="collision_046" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                  <geom name="collision_047" type="mesh" mesh="collision_047" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                  <geom name="collision_048" type="mesh" mesh="collision_048" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                  <geom name="collision_070" type="mesh" mesh="collision_070" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                  <geom name="collision_071" type="mesh" mesh="collision_071" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                  <body name="gripper_left" pos="0 0 0">
+                    <inertial mass="0.04069358132644238" pos="0.0892684585178 0.0160110042169 -0.0167195694783" fullinertia="5.3014351803e-06 1.59896590211e-05 1.44901436764e-05 2.14725551376e-06 4.03841338943e-07 -2.28246078983e-07" />
+                    <joint name="gripper_left_joint" type="slide" axis="0 1 0" range="0 0.0524125" />
+                    <geom name="visual_029" type="mesh" mesh="visual_029" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="visual_030" type="mesh" mesh="visual_030" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="visual_031" type="mesh" mesh="visual_031" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="visual_032" type="mesh" mesh="visual_032" rgba="0.16 0.2 0.23 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="visual_041" type="mesh" mesh="visual_041" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="visual_043" type="mesh" mesh="visual_043" rgba="0.16 0.2 0.23 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="collision_032" type="mesh" mesh="collision_032" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                    <geom name="collision_043" type="mesh" mesh="collision_043" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                  </body>
+                  <body name="gripper_right" pos="0 0 0">
+                    <inertial mass="0.03881005908593668" pos="0.0905860360995 -0.0159444649491 -0.0132522005216" fullinertia="5.45794507381e-06 1.51147921446e-05 1.34435047414e-05 -2.07374426577e-06 2.03143316018e-06 4.21700053103e-07" />
+                    <joint name="gripper_right_joint" type="slide" axis="0 -1 0" range="0 0.0524125" />
+                    <geom name="visual_036" type="mesh" mesh="visual_036" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="visual_037" type="mesh" mesh="visual_037" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="visual_038" type="mesh" mesh="visual_038" rgba="0.38 0.42 0.45 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="visual_039" type="mesh" mesh="visual_039" rgba="0.16 0.2 0.23 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="visual_042" type="mesh" mesh="visual_042" rgba="0.16 0.2 0.23 1" contype="0" conaffinity="0" group="2" density="0" />
+                    <geom name="collision_039" type="mesh" mesh="collision_039" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                    <geom name="collision_042" type="mesh" mesh="collision_042" rgba="1 .4 .05 .2" contype="1" conaffinity="1" group="3" density="0" />
+                  </body>
+                  <body name="tool0" pos="0.132424713453 -7.42851199996e-12 -0.0215712455172" quat="0.458046036552 0.538696415803 0.538696415803 0.458046036552">
+                    <site name="tool_center" size=".004" rgba="0.1 0.8 0.8 1" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <light name="fill" pos="-.5 -1 1" dir=".5 1 -1" diffuse=".55 .6 .7" />
+    <geom name="pickup_platform" type="box" pos="0.17 0.04 0.0125" size="0.045 0.038 0.0125" rgba=".22 .29 .36 1" friction=".8 .005 .0001" />
+    <body name="cube" pos="0.17 0.04 0.0351">
+      <freejoint name="cube_free" />
+      <inertial pos="0 0 0" mass=".01" diaginertia="6.666666667e-7 6.666666667e-7 6.666666667e-7" />
+      <geom name="cube_geom" type="box" size=".01 .01 .01" mass=".01" rgba="1 .32 .075 1" friction=".8 .01 .001" condim="4" solref=".004 1" solimp=".95 .99 .001" />
+    </body>
+    <body name="cup" pos="0.12 -0.12 0.0">
+      <geom name="cup_bottom" type="cylinder" pos="0 0 .003" size=".041 .003" rgba=".14 .58 .63 1" />
+      <geom name="cup_wall_0" type="box" pos="0.038 0.0 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 0.0" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_1" type="box" pos="0.03726984065532275 0.007413432236612874 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 0.19634954084936207" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_2" type="box" pos="0.0351074222354289 0.01454197042987341 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 0.39269908169872414" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_3" type="box" pos="0.03159584526749672 0.021111668854744883 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 0.5890486225480862" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_4" type="box" pos="0.026870057685088808 0.026870057685088804 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 0.7853981633974483" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_5" type="box" pos="0.021111668854744886 0.03159584526749672 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 0.9817477042468103" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_6" type="box" pos="0.014541970429873414 0.0351074222354289 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 1.1780972450961724" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_7" type="box" pos="0.007413432236612876 0.03726984065532275 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 1.3744467859455345" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_8" type="box" pos="2.326828918379971e-18 0.038 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 1.5707963267948966" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_9" type="box" pos="-0.007413432236612871 0.03726984065532275 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 1.7671458676442586" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_10" type="box" pos="-0.014541970429873409 0.0351074222354289 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 1.9634954084936207" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_11" type="box" pos="-0.021111668854744872 0.031595845267496724 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 2.1598449493429825" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_12" type="box" pos="-0.026870057685088804 0.026870057685088808 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 2.356194490192345" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_13" type="box" pos="-0.031595845267496724 0.021111668854744883 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 2.552544031041707" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_14" type="box" pos="-0.0351074222354289 0.014541970429873416 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 2.748893571891069" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_15" type="box" pos="-0.03726984065532275 0.007413432236612887 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 2.945243112740431" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_16" type="box" pos="-0.038 4.653657836759942e-18 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 3.141592653589793" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_17" type="box" pos="-0.03726984065532275 -0.007413432236612877 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 3.3379421944391554" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_18" type="box" pos="-0.0351074222354289 -0.014541970429873407 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 3.5342917352885173" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_19" type="box" pos="-0.031595845267496724 -0.021111668854744872 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 3.730641276137879" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_20" type="box" pos="-0.02687005768508881 -0.026870057685088804 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 3.9269908169872414" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_21" type="box" pos="-0.021111668854744883 -0.03159584526749672 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 4.123340357836604" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_22" type="box" pos="-0.014541970429873433 -0.035107422235428884 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 4.319689898685965" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_23" type="box" pos="-0.007413432236612889 -0.03726984065532275 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 4.516039439535327" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_24" type="box" pos="-6.980486755139913e-18 -0.038 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 4.71238898038469" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_25" type="box" pos="0.007413432236612875 -0.03726984065532275 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 4.908738521234052" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_26" type="box" pos="0.01454197042987342 -0.03510742223542889 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 5.105088062083414" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_27" type="box" pos="0.02111166885474487 -0.031595845267496724 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 5.301437602932776" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_28" type="box" pos="0.026870057685088797 -0.02687005768508881 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 5.497787143782138" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_29" type="box" pos="0.03159584526749672 -0.021111668854744883 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 5.6941366846315" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_30" type="box" pos="0.035107422235428884 -0.014541970429873435 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 5.890486225480862" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+      <geom name="cup_wall_31" type="box" pos="0.03726984065532275 -0.007413432236612891 0.025" size="0.0035 0.0041 0.025" euler="0.0 0.0 6.086835766330224" rgba=".18 .66 .70 .85" friction=".6 .005 .0001" />
+    </body>
+  </worldbody>
+  <contact>
+    <exclude body1="base_link" body2="yaw_link" />
+    <exclude body1="yaw_link" body2="upper_arm_link" />
+    <exclude body1="upper_arm_link" body2="forearm_link" />
+    <exclude body1="forearm_link" body2="wrist_pitch_link" />
+    <exclude body1="wrist_pitch_link" body2="wrist_yaw_link" />
+    <exclude body1="wrist_yaw_link" body2="wrist_roll_link" />
+    <exclude body1="wrist_roll_link" body2="gripper_left" />
+    <exclude body1="wrist_roll_link" body2="gripper_right" />
+  </contact>
+  <equality>
+    <joint name="symmetric_gripper" joint1="gripper_right_joint" joint2="gripper_left_joint" polycoef="0 1 0 0 0" solref=".002 1" />
+  </equality>
+  <actuator>
+    <position name="shoulder_pan_drive" joint="shoulder_pan" kp="90.0" kv="5.0" forcelimited="true" forcerange="-5 5" />
+    <position name="shoulder_lift_drive" joint="shoulder_lift" kp="90.0" kv="5.0" forcelimited="true" forcerange="-5 5" />
+    <position name="elbow_flex_drive" joint="elbow_flex" kp="70.0" kv="3.0" forcelimited="true" forcerange="-5 5" />
+    <position name="wrist_flex_drive" joint="wrist_flex" kp="35.0" kv="1.5" forcelimited="true" forcerange="-5 5" />
+    <position name="wrist_yaw_drive" joint="wrist_yaw" kp="20.0" kv="0.7" forcelimited="true" forcerange="-5 5" />
+    <position name="wrist_roll_drive" joint="wrist_roll" kp="15.0" kv="0.5" forcelimited="true" forcerange="-5 5" />
+    <position name="gripper_left_joint_drive" joint="gripper_left_joint" kp="3000.0" kv="12.0" forcelimited="true" forcerange="-10 10" />
+  </actuator>
+</mujoco>

@@ -1,0 +1,117 @@
+{
+  "pass": true,
+  "review_scope": "Independent source/model inspection and recomputed MuJoCo forward/contact checks of all saved 0.1-second state samples; not a full independent simulation replay or visual video review.",
+  "state_samples": 214,
+  "last_sample_time_s": 21.30000000000305,
+  "cube_freejoint": true,
+  "equality_names": [
+    "symmetric_gripper"
+  ],
+  "mocap_body_count": 0,
+  "source_qpos_writes": [
+    {
+      "line": 64,
+      "target": "d.qpos[:6]"
+    },
+    {
+      "line": 64,
+      "target": "d.qpos[6:8]"
+    }
+  ],
+  "arm_actuator_forceranges_Nm": [
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ]
+  ],
+  "gripper_actuator_forcerange_N": [
+    -10.0,
+    10.0
+  ],
+  "all_actuators_force_limited": true,
+  "sampled_max_arm_speed_rad_s": 0.522521268354658,
+  "sampled_max_joint_limit_excursion": 0.0,
+  "reported_max_arm_force_Nm": 3.724991920455011,
+  "sampled_max_cube_center_height_m": 0.07250735859366862,
+  "lifted_bilateral_samples": 83,
+  "first_lifted_bilateral_sample": {
+    "time_s": 7.000000000000672,
+    "cube_xyz": [
+      0.1699100489638892,
+      0.039958981615732574,
+      0.05139669289741807
+    ],
+    "cube_center_in_tool_frame_m": [
+      -2.5184589665996188e-05,
+      -2.2397350482286272e-05,
+      0.02719172176314293
+    ],
+    "contacts": [
+      "collision_042",
+      "collision_043"
+    ]
+  },
+  "last_lifted_bilateral_sample": {
+    "time_s": 15.199999999997015,
+    "cube_xyz": [
+      0.12007233691481478,
+      -0.11997008458044929,
+      0.06147124862952675
+    ],
+    "cube_center_in_tool_frame_m": [
+      -3.2531385112574564e-06,
+      0.00010567712340525888,
+      0.028472885330239072
+    ],
+    "contacts": [
+      "collision_042",
+      "collision_043"
+    ]
+  },
+  "sampled_unexpected_penetrations_over_0_5mm": [],
+  "final_sample_cube_contacts": [
+    "cup_bottom"
+  ],
+  "final_sample_cube_xyz": [
+    0.12006402453163212,
+    -0.11979956619234275,
+    0.015997303368261925
+  ],
+  "final_sample_cube_speed_m_s": 1.325256663991645e-15,
+  "final_sample_cube_angular_speed_rad_s": 1.0192691368940329e-07,
+  "cube_corner_min_radial_wall_clearance_m": 0.020170864424565144,
+  "cube_corner_min_z_m": 0.005997303368261903,
+  "cube_corner_max_z_m": 0.025997303368261948,
+  "cup_floor_top_z_m": 0.006,
+  "cup_rim_z_m": 0.05,
+  "floor_numerical_penetration_m": 2.6966317380975463e-06,
+  "report_warning_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

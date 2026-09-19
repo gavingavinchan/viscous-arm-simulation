@@ -1,0 +1,244 @@
+{
+  "success": true,
+  "final_cube_speed_m_s": 1.7089789312177153e-15,
+  "final_cube_angular_speed_rad_s": 5.716550450768419e-09,
+  "max_arm_speed_rad_s": 0.5227860058593693,
+  "max_joint_limit_excursion": 0.0,
+  "carried_bilateral_contact_steps": 8276,
+  "cube_side_m": 0.02,
+  "cube_mass_kg": 0.01,
+  "cube_final_xyz": [
+    0.12006402453163212,
+    -0.11979956619234275,
+    0.015997303368261925
+  ],
+  "inside_cup": true,
+  "max_cube_height_m": 0.07250921617056887,
+  "bilateral_contact_steps": 10040,
+  "max_arm_command_Nm": 3.724991920455011,
+  "max_arm_tracking_error_rad": 0.0006374214607466344,
+  "unexpected_contacts": {},
+  "warning_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "duration_seconds": 21.400000000000002,
+  "rendered": true,
+  "stage_end_states": {
+    "Ready": {
+      "time": 0.9,
+      "stage": "Ready",
+      "cube_xyz": [
+        0.17,
+        0.04,
+        0.03499730336831775
+      ],
+      "tool_xyz": [
+        0.17000000000002788,
+        0.0400000000000081,
+        0.1000000000006572
+      ],
+      "jaw_q": [
+        0.019999999999990088,
+        0.02000000000012548
+      ],
+      "cube_contacts": [
+        "pickup_platform"
+      ],
+      "joint_error": 1.3553449962002287e-14
+    },
+    "Approach cube": {
+      "time": 4.0,
+      "stage": "Approach cube",
+      "cube_xyz": [
+        0.17,
+        0.04,
+        0.034997303368313366
+      ],
+      "tool_xyz": [
+        0.16999542510812174,
+        0.03999893924964508,
+        0.06199486345781455
+      ],
+      "jaw_q": [
+        0.019999999995970526,
+        0.0199999998751931
+      ],
+      "cube_contacts": [
+        "pickup_platform"
+      ],
+      "joint_error": 1.594600516896527e-05
+    },
+    "Close fingers": {
+      "time": 5.5,
+      "stage": "Close fingers",
+      "cube_xyz": [
+        0.1700001347703514,
+        0.03999316032813114,
+        0.03499732222335772
+      ],
+      "tool_xyz": [
+        0.17000011019341027,
+        0.040015735344741114,
+        0.06200043223922866
+      ],
+      "jaw_q": [
+        0.009786960877139164,
+        0.009836129871453693
+      ],
+      "cube_contacts": [
+        "collision_042",
+        "collision_043",
+        "pickup_platform"
+      ],
+      "joint_error": 7.272310817200995e-05
+    },
+    "Lift cube": {
+      "time": 8.5,
+      "stage": "Lift cube",
+      "cube_xyz": [
+        0.1699829183813514,
+        0.039968062752913654,
+        0.07250720838990594
+      ],
+      "tool_xyz": [
+        0.1699789764116882,
+        0.03999502661879512,
+        0.0999425462283407
+      ],
+      "jaw_q": [
+        0.00978525160229648,
+        0.009835410281037602
+      ],
+      "cube_contacts": [
+        "collision_042",
+        "collision_043"
+      ],
+      "joint_error": 0.00015811356104156182
+    },
+    "Transfer to cup": {
+      "time": 12.6,
+      "stage": "Transfer to cup",
+      "cube_xyz": [
+        0.12007234616745069,
+        -0.12000468836096112,
+        0.07187677818751396
+      ],
+      "tool_xyz": [
+        0.11997472479812255,
+        -0.11998641882167926,
+        0.09994376470840693
+      ],
+      "jaw_q": [
+        0.00978524452990073,
+        0.009835419614018112
+      ],
+      "cube_contacts": [
+        "collision_042",
+        "collision_043"
+      ],
+      "joint_error": 0.0002030166153266233
+    },
+    "Lower above cup": {
+      "time": 14.8,
+      "stage": "Lower above cup",
+      "cube_xyz": [
+        0.1200703325857296,
+        -0.11998992713739931,
+        0.06153116446432772
+      ],
+      "tool_xyz": [
+        0.11997245719947319,
+        -0.11997257717903455,
+        0.08994126414111772
+      ],
+      "jaw_q": [
+        0.009785244260895344,
+        0.009835419581260503
+      ],
+      "cube_contacts": [
+        "collision_042",
+        "collision_043"
+      ],
+      "joint_error": 0.00019516314467038498
+    },
+    "Release cube": {
+      "time": 16.6,
+      "stage": "Release cube",
+      "cube_xyz": [
+        0.12006402453163212,
+        -0.11979956619234275,
+        0.015997303368261925
+      ],
+      "tool_xyz": [
+        0.1199999960338084,
+        -0.11999998440022443,
+        0.0899999987620132
+      ],
+      "jaw_q": [
+        0.02399998830377261,
+        0.02399998867358436
+      ],
+      "cube_contacts": [
+        "cup_bottom"
+      ],
+      "joint_error": 4.484917359715013e-08
+    },
+    "Retract": {
+      "time": 19.3,
+      "stage": "Retract",
+      "cube_xyz": [
+        0.12006402453163212,
+        -0.11979956619234275,
+        0.01599730336826193
+      ],
+      "tool_xyz": [
+        0.1200034031183693,
+        -0.12000324594762711,
+        0.10999709523101611
+      ],
+      "jaw_q": [
+        0.023999984294723303,
+        0.024000015758949642
+      ],
+      "cube_contacts": [
+        "cup_bottom"
+      ],
+      "joint_error": 2.6576806850808765e-05
+    },
+    "Cube in cup": {
+      "time": 21.3,
+      "stage": "Cube in cup",
+      "cube_xyz": [
+        0.12006402453163212,
+        -0.11979956619234275,
+        0.015997303368261925
+      ],
+      "tool_xyz": [
+        0.11000019276084541,
+        -0.07501389586422351,
+        0.110017645143408
+      ],
+      "jaw_q": [
+        0.0240000309624936,
+        0.0239999766276254
+      ],
+      "cube_contacts": [
+        "cup_bottom"
+      ],
+      "joint_error": 0.0001349888366819485
+    }
+  },
+  "assumptions": [
+    "Bounded position servos with model gravity feedforward for this demo.",
+    "Friction coefficient .8 for demo cube; contact forces resolve physically.",
+    "No weld, mocap parenting, cube position resets, or object teleporting.",
+    "Original arm torque limits +/-5 Nm, gripper generalized force +/-10 N.",
+    "Robot masses and calibration remain provisional."
+  ]
+}

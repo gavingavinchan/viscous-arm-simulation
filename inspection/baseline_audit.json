@@ -1,0 +1,666 @@
+{
+  "joints": [
+    {
+      "name": "link_002_joint",
+      "zero_base_pivot_m": [
+        0.0,
+        0.030799999,
+        0.0
+      ],
+      "zero_base_axis": [
+        0.0,
+        -1.0,
+        -2.7e-08
+      ],
+      "limit": {
+        "lower": "-2.8",
+        "upper": "2.8",
+        "effort": "10",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "link_003_joint",
+      "zero_base_pivot_m": [
+        0.0,
+        0.089099999,
+        2e-09
+      ],
+      "zero_base_axis": [
+        0.0,
+        -0.0,
+        -1.0
+      ],
+      "limit": {
+        "lower": "-3.14",
+        "upper": "0",
+        "effort": "10",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "link_004_joint",
+      "zero_base_pivot_m": [
+        0.19,
+        0.089099999,
+        2e-09
+      ],
+      "zero_base_axis": [
+        0.0,
+        -0.0,
+        -1.0
+      ],
+      "limit": {
+        "lower": "0",
+        "upper": "3.14",
+        "effort": "10",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "link_005_joint",
+      "zero_base_pivot_m": [
+        0.016,
+        0.165415135,
+        2e-09
+      ],
+      "zero_base_axis": [
+        0.0,
+        -0.0,
+        -1.0
+      ],
+      "limit": {
+        "lower": "-1.6",
+        "upper": "1.73",
+        "effort": "10",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "link_006_joint",
+      "zero_base_pivot_m": [
+        -0.068967787,
+        0.198107301,
+        2e-09
+      ],
+      "zero_base_axis": [
+        0.173648182,
+        -0.984807752,
+        2.7e-08
+      ],
+      "limit": {
+        "lower": "-1.57",
+        "upper": "1.57",
+        "effort": "10",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "link_007_joint",
+      "zero_base_pivot_m": [
+        -0.061061207,
+        0.151827165,
+        3e-09
+      ],
+      "zero_base_axis": [
+        0.984807757,
+        0.173648156,
+        0.0
+      ],
+      "limit": {
+        "lower": "-2.7",
+        "upper": "2.7",
+        "effort": "10",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "gripper_left_joint",
+      "zero_base_pivot_m": [
+        -0.061061207,
+        0.151827165,
+        3e-09
+      ],
+      "zero_base_axis": [
+        -1.3e-08,
+        9.9e-08,
+        1.0
+      ],
+      "limit": {
+        "lower": "0",
+        "upper": "0.0524125",
+        "effort": "20",
+        "velocity": "0.1"
+      }
+    },
+    {
+      "name": "gripper_right_joint",
+      "zero_base_pivot_m": [
+        -0.061061207,
+        0.151827165,
+        3e-09
+      ],
+      "zero_base_axis": [
+        1.3e-08,
+        -9.9e-08,
+        -1.0
+      ],
+      "limit": {
+        "lower": "0",
+        "upper": "0.0524125",
+        "effort": "20",
+        "velocity": "0.1"
+      }
+    },
+    {
+      "name": "grasp_center_joint",
+      "zero_base_pivot_m": [
+        -0.228122719,
+        0.122369714,
+        -1e-08
+      ],
+      "zero_base_axis": null,
+      "limit": null
+    }
+  ],
+  "links": [
+    {
+      "name": "base_link",
+      "mass_kg": 0.38,
+      "CAD_to_base_at_zero": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hidden_collisions": []
+    },
+    {
+      "name": "link_002",
+      "mass_kg": 0.55,
+      "CAD_to_base_at_zero": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hidden_collisions": []
+    },
+    {
+      "name": "link_003",
+      "mass_kg": 0.7,
+      "CAD_to_base_at_zero": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hidden_collisions": []
+    },
+    {
+      "name": "link_004",
+      "mass_kg": 0.6,
+      "CAD_to_base_at_zero": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hidden_collisions": []
+    },
+    {
+      "name": "link_005",
+      "mass_kg": 0.4,
+      "CAD_to_base_at_zero": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hidden_collisions": []
+    },
+    {
+      "name": "link_006",
+      "mass_kg": 0.35,
+      "CAD_to_base_at_zero": [
+        [
+          1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          -0.0257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1e-08
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hidden_collisions": []
+    },
+    {
+      "name": "link_007",
+      "mass_kg": 0.280479451602,
+      "CAD_to_base_at_zero": [
+        [
+          1.0,
+          2e-08,
+          -1e-08,
+          -0.0
+        ],
+        [
+          -2e-08,
+          1.0,
+          1e-07,
+          -0.02570001
+        ],
+        [
+          1e-08,
+          -1e-07,
+          1.0,
+          1e-08
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hidden_collisions": []
+    },
+    {
+      "name": "gripper_left",
+      "mass_kg": 0.0599060506559,
+      "CAD_to_base_at_zero": [
+        [
+          1.0,
+          2e-08,
+          -1e-08,
+          -0.0
+        ],
+        [
+          -2e-08,
+          1.0,
+          1e-07,
+          -0.02570001
+        ],
+        [
+          1e-08,
+          -1e-07,
+          1.0,
+          1e-08
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hidden_collisions": [
+        "meshes/part_047_solid_047.stl"
+      ]
+    },
+    {
+      "name": "gripper_right",
+      "mass_kg": 0.0596144977418,
+      "CAD_to_base_at_zero": [
+        [
+          1.0,
+          2e-08,
+          -1e-08,
+          -0.0
+        ],
+        [
+          -2e-08,
+          1.0,
+          1e-07,
+          -0.02570001
+        ],
+        [
+          1e-08,
+          -1e-07,
+          1.0,
+          1e-08
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hidden_collisions": [
+        "meshes/part_046_solid_046.stl"
+      ]
+    },
+    {
+      "name": "grasp_center",
+      "mass_kg": null,
+      "CAD_to_base_at_zero": null,
+      "hidden_collisions": []
+    }
+  ],
+  "mass_kg": 3.3799999999997,
+  "source": "reference/maker-urdf",
+  "inertia_sanity": [
+    {
+      "link": "base_link",
+      "principal_inertias_kg_m2": [
+        0.0003630774637438367,
+        0.0007386211251240426,
+        0.000806505061132121
+      ],
+      "positive_definite": true,
+      "triangle_inequality": true
+    },
+    {
+      "link": "link_002",
+      "principal_inertias_kg_m2": [
+        0.0004203863625735189,
+        0.0005291617356365344,
+        0.000630559541789947
+      ],
+      "positive_definite": true,
+      "triangle_inequality": true
+    },
+    {
+      "link": "link_003",
+      "principal_inertias_kg_m2": [
+        0.0005843997399716563,
+        0.0036663806652410826,
+        0.0037745666947872607
+      ],
+      "positive_definite": true,
+      "triangle_inequality": true
+    },
+    {
+      "link": "link_004",
+      "principal_inertias_kg_m2": [
+        0.0007416613178389658,
+        0.0031886263106260643,
+        0.0031981867415349697
+      ],
+      "positive_definite": true,
+      "triangle_inequality": true
+    },
+    {
+      "link": "link_005",
+      "principal_inertias_kg_m2": [
+        0.0003264770440700886,
+        0.0007041192148009636,
+        0.0008787785111289475
+      ],
+      "positive_definite": true,
+      "triangle_inequality": true
+    },
+    {
+      "link": "link_006",
+      "principal_inertias_kg_m2": [
+        0.00017145779639491336,
+        0.00020098389192790535,
+        0.00022228946167718118
+      ],
+      "positive_definite": true,
+      "triangle_inequality": true
+    },
+    {
+      "link": "link_007",
+      "principal_inertias_kg_m2": [
+        0.0002695196900682852,
+        0.000317310213509497,
+        0.0003220602952362179
+      ],
+      "positive_definite": true,
+      "triangle_inequality": true
+    },
+    {
+      "link": "gripper_left",
+      "principal_inertias_kg_m2": [
+        1.5889483596064608e-05,
+        3.588635439236336e-05,
+        4.661675423657199e-05
+      ],
+      "positive_definite": true,
+      "triangle_inequality": true
+    },
+    {
+      "link": "gripper_right",
+      "principal_inertias_kg_m2": [
+        1.6806912433087708e-05,
+        3.516339710458675e-05,
+        4.681240737362555e-05
+      ],
+      "positive_definite": true,
+      "triangle_inequality": true
+    }
+  ],
+  "findings": [
+    "Baseline represents six arm revolute DOFs and one independently driven gripper DOF with equal-travel opposed prismatic jaws. Seven motor actuators must not become seven serial arm joints.",
+    "All mesh vertices are assembly-coordinate millimetres. At q=0 every link visual has CAD-to-base transform identity rotation and [0,-0.0257,0] m translation. CAD +Y is up. Rotate complete assembly +90 degrees around X for conventional Z-up.",
+    "J2-J3 and J3-J4 baseline joint-center lengths are both 190 mm; J3-J4 is vector [-174,76.315136,0] mm because CAD zero is bent.",
+    "All arm effort=10 Nm, velocity=5 rad/s and angular limits are inherited unverified; do not use as RS00 specifications.",
+    "All masses/inertias are unverified designer estimates. Baseline total mass 3.38 kg; fixed wrist plus two jaws sums 0.4 kg. Jaw masses derived by partitioning uniform mesh density 1246.9258626 kg/m3, not measured material mass.",
+    "Hidden collision loop meshes 46 and 47 remain even though their visuals were removed. Internal drive meshes 23,24,25,28,29,30,35,36,37,42 omitted from visuals and collisions; their inertia remains lumped in link_007.",
+    "Gripper full gap = 2 * gripper_left_joint; range 0..104.825 mm gap and 0..52.4125 mm per-jaw travel. Mimic multiplier +1 is correct because jaw axes already oppose. Some simulators ignore URDF mimic.",
+    "J7 motor-to-gap preview mapping uses closed encoder +0.00671320668 rad and commanded-open -2.07898420691 rad. Full-open physical gap and intermediate nonlinearity are explicitly unverified. Do not equate J7 radians with the prismatic coordinate.",
+    "No armature, rotor reflected inertia, friction, damping, actuator dynamics or transmission model exists in baseline. No self-collision exclusions; triangle meshes are reused as collision meshes.",
+    "Baseline omits CAD part_003 with purpose and ownership unverified.",
+    "Reuse link_005 onward and joints link_006_joint/link_007_joint/gripper joints/grasp_center structurally if identical J4-J7 geometry is confirmed. Keep those meshes and local transforms together. Update J4 upstream origin using new CAD alignment, not only scalar link-length changes.",
+    "Build new proximal link inertia from new geometry and RS00 motor assignment; do not retain RS02-era link_002/link_003/link_004 physical parameters. Distal reused inertia remains provisional until weighed."
+  ],
+  "new_cad_ownership_review": {
+    "source": "inspection/parts.json",
+    "result": "Proposed ownership mechanically plausible from exact component names, axis locations, and centers; not a physical assembly validation.",
+    "groups": {
+      "base": [
+        0,
+        1,
+        2,
+        14,
+        15,
+        16
+      ],
+      "yaw": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        19
+      ],
+      "upper": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        18
+      ],
+      "forearm": [
+        13,
+        17,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "wristpitch": [
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "wristyaw": [
+        49,
+        50,
+        51,
+        52,
+        59
+      ],
+      "negative_z_jaw": [
+        29,
+        30,
+        31,
+        32,
+        41,
+        43,
+        45
+      ],
+      "positive_z_jaw": [
+        36,
+        37,
+        38,
+        39,
+        42,
+        44
+      ],
+      "internal_crank": [
+        21,
+        22,
+        23,
+        26,
+        27,
+        28,
+        33,
+        34,
+        35,
+        40
+      ]
+    },
+    "motor_ownership": "J1 motor0 in base, J2 motor19 in yaw, J3 motor18 in upper, J4 motor58 in forearm, J5 motor53 in wristpitch, J6 motor49 in wristyaw, J7 motor20 in wristroll.",
+    "axis_sign_review": "Proposed CAD J1 -X and J2..J4 +Z preserve prior convention under base pose change. Proposed J5 negative largest cylinder axis and J6 positive largest cylinder axis form proper rigid rotation mapping from baseline signed distal axes; that same rotation maps old J4 -Z to new +Z. Cylinder geometry cannot verify encoder polarity.",
+    "distal_axis_discrepancy": {
+      "description": "Transform aligning signed J4/J5/J6 axis directions and J4 location gives 4 mm residual to new CAD J5 axis, but near-zero residual to J6 axis. Could be old URDF axis error or real CAD change; new CAD axis line should take priority.",
+      "baseline_J5_pivot_transformed_to_new_CAD_mm": [
+        203.586512,
+        -62.5337,
+        0
+      ],
+      "distance_to_new_J5_axis_mm": 4.000000344,
+      "distance_to_new_J6_axis_mm": 3.93309794e-08
+    },
+    "camera": "Parts70/71 are waterproof camera mount and camera. Likely belong to wristroll with J7 housing; explicitly count these in new model mass and note no equivalent baseline parts."
+  }
+}

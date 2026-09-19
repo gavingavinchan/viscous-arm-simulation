@@ -1,0 +1,391 @@
+{
+  "schema": 2,
+  "review_date": "2026-09-18",
+  "revision": "final_no_loops_PLA372_absolute_mesh_0p08mm_angle0p25",
+  "scope": "Independent final mass/COM/central-inertia audit only; source CAD exact volume tensors, current materials, final URDF, compiled MJCF. Geometry/FK handled by separate final reviewer.",
+  "result": "PASS",
+  "errors": [],
+  "hashes_sha256": {
+    "model/viscous_arm.urdf": "8ac332cb14abb0527a7dee71732239bbb88183fe611185db92677dc2deb30168",
+    "model/viscous_arm.xml": "9eb24e1b721cc3b15c3b9745c7d041a2ccc40e7cc62bbd1d7a059bf31201b558",
+    "model/model_manifest.json": "379fbedcb507e09ed6c93acd2c130b06f5cfb3ef1245d17897c7816631bf6547",
+    "materials.json": "9eca49731af799034b48f7fd1ac2c40c1ac9a6d0fa05aeecd19440e0357652c6",
+    "inspection/parts.json": "f88a693988d8d449b824b505c836ac91a56a0714faa91e972bb84ad6f75d8458"
+  },
+  "included_solids": 70,
+  "excluded_solids": [
+    44,
+    45
+  ],
+  "removed_loop_references": {
+    "URDF": [],
+    "MJCF": []
+  },
+  "polymer_effective_density": {
+    "42": {
+      "density_kg_m3": 372,
+      "solid_density_kg_m3": 1240,
+      "effective_solid_fraction": 0.3,
+      "basis": "Gavin confirmed PLA+ and requested30%effective infill/perimeter allowance; nominal PLA+ density estimate, uniform distribution"
+    },
+    "43": {
+      "density_kg_m3": 372,
+      "solid_density_kg_m3": 1240,
+      "effective_solid_fraction": 0.3,
+      "basis": "Gavin confirmed PLA+ and requested30%effective infill/perimeter allowance; nominal PLA+ density estimate, uniform distribution"
+    },
+    "70": {
+      "density_kg_m3": 372,
+      "solid_density_kg_m3": 1240,
+      "effective_solid_fraction": 0.3,
+      "basis": "Gavin confirmed PLA+ and requested30%effective infill/perimeter allowance; nominal PLA+ density estimate, uniform distribution"
+    }
+  },
+  "mass_scaling": "m=V_mm3*rho_kg_m3*1e-9; I=I_mm5*(m/V_mm3)*1e-6; density372=1240*0.30 treated as uniform spatial distribution",
+  "links": [
+    {
+      "link": "base_link",
+      "part_ids": [
+        0,
+        1,
+        2,
+        14,
+        15,
+        16
+      ],
+      "expected_mass_kg": 0.6018924308934476,
+      "URDF_mass_kg": 0.6018924309,
+      "mass_error_kg": 6.552425269035211e-12,
+      "COM_world_error_m": 9.055325936560217e-13,
+      "inertia_max_error_kg_m2": 4.592680402648597e-16,
+      "principal_inertias_kg_m2": [
+        0.0004168542266185471,
+        0.0007120436808322899,
+        0.0007743765027411631
+      ],
+      "positive_definite": true,
+      "triangle_pass": true,
+      "pass": true
+    },
+    {
+      "link": "yaw_link",
+      "part_ids": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        19
+      ],
+      "expected_mass_kg": 0.44987058778450106,
+      "URDF_mass_kg": 0.4498705878,
+      "mass_error_kg": 1.549893546837211e-11,
+      "COM_world_error_m": 2.452292242182084e-12,
+      "inertia_max_error_kg_m2": 4.187188790139018e-16,
+      "principal_inertias_kg_m2": [
+        0.00023171372384620512,
+        0.0002785436754279811,
+        0.00032798524215381375
+      ],
+      "positive_definite": true,
+      "triangle_pass": true,
+      "pass": true
+    },
+    {
+      "link": "upper_arm_link",
+      "part_ids": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        18
+      ],
+      "expected_mass_kg": 0.48659359287584225,
+      "URDF_mass_kg": 0.4865935929,
+      "mass_error_kg": 2.41577313708774e-11,
+      "COM_world_error_m": 4.630793204370838e-11,
+      "inertia_max_error_kg_m2": 4.049928795102353e-15,
+      "principal_inertias_kg_m2": [
+        0.00034280062860482383,
+        0.001689615072211633,
+        0.001841515289685543
+      ],
+      "positive_definite": true,
+      "triangle_pass": true,
+      "pass": true
+    },
+    {
+      "link": "forearm_link",
+      "part_ids": [
+        13,
+        17,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "expected_mass_kg": 0.5232968101977042,
+      "URDF_mass_kg": 0.5232968102,
+      "mass_error_kg": 2.2957191703198987e-12,
+      "COM_world_error_m": 7.77904299601866e-11,
+      "inertia_max_error_kg_m2": 3.0494270303327298e-15,
+      "principal_inertias_kg_m2": [
+        0.0004222079887296375,
+        0.0017320414777626575,
+        0.0018239666106297044
+      ],
+      "positive_definite": true,
+      "triangle_pass": true,
+      "pass": true
+    },
+    {
+      "link": "wrist_pitch_link",
+      "part_ids": [
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "expected_mass_kg": 0.40498556423175097,
+      "URDF_mass_kg": 0.4049855642,
+      "mass_error_kg": 3.1750990725498696e-11,
+      "COM_world_error_m": 3.211774881339022e-11,
+      "inertia_max_error_kg_m2": 1.3639263329867646e-16,
+      "principal_inertias_kg_m2": [
+        0.00022100053006129168,
+        0.00047869311639234756,
+        0.0005374140742953609
+      ],
+      "positive_definite": true,
+      "triangle_pass": true,
+      "pass": true
+    },
+    {
+      "link": "wrist_yaw_link",
+      "part_ids": [
+        49,
+        50,
+        51,
+        52,
+        59
+      ],
+      "expected_mass_kg": 0.3975882203465001,
+      "URDF_mass_kg": 0.3975882203,
+      "mass_error_kg": 4.6500081563038975e-11,
+      "COM_world_error_m": 3.291053262447901e-11,
+      "inertia_max_error_kg_m2": 3.4783916198766196e-16,
+      "principal_inertias_kg_m2": [
+        0.00018171935918605576,
+        0.00022733469333954657,
+        0.00024241225005839774
+      ],
+      "positive_definite": true,
+      "triangle_pass": true,
+      "pass": true
+    },
+    {
+      "link": "wrist_roll_link",
+      "part_ids": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        33,
+        34,
+        35,
+        40,
+        46,
+        47,
+        48,
+        70,
+        71
+      ],
+      "expected_mass_kg": 0.5645111321125538,
+      "URDF_mass_kg": 0.5645111321,
+      "mass_error_kg": 1.2553735828646495e-11,
+      "COM_world_error_m": 2.5718130396562802e-11,
+      "inertia_max_error_kg_m2": 4.568827954853916e-16,
+      "principal_inertias_kg_m2": [
+        0.000566984191924525,
+        0.0006391607828384804,
+        0.0006479968248319948
+      ],
+      "positive_definite": true,
+      "triangle_pass": true,
+      "pass": true
+    },
+    {
+      "link": "gripper_left",
+      "part_ids": [
+        29,
+        30,
+        31,
+        32,
+        41,
+        43
+      ],
+      "expected_mass_kg": 0.04069358132644238,
+      "URDF_mass_kg": 0.04069358133,
+      "mass_error_kg": 3.5576194767905633e-12,
+      "COM_world_error_m": 2.7427803175749204e-11,
+      "inertia_max_error_kg_m2": 2.5898879395247487e-17,
+      "principal_inertias_kg_m2": [
+        4.866081340629533e-06,
+        1.4498866749370934e-05,
+        1.6416289787799527e-05
+      ],
+      "positive_definite": true,
+      "triangle_pass": true,
+      "pass": true
+    },
+    {
+      "link": "gripper_right",
+      "part_ids": [
+        36,
+        37,
+        38,
+        39,
+        42
+      ],
+      "expected_mass_kg": 0.03881005908593668,
+      "URDF_mass_kg": 0.03881005909,
+      "mass_error_kg": 4.063319125613418e-12,
+      "COM_world_error_m": 2.9376837823308124e-11,
+      "inertia_max_error_kg_m2": 3.417608535581651e-17,
+      "principal_inertias_kg_m2": [
+        4.547580176328169e-06,
+        1.3927373514229983e-05,
+        1.5541288269251845e-05
+      ],
+      "positive_definite": true,
+      "triangle_pass": true,
+      "pass": true
+    }
+  ],
+  "whole_assembly": {
+    "mass_kg": 3.5082419788546786,
+    "URDF_mass_kg": 3.508241978819999,
+    "manifest_mass_kg": 3.508241978854679,
+    "COM_world_m": [
+      0.0107168454052247,
+      -0.00021891285338114077,
+      0.12823550251087504
+    ],
+    "COM_error_m": 1.9402608796412475e-11,
+    "inertia_about_COM_world_kg_m2": [
+      [
+        0.014851147511140103,
+        -5.155688541117495e-05,
+        -0.004894270835330171
+      ],
+      [
+        -5.155688541117495e-05,
+        0.04095447126381975,
+        -1.7421230932944613e-06
+      ],
+      [
+        -0.004894270835330171,
+        -1.7421230932944613e-06,
+        0.029524571195185815
+      ]
+    ],
+    "inertia_max_error_kg_m2": 6.852990397376857e-12
+  },
+  "compiled_MJCF_status": "verified",
+  "compiled_MJCF_mass_inertia_checks": [
+    {
+      "link": "base_link",
+      "mass_kg": 0.6018924308934476,
+      "mass_error_kg": 0.0,
+      "inertia_max_error_kg_m2": 9.432395797150705e-15,
+      "COM_local_error_m": 8.999988257691205e-13,
+      "pass": true
+    },
+    {
+      "link": "yaw_link",
+      "mass_kg": 0.44987058778450106,
+      "mass_error_kg": 0.0,
+      "inertia_max_error_kg_m2": 5.585007414327786e-13,
+      "COM_local_error_m": 2.5001314021808917e-12,
+      "pass": true
+    },
+    {
+      "link": "upper_arm_link",
+      "mass_kg": 0.48659359287584225,
+      "mass_error_kg": 0.0,
+      "inertia_max_error_kg_m2": 6.380526735758583e-13,
+      "COM_local_error_m": 4.600001180283863e-11,
+      "pass": true
+    },
+    {
+      "link": "forearm_link",
+      "mass_kg": 0.5232968101977042,
+      "mass_error_kg": 0.0,
+      "inertia_max_error_kg_m2": 2.5350851450066207e-12,
+      "COM_local_error_m": 4.4219450964635234e-11,
+      "pass": true
+    },
+    {
+      "link": "wrist_pitch_link",
+      "mass_kg": 0.40498556423175097,
+      "mass_error_kg": 0.0,
+      "inertia_max_error_kg_m2": 1.2203563897264513e-12,
+      "COM_local_error_m": 4.976935271294841e-12,
+      "pass": true
+    },
+    {
+      "link": "wrist_yaw_link",
+      "mass_kg": 0.3975882203465001,
+      "mass_error_kg": 0.0,
+      "inertia_max_error_kg_m2": 3.7318411413912416e-11,
+      "COM_local_error_m": 3.016007458731592e-13,
+      "pass": true
+    },
+    {
+      "link": "wrist_roll_link",
+      "mass_kg": 0.5645111321125538,
+      "mass_error_kg": 0.0,
+      "inertia_max_error_kg_m2": 4.7729615398894865e-14,
+      "COM_local_error_m": 4.023047863520152e-12,
+      "pass": true
+    },
+    {
+      "link": "gripper_left",
+      "mass_kg": 0.04069358132644238,
+      "mass_error_kg": 0.0,
+      "inertia_max_error_kg_m2": 2.922615975235181e-13,
+      "COM_local_error_m": 4.16412746165672e-12,
+      "pass": true
+    },
+    {
+      "link": "gripper_right",
+      "mass_kg": 0.03881005908593668,
+      "mass_error_kg": 0.0,
+      "inertia_max_error_kg_m2": 1.7696185178160554e-12,
+      "COM_local_error_m": 1.9026312877438518e-12,
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Validation confirms mathematical consistency of chosen physical assumptions, not measured fidelity.",
+    "Effective30percent uniform PLA+ fraction approximates actual perimeter/infill distribution.",
+    "Camera30g remains unmeasured placeholder; cable/missing hardware mass absent.",
+    "Motor interior/rotor split and reflected motor inertia unidentified.",
+    "Internal gripper crank/rod mass remains wrist lump at CAD pose; gripper transmission not physically identified.",
+    "Joint calibration/limits and collision fidelity outside this final mass/inertia-only recheck."
+  ]
+}

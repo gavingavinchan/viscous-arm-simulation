@@ -1,0 +1,2313 @@
+{
+  "robot": "viscous_arm_dry_cad_v1",
+  "status": "geometry-derived model; physical calibration pending",
+  "units": "metres, kilograms, radians",
+  "coordinate_mapping": "robot XYZ=(-CAD Y,-CAD Z,CAD X); CAD mm -> m; base underside Z=0",
+  "mesh_tessellation": {
+    "linear_deflection_mm": 0.08,
+    "angular_deflection_rad": 0.25,
+    "relative": false
+  },
+  "source_sha256": "3c375f41702958ddd5586fa65e4a26df0340ae77f06e5ab0aa07092e01d02d43",
+  "excluded_cad_parts": [
+    44,
+    45
+  ],
+  "excluded_reason": "Gavin confirmed real arm has no finger loops, 2026-09-18",
+  "tool_frame": {
+    "origin": "area-weighted midpoint of opposing inner finger pad faces",
+    "axes": "+X jaw opening; +Z approach toward fingertips; +Y right-handed"
+  },
+  "cad_zero_is_encoder_zero": false,
+  "encoder_offset_status": "unmeasured; never command hardware with this model yet",
+  "joint_motor_mapping": {
+    "shoulder_pan": 1,
+    "shoulder_lift": 2,
+    "elbow_flex": 3,
+    "wrist_flex": 4,
+    "wrist_yaw": 5,
+    "wrist_roll": 6
+  },
+  "recorded_motor_ranges_rad": {
+    "shoulder_pan": [
+      -3.235,
+      2.227
+    ],
+    "shoulder_lift": [
+      -3.078,
+      -0.042
+    ],
+    "elbow_flex": [
+      0.05,
+      4.383
+    ],
+    "wrist_flex": [
+      -2.109,
+      1.606
+    ],
+    "wrist_yaw": [
+      -1.556,
+      1.505
+    ],
+    "wrist_roll": [
+      -2.641,
+      2.68
+    ]
+  },
+  "joint_ranges_status": "provisionally assumes zero offset; widened to include CAD zero. Not calibrated limits.",
+  "link_spacings_mm": {
+    "J2_J3": 159.9999984666554,
+    "J3_J4": 149.99999719753464
+  },
+  "total_mass_kg": 3.508241978854679,
+  "links": {
+    "base_link": {
+      "mass_kg": 0.6018924308934476,
+      "com_m": [
+        -6.401087327418989e-08,
+        1.1210077502301723e-07,
+        0.024333529009094468
+      ],
+      "inertia_kg_m2": [
+        [
+          0.000774376502184351,
+          -1.381896206761224e-08,
+          1.1982822404587374e-09
+        ],
+        [
+          -1.381896206761224e-08,
+          0.0004168542271734594,
+          2.449196830098859e-09
+        ],
+        [
+          1.1982822404587374e-09,
+          2.449196830098859e-09,
+          0.0007120436808345895
+        ]
+      ],
+      "visuals": [
+        {
+          "part": 0,
+          "mesh": "meshes/part_000.stl",
+          "rgba": [
+            0.12,
+            0.15,
+            0.18,
+            1
+          ]
+        },
+        {
+          "part": 1,
+          "mesh": "meshes/part_001.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 2,
+          "mesh": "meshes/part_002.stl",
+          "rgba": [
+            0.2,
+            0.24,
+            0.28,
+            1
+          ]
+        },
+        {
+          "part": 14,
+          "mesh": "meshes/part_014.stl",
+          "rgba": [
+            0.2,
+            0.24,
+            0.28,
+            1
+          ]
+        },
+        {
+          "part": 15,
+          "mesh": "meshes/part_015.stl",
+          "rgba": [
+            0.2,
+            0.24,
+            0.28,
+            1
+          ]
+        },
+        {
+          "part": 16,
+          "mesh": "meshes/part_016.stl",
+          "rgba": [
+            0.2,
+            0.24,
+            0.28,
+            1
+          ]
+        }
+      ],
+      "collisions": [
+        {
+          "part": 0,
+          "mesh": "meshes/collision_000.stl"
+        },
+        {
+          "part": 2,
+          "mesh": "meshes/collision_002.stl"
+        },
+        {
+          "part": 14,
+          "mesh": "meshes/collision_014.stl"
+        },
+        {
+          "part": 15,
+          "mesh": "meshes/collision_015.stl"
+        },
+        {
+          "part": 16,
+          "mesh": "meshes/collision_016.stl"
+        }
+      ],
+      "cad_pivot_mm": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "yaw_link": {
+      "mass_kg": 0.44987058778450106,
+      "com_m": [
+        -0.00012833620071564766,
+        -0.0011850590390196647,
+        0.04582404242245216
+      ],
+      "inertia_kg_m2": [
+        [
+          0.00032796560427025096,
+          6.801456833416703e-08,
+          -1.3724863022726494e-06
+        ],
+        [
+          6.801456833416703e-08,
+          0.0002782327464305813,
+          3.8026103742697346e-06
+        ],
+        [
+          -1.3724863022726494e-06,
+          3.8026103742697346e-06,
+          0.0002320442907266034
+        ]
+      ],
+      "visuals": [
+        {
+          "part": 3,
+          "mesh": "meshes/part_003.stl",
+          "rgba": [
+            0.7,
+            0.74,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 4,
+          "mesh": "meshes/part_004.stl",
+          "rgba": [
+            0.7,
+            0.74,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 5,
+          "mesh": "meshes/part_005.stl",
+          "rgba": [
+            0.7,
+            0.74,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 6,
+          "mesh": "meshes/part_006.stl",
+          "rgba": [
+            0.7,
+            0.74,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 7,
+          "mesh": "meshes/part_007.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 19,
+          "mesh": "meshes/part_019.stl",
+          "rgba": [
+            0.12,
+            0.15,
+            0.18,
+            1
+          ]
+        }
+      ],
+      "collisions": [
+        {
+          "part": 3,
+          "mesh": "meshes/collision_003.stl"
+        },
+        {
+          "part": 4,
+          "mesh": "meshes/collision_004.stl"
+        },
+        {
+          "part": 5,
+          "mesh": "meshes/collision_005.stl"
+        },
+        {
+          "part": 6,
+          "mesh": "meshes/collision_006.stl"
+        },
+        {
+          "part": 19,
+          "mesh": "meshes/collision_019.stl"
+        }
+      ],
+      "cad_pivot_mm": [
+        57.4,
+        0.0,
+        0.0
+      ]
+    },
+    "upper_arm_link": {
+      "mass_kg": 0.48659359287584225,
+      "com_m": [
+        -0.12974179044630796,
+        -0.000566773753214692,
+        -7.814054392974052e-08
+      ],
+      "inertia_kg_m2": [
+        [
+          0.00034450625521167076,
+          -4.7898150480965905e-05,
+          -1.5151520426386338e-07
+        ],
+        [
+          -4.7898150480965905e-05,
+          0.001687909461161161,
+          9.414422186911982e-10
+        ],
+        [
+          -1.5151520426386338e-07,
+          9.414422186911982e-10,
+          0.0018415152741259495
+        ]
+      ],
+      "visuals": [
+        {
+          "part": 8,
+          "mesh": "meshes/part_008.stl",
+          "rgba": [
+            0.69,
+            0.74,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 9,
+          "mesh": "meshes/part_009.stl",
+          "rgba": [
+            0.69,
+            0.74,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 10,
+          "mesh": "meshes/part_010.stl",
+          "rgba": [
+            0.69,
+            0.74,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 11,
+          "mesh": "meshes/part_011.stl",
+          "rgba": [
+            0.69,
+            0.74,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 12,
+          "mesh": "meshes/part_012.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 18,
+          "mesh": "meshes/part_018.stl",
+          "rgba": [
+            0.12,
+            0.15,
+            0.18,
+            1
+          ]
+        }
+      ],
+      "collisions": [
+        {
+          "part": 8,
+          "mesh": "meshes/collision_008.stl"
+        },
+        {
+          "part": 9,
+          "mesh": "meshes/collision_009.stl"
+        },
+        {
+          "part": 10,
+          "mesh": "meshes/collision_010.stl"
+        },
+        {
+          "part": 11,
+          "mesh": "meshes/collision_011.stl"
+        },
+        {
+          "part": 18,
+          "mesh": "meshes/collision_018.stl"
+        }
+      ],
+      "cad_pivot_mm": [
+        111.0,
+        -9.11502411713548e-07,
+        0.0
+      ]
+    },
+    "forearm_link": {
+      "mass_kg": 0.5232968101977042,
+      "com_m": [
+        0.10335186904432098,
+        7.696701704885108e-05,
+        0.052650505515594644
+      ],
+      "inertia_kg_m2": [
+        [
+          0.0004985899071823375,
+          3.724479439694013e-05,
+          -0.00031555337216245894
+        ],
+        [
+          3.724479439694013e-05,
+          0.0017313782568395561,
+          1.6216085900376512e-05
+        ],
+        [
+          -0.00031555337216245894,
+          1.6216085900376512e-05,
+          0.0017482479130969536
+        ]
+      ],
+      "visuals": [
+        {
+          "part": 13,
+          "mesh": "meshes/part_013.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 17,
+          "mesh": "meshes/part_017.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 58,
+          "mesh": "meshes/part_058.stl",
+          "rgba": [
+            0.12,
+            0.15,
+            0.18,
+            1
+          ]
+        },
+        {
+          "part": 60,
+          "mesh": "meshes/part_060.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 61,
+          "mesh": "meshes/part_061.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 62,
+          "mesh": "meshes/part_062.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 63,
+          "mesh": "meshes/part_063.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 64,
+          "mesh": "meshes/part_064.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 65,
+          "mesh": "meshes/part_065.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 66,
+          "mesh": "meshes/part_066.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 67,
+          "mesh": "meshes/part_067.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 68,
+          "mesh": "meshes/part_068.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        },
+        {
+          "part": 69,
+          "mesh": "meshes/part_069.stl",
+          "rgba": [
+            0.67,
+            0.73,
+            0.77,
+            1
+          ]
+        }
+      ],
+      "collisions": [
+        {
+          "part": 13,
+          "mesh": "meshes/collision_013.stl"
+        },
+        {
+          "part": 17,
+          "mesh": "meshes/collision_017.stl"
+        },
+        {
+          "part": 58,
+          "mesh": "meshes/collision_058.stl"
+        },
+        {
+          "part": 60,
+          "mesh": "meshes/collision_060.stl"
+        },
+        {
+          "part": 61,
+          "mesh": "meshes/collision_061.stl"
+        },
+        {
+          "part": 62,
+          "mesh": "meshes/collision_062.stl"
+        },
+        {
+          "part": 63,
+          "mesh": "meshes/collision_063.stl"
+        },
+        {
+          "part": 64,
+          "mesh": "meshes/collision_064.stl"
+        },
+        {
+          "part": 65,
+          "mesh": "meshes/collision_065.stl"
+        },
+        {
+          "part": 66,
+          "mesh": "meshes/collision_066.stl"
+        },
+        {
+          "part": 67,
+          "mesh": "meshes/collision_067.stl"
+        },
+        {
+          "part": 68,
+          "mesh": "meshes/collision_068.stl"
+        },
+        {
+          "part": 69,
+          "mesh": "meshes/collision_069.stl"
+        }
+      ],
+      "cad_pivot_mm": [
+        111.00000141153443,
+        159.999997555153,
+        0.0
+      ]
+    },
+    "wrist_pitch_link": {
+      "mass_kg": 0.40498556423175097,
+      "com_m": [
+        0.0736904003853934,
+        9.436990185432968e-08,
+        0.050713964288112166
+      ],
+      "inertia_kg_m2": [
+        [
+          0.00031702010660897436,
+          -1.2723637611552408e-08,
+          -0.0001454721108610688
+        ],
+        [
+          -1.2723637611552408e-08,
+          0.0004786931203638635,
+          1.012573433070205e-08
+        ],
+        [
+          -0.0001454721108610688,
+          1.012573433070205e-08,
+          0.0004413944937760911
+        ]
+      ],
+      "visuals": [
+        {
+          "part": 53,
+          "mesh": "meshes/part_053.stl",
+          "rgba": [
+            0.12,
+            0.15,
+            0.18,
+            1
+          ]
+        },
+        {
+          "part": 54,
+          "mesh": "meshes/part_054.stl",
+          "rgba": [
+            0.66,
+            0.72,
+            0.76,
+            1
+          ]
+        },
+        {
+          "part": 55,
+          "mesh": "meshes/part_055.stl",
+          "rgba": [
+            0.66,
+            0.72,
+            0.76,
+            1
+          ]
+        },
+        {
+          "part": 56,
+          "mesh": "meshes/part_056.stl",
+          "rgba": [
+            0.66,
+            0.72,
+            0.76,
+            1
+          ]
+        },
+        {
+          "part": 57,
+          "mesh": "meshes/part_057.stl",
+          "rgba": [
+            0.66,
+            0.72,
+            0.76,
+            1
+          ]
+        }
+      ],
+      "collisions": [
+        {
+          "part": 53,
+          "mesh": "meshes/collision_053.stl"
+        },
+        {
+          "part": 54,
+          "mesh": "meshes/collision_054.stl"
+        },
+        {
+          "part": 55,
+          "mesh": "meshes/collision_055.stl"
+        },
+        {
+          "part": 56,
+          "mesh": "meshes/collision_056.stl"
+        },
+        {
+          "part": 57,
+          "mesh": "meshes/collision_057.stl"
+        }
+      ],
+      "cad_pivot_mm": [
+        169.78775793951695,
+        22.000001752011574,
+        0.0
+      ]
+    },
+    "wrist_yaw_link": {
+      "mass_kg": 0.3975882203465001,
+      "com_m": [
+        -0.0007747424643691326,
+        3.573218184958569e-05,
+        -0.04181155591973721
+      ],
+      "inertia_kg_m2": [
+        [
+          0.0002154333752450346,
+          -4.736005864909204e-07,
+          -2.003594797860262e-05
+        ],
+        [
+          -4.736005864909204e-07,
+          0.00024240298572892835,
+          -1.722086516521877e-07
+        ],
+        [
+          -2.003594797860262e-05,
+          -1.722086516521877e-07,
+          0.0001936299416096522
+        ]
+      ],
+      "visuals": [
+        {
+          "part": 49,
+          "mesh": "meshes/part_049.stl",
+          "rgba": [
+            0.12,
+            0.15,
+            0.18,
+            1
+          ]
+        },
+        {
+          "part": 50,
+          "mesh": "meshes/part_050.stl",
+          "rgba": [
+            0.65,
+            0.7,
+            0.74,
+            1
+          ]
+        },
+        {
+          "part": 51,
+          "mesh": "meshes/part_051.stl",
+          "rgba": [
+            0.65,
+            0.7,
+            0.74,
+            1
+          ]
+        },
+        {
+          "part": 52,
+          "mesh": "meshes/part_052.stl",
+          "rgba": [
+            0.65,
+            0.7,
+            0.74,
+            1
+          ]
+        },
+        {
+          "part": 59,
+          "mesh": "meshes/part_059.stl",
+          "rgba": [
+            0.65,
+            0.7,
+            0.74,
+            1
+          ]
+        }
+      ],
+      "collisions": [
+        {
+          "part": 49,
+          "mesh": "meshes/collision_049.stl"
+        },
+        {
+          "part": 50,
+          "mesh": "meshes/collision_050.stl"
+        },
+        {
+          "part": 51,
+          "mesh": "meshes/collision_051.stl"
+        },
+        {
+          "part": 52,
+          "mesh": "meshes/collision_052.stl"
+        },
+        {
+          "part": 59,
+          "mesh": "meshes/collision_059.stl"
+        }
+      ],
+      "cad_pivot_mm": [
+        202.8971758222711,
+        -58.368688964366896,
+        3.0150106285465208e-12
+      ]
+    },
+    "wrist_roll_link": {
+      "mass_kg": 0.5645111321125538,
+      "com_m": [
+        0.038150954235993115,
+        -8.222341694058841e-05,
+        -0.0010758922374279702
+      ],
+      "inertia_kg_m2": [
+        [
+          0.0005997111338994334,
+          1.1805289044464607e-06,
+          3.625633927526583e-05
+        ],
+        [
+          1.1805289044464607e-06,
+          0.0006468155482274568,
+          -4.780434268303208e-06
+        ],
+        [
+          3.625633927526583e-05,
+          -4.780434268303208e-06,
+          0.0006076151174687838
+        ]
+      ],
+      "visuals": [
+        {
+          "part": 20,
+          "mesh": "meshes/part_020.stl",
+          "rgba": [
+            0.12,
+            0.15,
+            0.18,
+            1
+          ]
+        },
+        {
+          "part": 24,
+          "mesh": "meshes/part_024.stl",
+          "rgba": [
+            0.65,
+            0.71,
+            0.76,
+            1
+          ]
+        },
+        {
+          "part": 25,
+          "mesh": "meshes/part_025.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 46,
+          "mesh": "meshes/part_046.stl",
+          "rgba": [
+            0.65,
+            0.71,
+            0.76,
+            1
+          ]
+        },
+        {
+          "part": 47,
+          "mesh": "meshes/part_047.stl",
+          "rgba": [
+            0.65,
+            0.71,
+            0.76,
+            1
+          ]
+        },
+        {
+          "part": 48,
+          "mesh": "meshes/part_048.stl",
+          "rgba": [
+            0.65,
+            0.71,
+            0.76,
+            1
+          ]
+        },
+        {
+          "part": 70,
+          "mesh": "meshes/part_070.stl",
+          "rgba": [
+            0.65,
+            0.71,
+            0.76,
+            1
+          ]
+        },
+        {
+          "part": 71,
+          "mesh": "meshes/part_071.stl",
+          "rgba": [
+            0.1,
+            0.13,
+            0.16,
+            1
+          ]
+        }
+      ],
+      "collisions": [
+        {
+          "part": 20,
+          "mesh": "meshes/collision_020.stl"
+        },
+        {
+          "part": 24,
+          "mesh": "meshes/collision_024.stl"
+        },
+        {
+          "part": 46,
+          "mesh": "meshes/collision_046.stl"
+        },
+        {
+          "part": 47,
+          "mesh": "meshes/collision_047.stl"
+        },
+        {
+          "part": 48,
+          "mesh": "meshes/collision_048.stl"
+        },
+        {
+          "part": 70,
+          "mesh": "meshes/collision_070.stl"
+        },
+        {
+          "part": 71,
+          "mesh": "meshes/collision_071.stl"
+        }
+      ],
+      "cad_pivot_mm": [
+        151.55583737754395,
+        -89.924781350845,
+        1.018284752452733e-12
+      ]
+    },
+    "gripper_left": {
+      "mass_kg": 0.04069358132644238,
+      "com_m": [
+        0.08926845851781408,
+        0.01601100421692079,
+        -0.016719569478315675
+      ],
+      "inertia_kg_m2": [
+        [
+          5.301435180296535e-06,
+          2.1472555137565407e-06,
+          4.038413389425614e-07
+        ],
+        [
+          2.1472555137565407e-06,
+          1.598965902111757e-05,
+          -2.282460789825458e-07
+        ],
+        [
+          4.038413389425614e-07,
+          -2.282460789825458e-07,
+          1.4490143676425932e-05
+        ]
+      ],
+      "visuals": [
+        {
+          "part": 29,
+          "mesh": "meshes/part_029.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 30,
+          "mesh": "meshes/part_030.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 31,
+          "mesh": "meshes/part_031.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 32,
+          "mesh": "meshes/part_032.stl",
+          "rgba": [
+            0.16,
+            0.2,
+            0.23,
+            1
+          ]
+        },
+        {
+          "part": 41,
+          "mesh": "meshes/part_041.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 43,
+          "mesh": "meshes/part_043.stl",
+          "rgba": [
+            0.16,
+            0.2,
+            0.23,
+            1
+          ]
+        }
+      ],
+      "collisions": [
+        {
+          "part": 32,
+          "mesh": "meshes/collision_032.stl"
+        },
+        {
+          "part": 43,
+          "mesh": "meshes/collision_043.stl"
+        }
+      ],
+      "cad_pivot_mm": [
+        151.55583737754395,
+        -89.924781350845,
+        1.018284752452733e-12
+      ]
+    },
+    "gripper_right": {
+      "mass_kg": 0.03881005908593668,
+      "com_m": [
+        0.09058603609947583,
+        -0.015944464949090128,
+        -0.013252200521636944
+      ],
+      "inertia_kg_m2": [
+        [
+          5.4579450738050305e-06,
+          -2.0737442657737655e-06,
+          2.03143316018076e-06
+        ],
+        [
+          -2.0737442657737655e-06,
+          1.5114792144584998e-05,
+          4.2170005310266866e-07
+        ],
+        [
+          2.03143316018076e-06,
+          4.2170005310266866e-07,
+          1.3443504741434114e-05
+        ]
+      ],
+      "visuals": [
+        {
+          "part": 36,
+          "mesh": "meshes/part_036.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 37,
+          "mesh": "meshes/part_037.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 38,
+          "mesh": "meshes/part_038.stl",
+          "rgba": [
+            0.38,
+            0.42,
+            0.45,
+            1
+          ]
+        },
+        {
+          "part": 39,
+          "mesh": "meshes/part_039.stl",
+          "rgba": [
+            0.16,
+            0.2,
+            0.23,
+            1
+          ]
+        },
+        {
+          "part": 42,
+          "mesh": "meshes/part_042.stl",
+          "rgba": [
+            0.16,
+            0.2,
+            0.23,
+            1
+          ]
+        }
+      ],
+      "collisions": [
+        {
+          "part": 39,
+          "mesh": "meshes/collision_039.stl"
+        },
+        {
+          "part": 42,
+          "mesh": "meshes/collision_042.stl"
+        }
+      ],
+      "cad_pivot_mm": [
+        151.55583737754395,
+        -89.924781350845,
+        1.018284752452733e-12
+      ]
+    }
+  },
+  "joints": [
+    {
+      "name": "shoulder_pan",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "yaw_link",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0574
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lower": -3.235,
+      "upper": 2.227,
+      "effort": 5.0,
+      "velocity": 2.0,
+      "source_motor_id": 0
+    },
+    {
+      "name": "shoulder_lift",
+      "type": "revolute",
+      "parent": "yaw_link",
+      "child": "upper_arm_link",
+      "xyz": [
+        9.115024117135481e-10,
+        0.0,
+        0.0536
+      ],
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "lower": -3.078,
+      "upper": 0,
+      "effort": 5.0,
+      "velocity": 2.0,
+      "source_motor_id": 19
+    },
+    {
+      "name": "elbow_flex",
+      "type": "revolute",
+      "parent": "upper_arm_link",
+      "child": "forearm_link",
+      "xyz": [
+        -0.1599999984666554,
+        0.0,
+        1.4115344271203867e-09
+      ],
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "lower": 0,
+      "upper": 4.383,
+      "effort": 5.0,
+      "velocity": 2.0,
+      "source_motor_id": 18
+    },
+    {
+      "name": "wrist_flex",
+      "type": "revolute",
+      "parent": "forearm_link",
+      "child": "wrist_pitch_link",
+      "xyz": [
+        0.13799999580314143,
+        0.0,
+        0.05878775652798252
+      ],
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "lower": -2.109,
+      "upper": 1.606,
+      "effort": 5.0,
+      "velocity": 2.0,
+      "source_motor_id": 58
+    },
+    {
+      "name": "wrist_yaw",
+      "type": "revolute",
+      "parent": "wrist_pitch_link",
+      "child": "wrist_yaw_link",
+      "xyz": [
+        0.08036869071637846,
+        -3.015010628546521e-15,
+        0.03310941788275414
+      ],
+      "axis": [
+        -0.16077531359764416,
+        2.880465012618807e-14,
+        -0.986991032653073
+      ],
+      "lower": -1.556,
+      "upper": 1.505,
+      "effort": 5.0,
+      "velocity": 2.0,
+      "source_motor_id": 53
+    },
+    {
+      "name": "wrist_roll",
+      "type": "revolute",
+      "parent": "wrist_yaw_link",
+      "child": "wrist_roll_link",
+      "xyz": [
+        0.0315560923864781,
+        1.996725876093788e-15,
+        -0.051341338444727144
+      ],
+      "axis": [
+        -0.9869910326530728,
+        -3.0736780324845042e-15,
+        0.16077531359764527
+      ],
+      "lower": -2.641,
+      "upper": 2.68,
+      "effort": 5.0,
+      "velocity": 2.0,
+      "source_motor_id": 49
+    },
+    {
+      "name": "gripper_left_joint",
+      "type": "prismatic",
+      "parent": "wrist_roll_link",
+      "child": "gripper_left",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0524125,
+      "effort": 10.0,
+      "velocity": 0.05
+    },
+    {
+      "name": "gripper_right_joint",
+      "type": "prismatic",
+      "parent": "wrist_roll_link",
+      "child": "gripper_right",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0524125,
+      "effort": 10.0,
+      "velocity": 0.05,
+      "mimic": "gripper_left_joint"
+    },
+    {
+      "name": "tool_fixed",
+      "type": "fixed",
+      "parent": "wrist_roll_link",
+      "child": "tool0",
+      "xyz": [
+        0.1324247134533703,
+        -7.428511999961893e-12,
+        -0.021571245517241544
+      ],
+      "rpy": [
+        1.7322724621412124,
+        -4.440892098500626e-16,
+        1.5707963267948997
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "part": 0,
+      "name": "maker arm cnc装配/RS00:1/solid_0",
+      "link": "base_link",
+      "mass_kg": 0.31,
+      "volume_mm3": 127905.64056930094,
+      "material": {
+        "mass_kg": 0.31,
+        "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 1,
+      "name": "maker arm cnc装配/深沟球35*44*5:1/solid_0",
+      "link": "base_link",
+      "mass_kg": 0.021917910196391735,
+      "volume_mm3": 2792.090470877928,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 2,
+      "name": "maker arm cnc装配/底板cnc:1/solid_0",
+      "link": "base_link",
+      "mass_kg": 0.19152162988885926,
+      "volume_mm3": 70933.9369958738,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 14,
+      "name": "maker arm cnc装配/yaw电机固定板:1/solid_0",
+      "link": "base_link",
+      "mass_kg": 0.019643330531088857,
+      "volume_mm3": 7275.3076041069835,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 15,
+      "name": "maker arm cnc装配/电机支撑:1/solid_0",
+      "link": "base_link",
+      "mass_kg": 0.02940478013855388,
+      "volume_mm3": 10890.65931057551,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 16,
+      "name": "maker arm cnc装配/电机支撑:2/solid_0",
+      "link": "base_link",
+      "mass_kg": 0.02940478013855388,
+      "volume_mm3": 10890.65931057551,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 3,
+      "name": "maker arm cnc装配/yaw输出cnc:1/solid_0",
+      "link": "yaw_link",
+      "mass_kg": 0.028862365233572527,
+      "volume_mm3": 10689.764901323157,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 4,
+      "name": "maker arm cnc装配/L2电机固定底板:1/solid_0",
+      "link": "yaw_link",
+      "mass_kg": 0.03152062720613697,
+      "volume_mm3": 11674.306372643321,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 5,
+      "name": "maker arm cnc装配/l2电机固定前:1/solid_0",
+      "link": "yaw_link",
+      "mass_kg": 0.031524447114933504,
+      "volume_mm3": 11675.721153679076,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 6,
+      "name": "maker arm cnc装配/l2电机固定后:1/solid_0",
+      "link": "yaw_link",
+      "mass_kg": 0.03943889994925859,
+      "volume_mm3": 14606.999981206885,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 7,
+      "name": "maker arm cnc装配/深沟球20，27，4:1/solid_0",
+      "link": "yaw_link",
+      "mass_kg": 0.008524248280599502,
+      "volume_mm3": 1085.8915007133123,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 19,
+      "name": "maker arm cnc装配/RS00:6/solid_0",
+      "link": "yaw_link",
+      "mass_kg": 0.31,
+      "volume_mm3": 127905.64056930089,
+      "material": {
+        "mass_kg": 0.31,
+        "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 8,
+      "name": "maker arm cnc装配/L2输出侧臂:1/solid_0",
+      "link": "upper_arm_link",
+      "mass_kg": 0.06986021794887436,
+      "volume_mm3": 25874.15479587939,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 9,
+      "name": "maker arm cnc装配/L2侧臂-2:1/solid_0",
+      "link": "upper_arm_link",
+      "mass_kg": 0.07857396741543195,
+      "volume_mm3": 29101.469413122944,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 10,
+      "name": "maker arm cnc装配/输出轴垫块---2:1/solid_0",
+      "link": "upper_arm_link",
+      "mass_kg": 0.014674922152128464,
+      "volume_mm3": 5435.1563526401715,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 11,
+      "name": "maker arm cnc装配/小轴承压紧轴cnc:1/solid_0",
+      "link": "upper_arm_link",
+      "mass_kg": 0.004960237078808023,
+      "volume_mm3": 1837.1248440029713,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 12,
+      "name": "maker arm cnc装配/深沟球20，27，4:2/solid_0",
+      "link": "upper_arm_link",
+      "mass_kg": 0.008524248280599504,
+      "volume_mm3": 1085.8915007133126,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 18,
+      "name": "maker arm cnc装配/RS00:5/solid_0",
+      "link": "upper_arm_link",
+      "mass_kg": 0.31,
+      "volume_mm3": 127905.6405693009,
+      "material": {
+        "mass_kg": 0.31,
+        "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 13,
+      "name": "maker arm cnc装配/小轴承压紧轴cnc:2/solid_0",
+      "link": "forearm_link",
+      "mass_kg": 0.0049602370788080245,
+      "volume_mm3": 1837.1248440029722,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 17,
+      "name": "maker arm cnc装配/输出轴垫块---2:2/solid_0",
+      "link": "forearm_link",
+      "mass_kg": 0.014674922152128466,
+      "volume_mm3": 5435.156352640172,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 58,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/RS00:4/solid_0",
+      "link": "forearm_link",
+      "mass_kg": 0.31,
+      "volume_mm3": 127905.65199990946,
+      "material": {
+        "mass_kg": 0.31,
+        "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 60,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/L3:1/solid_0",
+      "link": "forearm_link",
+      "mass_kg": 0.04202055451176007,
+      "volume_mm3": 15563.168337688914,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 61,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/L3:1/solid_1",
+      "link": "forearm_link",
+      "mass_kg": 0.041341860238616836,
+      "volume_mm3": 15311.800088376604,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 62,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/L3:1/solid_2",
+      "link": "forearm_link",
+      "mass_kg": 0.04834538657757143,
+      "volume_mm3": 17905.698732433862,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 63,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/L3:1/solid_3",
+      "link": "forearm_link",
+      "mass_kg": 0.04134186023861683,
+      "volume_mm3": 15311.800088376602,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 64,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 55mm:1/solid_0",
+      "link": "forearm_link",
+      "mass_kg": 0.0031490539361420686,
+      "volume_mm3": 1166.3162726452106,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 65,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 55mm:1/solid_1",
+      "link": "forearm_link",
+      "mass_kg": 0.0031490539361420694,
+      "volume_mm3": 1166.3162726452108,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 66,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 55mm:1/solid_2",
+      "link": "forearm_link",
+      "mass_kg": 0.0031490539361420694,
+      "volume_mm3": 1166.3162726452108,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 67,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 55mm:1/solid_3",
+      "link": "forearm_link",
+      "mass_kg": 0.0031490539361420686,
+      "volume_mm3": 1166.3162726452106,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 68,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 70mm:1/solid_0",
+      "link": "forearm_link",
+      "mass_kg": 0.004007886827817181,
+      "volume_mm3": 1484.4025288211778,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 69,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/M3铝柱 70mm:1/solid_1",
+      "link": "forearm_link",
+      "mass_kg": 0.0040078868278171816,
+      "volume_mm3": 1484.4025288211783,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 53,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/RS00:3/solid_0",
+      "link": "wrist_pitch_link",
+      "mass_kg": 0.31,
+      "volume_mm3": 127905.65199990952,
+      "material": {
+        "mass_kg": 0.31,
+        "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 54,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/J4-J5-Out:1/solid_0",
+      "link": "wrist_pitch_link",
+      "mass_kg": 0.04623975585212018,
+      "volume_mm3": 17125.83550078525,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 55,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/J4-J5-Out:1/solid_1",
+      "link": "wrist_pitch_link",
+      "mass_kg": 0.021114016139238957,
+      "volume_mm3": 7820.005977495909,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 56,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/J4-J5-Out:1/solid_2",
+      "link": "wrist_pitch_link",
+      "mass_kg": 0.021114016139238957,
+      "volume_mm3": 7820.005977495909,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 57,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/J4-J5-Out:1/solid_3",
+      "link": "wrist_pitch_link",
+      "mass_kg": 0.006517776101152844,
+      "volume_mm3": 2413.991148575127,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 49,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/RS00:2/solid_0",
+      "link": "wrist_yaw_link",
+      "mass_kg": 0.31,
+      "volume_mm3": 127905.65199990943,
+      "material": {
+        "mass_kg": 0.31,
+        "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 50,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/J5-J6-Out:1/solid_0",
+      "link": "wrist_yaw_link",
+      "mass_kg": 0.030550127774750965,
+      "volume_mm3": 11314.862138796652,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 51,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/J5-J6-In:1/solid_0",
+      "link": "wrist_yaw_link",
+      "mass_kg": 0.02918941100055892,
+      "volume_mm3": 10810.892963169968,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 52,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/输出轴垫块---2:1/solid_0",
+      "link": "wrist_yaw_link",
+      "mass_kg": 0.014674922152128466,
+      "volume_mm3": 5435.156352640172,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 59,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/护腕:1/solid_0",
+      "link": "wrist_yaw_link",
+      "mass_kg": 0.013173759419061742,
+      "volume_mm3": 4879.170155208052,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 20,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/RS00:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.31,
+      "volume_mm3": 127905.6519999095,
+      "material": {
+        "mass_kg": 0.31,
+        "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 21,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/夹爪连杆底座:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.025614539205843296,
+      "volume_mm3": 9486.866372534554,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": false,
+      "collision": false
+    },
+    {
+      "part": 22,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/夹爪连杆底座:1/solid_1",
+      "link": "wrist_roll_link",
+      "mass_kg": 3.9760782021995824e-05,
+      "volume_mm3": 14.726215563702157,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": false,
+      "collision": false
+    },
+    {
+      "part": 23,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/夹爪连杆底座:1/solid_2",
+      "link": "wrist_roll_link",
+      "mass_kg": 3.976078202199586e-05,
+      "volume_mm3": 14.726215563702167,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": false,
+      "collision": false
+    },
+    {
+      "part": 24,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/滑轨底座:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.05090062190647301,
+      "volume_mm3": 18852.082187582593,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 25,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/7mm直线滑轨:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.03628826235159964,
+      "volume_mm3": 4622.70857982161,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 26,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.000964166095120243,
+      "volume_mm3": 122.82370638474433,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": false,
+      "collision": false
+    },
+    {
+      "part": 27,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:1/solid_1",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.0009641660951202421,
+      "volume_mm3": 122.82370638474421,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": false,
+      "collision": false
+    },
+    {
+      "part": 28,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/连杆:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.005075249340183086,
+      "volume_mm3": 1879.7219778455874,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": false,
+      "collision": false
+    },
+    {
+      "part": 33,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:5/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.0009641660951202427,
+      "volume_mm3": 122.82370638474427,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": false,
+      "collision": false
+    },
+    {
+      "part": 34,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:5/solid_1",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.000964166095120243,
+      "volume_mm3": 122.82370638474433,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": false,
+      "collision": false
+    },
+    {
+      "part": 35,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/连杆:2/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.005075249340183089,
+      "volume_mm3": 1879.7219778455885,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": false,
+      "collision": false
+    },
+    {
+      "part": 40,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/M4塞打螺栓:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.0018835222405056986,
+      "volume_mm3": 239.93913891792337,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": false,
+      "collision": false
+    },
+    {
+      "part": 46,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/J7电机底座-平底:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.03479156957758177,
+      "volume_mm3": 12885.766510215468,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 47,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/J6轴头_2:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.03664249053882795,
+      "volume_mm3": 13571.2927921585,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 48,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/J6轴头_2:1/solid_1",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.02021647081005332,
+      "volume_mm3": 7487.58178150123,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 70,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/Maker Arm 摄像头支架-UW:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.004086970856778042,
+      "volume_mm3": 10986.480797790435,
+      "material": {
+        "density_kg_m3": 372,
+        "solid_density_kg_m3": 1240,
+        "effective_solid_fraction": 0.3,
+        "basis": "Gavin confirmed PLA+ and requested30%effective infill/perimeter allowance; nominal PLA+ density estimate, uniform distribution"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 71,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/摄像头（防水）:1/solid_0",
+      "link": "wrist_roll_link",
+      "mass_kg": 0.03,
+      "volume_mm3": 8676.149263107698,
+      "material": {
+        "mass_kg": 0.03,
+        "basis": "camera provisional mass, not measured; override when weighed"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 29,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:3/solid_0",
+      "link": "gripper_left",
+      "mass_kg": 0.000964166095120243,
+      "volume_mm3": 122.82370638474433,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 30,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:3/solid_1",
+      "link": "gripper_left",
+      "mass_kg": 0.0009641660951202427,
+      "volume_mm3": 122.82370638474427,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 31,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/7mm直线滑块:1/solid_0",
+      "link": "gripper_left",
+      "mass_kg": 0.014660828678898036,
+      "volume_mm3": 1867.6214877577115,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 32,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/滑块底座:1/solid_0",
+      "link": "gripper_left",
+      "mass_kg": 0.01156223198887327,
+      "volume_mm3": 4282.308144027137,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 41,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/M4塞打螺栓:2/solid_0",
+      "link": "gripper_left",
+      "mass_kg": 0.0018835222405056762,
+      "volume_mm3": 239.9391389179205,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 43,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/夹爪:2/solid_0",
+      "link": "gripper_left",
+      "mass_kg": 0.010658666227924909,
+      "volume_mm3": 28652.32856969061,
+      "material": {
+        "density_kg_m3": 372,
+        "solid_density_kg_m3": 1240,
+        "effective_solid_fraction": 0.3,
+        "basis": "Gavin confirmed PLA+ and requested30%effective infill/perimeter allowance; nominal PLA+ density estimate, uniform distribution"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 36,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:7/solid_0",
+      "link": "gripper_right",
+      "mass_kg": 0.000964166095120243,
+      "volume_mm3": 122.82370638474433,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 37,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/MF84ZZ 法兰轴承 4 8 3:7/solid_1",
+      "link": "gripper_right",
+      "mass_kg": 0.0009641660951202424,
+      "volume_mm3": 122.82370638474424,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 38,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/7mm直线滑块:2/solid_0",
+      "link": "gripper_right",
+      "mass_kg": 0.014660828678898022,
+      "volume_mm3": 1867.6214877577097,
+      "material": {
+        "density_kg_m3": 7850,
+        "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+      },
+      "visual": true,
+      "collision": false
+    },
+    {
+      "part": 39,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/滑块底座:2/solid_0",
+      "link": "gripper_right",
+      "mass_kg": 0.011562231988873276,
+      "volume_mm3": 4282.308144027139,
+      "material": {
+        "density_kg_m3": 2700,
+        "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+      },
+      "visual": true,
+      "collision": true
+    },
+    {
+      "part": 42,
+      "name": "maker arm cnc装配/MA01-01 (RS00)/夹爪:1/solid_0",
+      "link": "gripper_right",
+      "mass_kg": 0.010658666227924902,
+      "volume_mm3": 28652.3285696906,
+      "material": {
+        "density_kg_m3": 372,
+        "solid_density_kg_m3": 1240,
+        "effective_solid_fraction": 0.3,
+        "basis": "Gavin confirmed PLA+ and requested30%effective infill/perimeter allowance; nominal PLA+ density estimate, uniform distribution"
+      },
+      "visual": true,
+      "collision": true
+    }
+  ],
+  "simulator": {
+    "engine": "MuJoCo",
+    "model": "viscous_arm.xml",
+    "gravity_m_s2": [
+      0,
+      0,
+      -9.81
+    ],
+    "velocity_caps_enforced": false,
+    "joint_friction_damping_armature": "zero/unidentified",
+    "contact_friction": [
+      0.6,
+      0.005,
+      0.0001
+    ],
+    "contact_friction_status": "generic numerical default, unmeasured"
+  },
+  "gripper": {
+    "model": "symmetric sliders; internal crank/rod geometry omitted, its mass/inertia retained in wrist at CAD pose",
+    "per_jaw_max_travel_m": 0.0524125,
+    "range_basis": "Maker reference only; physical Viscous gap not remeasured",
+    "actuator_generalized_force_N": 10,
+    "symmetric_contact_force_per_jaw_N_approx": 5,
+    "force_status": "simulation placeholder, not motor specification",
+    "motor_to_gap": "unidentified nonlinear transmission; no encoder conversion provided"
+  },
+  "assumptions": [
+    "Seven nominal 310g RS00 solids with uniform effective-density inertias; internal rotor/transmission inertia unidentified",
+    "CNC structural aluminium at2700kg/m3; 6061 alloy provisional",
+    "Bearing/rail steel7850kg/m3 provisional",
+    "PLA+ fingers42/43 and camera bracket70: nominal solid density1240kg/m3 times user-assumed30%effective solid fraction=372kg/m3; uniform effective-density inertia approximation. Finger loops44/45 physically absent and excluded",
+    "Camera mass30g placeholder",
+    "All model arm effort limits5Nm nominal datasheet rated, not thermal guarantee; simulation velocity2rad/s is a conservative chosen cap",
+    "Cables, omitted fasteners, waterproofing additions and payload not estimated without evidence",
+    "Per-solid convex collision approximation; holes/concavities can be conservative",
+    "Motor axis positive signs inherited from reference convention, physical signs not independently checked",
+    "Reference pose is source CAD assembly, not measured encoder zero"
+  ]
+}

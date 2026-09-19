@@ -1,0 +1,74 @@
+{
+  "scope": "Offline numerical/model validation only; does not validate real motor calibration or physical parameters",
+  "mass_kg": 3.508241978854679,
+  "nq": 8,
+  "nu": 7,
+  "urdf_tree_and_assets": "pass",
+  "fk_100_poses": {
+    "pass": true,
+    "max_position_error_m": 8.282836457151205e-13,
+    "max_rotation_matrix_error": 2.2919166564605575e-12
+  },
+  "ik_12_local_reachable_targets": {
+    "pass": true,
+    "max_position_error_m": 4.132994188493711e-13,
+    "max_orientation_error_rad": 5.935066618459014e-13,
+    "note": "Local IK with perturbed known solution; not a global reachability guarantee"
+  },
+  "poses": {
+    "cad_zero": {
+      "contacts": [],
+      "gravity_torque_Nm": [
+        -0.0,
+        0.36939611801146593,
+        4.080648410942744,
+        1.5917246833261558,
+        -8.361333791679975e-07,
+        0.00013242166651479775
+      ],
+      "over_nominal_5Nm": false
+    },
+    "inspection_pose": {
+      "contacts": [],
+      "gravity_torque_Nm": [
+        -0.0,
+        1.139969400973376,
+        3.4469210918427216,
+        1.5845996786419132,
+        0.014177969030890502,
+        -0.0009089752979913185
+      ],
+      "over_nominal_5Nm": false
+    },
+    "extended_pose": {
+      "contacts": [],
+      "gravity_torque_Nm": [
+        -0.0,
+        3.5266572140455805,
+        4.157448503551948,
+        1.4795794411940613,
+        -0.00034709946854263613,
+        -0.0004338500485825342
+      ],
+      "over_nominal_5Nm": false
+    }
+  },
+  "two_second_hold": {
+    "finite": true,
+    "max_joint_error_rad": 7.795416386013887e-08,
+    "max_gripper_mimic_error_m": 2.5674240518996916e-07,
+    "max_arm_command_Nm": 3.4469214089069644,
+    "saturation_steps": 0,
+    "warning_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "note": "Gravity feedforward uses this same approximate model; numerical check, not hardware identification"
+  },
+  "renders": "3 PNGs generated on Linux via MuJoCo EGL"
+}

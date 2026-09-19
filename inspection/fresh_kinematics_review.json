@@ -1,0 +1,321 @@
+{
+  "review_date": "2026-09-18",
+  "status": "numerical consistency pass; provisional physical calibration remains",
+  "scope": "Independent read-only parser and MuJoCo runtime audit, no builder execution or hardware access",
+  "hashes": {
+    "model_manifest.json": "379fbedcb507e09ed6c93acd2c130b06f5cfb3ef1245d17897c7816631bf6547",
+    "viscous_arm.urdf": "8ac332cb14abb0527a7dee71732239bbb88183fe611185db92677dc2deb30168",
+    "viscous_arm.xml": "9eb24e1b721cc3b15c3b9745c7d041a2ccc40e7cc62bbd1d7a059bf31201b558"
+  },
+  "random_fk_samples": 100,
+  "max_body_position_difference_m": 8.71668042000359e-11,
+  "max_body_rotation_matrix_difference": 2.447263502958208e-10,
+  "max_sampled_mesh_vertex_difference_m": 3.785465155768808e-09,
+  "mesh_details": [
+    {
+      "geom": "visual_000",
+      "max_sampled_vertex_error_m": 1.5411220006166617e-09
+    },
+    {
+      "geom": "visual_001",
+      "max_sampled_vertex_error_m": 1.76047820211008e-10
+    },
+    {
+      "geom": "visual_002",
+      "max_sampled_vertex_error_m": 2.1509906858405515e-09
+    },
+    {
+      "geom": "visual_014",
+      "max_sampled_vertex_error_m": 1.2358255355746208e-09
+    },
+    {
+      "geom": "visual_015",
+      "max_sampled_vertex_error_m": 5.924979374603904e-10
+    },
+    {
+      "geom": "visual_016",
+      "max_sampled_vertex_error_m": 5.924978577139851e-10
+    },
+    {
+      "geom": "visual_003",
+      "max_sampled_vertex_error_m": 9.31481383189134e-10
+    },
+    {
+      "geom": "visual_004",
+      "max_sampled_vertex_error_m": 1.041859728602039e-10
+    },
+    {
+      "geom": "visual_005",
+      "max_sampled_vertex_error_m": 1.9416234754248454e-09
+    },
+    {
+      "geom": "visual_006",
+      "max_sampled_vertex_error_m": 1.824921966863357e-09
+    },
+    {
+      "geom": "visual_007",
+      "max_sampled_vertex_error_m": 2.4998128369405277e-10
+    },
+    {
+      "geom": "visual_019",
+      "max_sampled_vertex_error_m": 1.3995080226043082e-09
+    },
+    {
+      "geom": "visual_008",
+      "max_sampled_vertex_error_m": 3.785465155768808e-09
+    },
+    {
+      "geom": "visual_009",
+      "max_sampled_vertex_error_m": 3.730657909671763e-09
+    },
+    {
+      "geom": "visual_010",
+      "max_sampled_vertex_error_m": 8.216112446562037e-10
+    },
+    {
+      "geom": "visual_011",
+      "max_sampled_vertex_error_m": 8.870950683413529e-10
+    },
+    {
+      "geom": "visual_012",
+      "max_sampled_vertex_error_m": 4.739929456863169e-10
+    },
+    {
+      "geom": "visual_018",
+      "max_sampled_vertex_error_m": 1.3952635717100633e-09
+    },
+    {
+      "geom": "visual_013",
+      "max_sampled_vertex_error_m": 1.2573128810799562e-10
+    },
+    {
+      "geom": "visual_017",
+      "max_sampled_vertex_error_m": 9.051249918235762e-10
+    },
+    {
+      "geom": "visual_058",
+      "max_sampled_vertex_error_m": 1.5183455659214236e-09
+    },
+    {
+      "geom": "visual_060",
+      "max_sampled_vertex_error_m": 3.743275278113665e-09
+    },
+    {
+      "geom": "visual_061",
+      "max_sampled_vertex_error_m": 1.876699949410814e-09
+    },
+    {
+      "geom": "visual_062",
+      "max_sampled_vertex_error_m": 3.712659039002019e-09
+    },
+    {
+      "geom": "visual_063",
+      "max_sampled_vertex_error_m": 1.8885258412715354e-09
+    },
+    {
+      "geom": "visual_064",
+      "max_sampled_vertex_error_m": 5.077415419100362e-11
+    },
+    {
+      "geom": "visual_065",
+      "max_sampled_vertex_error_m": 6.221332874408932e-11
+    },
+    {
+      "geom": "visual_066",
+      "max_sampled_vertex_error_m": 9.669241218866086e-11
+    },
+    {
+      "geom": "visual_067",
+      "max_sampled_vertex_error_m": 9.191762437211149e-11
+    },
+    {
+      "geom": "visual_068",
+      "max_sampled_vertex_error_m": 6.396513464713244e-11
+    },
+    {
+      "geom": "visual_069",
+      "max_sampled_vertex_error_m": 1.293881640497188e-10
+    },
+    {
+      "geom": "visual_053",
+      "max_sampled_vertex_error_m": 1.3713990531484212e-09
+    },
+    {
+      "geom": "visual_054",
+      "max_sampled_vertex_error_m": 2.004779094230187e-09
+    },
+    {
+      "geom": "visual_055",
+      "max_sampled_vertex_error_m": 1.8607565867772874e-09
+    },
+    {
+      "geom": "visual_056",
+      "max_sampled_vertex_error_m": 1.8639034871162496e-09
+    },
+    {
+      "geom": "visual_057",
+      "max_sampled_vertex_error_m": 3.9769109355553355e-10
+    },
+    {
+      "geom": "visual_049",
+      "max_sampled_vertex_error_m": 1.3549432348638636e-09
+    },
+    {
+      "geom": "visual_050",
+      "max_sampled_vertex_error_m": 1.8331058512463995e-09
+    },
+    {
+      "geom": "visual_051",
+      "max_sampled_vertex_error_m": 1.0386422716570593e-09
+    },
+    {
+      "geom": "visual_052",
+      "max_sampled_vertex_error_m": 9.094674369905108e-10
+    },
+    {
+      "geom": "visual_059",
+      "max_sampled_vertex_error_m": 9.390677103235745e-10
+    },
+    {
+      "geom": "visual_020",
+      "max_sampled_vertex_error_m": 1.4910510482035315e-09
+    },
+    {
+      "geom": "visual_024",
+      "max_sampled_vertex_error_m": 3.7093380235683126e-09
+    },
+    {
+      "geom": "visual_025",
+      "max_sampled_vertex_error_m": 1.1129398198648709e-09
+    },
+    {
+      "geom": "visual_046",
+      "max_sampled_vertex_error_m": 1.912552847655104e-09
+    },
+    {
+      "geom": "visual_047",
+      "max_sampled_vertex_error_m": 1.0240628788021156e-09
+    },
+    {
+      "geom": "visual_048",
+      "max_sampled_vertex_error_m": 9.073650745948674e-10
+    },
+    {
+      "geom": "visual_070",
+      "max_sampled_vertex_error_m": 1.8554428175872394e-09
+    },
+    {
+      "geom": "visual_071",
+      "max_sampled_vertex_error_m": 6.345288385550324e-10
+    },
+    {
+      "geom": "visual_029",
+      "max_sampled_vertex_error_m": 1.979093834366454e-10
+    },
+    {
+      "geom": "visual_030",
+      "max_sampled_vertex_error_m": 2.3078962646245806e-10
+    },
+    {
+      "geom": "visual_031",
+      "max_sampled_vertex_error_m": 5.190977962109018e-10
+    },
+    {
+      "geom": "visual_032",
+      "max_sampled_vertex_error_m": 9.489164816662345e-10
+    },
+    {
+      "geom": "visual_041",
+      "max_sampled_vertex_error_m": 4.3758865716339746e-10
+    },
+    {
+      "geom": "visual_043",
+      "max_sampled_vertex_error_m": 1.3744054599535179e-09
+    },
+    {
+      "geom": "visual_036",
+      "max_sampled_vertex_error_m": 2.3603414285904313e-10
+    },
+    {
+      "geom": "visual_037",
+      "max_sampled_vertex_error_m": 2.3255139472300614e-10
+    },
+    {
+      "geom": "visual_038",
+      "max_sampled_vertex_error_m": 6.192708381808279e-10
+    },
+    {
+      "geom": "visual_039",
+      "max_sampled_vertex_error_m": 9.413930239990032e-10
+    },
+    {
+      "geom": "visual_042",
+      "max_sampled_vertex_error_m": 1.2511520213069765e-09
+    }
+  ],
+  "confirmed_kinematic_bugs": [],
+  "caveats": [
+    "Physical encoder signs/offsets and physical limits uncalibrated; current checks establish URDF/MuJoCo agreement only.",
+    "MuJoCo direct torque actuators enforce input5Nm arm caps, but no URDF velocity limit enforcement.",
+    "Gripper single-actuator10N is generalized force conjugate to one-jaw displacement; equals approximately5N force per jaw in symmetric bilateral quasi-static grasp.",
+    "Gripper ideal-slider lumped mechanism ignores motor transmission inertia, moving rod/crank inertia and nonlinear motor-to-gap mapping."
+  ],
+  "source_axis_checks": [
+    {
+      "joint": "shoulder_pan",
+      "source_motor": 0,
+      "axis_parallel_error": 0.0,
+      "axis_line_separation_m": 1.1102230246251564e-17
+    },
+    {
+      "joint": "shoulder_lift",
+      "source_motor": 19,
+      "axis_parallel_error": 2.36640185939571e-17,
+      "axis_line_separation_m": 3.549605666308819e-19
+    },
+    {
+      "joint": "elbow_flex",
+      "source_motor": 18,
+      "axis_parallel_error": 2.7585853813163483e-14,
+      "axis_line_separation_m": 3.4461322782106654e-13
+    },
+    {
+      "joint": "wrist_flex",
+      "source_motor": 58,
+      "axis_parallel_error": 2.8235651133938205e-14,
+      "axis_line_separation_m": 4.863518228216482e-13
+    },
+    {
+      "joint": "wrist_yaw",
+      "source_motor": 53,
+      "axis_parallel_error": 3.629596623255793e-13,
+      "axis_line_separation_m": 4.686494248229423e-13
+    },
+    {
+      "joint": "wrist_roll",
+      "source_motor": 49,
+      "axis_parallel_error": 3.6184943930095415e-13,
+      "axis_line_separation_m": 1.8150477373861002e-14
+    }
+  ],
+  "keyframe_contacts": [
+    {
+      "keyframe": "cad_zero",
+      "contact_count": 0
+    },
+    {
+      "keyframe": "inspection_pose",
+      "contact_count": 0
+    }
+  ],
+  "tool_frame": {
+    "z_approach_dot": 1.0000000000000002,
+    "x_positive_jaw_opening_dot": 1.0000000000000002
+  },
+  "ownership": {
+    "all_70_physical_solids_assigned_once": true,
+    "loops44_45_absent": true,
+    "motor_housing_parent_ownership_correct": true
+  },
+  "reviewed_total_mass_kg": 3.508241978854679
+}

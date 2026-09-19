@@ -1,0 +1,296 @@
+{
+  "0": {
+    "mass_kg": 0.31,
+    "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+  },
+  "1": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "2": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "3": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "4": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "5": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "6": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "7": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "8": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "9": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "10": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "11": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "12": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "13": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "14": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "15": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "16": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "17": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "18": {
+    "mass_kg": 0.31,
+    "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+  },
+  "19": {
+    "mass_kg": 0.31,
+    "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+  },
+  "20": {
+    "mass_kg": 0.31,
+    "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+  },
+  "21": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "22": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "23": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "24": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "25": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "26": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "27": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "28": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "29": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "30": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "31": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "32": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "33": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "34": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "35": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "36": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "37": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "38": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "39": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "40": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "41": {
+    "density_kg_m3": 7850,
+    "basis": "steel estimate for bearings/rail/blocks/bolts; verify assembled mass"
+  },
+  "42": {
+    "density_kg_m3": 372,
+    "solid_density_kg_m3": 1240,
+    "effective_solid_fraction": 0.3,
+    "basis": "Gavin confirmed PLA+ and requested30%effective infill/perimeter allowance; nominal PLA+ density estimate, uniform distribution"
+  },
+  "43": {
+    "density_kg_m3": 372,
+    "solid_density_kg_m3": 1240,
+    "effective_solid_fraction": 0.3,
+    "basis": "Gavin confirmed PLA+ and requested30%effective infill/perimeter allowance; nominal PLA+ density estimate, uniform distribution"
+  },
+  "44": {
+    "excluded": true,
+    "basis": "User confirmed finger loops are absent from real arm"
+  },
+  "45": {
+    "excluded": true,
+    "basis": "User confirmed finger loops are absent from real arm"
+  },
+  "46": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "47": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "48": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "49": {
+    "mass_kg": 0.31,
+    "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+  },
+  "50": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "51": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "52": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "53": {
+    "mass_kg": 0.31,
+    "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+  },
+  "54": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "55": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "56": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "57": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "58": {
+    "mass_kg": 0.31,
+    "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
+  },
+  "59": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "60": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "61": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "62": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "63": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "64": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "65": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "66": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "67": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "68": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "69": {
+    "density_kg_m3": 2700,
+    "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
+  },
+  "70": {
+    "density_kg_m3": 372,
+    "solid_density_kg_m3": 1240,
+    "effective_solid_fraction": 0.3,
+    "basis": "Gavin confirmed PLA+ and requested30%effective infill/perimeter allowance; nominal PLA+ density estimate, uniform distribution"
+  },
+  "71": {
+    "mass_kg": 0.03,
+    "basis": "camera provisional mass, not measured; override when weighed"
+  }
+}
