@@ -4,6 +4,10 @@ CAD-derived URDF, MuJoCo simulation, and a browser model explorer for the Viscou
 
 This is an offline model for inspection, kinematics, collision queries, and initial simulation. It does not contain a hardware controller or a verified encoder-to-URDF mapping.
 
+## How this model was made
+
+See [CAD to URDF: repeatable workflow for another robot arm](docs/CAD_TO_URDF_WORKFLOW.md) for the extraction process, rigid-link mapping, joint-frame choices, mass/inertia calculations, collision modeling, validation, and the exact code locations to adapt. The current scripts are specific to this arm; they are not an automatic arbitrary-CAD converter.
+
 ## Open
 
 - Browser explorer: start `python viewer/server.py`, then open http://127.0.0.1:8766/viewer/
