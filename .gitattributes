@@ -1,5 +1,6 @@
-*.step filter=lfs diff=lfs merge=lfs -text
-*.stp filter=lfs diff=lfs merge=lfs -text
-*.f3z filter=lfs diff=lfs merge=lfs -text
-*.f3d filter=lfs diff=lfs merge=lfs -text
-*.stl filter=lfs diff=lfs merge=lfs -text
+# CAD and meshes are ordinary Git blobs; no Git LFS filters.
+*.step binary
+*.stp binary
+*.f3z binary
+*.f3d binary
+*.stl binary

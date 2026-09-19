@@ -55,13 +55,11 @@ The single gripper actuator's +/-10 N is generalized force conjugate to one jaw'
 
 ## Reproduce
 
-The verified environment is Python 3.10 on Linux with NVIDIA EGL rendering. Clone with Git LFS enabled:
+The verified environment is Python 3.10 on Linux with NVIDIA EGL rendering. Clone normally; Git LFS is not required:
 
 ```sh
-git lfs install
 git clone https://github.com/gavingavinchan/viscous-arm-simulation.git
 cd viscous-arm-simulation
-git lfs pull
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-lock.txt
 ```
@@ -113,4 +111,4 @@ Output: `demo/viscous_pick_place_20mm.mp4` (1280 × 960, 30 fps, 21.4 seconds). 
 
 The verified run settled the cube inside the cup, with maximum arm torque 3.725 Nm, maximum arm speed 0.523 rad/s, no joint-limit excursions, no unintended robot collisions, and no solver warnings. See `demo/pick_place_report.json` and `demo/independent_demo_review.json`. This is a scripted simulated demonstration, not a trained policy or physical-arm test.
 
-Videos, intermediate CAD tessellations, environments, caches, and ZIP exports are not tracked. Source CAD and runtime meshes use Git LFS. Refer to `THIRD_PARTY_NOTICES.md` for asset provenance and third-party licenses.
+Videos, intermediate CAD tessellations, environments, caches, and ZIP exports are not tracked. Source CAD and runtime meshes are stored directly in regular Git. Refer to `THIRD_PARTY_NOTICES.md` for asset provenance and third-party licenses.
