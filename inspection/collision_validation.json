@@ -1,0 +1,489 @@
+{
+  "scope": "Convexity, asset parity, sampled surface coverage and local CPU timings; not a continuous geometric error bound or hardware validation",
+  "coverage_tolerance_m": 2e-06,
+  "parts": [
+    {
+      "part": 0,
+      "link": "base_link",
+      "hulls": 1,
+      "faces": 584,
+      "source_volume_cm3": 127.73503811712908,
+      "old_hull_volume_cm3": 130.63645534381521,
+      "new_summed_hull_volume_cm3": 130.63688084358358,
+      "max_sample_plane_gap_m": 5.47112948091899e-07
+    },
+    {
+      "part": 2,
+      "link": "base_link",
+      "hulls": 1,
+      "faces": 220,
+      "source_volume_cm3": 70.93170570675198,
+      "old_hull_volume_cm3": 71.48037332181613,
+      "new_summed_hull_volume_cm3": 71.48035252582868,
+      "max_sample_plane_gap_m": 4.5199649040261747e-07
+    },
+    {
+      "part": 14,
+      "link": "base_link",
+      "hulls": 6,
+      "faces": 262,
+      "source_volume_cm3": 7.276700877068303,
+      "old_hull_volume_cm3": 12.328448610241463,
+      "new_summed_hull_volume_cm3": 8.367385575051497,
+      "max_sample_plane_gap_m": 4.631761353728059e-07
+    },
+    {
+      "part": 15,
+      "link": "base_link",
+      "hulls": 1,
+      "faces": 20,
+      "source_volume_cm3": 10.891202911773233,
+      "old_hull_volume_cm3": 11.7810014345795,
+      "new_summed_hull_volume_cm3": 11.7810014345795,
+      "max_sample_plane_gap_m": 0.0
+    },
+    {
+      "part": 16,
+      "link": "base_link",
+      "hulls": 1,
+      "faces": 20,
+      "source_volume_cm3": 10.891202911773233,
+      "old_hull_volume_cm3": 11.7810014345795,
+      "new_summed_hull_volume_cm3": 11.7810014345795,
+      "max_sample_plane_gap_m": 0.0
+    },
+    {
+      "part": 3,
+      "link": "yaw_link",
+      "hulls": 6,
+      "faces": 692,
+      "source_volume_cm3": 10.665741012210216,
+      "old_hull_volume_cm3": 15.517432138385322,
+      "new_summed_hull_volume_cm3": 13.617406227815312,
+      "max_sample_plane_gap_m": 5.721587536776374e-07
+    },
+    {
+      "part": 4,
+      "link": "yaw_link",
+      "hulls": 1,
+      "faces": 12,
+      "source_volume_cm3": 11.679604044269766,
+      "old_hull_volume_cm3": 13.770000409372141,
+      "new_summed_hull_volume_cm3": 13.770000409372141,
+      "max_sample_plane_gap_m": 0.0
+    },
+    {
+      "part": 5,
+      "link": "yaw_link",
+      "hulls": 7,
+      "faces": 814,
+      "source_volume_cm3": 11.683986170215045,
+      "old_hull_volume_cm3": 26.51234162681668,
+      "new_summed_hull_volume_cm3": 13.801385650888719,
+      "max_sample_plane_gap_m": 5.63152450311355e-07
+    },
+    {
+      "part": 6,
+      "link": "yaw_link",
+      "hulls": 6,
+      "faces": 774,
+      "source_volume_cm3": 14.607631207815686,
+      "old_hull_volume_cm3": 26.512341972578472,
+      "new_summed_hull_volume_cm3": 16.507957205711037,
+      "max_sample_plane_gap_m": 5.615731719296746e-07
+    },
+    {
+      "part": 19,
+      "link": "yaw_link",
+      "hulls": 1,
+      "faces": 580,
+      "source_volume_cm3": 127.73503033161698,
+      "old_hull_volume_cm3": 130.63644458785402,
+      "new_summed_hull_volume_cm3": 130.63712040231252,
+      "max_sample_plane_gap_m": 5.932260745324797e-07
+    },
+    {
+      "part": "upper_arm_shell",
+      "link": "upper_arm_link",
+      "hulls": 3,
+      "faces": 784,
+      "source_volume_cm3": 190.12320071962003,
+      "old_hull_volume_cm3": 307.7991686654245,
+      "new_summed_hull_volume_cm3": 662.6160563758992,
+      "max_sample_plane_gap_m": 5.383032104094854e-07
+    },
+    {
+      "part": "forearm_shell",
+      "link": "forearm_link",
+      "hulls": 8,
+      "faces": 2140,
+      "source_volume_cm3": 206.670208709309,
+      "old_hull_volume_cm3": 261.03799652222693,
+      "new_summed_hull_volume_cm3": 634.0474868004266,
+      "max_sample_plane_gap_m": 6.00738510631027e-07
+    },
+    {
+      "part": 53,
+      "link": "wrist_pitch_link",
+      "hulls": 1,
+      "faces": 586,
+      "source_volume_cm3": 127.73503282540543,
+      "old_hull_volume_cm3": 130.6364772540592,
+      "new_summed_hull_volume_cm3": 130.63823387468565,
+      "max_sample_plane_gap_m": 6.42367152123291e-07
+    },
+    {
+      "part": 54,
+      "link": "wrist_pitch_link",
+      "hulls": 10,
+      "faces": 624,
+      "source_volume_cm3": 17.131277072577003,
+      "old_hull_volume_cm3": 37.440024090835315,
+      "new_summed_hull_volume_cm3": 20.662076156550413,
+      "max_sample_plane_gap_m": 5.338775961143127e-07
+    },
+    {
+      "part": 55,
+      "link": "wrist_pitch_link",
+      "hulls": 6,
+      "faces": 404,
+      "source_volume_cm3": 7.813835074616974,
+      "old_hull_volume_cm3": 11.438972113185297,
+      "new_summed_hull_volume_cm3": 8.934499967403395,
+      "max_sample_plane_gap_m": 5.178897011480499e-07
+    },
+    {
+      "part": 56,
+      "link": "wrist_pitch_link",
+      "hulls": 6,
+      "faces": 392,
+      "source_volume_cm3": 7.813835108360476,
+      "old_hull_volume_cm3": 11.438972113185297,
+      "new_summed_hull_volume_cm3": 9.287603138272072,
+      "max_sample_plane_gap_m": 5.178897011480499e-07
+    },
+    {
+      "part": 57,
+      "link": "wrist_pitch_link",
+      "hulls": 1,
+      "faces": 220,
+      "source_volume_cm3": 2.4139461240865883,
+      "old_hull_volume_cm3": 3.5722932747590064,
+      "new_summed_hull_volume_cm3": 3.572698745141703,
+      "max_sample_plane_gap_m": 5.352688745297041e-07
+    },
+    {
+      "part": 49,
+      "link": "wrist_yaw_link",
+      "hulls": 1,
+      "faces": 592,
+      "source_volume_cm3": 127.73503398865545,
+      "old_hull_volume_cm3": 130.6364523198534,
+      "new_summed_hull_volume_cm3": 130.63808959102235,
+      "max_sample_plane_gap_m": 5.667174079321269e-07
+    },
+    {
+      "part": 50,
+      "link": "wrist_yaw_link",
+      "hulls": 8,
+      "faces": 572,
+      "source_volume_cm3": 11.317150122430865,
+      "old_hull_volume_cm3": 21.88351479544363,
+      "new_summed_hull_volume_cm3": 12.827949192808159,
+      "max_sample_plane_gap_m": 5.638405243119093e-07
+    },
+    {
+      "part": 51,
+      "link": "wrist_yaw_link",
+      "hulls": 8,
+      "faces": 566,
+      "source_volume_cm3": 10.805943900689973,
+      "old_hull_volume_cm3": 16.98712641607201,
+      "new_summed_hull_volume_cm3": 14.777024502659987,
+      "max_sample_plane_gap_m": 5.758229351462973e-07
+    },
+    {
+      "part": 52,
+      "link": "wrist_yaw_link",
+      "hulls": 1,
+      "faces": 204,
+      "source_volume_cm3": 5.42141781250958,
+      "old_hull_volume_cm3": 7.716316747096561,
+      "new_summed_hull_volume_cm3": 7.7169268371358,
+      "max_sample_plane_gap_m": 5.526212232785654e-07
+    },
+    {
+      "part": 59,
+      "link": "wrist_yaw_link",
+      "hulls": 5,
+      "faces": 2220,
+      "source_volume_cm3": 4.878083662260626,
+      "old_hull_volume_cm3": 17.538352015891416,
+      "new_summed_hull_volume_cm3": 6.2074403359899595,
+      "max_sample_plane_gap_m": 6.915231594295523e-07
+    },
+    {
+      "part": 20,
+      "link": "wrist_roll_link",
+      "hulls": 1,
+      "faces": 584,
+      "source_volume_cm3": 127.73503470298175,
+      "old_hull_volume_cm3": 130.63646150776307,
+      "new_summed_hull_volume_cm3": 130.63808790227938,
+      "max_sample_plane_gap_m": 6.278229742230634e-07
+    },
+    {
+      "part": 24,
+      "link": "wrist_roll_link",
+      "hulls": 25,
+      "faces": 976,
+      "source_volume_cm3": 18.855823439691086,
+      "old_hull_volume_cm3": 65.81840297422433,
+      "new_summed_hull_volume_cm3": 44.56479510805722,
+      "max_sample_plane_gap_m": 5.042806232834207e-07
+    },
+    {
+      "part": 46,
+      "link": "wrist_roll_link",
+      "hulls": 1,
+      "faces": 250,
+      "source_volume_cm3": 12.890066494384943,
+      "old_hull_volume_cm3": 17.969125843053487,
+      "new_summed_hull_volume_cm3": 17.972184385260693,
+      "max_sample_plane_gap_m": 4.961510850082229e-07
+    },
+    {
+      "part": 47,
+      "link": "wrist_roll_link",
+      "hulls": 1,
+      "faces": 240,
+      "source_volume_cm3": 13.566156361791013,
+      "old_hull_volume_cm3": 15.21543507569037,
+      "new_summed_hull_volume_cm3": 15.217896409179225,
+      "max_sample_plane_gap_m": 5.520451146073801e-07
+    },
+    {
+      "part": 48,
+      "link": "wrist_roll_link",
+      "hulls": 1,
+      "faces": 248,
+      "source_volume_cm3": 7.4720368385701885,
+      "old_hull_volume_cm3": 9.663028401456659,
+      "new_summed_hull_volume_cm3": 9.663826613754473,
+      "max_sample_plane_gap_m": 6.216198142026952e-07
+    },
+    {
+      "part": 70,
+      "link": "wrist_roll_link",
+      "hulls": 2,
+      "faces": 378,
+      "source_volume_cm3": 10.987385146965206,
+      "old_hull_volume_cm3": 17.676131793899494,
+      "new_summed_hull_volume_cm3": 11.970252252777698,
+      "max_sample_plane_gap_m": 5.672845782653951e-07
+    },
+    {
+      "part": 71,
+      "link": "wrist_roll_link",
+      "hulls": 1,
+      "faces": 428,
+      "source_volume_cm3": 8.671187280168498,
+      "old_hull_volume_cm3": 9.734943259637861,
+      "new_summed_hull_volume_cm3": 9.735063857330651,
+      "max_sample_plane_gap_m": 6.83301131874231e-07
+    },
+    {
+      "part": 32,
+      "link": "gripper_left",
+      "hulls": 1,
+      "faces": 330,
+      "source_volume_cm3": 4.282708938768857,
+      "old_hull_volume_cm3": 6.181382798589408,
+      "new_summed_hull_volume_cm3": 6.181817992458184,
+      "max_sample_plane_gap_m": 6.779926209551923e-07
+    },
+    {
+      "part": 43,
+      "link": "gripper_left",
+      "hulls": 23,
+      "faces": 2392,
+      "source_volume_cm3": 28.652964659493385,
+      "old_hull_volume_cm3": 40.1847768096655,
+      "new_summed_hull_volume_cm3": 35.719050029700966,
+      "max_sample_plane_gap_m": 7.172019085358028e-07
+    },
+    {
+      "part": 39,
+      "link": "gripper_right",
+      "hulls": 1,
+      "faces": 334,
+      "source_volume_cm3": 4.282708860691392,
+      "old_hull_volume_cm3": 6.181379309134869,
+      "new_summed_hull_volume_cm3": 6.181802850973503,
+      "max_sample_plane_gap_m": 5.818687433892245e-07
+    },
+    {
+      "part": 42,
+      "link": "gripper_right",
+      "hulls": 23,
+      "faces": 2366,
+      "source_volume_cm3": 28.652965053160898,
+      "old_hull_volume_cm3": 40.184777243792624,
+      "new_summed_hull_volume_cm3": 35.718331385441545,
+      "max_sample_plane_gap_m": 6.821611434892905e-07
+    }
+  ],
+  "links": {
+    "base_link": {
+      "old_hull_volume_cm3": 238.0072801450318,
+      "new_summed_hull_volume_cm3": 234.04662181362275,
+      "summed_volume_reduction_percent": 1.6640912534253594
+    },
+    "yaw_link": {
+      "old_hull_volume_cm3": 212.94856073500665,
+      "new_summed_hull_volume_cm3": 188.3338698960997,
+      "summed_volume_reduction_percent": 11.558984364086633
+    },
+    "upper_arm_link": {
+      "old_hull_volume_cm3": 307.7991686654245,
+      "new_summed_hull_volume_cm3": 662.6160563758992,
+      "summed_volume_reduction_percent": -115.27545355268916
+    },
+    "forearm_link": {
+      "old_hull_volume_cm3": 261.03799652222693,
+      "new_summed_hull_volume_cm3": 634.0474868004266,
+      "summed_volume_reduction_percent": -142.89471082668172
+    },
+    "wrist_pitch_link": {
+      "old_hull_volume_cm3": 194.52673884602407,
+      "new_summed_hull_volume_cm3": 173.09511188205326,
+      "summed_volume_reduction_percent": 11.0173167406743
+    },
+    "wrist_yaw_link": {
+      "old_hull_volume_cm3": 194.76176229435703,
+      "new_summed_hull_volume_cm3": 172.16743045961624,
+      "summed_volume_reduction_percent": 11.60101016163141
+    },
+    "wrist_roll_link": {
+      "old_hull_volume_cm3": 266.71352885572526,
+      "new_summed_hull_volume_cm3": 239.76210652863935,
+      "summed_volume_reduction_percent": 10.10500758724724
+    },
+    "gripper_left": {
+      "old_hull_volume_cm3": 46.36615960825491,
+      "new_summed_hull_volume_cm3": 41.90086802215915,
+      "summed_volume_reduction_percent": 9.630496948254418
+    },
+    "gripper_right": {
+      "old_hull_volume_cm3": 46.36615655292749,
+      "new_summed_hull_volume_cm3": 41.90013423641505,
+      "summed_volume_reduction_percent": 9.632073582407951
+    }
+  },
+  "filled_outlines": [
+    {
+      "part": 24,
+      "passed": true,
+      "convex_pieces": 25,
+      "perimeter_tolerance_m": 2e-06,
+      "missing_area_beyond_tolerance_m2": 0.0,
+      "excess_area_beyond_tolerance_m2": 0.0,
+      "projected_symmetric_difference_mm2": 0.09944211619581401
+    },
+    {
+      "part": 43,
+      "passed": true,
+      "convex_pieces": 23,
+      "perimeter_tolerance_m": 2e-06,
+      "missing_area_beyond_tolerance_m2": 0.0,
+      "excess_area_beyond_tolerance_m2": 0.0,
+      "projected_symmetric_difference_mm2": 0.06185604191786641
+    },
+    {
+      "part": 42,
+      "passed": true,
+      "convex_pieces": 23,
+      "perimeter_tolerance_m": 2e-06,
+      "missing_area_beyond_tolerance_m2": 0.0,
+      "excess_area_beyond_tolerance_m2": 0.0,
+      "projected_symmetric_difference_mm2": 0.05572547264513154
+    }
+  ],
+  "solid_assemblies": [
+    {
+      "name": "upper_arm_shell",
+      "source_parts": [
+        8,
+        9,
+        10,
+        11,
+        18
+      ],
+      "passed": true,
+      "convex_pieces": 3,
+      "solid_interior_probes": 5577,
+      "formerly_empty_probes_now_filled": 3171,
+      "conservative_profile_tolerance_m": 0.0001
+    },
+    {
+      "name": "forearm_shell",
+      "source_parts": [
+        13,
+        17,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "passed": true,
+      "convex_pieces": 8,
+      "solid_interior_probes": 3139,
+      "formerly_empty_probes_now_filled": 1969,
+      "conservative_profile_tolerance_m": 0.0001
+    }
+  ],
+  "summary": {
+    "old_hulls": 49,
+    "new_hulls": 169,
+    "old_faces": 15303,
+    "new_faces": 21808,
+    "old_hull_volume_cm3": 1768.5273522249788,
+    "new_summed_hull_volume_cm3": 2387.8696860149316,
+    "summed_volume_change_percent": 35.02022928911788,
+    "note": "Assembly envelopes intentionally add volume in former plate-pair cavities; volumes sum convex pieces and may count overlaps."
+  },
+  "single_hull_envelopes": {
+    "passed": true,
+    "parts": [],
+    "checks": "Exactly one convex piece, CAD convex envelope bounds and support planes within export tolerance, volume within 0.1%"
+  },
+  "benchmark": {
+    "old": {
+      "median_1000_forward_seconds": 0.027914658974623308,
+      "rounds_seconds": [
+        0.028338283009361476,
+        0.027914658974623308,
+        0.02791286600404419,
+        0.02792590099852532
+      ]
+    },
+    "new": {
+      "median_1000_forward_seconds": 0.07809519401052967,
+      "rounds_seconds": [
+        0.07873574798577465,
+        0.0781123960041441,
+        0.07809448297484778,
+        0.07809519401052967
+      ]
+    },
+    "forward_time_ratio": 2.7976409843131003
+  },
+  "passed": true
+}

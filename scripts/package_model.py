@@ -1,7 +1,7 @@
 from pathlib import Path
 import hashlib,json,zipfile,xml.etree.ElementTree as ET
 R=Path(__file__).resolve().parents[1]
-files={R/'README.md',R/'materials.json',R/'requirements-lock.txt'}
+files={R/'README.md',R/'materials.json',R/'collision_settings.json',R/'requirements-lock.txt'}
 for folder in ['source','reference','viewer','scripts']:
  files.update(p for p in (R/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix not in ['.log','.pyc'])
 files.update((R/'inspection').glob('*.json'))

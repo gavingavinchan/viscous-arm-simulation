@@ -1,9 +1,12 @@
 """Build a reproducible CAD-zero Viscous model. Does not access robot hardware."""
 from pathlib import Path
+from importlib.metadata import version
 import json,copy,hashlib,xml.etree.ElementTree as ET
 import numpy as np
 from scipy.spatial.transform import Rotation
 import trimesh
+from collision_geometry import collision_hulls, SETTINGS as COLLISION_SETTINGS
+from outline_collision import outline_hulls
 ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'model'; OUT.mkdir(exist_ok=True)
 (OUT/'meshes').mkdir(exist_ok=True)
 parts=json.loads((ROOT/'inspection/parts.json').read_text())
@@ -60,6 +63,22 @@ overridepath=ROOT/'materials.json'
 if overridepath.exists():overrides=json.loads(overridepath.read_text())
 else:
  overrides={str(i):default_material(i) for i in range(len(parts))};overridepath.write_text(json.dumps(overrides,indent=2))
+assemblies=COLLISION_SETTINGS.get('assemblies',{})
+assembly_members={}
+for name,spec in assemblies.items():
+ assert set(spec['parts'])<=set(GROUPS[spec['link']]), 'Collision assemblies cannot cross a moving joint'
+ for i in spec['parts']:
+  assert i not in assembly_members and i not in INTERNAL and i not in STEEL
+  assembly_members[i]=name
+def export_hulls(hulls,stem,metadata):
+ result=[]
+ for piece,hull in enumerate(hulls):
+  # Triangulate on the float32 STL grid after 1 micrometre vertex cleanup.
+  hull=trimesh.convex.convex_hull(hull.vertices.round(6).astype(np.float32).astype(float))
+  suffix=f'_{piece:02d}' if len(hulls)>1 else ''
+  cf=f'meshes/{stem}{suffix}.stl';hull.export(OUT/cf)
+  result.append({**metadata,'piece':piece,'mesh':cf})
+ return result
 linkdata={};audit=[];allmeshes={}
 for link,ids in GROUPS.items():
  mass=0;first=np.zeros(3);Iorigin=np.zeros((3,3));visual=[];collisions=[]
@@ -75,12 +94,23 @@ for link,ids in GROUPS.items():
   if i in STEEL:col=[.38,.42,.45,1]
   if i==71:col=[.10,.13,.16,1]
   if i not in INTERNAL:visual.append({'part':i,'mesh':file,'rgba':col})
-  # Separate convex hull per physical solid; do not fill all link concavities with a single hull.
+  # Separate convex pieces preserve large openings in selected concave solids.
   # Tiny fasteners/bearings are visually represented but excluded from contact geometry.
-  if i not in INTERNAL and i not in STEEL:
-   hull=mesh.convex_hull;cf=f'meshes/collision_{i:03d}.stl';hull.export(OUT/cf)
-   collisions.append({'part':i,'mesh':cf})
+  if i not in INTERNAL and i not in STEEL and i not in assembly_members:
+   # Outline extraction and the comparison image use exactly the exported CAD
+   # vertices, including STL processing, to share the same projection frame.
+   collision_source=trimesh.load_mesh(OUT/file) if str(i) in COLLISION_SETTINGS.get('outline_parts',{}) else mesh
+   hulls=collision_hulls(collision_source,i)
+   collisions.extend(export_hulls(hulls,f'collision_{i:03d}',{'part':i}))
   audit.append({'part':i,'name':p['name'],'link':link,'mass_kg':m,'volume_mm3':vol,'material':spec,'visual':i not in INTERNAL,'collision':i not in INTERNAL and i not in STEEL})
+  if i in assembly_members:audit[-1]['collision_assembly']=assembly_members[i]
+ for name,spec in assemblies.items():
+  if spec['link']!=link:continue
+  source=trimesh.util.concatenate([trimesh.load_mesh(OUT/f'meshes/part_{i:03d}.stl') for i in spec['parts']])
+  hulls=outline_hulls(source,boundary_cleanup_m=spec['boundary_cleanup_m'],frame=(source.bounds.mean(axis=0),np.asarray(spec['profile_basis'])),outward_margin_m=spec['outward_margin_m'])
+  assert len(hulls)<=spec['max_pieces']
+  collisions.extend(export_hulls(hulls,f'collision_{name}',{'part':spec['parts'][0],'parts':spec['parts'],'assembly':name}))
+  print(f"Collision assembly {name}: {len(spec['parts'])} CAD solids -> {len(hulls)} convex pieces",flush=True)
  com=first/mass;I=Iorigin-mass*((com@com)*np.eye(3)-np.outer(com,com))
  assert np.linalg.eigvalsh(I).min()>0
  linkdata[link]={'mass_kg':mass,'com_m':com.tolist(),'inertia_kg_m2':I.tolist(),'visuals':visual,'collisions':collisions,'cad_pivot_mm':PIVOTS[link].tolist()}
@@ -108,7 +138,8 @@ for link,data in linkdata.items():
  I=np.array(data['inertia_kg_m2']);ET.SubElement(inert,'inertia',**{k:f'{I[a,b]:.12g}' for k,a,b in [('ixx',0,0),('ixy',0,1),('ixz',0,2),('iyy',1,1),('iyz',1,2),('izz',2,2)]})
  for typ,key in [('visual','visuals'),('collision','collisions')]:
   for v in data[key]:
-   el=ET.SubElement(l,typ,name=f"part_{v['part']:03d}");g=ET.SubElement(el,'geometry');ET.SubElement(g,'mesh',filename=v['mesh'])
+   shape_name=Path(v['mesh']).stem if typ=='collision' else f"part_{v['part']:03d}"
+   el=ET.SubElement(l,typ,name=shape_name);g=ET.SubElement(el,'geometry');ET.SubElement(g,'mesh',filename=v['mesh'])
    if typ=='visual':mat=ET.SubElement(el,'material',name=f"material_{v['part']}");ET.SubElement(mat,'color',rgba=fmt(v['rgba']))
 ET.SubElement(robot,'link',name='tool0')
 for j in J:
@@ -120,4 +151,10 @@ for j in J:
   if 'mimic' in j:ET.SubElement(el,'mimic',joint=j['mimic'],multiplier='1',offset='0')
 ET.indent(robot);ET.ElementTree(robot).write(OUT/'viscous_arm.urdf',encoding='utf-8',xml_declaration=True)
 meta={'robot':'viscous_arm_dry_cad_v1','status':'geometry-derived model; physical calibration pending','units':'metres, kilograms, radians','coordinate_mapping':'robot XYZ=(-CAD Y,-CAD Z,CAD X); CAD mm -> m; base underside Z=0','mesh_tessellation':{'linear_deflection_mm':.08,'angular_deflection_rad':.25,'relative':False},'source_sha256':hashlib.sha256((ROOT/'source/2026-09-18/maker arm cnc装配.step').read_bytes()).hexdigest(),'excluded_cad_parts':[44,45],'excluded_reason':'Gavin confirmed real arm has no finger loops, 2026-09-18','tool_frame':{'origin':'area-weighted midpoint of opposing inner finger pad faces','axes':'+X jaw opening; +Z approach toward fingertips; +Y right-handed'},'cad_zero_is_encoder_zero':False,'encoder_offset_status':'unmeasured; never command hardware with this model yet','joint_motor_mapping':dict(zip(names,range(1,7))),'recorded_motor_ranges_rad':dict(zip(names,recorded)),'joint_ranges_status':'provisionally assumes zero offset; widened to include CAD zero. Not calibrated limits.','link_spacings_mm':{'J2_J3':float(np.linalg.norm(j3-j2)),'J3_J4':float(np.linalg.norm(j4-j3))},'total_mass_kg':sum(x['mass_kg'] for x in linkdata.values()),'links':linkdata,'joints':J,'parts':audit,'simulator':{'engine':'MuJoCo','model':'viscous_arm.xml','gravity_m_s2':[0,0,-9.81],'velocity_caps_enforced':False,'joint_friction_damping_armature':'zero/unidentified','contact_friction':[.6,.005,.0001],'contact_friction_status':'generic numerical default, unmeasured'},'gripper':{'model':'symmetric sliders; internal crank/rod geometry omitted, its mass/inertia retained in wrist at CAD pose','per_jaw_max_travel_m':.0524125,'range_basis':'Maker reference only; physical Viscous gap not remeasured','actuator_generalized_force_N':10,'symmetric_contact_force_per_jaw_N_approx':5,'force_status':'simulation placeholder, not motor specification','motor_to_gap':'unidentified nonlinear transmission; no encoder conversion provided'},'assumptions':['Seven nominal 310g RS00 solids with uniform effective-density inertias; internal rotor/transmission inertia unidentified','CNC structural aluminium at2700kg/m3; 6061 alloy provisional','Bearing/rail steel7850kg/m3 provisional','PLA+ fingers42/43 and camera bracket70: nominal solid density1240kg/m3 times user-assumed30%effective solid fraction=372kg/m3; uniform effective-density inertia approximation. Finger loops44/45 physically absent and excluded','Camera mass30g placeholder','All model arm effort limits5Nm nominal datasheet rated, not thermal guarantee; simulation velocity2rad/s is a conservative chosen cap','Cables, omitted fasteners, waterproofing additions and payload not estimated without evidence','Per-solid convex collision approximation; holes/concavities can be conservative','Motor axis positive signs inherited from reference convention, physical signs not independently checked','Reference pose is source CAD assembly, not measured encoder zero']}
+meta['collision_geometry']={**COLLISION_SETTINGS,'coacd_version':version('coacd'),'shapely_version':version('shapely'),'export_grid_m':1e-6,'surface_coverage':'Outline parts preserve the filled broad-view CAD projection inside the full 3D convex envelope. Other compounds restore sampled source surface coverage after simplification.'}
+meta['assumptions']=[a.replace('Per-solid convex collision approximation; holes/concavities can be conservative','J2-J3 and J3-J4 use solid assembly collision envelopes with plate-pair cavities filled; rail base and fingers retain filled-outline envelopes. CAD visuals and measured/estimated mass properties remain separate from collision filling.') for a in meta['assumptions']]
 (OUT/'model_manifest.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2));print(json.dumps({'mass_kg':meta['total_mass_kg'],'spacing_mm':meta['link_spacings_mm'],'links':{k:round(v['mass_kg'],4) for k,v in linkdata.items()}},indent=2))
+# Remove only obsolete generated collision assets after the model is written.
+used={c['mesh'] for d in linkdata.values() for c in d['collisions']}
+for path in (OUT/'meshes').glob('collision_*.stl'):
+ if str(path.relative_to(OUT)) not in used:path.unlink()

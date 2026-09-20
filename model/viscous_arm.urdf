@@ -55,27 +55,52 @@
         <color rgba="0.2 0.24 0.28 1" />
       </material>
     </visual>
-    <collision name="part_000">
+    <collision name="collision_000">
       <geometry>
         <mesh filename="meshes/collision_000.stl" />
       </geometry>
     </collision>
-    <collision name="part_002">
+    <collision name="collision_002">
       <geometry>
         <mesh filename="meshes/collision_002.stl" />
       </geometry>
     </collision>
-    <collision name="part_014">
+    <collision name="collision_014_00">
       <geometry>
-        <mesh filename="meshes/collision_014.stl" />
+        <mesh filename="meshes/collision_014_00.stl" />
       </geometry>
     </collision>
-    <collision name="part_015">
+    <collision name="collision_014_01">
+      <geometry>
+        <mesh filename="meshes/collision_014_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_014_02">
+      <geometry>
+        <mesh filename="meshes/collision_014_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_014_03">
+      <geometry>
+        <mesh filename="meshes/collision_014_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_014_04">
+      <geometry>
+        <mesh filename="meshes/collision_014_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_014_05">
+      <geometry>
+        <mesh filename="meshes/collision_014_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_015">
       <geometry>
         <mesh filename="meshes/collision_015.stl" />
       </geometry>
     </collision>
-    <collision name="part_016">
+    <collision name="collision_016">
       <geometry>
         <mesh filename="meshes/collision_016.stl" />
       </geometry>
@@ -135,27 +160,107 @@
         <color rgba="0.12 0.15 0.18 1" />
       </material>
     </visual>
-    <collision name="part_003">
+    <collision name="collision_003_00">
       <geometry>
-        <mesh filename="meshes/collision_003.stl" />
+        <mesh filename="meshes/collision_003_00.stl" />
       </geometry>
     </collision>
-    <collision name="part_004">
+    <collision name="collision_003_01">
+      <geometry>
+        <mesh filename="meshes/collision_003_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_003_02">
+      <geometry>
+        <mesh filename="meshes/collision_003_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_003_03">
+      <geometry>
+        <mesh filename="meshes/collision_003_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_003_04">
+      <geometry>
+        <mesh filename="meshes/collision_003_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_003_05">
+      <geometry>
+        <mesh filename="meshes/collision_003_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_004">
       <geometry>
         <mesh filename="meshes/collision_004.stl" />
       </geometry>
     </collision>
-    <collision name="part_005">
+    <collision name="collision_005_00">
       <geometry>
-        <mesh filename="meshes/collision_005.stl" />
+        <mesh filename="meshes/collision_005_00.stl" />
       </geometry>
     </collision>
-    <collision name="part_006">
+    <collision name="collision_005_01">
       <geometry>
-        <mesh filename="meshes/collision_006.stl" />
+        <mesh filename="meshes/collision_005_01.stl" />
       </geometry>
     </collision>
-    <collision name="part_019">
+    <collision name="collision_005_02">
+      <geometry>
+        <mesh filename="meshes/collision_005_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_005_03">
+      <geometry>
+        <mesh filename="meshes/collision_005_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_005_04">
+      <geometry>
+        <mesh filename="meshes/collision_005_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_005_05">
+      <geometry>
+        <mesh filename="meshes/collision_005_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_005_06">
+      <geometry>
+        <mesh filename="meshes/collision_005_06.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_006_00">
+      <geometry>
+        <mesh filename="meshes/collision_006_00.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_006_01">
+      <geometry>
+        <mesh filename="meshes/collision_006_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_006_02">
+      <geometry>
+        <mesh filename="meshes/collision_006_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_006_03">
+      <geometry>
+        <mesh filename="meshes/collision_006_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_006_04">
+      <geometry>
+        <mesh filename="meshes/collision_006_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_006_05">
+      <geometry>
+        <mesh filename="meshes/collision_006_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_019">
       <geometry>
         <mesh filename="meshes/collision_019.stl" />
       </geometry>
@@ -215,29 +320,19 @@
         <color rgba="0.12 0.15 0.18 1" />
       </material>
     </visual>
-    <collision name="part_008">
+    <collision name="collision_upper_arm_shell_00">
       <geometry>
-        <mesh filename="meshes/collision_008.stl" />
+        <mesh filename="meshes/collision_upper_arm_shell_00.stl" />
       </geometry>
     </collision>
-    <collision name="part_009">
+    <collision name="collision_upper_arm_shell_01">
       <geometry>
-        <mesh filename="meshes/collision_009.stl" />
+        <mesh filename="meshes/collision_upper_arm_shell_01.stl" />
       </geometry>
     </collision>
-    <collision name="part_010">
+    <collision name="collision_upper_arm_shell_02">
       <geometry>
-        <mesh filename="meshes/collision_010.stl" />
-      </geometry>
-    </collision>
-    <collision name="part_011">
-      <geometry>
-        <mesh filename="meshes/collision_011.stl" />
-      </geometry>
-    </collision>
-    <collision name="part_018">
-      <geometry>
-        <mesh filename="meshes/collision_018.stl" />
+        <mesh filename="meshes/collision_upper_arm_shell_02.stl" />
       </geometry>
     </collision>
   </link>
@@ -351,69 +446,44 @@
         <color rgba="0.67 0.73 0.77 1" />
       </material>
     </visual>
-    <collision name="part_013">
+    <collision name="collision_forearm_shell_00">
       <geometry>
-        <mesh filename="meshes/collision_013.stl" />
+        <mesh filename="meshes/collision_forearm_shell_00.stl" />
       </geometry>
     </collision>
-    <collision name="part_017">
+    <collision name="collision_forearm_shell_01">
       <geometry>
-        <mesh filename="meshes/collision_017.stl" />
+        <mesh filename="meshes/collision_forearm_shell_01.stl" />
       </geometry>
     </collision>
-    <collision name="part_058">
+    <collision name="collision_forearm_shell_02">
       <geometry>
-        <mesh filename="meshes/collision_058.stl" />
+        <mesh filename="meshes/collision_forearm_shell_02.stl" />
       </geometry>
     </collision>
-    <collision name="part_060">
+    <collision name="collision_forearm_shell_03">
       <geometry>
-        <mesh filename="meshes/collision_060.stl" />
+        <mesh filename="meshes/collision_forearm_shell_03.stl" />
       </geometry>
     </collision>
-    <collision name="part_061">
+    <collision name="collision_forearm_shell_04">
       <geometry>
-        <mesh filename="meshes/collision_061.stl" />
+        <mesh filename="meshes/collision_forearm_shell_04.stl" />
       </geometry>
     </collision>
-    <collision name="part_062">
+    <collision name="collision_forearm_shell_05">
       <geometry>
-        <mesh filename="meshes/collision_062.stl" />
+        <mesh filename="meshes/collision_forearm_shell_05.stl" />
       </geometry>
     </collision>
-    <collision name="part_063">
+    <collision name="collision_forearm_shell_06">
       <geometry>
-        <mesh filename="meshes/collision_063.stl" />
+        <mesh filename="meshes/collision_forearm_shell_06.stl" />
       </geometry>
     </collision>
-    <collision name="part_064">
+    <collision name="collision_forearm_shell_07">
       <geometry>
-        <mesh filename="meshes/collision_064.stl" />
-      </geometry>
-    </collision>
-    <collision name="part_065">
-      <geometry>
-        <mesh filename="meshes/collision_065.stl" />
-      </geometry>
-    </collision>
-    <collision name="part_066">
-      <geometry>
-        <mesh filename="meshes/collision_066.stl" />
-      </geometry>
-    </collision>
-    <collision name="part_067">
-      <geometry>
-        <mesh filename="meshes/collision_067.stl" />
-      </geometry>
-    </collision>
-    <collision name="part_068">
-      <geometry>
-        <mesh filename="meshes/collision_068.stl" />
-      </geometry>
-    </collision>
-    <collision name="part_069">
-      <geometry>
-        <mesh filename="meshes/collision_069.stl" />
+        <mesh filename="meshes/collision_forearm_shell_07.stl" />
       </geometry>
     </collision>
   </link>
@@ -463,27 +533,122 @@
         <color rgba="0.66 0.72 0.76 1" />
       </material>
     </visual>
-    <collision name="part_053">
+    <collision name="collision_053">
       <geometry>
         <mesh filename="meshes/collision_053.stl" />
       </geometry>
     </collision>
-    <collision name="part_054">
+    <collision name="collision_054_00">
       <geometry>
-        <mesh filename="meshes/collision_054.stl" />
+        <mesh filename="meshes/collision_054_00.stl" />
       </geometry>
     </collision>
-    <collision name="part_055">
+    <collision name="collision_054_01">
       <geometry>
-        <mesh filename="meshes/collision_055.stl" />
+        <mesh filename="meshes/collision_054_01.stl" />
       </geometry>
     </collision>
-    <collision name="part_056">
+    <collision name="collision_054_02">
       <geometry>
-        <mesh filename="meshes/collision_056.stl" />
+        <mesh filename="meshes/collision_054_02.stl" />
       </geometry>
     </collision>
-    <collision name="part_057">
+    <collision name="collision_054_03">
+      <geometry>
+        <mesh filename="meshes/collision_054_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_054_04">
+      <geometry>
+        <mesh filename="meshes/collision_054_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_054_05">
+      <geometry>
+        <mesh filename="meshes/collision_054_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_054_06">
+      <geometry>
+        <mesh filename="meshes/collision_054_06.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_054_07">
+      <geometry>
+        <mesh filename="meshes/collision_054_07.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_054_08">
+      <geometry>
+        <mesh filename="meshes/collision_054_08.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_054_09">
+      <geometry>
+        <mesh filename="meshes/collision_054_09.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_055_00">
+      <geometry>
+        <mesh filename="meshes/collision_055_00.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_055_01">
+      <geometry>
+        <mesh filename="meshes/collision_055_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_055_02">
+      <geometry>
+        <mesh filename="meshes/collision_055_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_055_03">
+      <geometry>
+        <mesh filename="meshes/collision_055_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_055_04">
+      <geometry>
+        <mesh filename="meshes/collision_055_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_055_05">
+      <geometry>
+        <mesh filename="meshes/collision_055_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_056_00">
+      <geometry>
+        <mesh filename="meshes/collision_056_00.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_056_01">
+      <geometry>
+        <mesh filename="meshes/collision_056_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_056_02">
+      <geometry>
+        <mesh filename="meshes/collision_056_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_056_03">
+      <geometry>
+        <mesh filename="meshes/collision_056_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_056_04">
+      <geometry>
+        <mesh filename="meshes/collision_056_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_056_05">
+      <geometry>
+        <mesh filename="meshes/collision_056_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_057">
       <geometry>
         <mesh filename="meshes/collision_057.stl" />
       </geometry>
@@ -535,29 +700,119 @@
         <color rgba="0.65 0.7 0.74 1" />
       </material>
     </visual>
-    <collision name="part_049">
+    <collision name="collision_049">
       <geometry>
         <mesh filename="meshes/collision_049.stl" />
       </geometry>
     </collision>
-    <collision name="part_050">
+    <collision name="collision_050_00">
       <geometry>
-        <mesh filename="meshes/collision_050.stl" />
+        <mesh filename="meshes/collision_050_00.stl" />
       </geometry>
     </collision>
-    <collision name="part_051">
+    <collision name="collision_050_01">
       <geometry>
-        <mesh filename="meshes/collision_051.stl" />
+        <mesh filename="meshes/collision_050_01.stl" />
       </geometry>
     </collision>
-    <collision name="part_052">
+    <collision name="collision_050_02">
+      <geometry>
+        <mesh filename="meshes/collision_050_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_050_03">
+      <geometry>
+        <mesh filename="meshes/collision_050_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_050_04">
+      <geometry>
+        <mesh filename="meshes/collision_050_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_050_05">
+      <geometry>
+        <mesh filename="meshes/collision_050_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_050_06">
+      <geometry>
+        <mesh filename="meshes/collision_050_06.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_050_07">
+      <geometry>
+        <mesh filename="meshes/collision_050_07.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_051_00">
+      <geometry>
+        <mesh filename="meshes/collision_051_00.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_051_01">
+      <geometry>
+        <mesh filename="meshes/collision_051_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_051_02">
+      <geometry>
+        <mesh filename="meshes/collision_051_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_051_03">
+      <geometry>
+        <mesh filename="meshes/collision_051_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_051_04">
+      <geometry>
+        <mesh filename="meshes/collision_051_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_051_05">
+      <geometry>
+        <mesh filename="meshes/collision_051_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_051_06">
+      <geometry>
+        <mesh filename="meshes/collision_051_06.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_051_07">
+      <geometry>
+        <mesh filename="meshes/collision_051_07.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_052">
       <geometry>
         <mesh filename="meshes/collision_052.stl" />
       </geometry>
     </collision>
-    <collision name="part_059">
+    <collision name="collision_059_00">
       <geometry>
-        <mesh filename="meshes/collision_059.stl" />
+        <mesh filename="meshes/collision_059_00.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_059_01">
+      <geometry>
+        <mesh filename="meshes/collision_059_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_059_02">
+      <geometry>
+        <mesh filename="meshes/collision_059_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_059_03">
+      <geometry>
+        <mesh filename="meshes/collision_059_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_059_04">
+      <geometry>
+        <mesh filename="meshes/collision_059_04.stl" />
       </geometry>
     </collision>
   </link>
@@ -631,37 +886,162 @@
         <color rgba="0.1 0.13 0.16 1" />
       </material>
     </visual>
-    <collision name="part_020">
+    <collision name="collision_020">
       <geometry>
         <mesh filename="meshes/collision_020.stl" />
       </geometry>
     </collision>
-    <collision name="part_024">
+    <collision name="collision_024_00">
       <geometry>
-        <mesh filename="meshes/collision_024.stl" />
+        <mesh filename="meshes/collision_024_00.stl" />
       </geometry>
     </collision>
-    <collision name="part_046">
+    <collision name="collision_024_01">
+      <geometry>
+        <mesh filename="meshes/collision_024_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_02">
+      <geometry>
+        <mesh filename="meshes/collision_024_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_03">
+      <geometry>
+        <mesh filename="meshes/collision_024_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_04">
+      <geometry>
+        <mesh filename="meshes/collision_024_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_05">
+      <geometry>
+        <mesh filename="meshes/collision_024_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_06">
+      <geometry>
+        <mesh filename="meshes/collision_024_06.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_07">
+      <geometry>
+        <mesh filename="meshes/collision_024_07.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_08">
+      <geometry>
+        <mesh filename="meshes/collision_024_08.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_09">
+      <geometry>
+        <mesh filename="meshes/collision_024_09.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_10">
+      <geometry>
+        <mesh filename="meshes/collision_024_10.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_11">
+      <geometry>
+        <mesh filename="meshes/collision_024_11.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_12">
+      <geometry>
+        <mesh filename="meshes/collision_024_12.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_13">
+      <geometry>
+        <mesh filename="meshes/collision_024_13.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_14">
+      <geometry>
+        <mesh filename="meshes/collision_024_14.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_15">
+      <geometry>
+        <mesh filename="meshes/collision_024_15.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_16">
+      <geometry>
+        <mesh filename="meshes/collision_024_16.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_17">
+      <geometry>
+        <mesh filename="meshes/collision_024_17.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_18">
+      <geometry>
+        <mesh filename="meshes/collision_024_18.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_19">
+      <geometry>
+        <mesh filename="meshes/collision_024_19.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_20">
+      <geometry>
+        <mesh filename="meshes/collision_024_20.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_21">
+      <geometry>
+        <mesh filename="meshes/collision_024_21.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_22">
+      <geometry>
+        <mesh filename="meshes/collision_024_22.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_23">
+      <geometry>
+        <mesh filename="meshes/collision_024_23.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_024_24">
+      <geometry>
+        <mesh filename="meshes/collision_024_24.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_046">
       <geometry>
         <mesh filename="meshes/collision_046.stl" />
       </geometry>
     </collision>
-    <collision name="part_047">
+    <collision name="collision_047">
       <geometry>
         <mesh filename="meshes/collision_047.stl" />
       </geometry>
     </collision>
-    <collision name="part_048">
+    <collision name="collision_048">
       <geometry>
         <mesh filename="meshes/collision_048.stl" />
       </geometry>
     </collision>
-    <collision name="part_070">
+    <collision name="collision_070_00">
       <geometry>
-        <mesh filename="meshes/collision_070.stl" />
+        <mesh filename="meshes/collision_070_00.stl" />
       </geometry>
     </collision>
-    <collision name="part_071">
+    <collision name="collision_070_01">
+      <geometry>
+        <mesh filename="meshes/collision_070_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_071">
       <geometry>
         <mesh filename="meshes/collision_071.stl" />
       </geometry>
@@ -721,14 +1101,124 @@
         <color rgba="0.16 0.2 0.23 1" />
       </material>
     </visual>
-    <collision name="part_032">
+    <collision name="collision_032">
       <geometry>
         <mesh filename="meshes/collision_032.stl" />
       </geometry>
     </collision>
-    <collision name="part_043">
+    <collision name="collision_043_00">
       <geometry>
-        <mesh filename="meshes/collision_043.stl" />
+        <mesh filename="meshes/collision_043_00.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_01">
+      <geometry>
+        <mesh filename="meshes/collision_043_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_02">
+      <geometry>
+        <mesh filename="meshes/collision_043_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_03">
+      <geometry>
+        <mesh filename="meshes/collision_043_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_04">
+      <geometry>
+        <mesh filename="meshes/collision_043_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_05">
+      <geometry>
+        <mesh filename="meshes/collision_043_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_06">
+      <geometry>
+        <mesh filename="meshes/collision_043_06.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_07">
+      <geometry>
+        <mesh filename="meshes/collision_043_07.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_08">
+      <geometry>
+        <mesh filename="meshes/collision_043_08.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_09">
+      <geometry>
+        <mesh filename="meshes/collision_043_09.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_10">
+      <geometry>
+        <mesh filename="meshes/collision_043_10.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_11">
+      <geometry>
+        <mesh filename="meshes/collision_043_11.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_12">
+      <geometry>
+        <mesh filename="meshes/collision_043_12.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_13">
+      <geometry>
+        <mesh filename="meshes/collision_043_13.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_14">
+      <geometry>
+        <mesh filename="meshes/collision_043_14.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_15">
+      <geometry>
+        <mesh filename="meshes/collision_043_15.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_16">
+      <geometry>
+        <mesh filename="meshes/collision_043_16.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_17">
+      <geometry>
+        <mesh filename="meshes/collision_043_17.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_18">
+      <geometry>
+        <mesh filename="meshes/collision_043_18.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_19">
+      <geometry>
+        <mesh filename="meshes/collision_043_19.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_20">
+      <geometry>
+        <mesh filename="meshes/collision_043_20.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_21">
+      <geometry>
+        <mesh filename="meshes/collision_043_21.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_043_22">
+      <geometry>
+        <mesh filename="meshes/collision_043_22.stl" />
       </geometry>
     </collision>
   </link>
@@ -778,14 +1268,124 @@
         <color rgba="0.16 0.2 0.23 1" />
       </material>
     </visual>
-    <collision name="part_039">
+    <collision name="collision_039">
       <geometry>
         <mesh filename="meshes/collision_039.stl" />
       </geometry>
     </collision>
-    <collision name="part_042">
+    <collision name="collision_042_00">
       <geometry>
-        <mesh filename="meshes/collision_042.stl" />
+        <mesh filename="meshes/collision_042_00.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_01">
+      <geometry>
+        <mesh filename="meshes/collision_042_01.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_02">
+      <geometry>
+        <mesh filename="meshes/collision_042_02.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_03">
+      <geometry>
+        <mesh filename="meshes/collision_042_03.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_04">
+      <geometry>
+        <mesh filename="meshes/collision_042_04.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_05">
+      <geometry>
+        <mesh filename="meshes/collision_042_05.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_06">
+      <geometry>
+        <mesh filename="meshes/collision_042_06.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_07">
+      <geometry>
+        <mesh filename="meshes/collision_042_07.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_08">
+      <geometry>
+        <mesh filename="meshes/collision_042_08.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_09">
+      <geometry>
+        <mesh filename="meshes/collision_042_09.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_10">
+      <geometry>
+        <mesh filename="meshes/collision_042_10.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_11">
+      <geometry>
+        <mesh filename="meshes/collision_042_11.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_12">
+      <geometry>
+        <mesh filename="meshes/collision_042_12.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_13">
+      <geometry>
+        <mesh filename="meshes/collision_042_13.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_14">
+      <geometry>
+        <mesh filename="meshes/collision_042_14.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_15">
+      <geometry>
+        <mesh filename="meshes/collision_042_15.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_16">
+      <geometry>
+        <mesh filename="meshes/collision_042_16.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_17">
+      <geometry>
+        <mesh filename="meshes/collision_042_17.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_18">
+      <geometry>
+        <mesh filename="meshes/collision_042_18.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_19">
+      <geometry>
+        <mesh filename="meshes/collision_042_19.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_20">
+      <geometry>
+        <mesh filename="meshes/collision_042_20.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_21">
+      <geometry>
+        <mesh filename="meshes/collision_042_21.stl" />
+      </geometry>
+    </collision>
+    <collision name="collision_042_22">
+      <geometry>
+        <mesh filename="meshes/collision_042_22.stl" />
       </geometry>
     </collision>
   </link>

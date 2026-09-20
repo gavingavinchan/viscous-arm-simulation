@@ -27,7 +27,7 @@ def add_link(name,parent,j=None):
    mn=f"visual_{v['part']:03d}";ET.SubElement(asset,'mesh',name=mn,file=Path(v['mesh']).name)
    ET.SubElement(b,'geom',name=mn,type='mesh',mesh=mn,rgba=f(v['rgba']),contype='0',conaffinity='0',group='2',density='0')
   for c in d['collisions']:
-   mn=f"collision_{c['part']:03d}";ET.SubElement(asset,'mesh',name=mn,file=Path(c['mesh']).name)
+   mn=Path(c['mesh']).stem;ET.SubElement(asset,'mesh',name=mn,file=Path(c['mesh']).name)
    ET.SubElement(b,'geom',name=mn,type='mesh',mesh=mn,rgba='1 .4 .05 .2',contype='1',conaffinity='1',group='3',density='0')
  else:ET.SubElement(b,'site',name='tool_center',size='.004',rgba='0.1 0.8 0.8 1')
  for jj in children.get(name,[]):add_link(jj['child'],b,jj)

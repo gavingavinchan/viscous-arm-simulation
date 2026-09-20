@@ -15,6 +15,8 @@ viewer/vendor contains Three.js revision 160 and the OrbitControls and STLLoader
 
 ## Viscous sources
 
+The collision builder uses [CoACD](https://github.com/SarahWeiii/CoACD), an MIT-licensed offline dependency, for approximate convex decomposition. See Wei, Liu, Ling and Su, “Approximate Convex Decomposition for 3D Meshes with Collision-Aware Concavity and Tree Search,” ACM Transactions on Graphics 41(4), 2022. Generated collision meshes remain derived from Gavin's supplied CAD; the CoACD library is installed separately through requirements-lock.txt.
+
 source/2026-09-18 contains Gavin's Viscous assembly exports, supplied with permission to publish this simulation project. Source checksums and assumptions are recorded in intake.json.
 
 No additional project-wide license is selected in this revision. Public repository visibility does not replace the licenses and attribution of third-party material.

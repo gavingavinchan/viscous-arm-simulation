@@ -27,6 +27,9 @@ async function geometry(g){
  throw new Error('Unsupported URDF geometry');
 }
 const palette=[0x708792,0xcbd6df,0x4caaaa,0xc4d0d8,0x627786,0x76b4b5,0xc6d4dc,0x83a7b7,0xb3c4ce];
+// Intentional feature, requested by Gavin: keep the piece-by-piece assembly
+// effect on refresh. Add each mesh as it finishes loading while rendering stays
+// active; do not hide the model until all assets are ready or add artificial delays.
 async function addShape(element,link,index,isCollision,materials){
  const {geo,scale}=await geometry(child(element,'geometry'));const group=new THREE.Group();origin(group,element);
  const mat=child(element,'material');const named=materials.get(mat?.getAttribute('name'));const colorNode=mat&&child(mat,'color')||named&&child(named,'color');const rgba=colorNode?nums(colorNode.getAttribute('rgba'),[.65,.72,.78,1]):null;
@@ -44,6 +47,11 @@ function applyPose(){
   else if(j.type==='prismatic')j.motion.position.copy(j.axis).multiplyScalar(q);
  }
  robot.updateMatrixWorld(true);for(const s of sliders){s.input.value=s.j.value*s.factor;s.output.textContent=`${(s.j.value*s.factor).toFixed(1)}${s.unit}`;}
+}
+function applyDisplay(){
+ const showCAD=$('cad').checked,showCollision=$('collision').checked;
+ for(const group of collisionMeshes){group.visible=showCollision;group.children[0].material.opacity=showCAD?.42:.85;}
+ for(const mesh of visualMeshes){mesh.visible=showCAD;mesh.material.opacity=showCollision?.24:mesh.userData.originalOpacity;mesh.material.transparent=mesh.material.opacity<1;}
 }
 function fit(){
  robot.updateMatrixWorld(true);const box=new THREE.Box3();for(const mesh of visualMeshes)box.expandByObject(mesh);if(box.isEmpty())return;
@@ -72,17 +80,17 @@ async function load(){
   const axes=new THREE.AxesHelper(.035);axes.visible=false;motion.add(axes);jointFrames.push(axes);
  }
  for(const [name,link] of links)if(!childNames.has(name))robot.add(link);
- await Promise.all(pending);makeSliders();applyPose();fit();
+ await Promise.all(pending);makeSliders();applyPose();applyDisplay();fit();
  const active=sliders.length,mimics=[...joints.values()].filter(j=>j.mimic).length;
  $('status').textContent=sourceFallback?'Reference model loaded · regenerated model is not yet available. Reload after export.':`${links.size} links · ${active} independent joints · ${mimics} mimic joint${mimics===1?'':'s'} · CAD zero`;
  $('meta').textContent=`${root.getAttribute('name')} · ${sourceFallback?'reference/maker-urdf/robot.urdf':'model/viscous_arm.urdf'}\nThree.js r160 · local assets`;
  for(const id of ['zero','sample','frame'])$(id).disabled=false;
  // Deliberately expose read-only numeric diagnostics for browser QA; no hardware interfaces.
- window.modelDiagnostics=()=>({source:modelURL,links:links.size,joints:[...joints.values()].map(j=>({name:j.name,type:j.type,value:jointValue(j),mimic:j.mimic??null})),visualMeshes:visualMeshes.length,collisionMeshes:collisionMeshes.length,collisionVisible:$('collision').checked,zeroConvention:'CAD zero; encoder offsets unverified'});
+ window.modelDiagnostics=()=>({source:modelURL,links:links.size,joints:[...joints.values()].map(j=>({name:j.name,type:j.type,value:jointValue(j),mimic:j.mimic??null})),visualMeshes:visualMeshes.length,collisionMeshes:collisionMeshes.length,cadVisible:$('cad').checked,collisionVisible:$('collision').checked,zeroConvention:'CAD zero; encoder offsets unverified'});
 }
 $('zero').onclick=()=>{for(const j of joints.values())j.value=0;applyPose();$('status').textContent='CAD zero · encoder offsets unverified';};
 $('sample').onclick=()=>{let i=0;const degrees=[25,-32,48,22,-28,15];for(const j of joints.values()){if(j.mimic||j.type==='fixed')continue;const value=j.type==='prismatic'?(j.min+j.max)*.5:THREE.MathUtils.degToRad(degrees[i++%degrees.length]);j.value=THREE.MathUtils.clamp(value,j.min,j.max);}applyPose();fit();$('status').textContent='Illustrative sample pose · no collision or reachability validation';};
-$('frame').onclick=fit;$('collision').onchange=()=>{for(const obj of collisionMeshes)obj.visible=$('collision').checked;for(const mesh of visualMeshes){mesh.material.opacity=$('collision').checked?.24:mesh.userData.originalOpacity;mesh.material.transparent=mesh.material.opacity<1;}};
+$('frame').onclick=fit;$('cad').onchange=applyDisplay;$('collision').onchange=applyDisplay;
 $('axes').onchange=()=>{for(const axes of jointFrames)axes.visible=$('axes').checked;};
 new ResizeObserver(()=>{const width=viewport.clientWidth,height=viewport.clientHeight;renderer.setSize(width,height);camera.aspect=width/height;camera.updateProjectionMatrix();}).observe(viewport);
 renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);});

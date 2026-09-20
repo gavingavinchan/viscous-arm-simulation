@@ -21,6 +21,8 @@ See [CAD to URDF: repeatable workflow for another robot arm](docs/CAD_TO_URDF_WO
 
 The browser's seven independent sliders represent six arm rotations plus symmetric gripper opening. The second finger is a mimic joint. No controls in this project send commands to the physical arm.
 
+**Preserve progressive assembly as a viewer feature.** Gavin specifically wants to keep the effect where the CAD appears piece by piece on refresh. Load meshes concurrently and display each as it becomes ready while rendering continues. Do not replace this with an all-at-once reveal or add artificial loading delays; the assembly order and speed may naturally vary with caching and file size.
+
 ## Geometry and frames
 
 The CAD has 72 solids. The two finger loops (44,45) are excluded entirely because Gavin confirmed the real arm does not have them. The remaining 70 solids contribute to mass. Ten internal crank/rod/bearing pieces are omitted from visible/contact geometry in the simplified gripper; their mass and inertia are retained in the wrist at the exported CAD pose. No loops are hidden collision objects.
@@ -49,7 +51,15 @@ Full CAD volume properties and the parallel-axis theorem produce each link's COM
 
 ## Contact and actuation
 
-Collision geometry uses separate convex hulls per substantial solid, retaining separation between structural pieces. This is a conservative contact approximation around holes/concavities. Tiny fasteners/bearings and the omitted crank mechanism have no separate contact geometry. Parent/child body contacts at mechanical interfaces are excluded; nonadjacent link collisions remain enabled. The browser can overlay the collision hulls.
+Each arm span now has one continuous solid collision envelope: J2–J3 combines both side plates and their joint hardware; J3–J4 combines all four plates, all six cylindrical spacers and their joint hardware. The space between the plates and spacers is deliberately filled. These envelopes follow the assembled outer profile and use 3 and 8 convex simulation pieces respectively, rather than separate colliders for every component. The original CAD appearance, joint definitions, masses and inertias are unchanged. Rail and finger collision envelopes retain their broad-view outlines while filling internal holes/deep grooves (25 pieces for the rail base, 23 per finger). Selected other brackets retain modest convex compounds. [collision_settings.json](collision_settings.json) records each policy and assembly membership. Tiny fasteners/bearings and the omitted crank mechanism have no separate contact geometry. Parent/child contacts at mechanical interfaces are excluded; nonadjacent collisions remain enabled. Enable **Collision** in the browser to inspect the result.
+
+The offline builder uses [Shapely](https://shapely.readthedocs.io/en/stable/) for filled-outline partitioning and [CoACD](https://github.com/SarahWeiii/CoACD) for other selected brackets; running the generated model requires neither library. CoACD intermediate results are cached in `inspection/.collision_cache/` by source geometry, settings and library version. Delete that directory to force decomposition again. [Collision validation](inspection/collision_validation.json) checks CAD surface coverage within 2 micrometres of STL export tolerance, the rail/finger silhouettes within the same tolerance, and solid interior coverage across both complete arm spans. Assemblies apply a 25 micrometre profile cleanup with a 25 micrometre outward margin to avoid tessellation notches; their conservative profile overfill is checked against a 0.1 mm bound. All assembly pieces remain inside the complete 3D convex envelope, subject to export rounding.
+
+[Collision validation](inspection/collision_validation.json) records current piece/triangle counts and machine-specific query timings against the original single-hull policy. These query timings are not full simulation throughput. Generate a CAD/collision-envelope comparison with `.venv/bin/python scripts/render_collision_comparison.py`, which writes `inspection/collision_comparison.png` and includes broad and side views of a finger.
+
+Generate an isometric CAD/solid-envelope comparison of both arm spans with `.venv/bin/python scripts/render_arm_envelopes.py`; output is `inspection/arm_envelopes.png`.
+
+Generate opposite isometric views of the CAD finger and its collision envelope with `.venv/bin/python scripts/render_finger_isometric.py`; output is `inspection/finger_isometric.png`. These are orthographic renders of the actual meshes with depth buffering. An individual contact piece is a **finger** (or **gripper finger**); the **gripper** is the complete assembly of fingers, guides and actuation mechanism.
 
 MuJoCo has fixed base, gravity -9.81 m/s2, 1 ms integration, explicit inertias and seven bounded direct force/torque actuators. The two jaw sliders are coupled with a joint equality.
 
@@ -74,6 +84,7 @@ Rebuild the CAD-derived model and validate it:
 .venv/bin/python scripts/inspect_cad.py
 .venv/bin/python scripts/build_model.py
 .venv/bin/python scripts/build_mujoco.py
+.venv/bin/python scripts/validate_collisions.py
 MUJOCO_GL=egl .venv/bin/python scripts/validate_model.py
 ```
 
@@ -114,5 +125,7 @@ MUJOCO_GL=egl .venv/bin/python scripts/pick_place_video.py --render
 Output: `demo/viscous_pick_place_20mm.mp4` (1280 × 960, 30 fps, 21.4 seconds). Omit `--render` for numerical validation only. The scene uses a 10 g cube, provisional friction, a 25 mm pickup platform, a 50 mm high cup, and bounded position servos with model gravity feedforward. The original base model remains unchanged.
 
 The verified run settled the cube inside the cup, with maximum arm torque 3.725 Nm, maximum arm speed 0.523 rad/s, no joint-limit excursions, no unintended robot collisions, and no solver warnings. See `demo/pick_place_report.json` and `demo/independent_demo_review.json`. This is a scripted simulated demonstration, not a trained policy or physical-arm test.
+
+The refined collision model passed the numerical demonstration again; `demo/pick_place_report.json`, its scene and trajectory log reflect that run. The existing video and independent reviews describe the earlier collision revision; the video has not been re-rendered for this change.
 
 Videos, intermediate CAD tessellations, environments, caches, and ZIP exports are not tracked. Source CAD and runtime meshes are stored directly in regular Git. Refer to `THIRD_PARTY_NOTICES.md` for asset provenance and third-party licenses.

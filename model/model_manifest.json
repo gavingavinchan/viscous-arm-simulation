@@ -150,22 +150,52 @@
       "collisions": [
         {
           "part": 0,
+          "piece": 0,
           "mesh": "meshes/collision_000.stl"
         },
         {
           "part": 2,
+          "piece": 0,
           "mesh": "meshes/collision_002.stl"
         },
         {
           "part": 14,
-          "mesh": "meshes/collision_014.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_014_00.stl"
+        },
+        {
+          "part": 14,
+          "piece": 1,
+          "mesh": "meshes/collision_014_01.stl"
+        },
+        {
+          "part": 14,
+          "piece": 2,
+          "mesh": "meshes/collision_014_02.stl"
+        },
+        {
+          "part": 14,
+          "piece": 3,
+          "mesh": "meshes/collision_014_03.stl"
+        },
+        {
+          "part": 14,
+          "piece": 4,
+          "mesh": "meshes/collision_014_04.stl"
+        },
+        {
+          "part": 14,
+          "piece": 5,
+          "mesh": "meshes/collision_014_05.stl"
         },
         {
           "part": 15,
+          "piece": 0,
           "mesh": "meshes/collision_015.stl"
         },
         {
           "part": 16,
+          "piece": 0,
           "mesh": "meshes/collision_016.stl"
         }
       ],
@@ -264,22 +294,107 @@
       "collisions": [
         {
           "part": 3,
-          "mesh": "meshes/collision_003.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_003_00.stl"
+        },
+        {
+          "part": 3,
+          "piece": 1,
+          "mesh": "meshes/collision_003_01.stl"
+        },
+        {
+          "part": 3,
+          "piece": 2,
+          "mesh": "meshes/collision_003_02.stl"
+        },
+        {
+          "part": 3,
+          "piece": 3,
+          "mesh": "meshes/collision_003_03.stl"
+        },
+        {
+          "part": 3,
+          "piece": 4,
+          "mesh": "meshes/collision_003_04.stl"
+        },
+        {
+          "part": 3,
+          "piece": 5,
+          "mesh": "meshes/collision_003_05.stl"
         },
         {
           "part": 4,
+          "piece": 0,
           "mesh": "meshes/collision_004.stl"
         },
         {
           "part": 5,
-          "mesh": "meshes/collision_005.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_005_00.stl"
+        },
+        {
+          "part": 5,
+          "piece": 1,
+          "mesh": "meshes/collision_005_01.stl"
+        },
+        {
+          "part": 5,
+          "piece": 2,
+          "mesh": "meshes/collision_005_02.stl"
+        },
+        {
+          "part": 5,
+          "piece": 3,
+          "mesh": "meshes/collision_005_03.stl"
+        },
+        {
+          "part": 5,
+          "piece": 4,
+          "mesh": "meshes/collision_005_04.stl"
+        },
+        {
+          "part": 5,
+          "piece": 5,
+          "mesh": "meshes/collision_005_05.stl"
+        },
+        {
+          "part": 5,
+          "piece": 6,
+          "mesh": "meshes/collision_005_06.stl"
         },
         {
           "part": 6,
-          "mesh": "meshes/collision_006.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_006_00.stl"
+        },
+        {
+          "part": 6,
+          "piece": 1,
+          "mesh": "meshes/collision_006_01.stl"
+        },
+        {
+          "part": 6,
+          "piece": 2,
+          "mesh": "meshes/collision_006_02.stl"
+        },
+        {
+          "part": 6,
+          "piece": 3,
+          "mesh": "meshes/collision_006_03.stl"
+        },
+        {
+          "part": 6,
+          "piece": 4,
+          "mesh": "meshes/collision_006_04.stl"
+        },
+        {
+          "part": 6,
+          "piece": 5,
+          "mesh": "meshes/collision_006_05.stl"
         },
         {
           "part": 19,
+          "piece": 0,
           "mesh": "meshes/collision_019.stl"
         }
       ],
@@ -378,23 +493,42 @@
       "collisions": [
         {
           "part": 8,
-          "mesh": "meshes/collision_008.stl"
+          "parts": [
+            8,
+            9,
+            10,
+            11,
+            18
+          ],
+          "assembly": "upper_arm_shell",
+          "piece": 0,
+          "mesh": "meshes/collision_upper_arm_shell_00.stl"
         },
         {
-          "part": 9,
-          "mesh": "meshes/collision_009.stl"
+          "part": 8,
+          "parts": [
+            8,
+            9,
+            10,
+            11,
+            18
+          ],
+          "assembly": "upper_arm_shell",
+          "piece": 1,
+          "mesh": "meshes/collision_upper_arm_shell_01.stl"
         },
         {
-          "part": 10,
-          "mesh": "meshes/collision_010.stl"
-        },
-        {
-          "part": 11,
-          "mesh": "meshes/collision_011.stl"
-        },
-        {
-          "part": 18,
-          "mesh": "meshes/collision_018.stl"
+          "part": 8,
+          "parts": [
+            8,
+            9,
+            10,
+            11,
+            18
+          ],
+          "assembly": "upper_arm_shell",
+          "piece": 2,
+          "mesh": "meshes/collision_upper_arm_shell_02.stl"
         }
       ],
       "cad_pivot_mm": [
@@ -562,55 +696,171 @@
       "collisions": [
         {
           "part": 13,
-          "mesh": "meshes/collision_013.stl"
+          "parts": [
+            13,
+            17,
+            58,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69
+          ],
+          "assembly": "forearm_shell",
+          "piece": 0,
+          "mesh": "meshes/collision_forearm_shell_00.stl"
         },
         {
-          "part": 17,
-          "mesh": "meshes/collision_017.stl"
+          "part": 13,
+          "parts": [
+            13,
+            17,
+            58,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69
+          ],
+          "assembly": "forearm_shell",
+          "piece": 1,
+          "mesh": "meshes/collision_forearm_shell_01.stl"
         },
         {
-          "part": 58,
-          "mesh": "meshes/collision_058.stl"
+          "part": 13,
+          "parts": [
+            13,
+            17,
+            58,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69
+          ],
+          "assembly": "forearm_shell",
+          "piece": 2,
+          "mesh": "meshes/collision_forearm_shell_02.stl"
         },
         {
-          "part": 60,
-          "mesh": "meshes/collision_060.stl"
+          "part": 13,
+          "parts": [
+            13,
+            17,
+            58,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69
+          ],
+          "assembly": "forearm_shell",
+          "piece": 3,
+          "mesh": "meshes/collision_forearm_shell_03.stl"
         },
         {
-          "part": 61,
-          "mesh": "meshes/collision_061.stl"
+          "part": 13,
+          "parts": [
+            13,
+            17,
+            58,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69
+          ],
+          "assembly": "forearm_shell",
+          "piece": 4,
+          "mesh": "meshes/collision_forearm_shell_04.stl"
         },
         {
-          "part": 62,
-          "mesh": "meshes/collision_062.stl"
+          "part": 13,
+          "parts": [
+            13,
+            17,
+            58,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69
+          ],
+          "assembly": "forearm_shell",
+          "piece": 5,
+          "mesh": "meshes/collision_forearm_shell_05.stl"
         },
         {
-          "part": 63,
-          "mesh": "meshes/collision_063.stl"
+          "part": 13,
+          "parts": [
+            13,
+            17,
+            58,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69
+          ],
+          "assembly": "forearm_shell",
+          "piece": 6,
+          "mesh": "meshes/collision_forearm_shell_06.stl"
         },
         {
-          "part": 64,
-          "mesh": "meshes/collision_064.stl"
-        },
-        {
-          "part": 65,
-          "mesh": "meshes/collision_065.stl"
-        },
-        {
-          "part": 66,
-          "mesh": "meshes/collision_066.stl"
-        },
-        {
-          "part": 67,
-          "mesh": "meshes/collision_067.stl"
-        },
-        {
-          "part": 68,
-          "mesh": "meshes/collision_068.stl"
-        },
-        {
-          "part": 69,
-          "mesh": "meshes/collision_069.stl"
+          "part": 13,
+          "parts": [
+            13,
+            17,
+            58,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69
+          ],
+          "assembly": "forearm_shell",
+          "piece": 7,
+          "mesh": "meshes/collision_forearm_shell_07.stl"
         }
       ],
       "cad_pivot_mm": [
@@ -698,22 +948,122 @@
       "collisions": [
         {
           "part": 53,
+          "piece": 0,
           "mesh": "meshes/collision_053.stl"
         },
         {
           "part": 54,
-          "mesh": "meshes/collision_054.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_054_00.stl"
+        },
+        {
+          "part": 54,
+          "piece": 1,
+          "mesh": "meshes/collision_054_01.stl"
+        },
+        {
+          "part": 54,
+          "piece": 2,
+          "mesh": "meshes/collision_054_02.stl"
+        },
+        {
+          "part": 54,
+          "piece": 3,
+          "mesh": "meshes/collision_054_03.stl"
+        },
+        {
+          "part": 54,
+          "piece": 4,
+          "mesh": "meshes/collision_054_04.stl"
+        },
+        {
+          "part": 54,
+          "piece": 5,
+          "mesh": "meshes/collision_054_05.stl"
+        },
+        {
+          "part": 54,
+          "piece": 6,
+          "mesh": "meshes/collision_054_06.stl"
+        },
+        {
+          "part": 54,
+          "piece": 7,
+          "mesh": "meshes/collision_054_07.stl"
+        },
+        {
+          "part": 54,
+          "piece": 8,
+          "mesh": "meshes/collision_054_08.stl"
+        },
+        {
+          "part": 54,
+          "piece": 9,
+          "mesh": "meshes/collision_054_09.stl"
         },
         {
           "part": 55,
-          "mesh": "meshes/collision_055.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_055_00.stl"
+        },
+        {
+          "part": 55,
+          "piece": 1,
+          "mesh": "meshes/collision_055_01.stl"
+        },
+        {
+          "part": 55,
+          "piece": 2,
+          "mesh": "meshes/collision_055_02.stl"
+        },
+        {
+          "part": 55,
+          "piece": 3,
+          "mesh": "meshes/collision_055_03.stl"
+        },
+        {
+          "part": 55,
+          "piece": 4,
+          "mesh": "meshes/collision_055_04.stl"
+        },
+        {
+          "part": 55,
+          "piece": 5,
+          "mesh": "meshes/collision_055_05.stl"
         },
         {
           "part": 56,
-          "mesh": "meshes/collision_056.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_056_00.stl"
+        },
+        {
+          "part": 56,
+          "piece": 1,
+          "mesh": "meshes/collision_056_01.stl"
+        },
+        {
+          "part": 56,
+          "piece": 2,
+          "mesh": "meshes/collision_056_02.stl"
+        },
+        {
+          "part": 56,
+          "piece": 3,
+          "mesh": "meshes/collision_056_03.stl"
+        },
+        {
+          "part": 56,
+          "piece": 4,
+          "mesh": "meshes/collision_056_04.stl"
+        },
+        {
+          "part": 56,
+          "piece": 5,
+          "mesh": "meshes/collision_056_05.stl"
         },
         {
           "part": 57,
+          "piece": 0,
           "mesh": "meshes/collision_057.stl"
         }
       ],
@@ -802,23 +1152,118 @@
       "collisions": [
         {
           "part": 49,
+          "piece": 0,
           "mesh": "meshes/collision_049.stl"
         },
         {
           "part": 50,
-          "mesh": "meshes/collision_050.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_050_00.stl"
+        },
+        {
+          "part": 50,
+          "piece": 1,
+          "mesh": "meshes/collision_050_01.stl"
+        },
+        {
+          "part": 50,
+          "piece": 2,
+          "mesh": "meshes/collision_050_02.stl"
+        },
+        {
+          "part": 50,
+          "piece": 3,
+          "mesh": "meshes/collision_050_03.stl"
+        },
+        {
+          "part": 50,
+          "piece": 4,
+          "mesh": "meshes/collision_050_04.stl"
+        },
+        {
+          "part": 50,
+          "piece": 5,
+          "mesh": "meshes/collision_050_05.stl"
+        },
+        {
+          "part": 50,
+          "piece": 6,
+          "mesh": "meshes/collision_050_06.stl"
+        },
+        {
+          "part": 50,
+          "piece": 7,
+          "mesh": "meshes/collision_050_07.stl"
         },
         {
           "part": 51,
-          "mesh": "meshes/collision_051.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_051_00.stl"
+        },
+        {
+          "part": 51,
+          "piece": 1,
+          "mesh": "meshes/collision_051_01.stl"
+        },
+        {
+          "part": 51,
+          "piece": 2,
+          "mesh": "meshes/collision_051_02.stl"
+        },
+        {
+          "part": 51,
+          "piece": 3,
+          "mesh": "meshes/collision_051_03.stl"
+        },
+        {
+          "part": 51,
+          "piece": 4,
+          "mesh": "meshes/collision_051_04.stl"
+        },
+        {
+          "part": 51,
+          "piece": 5,
+          "mesh": "meshes/collision_051_05.stl"
+        },
+        {
+          "part": 51,
+          "piece": 6,
+          "mesh": "meshes/collision_051_06.stl"
+        },
+        {
+          "part": 51,
+          "piece": 7,
+          "mesh": "meshes/collision_051_07.stl"
         },
         {
           "part": 52,
+          "piece": 0,
           "mesh": "meshes/collision_052.stl"
         },
         {
           "part": 59,
-          "mesh": "meshes/collision_059.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_059_00.stl"
+        },
+        {
+          "part": 59,
+          "piece": 1,
+          "mesh": "meshes/collision_059_01.stl"
+        },
+        {
+          "part": 59,
+          "piece": 2,
+          "mesh": "meshes/collision_059_02.stl"
+        },
+        {
+          "part": 59,
+          "piece": 3,
+          "mesh": "meshes/collision_059_03.stl"
+        },
+        {
+          "part": 59,
+          "piece": 4,
+          "mesh": "meshes/collision_059_04.stl"
         }
       ],
       "cad_pivot_mm": [
@@ -936,30 +1381,162 @@
       "collisions": [
         {
           "part": 20,
+          "piece": 0,
           "mesh": "meshes/collision_020.stl"
         },
         {
           "part": 24,
-          "mesh": "meshes/collision_024.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_024_00.stl"
+        },
+        {
+          "part": 24,
+          "piece": 1,
+          "mesh": "meshes/collision_024_01.stl"
+        },
+        {
+          "part": 24,
+          "piece": 2,
+          "mesh": "meshes/collision_024_02.stl"
+        },
+        {
+          "part": 24,
+          "piece": 3,
+          "mesh": "meshes/collision_024_03.stl"
+        },
+        {
+          "part": 24,
+          "piece": 4,
+          "mesh": "meshes/collision_024_04.stl"
+        },
+        {
+          "part": 24,
+          "piece": 5,
+          "mesh": "meshes/collision_024_05.stl"
+        },
+        {
+          "part": 24,
+          "piece": 6,
+          "mesh": "meshes/collision_024_06.stl"
+        },
+        {
+          "part": 24,
+          "piece": 7,
+          "mesh": "meshes/collision_024_07.stl"
+        },
+        {
+          "part": 24,
+          "piece": 8,
+          "mesh": "meshes/collision_024_08.stl"
+        },
+        {
+          "part": 24,
+          "piece": 9,
+          "mesh": "meshes/collision_024_09.stl"
+        },
+        {
+          "part": 24,
+          "piece": 10,
+          "mesh": "meshes/collision_024_10.stl"
+        },
+        {
+          "part": 24,
+          "piece": 11,
+          "mesh": "meshes/collision_024_11.stl"
+        },
+        {
+          "part": 24,
+          "piece": 12,
+          "mesh": "meshes/collision_024_12.stl"
+        },
+        {
+          "part": 24,
+          "piece": 13,
+          "mesh": "meshes/collision_024_13.stl"
+        },
+        {
+          "part": 24,
+          "piece": 14,
+          "mesh": "meshes/collision_024_14.stl"
+        },
+        {
+          "part": 24,
+          "piece": 15,
+          "mesh": "meshes/collision_024_15.stl"
+        },
+        {
+          "part": 24,
+          "piece": 16,
+          "mesh": "meshes/collision_024_16.stl"
+        },
+        {
+          "part": 24,
+          "piece": 17,
+          "mesh": "meshes/collision_024_17.stl"
+        },
+        {
+          "part": 24,
+          "piece": 18,
+          "mesh": "meshes/collision_024_18.stl"
+        },
+        {
+          "part": 24,
+          "piece": 19,
+          "mesh": "meshes/collision_024_19.stl"
+        },
+        {
+          "part": 24,
+          "piece": 20,
+          "mesh": "meshes/collision_024_20.stl"
+        },
+        {
+          "part": 24,
+          "piece": 21,
+          "mesh": "meshes/collision_024_21.stl"
+        },
+        {
+          "part": 24,
+          "piece": 22,
+          "mesh": "meshes/collision_024_22.stl"
+        },
+        {
+          "part": 24,
+          "piece": 23,
+          "mesh": "meshes/collision_024_23.stl"
+        },
+        {
+          "part": 24,
+          "piece": 24,
+          "mesh": "meshes/collision_024_24.stl"
         },
         {
           "part": 46,
+          "piece": 0,
           "mesh": "meshes/collision_046.stl"
         },
         {
           "part": 47,
+          "piece": 0,
           "mesh": "meshes/collision_047.stl"
         },
         {
           "part": 48,
+          "piece": 0,
           "mesh": "meshes/collision_048.stl"
         },
         {
           "part": 70,
-          "mesh": "meshes/collision_070.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_070_00.stl"
+        },
+        {
+          "part": 70,
+          "piece": 1,
+          "mesh": "meshes/collision_070_01.stl"
         },
         {
           "part": 71,
+          "piece": 0,
           "mesh": "meshes/collision_071.stl"
         }
       ],
@@ -1058,11 +1635,123 @@
       "collisions": [
         {
           "part": 32,
+          "piece": 0,
           "mesh": "meshes/collision_032.stl"
         },
         {
           "part": 43,
-          "mesh": "meshes/collision_043.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_043_00.stl"
+        },
+        {
+          "part": 43,
+          "piece": 1,
+          "mesh": "meshes/collision_043_01.stl"
+        },
+        {
+          "part": 43,
+          "piece": 2,
+          "mesh": "meshes/collision_043_02.stl"
+        },
+        {
+          "part": 43,
+          "piece": 3,
+          "mesh": "meshes/collision_043_03.stl"
+        },
+        {
+          "part": 43,
+          "piece": 4,
+          "mesh": "meshes/collision_043_04.stl"
+        },
+        {
+          "part": 43,
+          "piece": 5,
+          "mesh": "meshes/collision_043_05.stl"
+        },
+        {
+          "part": 43,
+          "piece": 6,
+          "mesh": "meshes/collision_043_06.stl"
+        },
+        {
+          "part": 43,
+          "piece": 7,
+          "mesh": "meshes/collision_043_07.stl"
+        },
+        {
+          "part": 43,
+          "piece": 8,
+          "mesh": "meshes/collision_043_08.stl"
+        },
+        {
+          "part": 43,
+          "piece": 9,
+          "mesh": "meshes/collision_043_09.stl"
+        },
+        {
+          "part": 43,
+          "piece": 10,
+          "mesh": "meshes/collision_043_10.stl"
+        },
+        {
+          "part": 43,
+          "piece": 11,
+          "mesh": "meshes/collision_043_11.stl"
+        },
+        {
+          "part": 43,
+          "piece": 12,
+          "mesh": "meshes/collision_043_12.stl"
+        },
+        {
+          "part": 43,
+          "piece": 13,
+          "mesh": "meshes/collision_043_13.stl"
+        },
+        {
+          "part": 43,
+          "piece": 14,
+          "mesh": "meshes/collision_043_14.stl"
+        },
+        {
+          "part": 43,
+          "piece": 15,
+          "mesh": "meshes/collision_043_15.stl"
+        },
+        {
+          "part": 43,
+          "piece": 16,
+          "mesh": "meshes/collision_043_16.stl"
+        },
+        {
+          "part": 43,
+          "piece": 17,
+          "mesh": "meshes/collision_043_17.stl"
+        },
+        {
+          "part": 43,
+          "piece": 18,
+          "mesh": "meshes/collision_043_18.stl"
+        },
+        {
+          "part": 43,
+          "piece": 19,
+          "mesh": "meshes/collision_043_19.stl"
+        },
+        {
+          "part": 43,
+          "piece": 20,
+          "mesh": "meshes/collision_043_20.stl"
+        },
+        {
+          "part": 43,
+          "piece": 21,
+          "mesh": "meshes/collision_043_21.stl"
+        },
+        {
+          "part": 43,
+          "piece": 22,
+          "mesh": "meshes/collision_043_22.stl"
         }
       ],
       "cad_pivot_mm": [
@@ -1150,11 +1839,123 @@
       "collisions": [
         {
           "part": 39,
+          "piece": 0,
           "mesh": "meshes/collision_039.stl"
         },
         {
           "part": 42,
-          "mesh": "meshes/collision_042.stl"
+          "piece": 0,
+          "mesh": "meshes/collision_042_00.stl"
+        },
+        {
+          "part": 42,
+          "piece": 1,
+          "mesh": "meshes/collision_042_01.stl"
+        },
+        {
+          "part": 42,
+          "piece": 2,
+          "mesh": "meshes/collision_042_02.stl"
+        },
+        {
+          "part": 42,
+          "piece": 3,
+          "mesh": "meshes/collision_042_03.stl"
+        },
+        {
+          "part": 42,
+          "piece": 4,
+          "mesh": "meshes/collision_042_04.stl"
+        },
+        {
+          "part": 42,
+          "piece": 5,
+          "mesh": "meshes/collision_042_05.stl"
+        },
+        {
+          "part": 42,
+          "piece": 6,
+          "mesh": "meshes/collision_042_06.stl"
+        },
+        {
+          "part": 42,
+          "piece": 7,
+          "mesh": "meshes/collision_042_07.stl"
+        },
+        {
+          "part": 42,
+          "piece": 8,
+          "mesh": "meshes/collision_042_08.stl"
+        },
+        {
+          "part": 42,
+          "piece": 9,
+          "mesh": "meshes/collision_042_09.stl"
+        },
+        {
+          "part": 42,
+          "piece": 10,
+          "mesh": "meshes/collision_042_10.stl"
+        },
+        {
+          "part": 42,
+          "piece": 11,
+          "mesh": "meshes/collision_042_11.stl"
+        },
+        {
+          "part": 42,
+          "piece": 12,
+          "mesh": "meshes/collision_042_12.stl"
+        },
+        {
+          "part": 42,
+          "piece": 13,
+          "mesh": "meshes/collision_042_13.stl"
+        },
+        {
+          "part": 42,
+          "piece": 14,
+          "mesh": "meshes/collision_042_14.stl"
+        },
+        {
+          "part": 42,
+          "piece": 15,
+          "mesh": "meshes/collision_042_15.stl"
+        },
+        {
+          "part": 42,
+          "piece": 16,
+          "mesh": "meshes/collision_042_16.stl"
+        },
+        {
+          "part": 42,
+          "piece": 17,
+          "mesh": "meshes/collision_042_17.stl"
+        },
+        {
+          "part": 42,
+          "piece": 18,
+          "mesh": "meshes/collision_042_18.stl"
+        },
+        {
+          "part": 42,
+          "piece": 19,
+          "mesh": "meshes/collision_042_19.stl"
+        },
+        {
+          "part": 42,
+          "piece": 20,
+          "mesh": "meshes/collision_042_20.stl"
+        },
+        {
+          "part": 42,
+          "piece": 21,
+          "mesh": "meshes/collision_042_21.stl"
+        },
+        {
+          "part": 42,
+          "piece": 22,
+          "mesh": "meshes/collision_042_22.stl"
         }
       ],
       "cad_pivot_mm": [
@@ -1522,7 +2323,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "upper_arm_shell"
     },
     {
       "part": 9,
@@ -1535,7 +2337,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "upper_arm_shell"
     },
     {
       "part": 10,
@@ -1548,7 +2351,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "upper_arm_shell"
     },
     {
       "part": 11,
@@ -1561,7 +2365,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "upper_arm_shell"
     },
     {
       "part": 12,
@@ -1587,7 +2392,8 @@
         "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "upper_arm_shell"
     },
     {
       "part": 13,
@@ -1600,7 +2406,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 17,
@@ -1613,7 +2420,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 58,
@@ -1626,7 +2434,8 @@
         "basis": "RS00 nominal manufacturer mass; solid-normalized COM/inertia approximation"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 60,
@@ -1639,7 +2448,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 61,
@@ -1652,7 +2462,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 62,
@@ -1665,7 +2476,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 63,
@@ -1678,7 +2490,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 64,
@@ -1691,7 +2504,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 65,
@@ -1704,7 +2518,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 66,
@@ -1717,7 +2532,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 67,
@@ -1730,7 +2546,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 68,
@@ -1743,7 +2560,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 69,
@@ -1756,7 +2574,8 @@
         "basis": "CNC aluminium, likely6061 per Gavin; nonstructural metal assignment provisional"
       },
       "visual": true,
-      "collision": true
+      "collision": true,
+      "collision_assembly": "forearm_shell"
     },
     {
       "part": 53,
@@ -2306,8 +3125,123 @@
     "Camera mass30g placeholder",
     "All model arm effort limits5Nm nominal datasheet rated, not thermal guarantee; simulation velocity2rad/s is a conservative chosen cap",
     "Cables, omitted fasteners, waterproofing additions and payload not estimated without evidence",
-    "Per-solid convex collision approximation; holes/concavities can be conservative",
+    "J2-J3 and J3-J4 use solid assembly collision envelopes with plate-pair cavities filled; rail base and fingers retain filled-outline envelopes. CAD visuals and measured/estimated mass properties remain separate from collision filling.",
     "Motor axis positive signs inherited from reference convention, physical signs not independently checked",
     "Reference pose is source CAD assembly, not measured encoder zero"
-  ]
+  ],
+  "collision_geometry": {
+    "method": "selective convex decomposition",
+    "threshold_m": 0.005,
+    "max_vertices_before_surface_repair": 48,
+    "seed": 0,
+    "parts": {
+      "3": 6,
+      "5": 8,
+      "6": 8,
+      "14": 6,
+      "50": 8,
+      "51": 8,
+      "54": 10,
+      "55": 6,
+      "56": 6,
+      "59": 8,
+      "70": 6
+    },
+    "notes": "assemblies merge collision geometry within one rigid link, bridge the complete plate spacing, and preserve the exterior profile. A 25 micrometre profile cleanup plus outward margin avoids tiny tessellation notches; the result is clipped to the full 3D convex envelope. Visual CAD meshes and mass properties remain unchanged. outline_parts preserve individual rail/finger outlines while filling holes/grooves. Values in parts are CoACD caps for other brackets. Other parts default to one convex hull.",
+    "single_hull_parts": {},
+    "outline_parts": {
+      "42": {
+        "max_pieces": 32,
+        "basis": "same broad-view PCA projection as comparison image",
+        "purpose": "Preserve the complete outer perimeter, fill projected holes, and bridge depth grooves inside the 3D convex envelope."
+      },
+      "43": {
+        "max_pieces": 32,
+        "basis": "same broad-view PCA projection as comparison image",
+        "purpose": "Preserve the complete outer perimeter, fill projected holes, and bridge depth grooves inside the 3D convex envelope."
+      },
+      "24": {
+        "max_pieces": 32,
+        "basis": "same broad-view PCA projection as comparison image",
+        "purpose": "Preserve the complete rail-base outer perimeter and fill every projected internal hole, including the centre opening. Remove sub-micrometre boundary slivers that collapse on the 1 micrometre STL export grid; validate against the unsimplified perimeter.",
+        "boundary_cleanup_m": 5e-07
+      }
+    },
+    "assemblies": {
+      "upper_arm_shell": {
+        "link": "upper_arm_link",
+        "parts": [
+          8,
+          9,
+          10,
+          11,
+          18
+        ],
+        "profile_basis": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            -1,
+            0
+          ]
+        ],
+        "boundary_cleanup_m": 2.5e-05,
+        "outward_margin_m": 2.5e-05,
+        "max_pieces": 12,
+        "purpose": "One continuous collision envelope for J2-J3: two plates, supports and the enclosed motor. Fill the cavity across the plates while retaining the outer XZ profile."
+      },
+      "forearm_shell": {
+        "link": "forearm_link",
+        "parts": [
+          13,
+          17,
+          58,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "profile_basis": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            -1,
+            0
+          ]
+        ],
+        "boundary_cleanup_m": 2.5e-05,
+        "outward_margin_m": 2.5e-05,
+        "max_pieces": 12,
+        "purpose": "One continuous collision envelope for J3-J4: all four plates, all six cylindrical spacers, supports and the enclosed motor. Fill both plate-pair cavities and the connecting region."
+      }
+    },
+    "coacd_version": "1.0.14",
+    "shapely_version": "2.1.2",
+    "export_grid_m": 1e-06,
+    "surface_coverage": "Outline parts preserve the filled broad-view CAD projection inside the full 3D convex envelope. Other compounds restore sampled source surface coverage after simplification."
+  }
 }

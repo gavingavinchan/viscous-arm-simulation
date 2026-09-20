@@ -89,7 +89,10 @@ for step in range(round(t/m.opt.timestep)):
  for contact in d.contact:
   n1=m.geom(contact.geom1).name;n2=m.geom(contact.geom2).name
   if 'cube_geom' in (n1,n2):
-   other=n2 if n1=='cube_geom' else n1;touch.add(other)
+   other=n2 if n1=='cube_geom' else n1
+   # All convex pieces of a finger represent the same physical contact surface.
+   if other.startswith('collision_'):other='_'.join(other.split('_')[:2])
+   touch.add(other)
    if other.startswith('collision_') and other not in ['collision_042','collision_043']:badcontacts['cube / '+other]=max(badcontacts.get('cube / '+other,0),float(-contact.dist))
   elif contact.dist<-.0005 and ('collision_' in n1 or 'collision_' in n2):
    pair=' / '.join(sorted([n1,n2]));badcontacts[pair]=max(badcontacts.get(pair,0),float(-contact.dist))

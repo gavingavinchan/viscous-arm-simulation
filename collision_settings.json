@@ -1,0 +1,111 @@
+{
+  "method": "selective convex decomposition",
+  "threshold_m": 0.005,
+  "max_vertices_before_surface_repair": 48,
+  "seed": 0,
+  "parts": {
+    "3": 6,
+    "5": 8,
+    "6": 8,
+    "14": 6,
+    "50": 8,
+    "51": 8,
+    "54": 10,
+    "55": 6,
+    "56": 6,
+    "59": 8,
+    "70": 6
+  },
+  "notes": "assemblies merge collision geometry within one rigid link, bridge the complete plate spacing, and preserve the exterior profile. A 25 micrometre profile cleanup plus outward margin avoids tiny tessellation notches; the result is clipped to the full 3D convex envelope. Visual CAD meshes and mass properties remain unchanged. outline_parts preserve individual rail/finger outlines while filling holes/grooves. Values in parts are CoACD caps for other brackets. Other parts default to one convex hull.",
+  "single_hull_parts": {},
+  "outline_parts": {
+    "42": {
+      "max_pieces": 32,
+      "basis": "same broad-view PCA projection as comparison image",
+      "purpose": "Preserve the complete outer perimeter, fill projected holes, and bridge depth grooves inside the 3D convex envelope."
+    },
+    "43": {
+      "max_pieces": 32,
+      "basis": "same broad-view PCA projection as comparison image",
+      "purpose": "Preserve the complete outer perimeter, fill projected holes, and bridge depth grooves inside the 3D convex envelope."
+    },
+    "24": {
+      "max_pieces": 32,
+      "basis": "same broad-view PCA projection as comparison image",
+      "purpose": "Preserve the complete rail-base outer perimeter and fill every projected internal hole, including the centre opening. Remove sub-micrometre boundary slivers that collapse on the 1 micrometre STL export grid; validate against the unsimplified perimeter.",
+      "boundary_cleanup_m": 5e-07
+    }
+  },
+  "assemblies": {
+    "upper_arm_shell": {
+      "link": "upper_arm_link",
+      "parts": [
+        8,
+        9,
+        10,
+        11,
+        18
+      ],
+      "profile_basis": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "boundary_cleanup_m": 2.5e-05,
+      "outward_margin_m": 2.5e-05,
+      "max_pieces": 12,
+      "purpose": "One continuous collision envelope for J2-J3: two plates, supports and the enclosed motor. Fill the cavity across the plates while retaining the outer XZ profile."
+    },
+    "forearm_shell": {
+      "link": "forearm_link",
+      "parts": [
+        13,
+        17,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "profile_basis": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "boundary_cleanup_m": 2.5e-05,
+      "outward_margin_m": 2.5e-05,
+      "max_pieces": 12,
+      "purpose": "One continuous collision envelope for J3-J4: all four plates, all six cylindrical spacers, supports and the enclosed motor. Fill both plate-pair cavities and the connecting region."
+    }
+  }
+}
