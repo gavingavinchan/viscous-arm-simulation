@@ -1,0 +1,225 @@
+{
+  "provenance": {
+    "legacy_follower_config": {
+      "path": "/home/gavin/Documents/lerobot/src/lerobot/robots/viscous_follower/config_viscous_follower.py",
+      "sha256": "de73bca6e94c1cb8722d6bde42bfc43c7a999cc0eeec275dd5e6f8f2924511f3"
+    },
+    "legacy_leader_config": {
+      "path": "/home/gavin/Documents/lerobot/src/lerobot/teleoperators/rebot_102_leader/config_rebot_102_leader_viscous.py",
+      "sha256": "ef7a489e75d1eb1e726d0817ec248790aae60f709e17347e4dd4ec4768ec67c6"
+    },
+    "waterproof_profile": {
+      "path": "/home/gavin/Documents/makermodslab-viscous/configs/viscous/viscous_waterproof_01/viscous_profiles/viscous_waterproof_01.json",
+      "sha256": "d440487e2520336c869ec3a781dd397862a0c4491263cc64615ae0c1c2045fd2"
+    },
+    "leader_range_capture": {
+      "path": "/home/gavin/Documents/makermodslab-viscous/configs/viscous/viscous_waterproof_01/evidence/star-ranges-2026-08-29.json",
+      "sha256": "c29025d0d9f43e12b91d567a55ff01c372f2610da1cc51252387fc4ec7754c40"
+    },
+    "waterproof_j1_rezero": {
+      "path": "/home/gavin/Documents/makermodslab-viscous/configs/viscous/viscous_waterproof_01/evidence/j1-rezero-2026-10-11.json",
+      "sha256": "3044023a7f572d5ee1579dbd841f8b3aeca1aa564280699a5758c77becd0b0ef"
+    }
+  },
+  "legacy_follower_limits_deg": {
+    "shoulder_pan": [
+      -185.4,
+      127.6
+    ],
+    "shoulder_lift": [
+      -176.4,
+      -2.4
+    ],
+    "elbow_flex": [
+      2.9,
+      251.1
+    ],
+    "wrist_flex": [
+      -120.8,
+      92.0
+    ],
+    "wrist_yaw": [
+      -89.2,
+      86.2
+    ],
+    "wrist_roll": [
+      -151.3,
+      153.6
+    ],
+    "gripper": [
+      -120.0,
+      -2.8
+    ]
+  },
+  "legacy_leader_directions": {
+    "shoulder_pan": 1.439742,
+    "shoulder_lift": -0.868697,
+    "elbow_flex": -0.915867,
+    "wrist_flex": -1.082952,
+    "wrist_yaw": -1.260963,
+    "wrist_roll": 0.945426,
+    "gripper": -1.778452
+  },
+  "legacy_gripper_closed_offset_deg": -33.0,
+  "waterproof_profile": {
+    "follower": {
+      "joint_limits": {
+        "shoulder_pan": [
+          -126.85285584196426,
+          187.52908634631845
+        ],
+        "shoulder_lift": [
+          -199.44660848503955,
+          -2.807493196141034
+        ],
+        "elbow_flex": [
+          2.8647889756541165,
+          250.03878179509124
+        ],
+        "wrist_flex": [
+          -122.26919348091766,
+          82.10485204224697
+        ],
+        "wrist_yaw": [
+          -86.05826082864965,
+          87.31876797793745
+        ],
+        "wrist_roll": [
+          -154.98508358288768,
+          150.00035076524952
+        ],
+        "gripper": [
+          -115.10722104178238,
+          -2.9220847551671985
+        ]
+      }
+    },
+    "leader": {
+      "joint_directions": {
+        "shoulder_pan": 1.446099,
+        "shoulder_lift": -0.981723,
+        "elbow_flex": -0.912081,
+        "wrist_flex": -1.040071,
+        "wrist_yaw": -1.24642,
+        "wrist_roll": 0.945691,
+        "gripper": -1.702354
+      },
+      "joint_ranges": {
+        "shoulder_pan": [
+          -126,
+          187
+        ],
+        "shoulder_lift": [
+          -199,
+          -3
+        ],
+        "elbow_flex": [
+          3,
+          250
+        ],
+        "wrist_flex": [
+          -122,
+          82
+        ],
+        "wrist_yaw": [
+          -86,
+          87
+        ],
+        "wrist_roll": [
+          -154,
+          150
+        ],
+        "gripper": [
+          -115,
+          -3
+        ]
+      },
+      "joint_offsets": {
+        "shoulder_pan": 0.0,
+        "shoulder_lift": 0.0,
+        "elbow_flex": 0.0,
+        "wrist_flex": 0.0,
+        "wrist_yaw": 0.0,
+        "wrist_roll": 0.0,
+        "gripper": 0.0
+      },
+      "max_start_offset_deg": 30.0
+    }
+  },
+  "leader_range_capture": {
+    "timestamp": "2026-08-29T11:34:03",
+    "joints": [
+      {
+        "servo": 0,
+        "min_deg": -107.1,
+        "max_deg": 110.3,
+        "travel_deg": 217.4
+      },
+      {
+        "servo": 1,
+        "min_deg": -0.9,
+        "max_deg": 199.4,
+        "travel_deg": 200.3
+      },
+      {
+        "servo": 2,
+        "min_deg": -270.5,
+        "max_deg": 0.5,
+        "travel_deg": 271.0
+      },
+      {
+        "servo": 3,
+        "min_deg": -101.2,
+        "max_deg": 95.3,
+        "travel_deg": 196.5
+      },
+      {
+        "servo": 4,
+        "min_deg": -71.4,
+        "max_deg": 67.7,
+        "travel_deg": 139.1
+      },
+      {
+        "servo": 5,
+        "min_deg": -159.2,
+        "max_deg": 163.3,
+        "travel_deg": 322.5
+      },
+      {
+        "servo": 6,
+        "min_deg": -1.3,
+        "max_deg": 64.6,
+        "travel_deg": 65.9
+      }
+    ]
+  },
+  "waterproof_j1_rezero": {
+    "date": "2026-10-11",
+    "joint": "shoulder_pan",
+    "motor_id": 1,
+    "reason": "Arm mounted on the ROV; Gavin posed J1 at its new neutral (leader at its neutral) and asked for this pose to be J1 zero.",
+    "method": "RobStride SET_ZERO (0xFE) on motor 1 only, bus opened without handshake, torque disabled before and after. Persists across power cycles.",
+    "reading_before_deg": 265.52,
+    "reading_before_old_frame_deg": -94.48,
+    "old_frame_note": "265.52 lies outside J1's captured stops [-129.7, 190.4] deg, so it is the -94.48 deg branch (driver whole-turn correction). Old frame = new frame - 94.48.",
+    "reading_after_deg": -0.01,
+    "other_joints_unchanged_deg": {
+      "shoulder_lift": 0.03,
+      "elbow_flex": 0.16,
+      "wrist_flex": 0.25,
+      "wrist_yaw": 2.76,
+      "wrist_roll": 1.95,
+      "gripper": -0.41
+    },
+    "captured_stops_new_frame_deg": {
+      "backed_off_soft_limits_shifted": [
+        -32.37,
+        282.01
+      ]
+    },
+    "lab_profiles_changed": false,
+    "lab_profile_note": "Soft limits in viscous_profiles/viscous_waterproof_01.json and the leader mapping were deliberately left in the old frame (Gavin: no remap, pilot carefully). Lab J1 soft range is still [-126.85, 187.53] in the NEW frame: it allows ~94 deg past the real negative stop (~-32 deg) and stops short of the positive one.",
+    "post_check": "Powered teleop from the Lab GUI worked after the re-zero (Gavin)."
+  },
+  "status": "Historical records for draft offline mapping, not fresh physical calibration"
+}

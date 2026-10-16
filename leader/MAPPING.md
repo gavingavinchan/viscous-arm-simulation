@@ -1,82 +1,147 @@
-# Leader-to-Viscous mapping work
+# Leader-to-Viscous joint-posture mapping
 
-The CAD rebuild and the physical motor mapping are separate. The emitted URDFs
-provide geometry, but both project manifests explicitly state that their encoder
-signs and CAD-zero offsets are unverified. They cannot establish those values
-without known physical poses.
+Gavin selected **corresponding joint angles and arm posture**, with physical
+checks deferred until the next session. The selected mapper is
+[joint_mapping.py](joint_mapping.py). The earlier Cartesian/IK mapper remains
+an offline experiment and is not the selected control law.
 
-## Implemented offline
+## Mapping prepared offline
 
-`retarget.PoseMapper` maps relative leader hand motion to the Viscous tool pose,
-using the actual tool frames in both URDFs and bounded inverse kinematics. This
-replaces independent per-joint travel scaling in the offline calculation.
+For each of the six arm joints:
 
-The corresponding hand reference poses align the two coordinate frames. At the
-reference pose the follower has no target jump. Translation scale is explicit;
-orientation is preserved. Unreachable targets and excessive joint steps raise
-`PoseRejected`; a clipped IK result is never returned as an accepted solution.
-The gripper remains a separate coordinate and is not changed by this six-axis
-pose mapper.
-
-```python
-from leader.retarget import PoseMapper
-
-# These must be MODEL coordinates in radians, after encoder calibration.
-mapper = PoseMapper(leader_reference, follower_reference,
-                    follower_bounds=calibrated_model_bounds)
-solution = mapper.map(leader_model_angles, previous_follower_model_angles)
+```text
+leader_angle = unwrap(raw_encoder, leader_window_center)
+requested_follower = follower_reference + direction * (leader_angle - leader_reference)
+applied_follower = clamp(requested_follower, this_unit_limits)
 ```
 
-Run `.venv/bin/python -m unittest leader.test_retarget`. The tests include 100
-small pose changes, reference-pose continuity, independent leader FK agreement,
-translation scaling, and rejection of unreachable, discontinuous and out-of-range
-solutions. These are offline geometry tests, not collision or hardware tests.
-No realtime throughput is claimed. The solver is not wired into Lab or any motor
-controller. All existing live profiles remain unchanged pending physical checks.
+`direction` is exactly +1 or −1. A 10-degree leader change therefore requests a
+10-degree follower change in the corresponding direction. Follower travel is
+not divided by leader travel. Different link lengths need no angle scaling for
+this control mode; the two hand positions will naturally differ.
 
-## Waterproof J1 frame mismatch found on 16 October 2026
+The mapper returns both the requested angle and the limited target, with an
+explicit `limited` flag and reason. Joint limits can prevent matching posture
+at the ends of travel. The original software backoff also excludes the assumed
+exact zero of J2/J3: those zero requests are visibly reported as limited rather
+than silently moving the reference anchor.
 
-The authoritative saved record is
-`../makermodslab-viscous/configs/viscous/viscous_waterproof_01/evidence/j1-rezero-2026-10-11.json`
-(relative to the repository root). It records:
+Raw-angle unwrapping uses the **leader's own coordinate frame**, independently
+of follower limits, offsets and direction. Wrapped readings such as −270.5 and
++89.5 degrees produce the same target. An exact ambiguous ±180-degree window
+boundary is rejected. Each physical leader joint's entire travel must fit
+inside its configured window; current windows still require physical checking.
 
-- J1 was re-zeroed at the ROV-mounted neutral with the leader at neutral.
-- Old-frame angle = new-frame angle − 94.48 degrees.
-- The old soft limits were deliberately left in the profiles at that time.
-- The backed-off mechanical range in the new frame is approximately
-  −32.37 to +282.01 degrees.
+The gripper is separate from the six posture joints. Its closed/open control
+fraction is interpolated onto each follower's own closed/open motor endpoints.
+The original unit retains its historical −33-degree closed reference. The
+waterproof unit uses its backed-off closed limit. This is a control-endpoint
+mapping, not a measured jaw-gap or nonlinear transmission model.
 
-The checked-in and active Linux profile still has −126.85285584 to +187.52908635
-degrees. Re-expressing that same captured interval in the new frame gives
-−32.37285584 to +282.00908635 degrees, or the inward-rounded leader output range
-`[-32, 282]`.
+## Per-unit drafts and provenance
 
-**Do not change just that range in isolation.** The installed leader driver
-centers raw-servo unwrapping on the follower range divided by its scale. After
-the J1 range shift, its raw unwrap center would move to about +86 degrees. A
-negative leader reading near −107 degrees could then unwrap to about +253 and
-produce the opposite positive limit. Raw leader unwrapping must use its own
-mechanical angle window independently of the follower clamp, and the new neutral
-alignment must be retained. Merely adding +94.48 degrees to every leader command
-would move the matched neutral and is not a valid correction either.
+- [Original non-waterproof unit](mapping/profiles/viscous_01.json)
+- [Waterproof ROV-mounted unit](mapping/profiles/viscous_waterproof_01.json)
+- [Historical inputs and source hashes](mapping/inputs.json)
 
-The original non-waterproof unit has a different calibration and its own
-gripper-closed offset. The waterproof profile must not be copied over it.
+Both drafts have `verification.status = "draft"`. Their zero-to-zero arm
+anchors are **assumptions**, not newly measured corresponding poses. Direction
+signs are retained from the commissioned mapping. Historical raw travel and
+motor endpoints are preserved with their sources; the leader's pan origin has
+changed since its range capture, so its draft unwrap window is centered on
+neutral instead. Replace the reference anchors, directions or window centers
+where physical checks show a discrepancy. No commissioned motor zeros need to
+be rewritten.
 
-## Remaining information for a live correction
+Default loading refuses these unverified profiles. Offline evaluation requires
+an explicit opt-in, and the result remains labelled `physically_verified: false`:
 
-1. Confirm whether the intended control matches Cartesian tool motion or the
-   corresponding joint posture. Cartesian motion is the current offline mapper's
-   assumption; they require different control laws for arms of different lengths.
-2. Check encoder-to-URDF signs and offsets against known poses for the leader and
-   each follower, including the ROV-mounted J1 zero. Preserve commissioned motor
-   zeros; do not re-run follower calibration.
-3. Establish the leader's raw angle unwrap windows in its current zero frame.
-4. Verify gripper closed/open references separately for each follower. The old
-   unit's −33-degree closed offset does not apply to the waterproof unit.
-5. Use those calibrations to convert follower limits and IK output between model
-   radians and motor degrees. Integrate the selected mapping into both Lab
-   teleoperation and recording, then check supported small motions with the user.
+```python
+from leader.joint_mapping import JointMapper
 
-The mathematical retargeter is ready to evaluate in model coordinates. A correct
-live encoder mapping is not claimed until these physical references are checked.
+mapper = JointMapper.from_file(
+    "leader/mapping/profiles/viscous_waterproof_01.json",
+    allow_unverified=True,  # Offline draft evaluation only.
+)
+result = mapper.map({
+    "shoulder_pan": 0., "shoulder_lift": 30., "elbow_flex": -60.,
+    "wrist_flex": 0., "wrist_yaw": 0., "wrist_roll": 0., "gripper": 20.,
+})
+```
+
+The standalone CLI accepts the same seven-value JSON object in a file:
+
+```sh
+.venv/bin/python -m leader.joint_mapping \
+  --profile leader/mapping/profiles/viscous_waterproof_01.json \
+  --leader-degrees /path/to/raw-leader-angles.json --offline
+```
+
+## Waterproof J1 correction in the draft
+
+The saved commissioning record says J1 was re-zeroed at its ROV-mounted neutral
+on 11 October 2026 while the leader was also at neutral. It gives:
+
+```text
+old angle = new angle - 94.48 degrees
+```
+
+The existing Lab profile still has −126.85285584 to +187.52908635 degrees in the
+old frame. Re-expressing its captured soft limits in the new frame gives
+**−32.37285584 to +282.00908635 degrees**. These corrected limits are included
+in the waterproof offline draft. Its matched-neutral assumption stays zero;
++94.48 degrees is not added to leader commands.
+
+Changing just the range in the current driver would introduce a wrap error:
+that driver derives the raw leader window from the follower range and scale.
+With the new J1 limits, a negative raw reading near −107 degrees could unwrap
+to +253 degrees and request the opposite positive stop. The offline mapper
+uses the independent leader window and correctly produces the negative limited
+target. This case is explicitly regression-tested.
+
+The authoritative record and old profile are preserved inside
+`mapping/inputs.json`, with hashes and original paths. The original
+non-waterproof unit keeps its own frame, limits and gripper reference.
+
+## Rebuild and tests
+
+From the repository root:
+
+```sh
+.venv/bin/python -m leader.prepare_joint_profiles
+.venv/bin/python -m unittest leader.test_joint_mapping -v
+.venv/bin/python -m leader.validate_joint_mapping
+```
+
+The suite checks signed unit gain, arbitrary reference anchors, both unit
+profiles, monotonic full-travel sweeps, full-turn equivalence, limit reporting,
+gripper endpoints, malformed/nonfinite data, ambiguous boundaries, draft-loading
+refusal and the J1 re-zero regression. The generated
+[validation report](inspection/joint_mapping_validation.json) records input,
+profile and implementation hashes plus numeric examples. These are software
+checks under the draft anchor assumptions, not physical accuracy measurements.
+
+## Next physical session
+
+1. Check corresponding reference poses on the leader and each follower; replace
+   the draft anchors, especially the original unit's folded wrist-flex anchor
+   and the waterproof unit's ROV-mounted J1 frame.
+2. Confirm the direction of a small movement at each joint and verify that its
+   full raw travel stays inside the configured unwrap window.
+3. Check each gripper's closed/open endpoints separately.
+4. Review limited targets against the measured per-unit stops and ROV clearance.
+5. Integrate the checked mapping consistently into Lab teleoperation and recording,
+   retaining the existing startup, stop and thermal controls; then test small
+   supported movements with the operator.
+
+No live profiles, actuator zeros or running control sessions were changed.
+Both URDF projects still mark encoder-to-CAD signs/zeros as unverified. The live
+mapping should only be replaced after the corresponding physical references
+are checked.
+
+## Cartesian experiment
+
+`retarget.PoseMapper` and `test_retarget.py` remain available for separate offline
+research. They match relative tool poses through bounded IK and have their own
+geometry tests. They are not used by `JointMapper` or the selected posture
+profiles.

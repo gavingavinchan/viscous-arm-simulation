@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "unit_id": "viscous_waterproof_01",
+  "angle_unit": "degrees",
+  "mapping_mode": "joint_posture",
+  "verification": {
+    "status": "draft",
+    "arm_anchors": "Zero-to-zero assumptions only; no fresh matched-pose measurements. Replace each leader/follower reference with a checked corresponding pose.",
+    "directions": "Signs retained from the existing commissioned mapping; not freshly verified against the URDFs.",
+    "unwrap_windows": "Independent leader-frame windows. Non-pan centers use historical 2026-08-29 capture; pan uses neutral 0 after origin changes. Recheck in current leader zero frame.",
+    "gripper": "Historical follower closed/open limits; leader closed=0 and open=archived travel are assumptions requiring endpoint verification. Control interpolation is not a transmission or jaw-gap calibration.",
+    "follower_frame": "ROV-mounted J1 zero, with shifted J1 limits; neutral remains zero"
+  },
+  "arm_joints": {
+    "shoulder_pan": {
+      "direction": 1.0,
+      "leader_reference_deg": 0.0,
+      "follower_reference_deg": 0.0,
+      "leader_unwrap_center_deg": 0.0,
+      "follower_limits_deg": [
+        -32.37285584196425,
+        282.00908634631844
+      ]
+    },
+    "shoulder_lift": {
+      "direction": -1.0,
+      "leader_reference_deg": 0.0,
+      "follower_reference_deg": 0.0,
+      "leader_unwrap_center_deg": 99.25,
+      "follower_limits_deg": [
+        -199.44660848503955,
+        -2.807493196141034
+      ]
+    },
+    "elbow_flex": {
+      "direction": -1.0,
+      "leader_reference_deg": 0.0,
+      "follower_reference_deg": 0.0,
+      "leader_unwrap_center_deg": -135.0,
+      "follower_limits_deg": [
+        2.8647889756541165,
+        250.03878179509124
+      ]
+    },
+    "wrist_flex": {
+      "direction": -1.0,
+      "leader_reference_deg": 0.0,
+      "follower_reference_deg": 0.0,
+      "leader_unwrap_center_deg": -2.950000000000003,
+      "follower_limits_deg": [
+        -122.26919348091766,
+        82.10485204224697
+      ]
+    },
+    "wrist_yaw": {
+      "direction": -1.0,
+      "leader_reference_deg": 0.0,
+      "follower_reference_deg": 0.0,
+      "leader_unwrap_center_deg": -1.8500000000000014,
+      "follower_limits_deg": [
+        -86.05826082864965,
+        87.31876797793745
+      ]
+    },
+    "wrist_roll": {
+      "direction": 1.0,
+      "leader_reference_deg": 0.0,
+      "follower_reference_deg": 0.0,
+      "leader_unwrap_center_deg": 2.0500000000000114,
+      "follower_limits_deg": [
+        -154.98508358288768,
+        150.00035076524952
+      ]
+    }
+  },
+  "gripper": {
+    "leader_closed_deg": 0.0,
+    "leader_open_deg": 65.9,
+    "follower_closed_deg": -2.9220847551671985,
+    "follower_open_deg": -115.10722104178238,
+    "leader_unwrap_center_deg": 32.95,
+    "follower_limits_deg": [
+      -115.10722104178238,
+      -2.9220847551671985
+    ]
+  },
+  "source_inputs_sha256": "aa5657c0327f6b5679c441b9e05fd94af80107041a81fa8bb155faa5890e4fa9"
+}

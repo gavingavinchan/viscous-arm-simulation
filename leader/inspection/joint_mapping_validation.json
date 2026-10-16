@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "tests_run": 16,
+  "mode": "joint_posture",
+  "validation_scope": "Offline calculations under explicit draft reference assumptions; no physical motion or live profile changes",
+  "input_sha256": "aa5657c0327f6b5679c441b9e05fd94af80107041a81fa8bb155faa5890e4fa9",
+  "implementation_sha256": "3c08d6fde23b7b9b3dcd40498102d1f1ff272a9885946f75b4a6f70639e5e7d4",
+  "tests_sha256": "25f42e480a1ced4dd6f85daea04599c73338f8c89ec040055047f4c14e279628",
+  "units": {
+    "viscous_01": {
+      "profile_sha256": "9c2811500259e25a42b56a728c728e4a2ca048c1835b561b5e84bea940d9dcd8",
+      "physically_verified": false,
+      "ten_degree_changes": {
+        "shoulder_pan": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": 10.0
+        },
+        "shoulder_lift": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": -10.0
+        },
+        "elbow_flex": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": -10.0
+        },
+        "wrist_flex": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": -10.0
+        },
+        "wrist_yaw": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": -10.0
+        },
+        "wrist_roll": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": 10.0
+        }
+      },
+      "gripper_closed_deg": -33.00000000000002,
+      "gripper_open_deg": -119.99999999999999
+    },
+    "viscous_waterproof_01": {
+      "profile_sha256": "f12ed3c933fdfd010c72caea47f23a8db4b4ed5c63c8c4f8e288d0ad1d6b77ea",
+      "physically_verified": false,
+      "ten_degree_changes": {
+        "shoulder_pan": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": 10.0
+        },
+        "shoulder_lift": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": -10.0
+        },
+        "elbow_flex": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": -10.0
+        },
+        "wrist_flex": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": -10.0
+        },
+        "wrist_yaw": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": -10.0
+        },
+        "wrist_roll": {
+          "leader_change_deg": 10.0,
+          "requested_follower_change_deg": 10.0
+        }
+      },
+      "gripper_closed_deg": -2.9220847551672224,
+      "gripper_open_deg": -115.10722104178235
+    }
+  },
+  "waterproof_j1_regression": {
+    "raw_leader_deg": -107.1,
+    "neutral_requested_deg": 0.0,
+    "corrected_follower_limits_deg": [
+      -32.37285584196425,
+      282.00908634631844
+    ],
+    "old_algorithm_if_only_limits_were_shifted": {
+      "raw_unwrapped_deg": 252.9,
+      "target_deg": 282.00908634631844
+    },
+    "new_independent_leader_window": {
+      "raw_unwrapped_deg": -107.1,
+      "target_deg": -32.37285584196425
+    }
+  },
+  "next_session": "Check per-joint matching-pose anchors, directions, raw unwrap windows and each gripper's endpoints before live integration"
+}

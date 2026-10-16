@@ -127,11 +127,13 @@ all in radians. These functions neither clamp to hardware limits nor convert
 encoder readings.
 
 `star_arm_102_hd_model.zip` is a portable runtime package containing the URDF,
-meshes, manifest, validation report and source/license records. The STEP and
-rebuild scripts remain in this repository directory.
+meshes, manifest, validation reports, offline joint-mapping drafts and
+source/license records. The STEP and rebuild scripts remain in this repository
+directory. The included joint-mapping drafts are not physically verified.
 
 The next mapping step is to measure the leader's encoder-to-model signs and
 zeros, then compare hand motion with each Viscous model. The waterproofed and
 non-waterproofed followers retain their own measured calibration and limits.
-See [mapping implementation and outstanding physical checks](MAPPING.md) for the
-tested offline pose mapper and the waterproof unit's J1 frame mismatch.
+See [joint-posture mapping and next-session checks](MAPPING.md) for the selected
+one-to-one joint mapper, both offline draft profiles and the waterproof unit's
+J1 frame correction. The Cartesian mapper remains a separate offline experiment.
