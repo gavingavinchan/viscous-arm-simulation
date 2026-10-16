@@ -133,3 +133,5 @@ rebuild scripts remain in this repository directory.
 The next mapping step is to measure the leader's encoder-to-model signs and
 zeros, then compare hand motion with each Viscous model. The waterproofed and
 non-waterproofed followers retain their own measured calibration and limits.
+See [mapping implementation and outstanding physical checks](MAPPING.md) for the
+tested offline pose mapper and the waterproof unit's J1 frame mismatch.
