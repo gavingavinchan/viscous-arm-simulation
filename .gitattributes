@@ -4,3 +4,7 @@
 *.f3z binary
 *.f3d binary
 *.stl binary
+
+# Preserve pinned manufacturer files byte-for-byte, including STEP case and CRLF.
+*.STEP binary
+leader/source/*.urdf -text -whitespace

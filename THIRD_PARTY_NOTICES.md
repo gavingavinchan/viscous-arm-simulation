@@ -1,5 +1,16 @@
 # Third-party notices and provenance
 
+## Star Arm 102-HD leader reference
+
+`leader/source/` retains the manufacturer's HD assembly STEP, original URDFs,
+documentation and license-scope note from `servodevelop/Star-Arm-102`, pinned at
+`b6eae72210082778976643c636655502ebb17417`. Exact paths and hashes are recorded in
+`leader/source/intake.json`. `leader/model/` contains a locally rebuilt kinematic
+description and CAD-derived meshes. The manufacturer's `LICENSE.md`, preserved
+as `leader/source/LICENSE-scope.md`, states that a consistent license grant for
+hardware/model assets has not been established. These local engineering copies
+do not imply a new license or permission to redistribute the upstream assets.
+
 ## Maker Arm reference
 
 The comparison-only files in reference/maker-urdf were copied from the MakerMods Lab Maker Arm assets, which identify their upstream as:

@@ -3,6 +3,14 @@ import {OrbitControls} from './vendor/OrbitControls.js';
 import {STLLoader} from './vendor/STLLoader.js';
 
 const $=id=>document.getElementById(id), viewport=$('viewport');
+const leaderMode=new URLSearchParams(location.search).get('model')==='leader';
+const selectedModel=leaderMode?'../leader/model/star_arm_102_hd.urdf':'../model/viscous_arm.urdf';
+if(leaderMode){
+ document.title='Star Arm 102-HD · Model Explorer';
+ document.querySelector('h1').textContent='Star Arm 102-HD · Model Explorer';
+ document.querySelector('.notice').innerHTML='<strong>CAD reference; encoder offsets unverified</strong>Standard leader handle and finger rings. Joint limits are for preview. Geometry and kinematics only; masses and inertias are not identified. No hardware connection.';
+ $('model-switch').textContent='View Viscous Arm';$('model-switch').href='./';
+}
 const scene=new THREE.Scene(); scene.background=new THREE.Color('#0b1119');
 const camera=new THREE.PerspectiveCamera(38,1,.001,100);camera.up.set(0,0,1);camera.position.set(.8,-1.1,.7);
 const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.35;viewport.prepend(renderer.domElement);
@@ -68,7 +76,7 @@ function makeSliders(){
  }
 }
 async function load(){
- let response=await fetch('../model/viscous_arm.urdf',{cache:'no-store'});if(!response.ok){if(response.status!==404)throw new Error(`URDF HTTP ${response.status}`);sourceFallback=true;response=await fetch('../reference/maker-urdf/robot.urdf',{cache:'no-store'});}if(!response.ok)throw new Error(`URDF HTTP ${response.status}`);modelURL=response.url;
+ let response=await fetch(selectedModel,{cache:'no-store'});if(!response.ok&&!leaderMode){if(response.status!==404)throw new Error(`URDF HTTP ${response.status}`);sourceFallback=true;response=await fetch('../reference/maker-urdf/robot.urdf',{cache:'no-store'});}if(!response.ok)throw new Error(`URDF HTTP ${response.status}`);modelURL=response.url;
  const doc=new DOMParser().parseFromString(await response.text(),'application/xml');if(doc.querySelector('parsererror'))throw new Error('Invalid URDF XML');const root=doc.querySelector('robot');if(!root)throw new Error('URDF has no robot');
  const materials=new Map(children(root,'material').map(m=>[m.getAttribute('name'),m])),pending=[];let index=0;
  for(const el of children(root,'link')){const link=new THREE.Group();link.name=el.getAttribute('name');links.set(link.name,link);for(const visual of children(el,'visual'))pending.push(addShape(visual,link,index,false,materials));for(const collision of children(el,'collision'))pending.push(addShape(collision,link,index,true,materials));index++;}
@@ -83,13 +91,13 @@ async function load(){
  await Promise.all(pending);makeSliders();applyPose();applyDisplay();fit();
  const active=sliders.length,mimics=[...joints.values()].filter(j=>j.mimic).length;
  $('status').textContent=sourceFallback?'Reference model loaded · regenerated model is not yet available. Reload after export.':`${links.size} links · ${active} independent joints · ${mimics} mimic joint${mimics===1?'':'s'} · CAD zero`;
- $('meta').textContent=`${root.getAttribute('name')} · ${sourceFallback?'reference/maker-urdf/robot.urdf':'model/viscous_arm.urdf'}\nThree.js r160 · local assets`;
+ $('meta').textContent=`${root.getAttribute('name')} · ${sourceFallback?'reference/maker-urdf/robot.urdf':selectedModel.replace('../','')}\nThree.js r160 · local assets`;
  for(const id of ['zero','sample','frame'])$(id).disabled=false;
  // Deliberately expose read-only numeric diagnostics for browser QA; no hardware interfaces.
- window.modelDiagnostics=()=>({source:modelURL,links:links.size,joints:[...joints.values()].map(j=>({name:j.name,type:j.type,value:jointValue(j),mimic:j.mimic??null})),visualMeshes:visualMeshes.length,collisionMeshes:collisionMeshes.length,cadVisible:$('cad').checked,collisionVisible:$('collision').checked,zeroConvention:'CAD zero; encoder offsets unverified'});
+ window.modelDiagnostics=()=>({source:modelURL,links:links.size,joints:[...joints.values()].map(j=>({name:j.name,type:j.type,value:jointValue(j),mimic:j.mimic??null})),frames:Object.fromEntries([...links].map(([name,link])=>[name,link.matrixWorld.toArray()])),visualMeshes:visualMeshes.length,collisionMeshes:collisionMeshes.length,cadVisible:$('cad').checked,collisionVisible:$('collision').checked,zeroConvention:'CAD zero; encoder offsets unverified'});
 }
 $('zero').onclick=()=>{for(const j of joints.values())j.value=0;applyPose();$('status').textContent='CAD zero · encoder offsets unverified';};
-$('sample').onclick=()=>{let i=0;const degrees=[25,-32,48,22,-28,15];for(const j of joints.values()){if(j.mimic||j.type==='fixed')continue;const value=j.type==='prismatic'?(j.min+j.max)*.5:THREE.MathUtils.degToRad(degrees[i++%degrees.length]);j.value=THREE.MathUtils.clamp(value,j.min,j.max);}applyPose();fit();$('status').textContent='Illustrative sample pose · no collision or reachability validation';};
+$('sample').onclick=()=>{let i=0;const degrees=leaderMode?[25,55,-95,22,-28,15,20]:[25,-32,48,22,-28,15];for(const j of joints.values()){if(j.mimic||j.type==='fixed')continue;const value=j.type==='prismatic'?(j.min+j.max)*.5:THREE.MathUtils.degToRad(degrees[i++%degrees.length]);j.value=THREE.MathUtils.clamp(value,j.min,j.max);}applyPose();fit();$('status').textContent='Illustrative sample pose · no collision or reachability validation';};
 $('frame').onclick=fit;$('cad').onchange=applyDisplay;$('collision').onchange=applyDisplay;
 $('axes').onchange=()=>{for(const axes of jointFrames)axes.visible=$('axes').checked;};
 new ResizeObserver(()=>{const width=viewport.clientWidth,height=viewport.clientHeight;renderer.setSize(width,height);camera.aspect=width/height;camera.updateProjectionMatrix();}).observe(viewport);

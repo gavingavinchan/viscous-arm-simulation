@@ -1,0 +1,2090 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="star_arm_102_hd">
+  <!--CAD-derived kinematic model. Preview limits only; no hardware zero calibration or identified dynamics.-->
+  <link name="base_link">
+    <visual name="part_067">
+      <geometry>
+        <mesh filename="meshes/part_067.stl" />
+      </geometry>
+      <material name="part_067">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_068">
+      <geometry>
+        <mesh filename="meshes/part_068.stl" />
+      </geometry>
+      <material name="part_068">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_069">
+      <geometry>
+        <mesh filename="meshes/part_069.stl" />
+      </geometry>
+      <material name="part_069">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_069">
+      <geometry>
+        <mesh filename="meshes/part_069.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_070">
+      <geometry>
+        <mesh filename="meshes/part_070.stl" />
+      </geometry>
+      <material name="part_070">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_070">
+      <geometry>
+        <mesh filename="meshes/part_070.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_085">
+      <geometry>
+        <mesh filename="meshes/part_085.stl" />
+      </geometry>
+      <material name="part_085">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_085">
+      <geometry>
+        <mesh filename="meshes/part_085.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_086">
+      <geometry>
+        <mesh filename="meshes/part_086.stl" />
+      </geometry>
+      <material name="part_086">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_086">
+      <geometry>
+        <mesh filename="meshes/part_086.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_087">
+      <geometry>
+        <mesh filename="meshes/part_087.stl" />
+      </geometry>
+      <material name="part_087">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_087">
+      <geometry>
+        <mesh filename="meshes/part_087.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_088">
+      <geometry>
+        <mesh filename="meshes/part_088.stl" />
+      </geometry>
+      <material name="part_088">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_088">
+      <geometry>
+        <mesh filename="meshes/part_088.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_090">
+      <geometry>
+        <mesh filename="meshes/part_090.stl" />
+      </geometry>
+      <material name="part_090">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_091">
+      <geometry>
+        <mesh filename="meshes/part_091.stl" />
+      </geometry>
+      <material name="part_091">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_092">
+      <geometry>
+        <mesh filename="meshes/part_092.stl" />
+      </geometry>
+      <material name="part_092">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_093">
+      <geometry>
+        <mesh filename="meshes/part_093.stl" />
+      </geometry>
+      <material name="part_093">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_094">
+      <geometry>
+        <mesh filename="meshes/part_094.stl" />
+      </geometry>
+      <material name="part_094">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_095">
+      <geometry>
+        <mesh filename="meshes/part_095.stl" />
+      </geometry>
+      <material name="part_095">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_096">
+      <geometry>
+        <mesh filename="meshes/part_096.stl" />
+      </geometry>
+      <material name="part_096">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_097">
+      <geometry>
+        <mesh filename="meshes/part_097.stl" />
+      </geometry>
+      <material name="part_097">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_127">
+      <geometry>
+        <mesh filename="meshes/part_127.stl" />
+      </geometry>
+      <material name="part_127">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_128">
+      <geometry>
+        <mesh filename="meshes/part_128.stl" />
+      </geometry>
+      <material name="part_128">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_129">
+      <geometry>
+        <mesh filename="meshes/part_129.stl" />
+      </geometry>
+      <material name="part_129">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_130">
+      <geometry>
+        <mesh filename="meshes/part_130.stl" />
+      </geometry>
+      <material name="part_130">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_131">
+      <geometry>
+        <mesh filename="meshes/part_131.stl" />
+      </geometry>
+      <material name="part_131">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_132">
+      <geometry>
+        <mesh filename="meshes/part_132.stl" />
+      </geometry>
+      <material name="part_132">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_133">
+      <geometry>
+        <mesh filename="meshes/part_133.stl" />
+      </geometry>
+      <material name="part_133">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_134">
+      <geometry>
+        <mesh filename="meshes/part_134.stl" />
+      </geometry>
+      <material name="part_134">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_135">
+      <geometry>
+        <mesh filename="meshes/part_135.stl" />
+      </geometry>
+      <material name="part_135">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_136">
+      <geometry>
+        <mesh filename="meshes/part_136.stl" />
+      </geometry>
+      <material name="part_136">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_137">
+      <geometry>
+        <mesh filename="meshes/part_137.stl" />
+      </geometry>
+      <material name="part_137">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_138">
+      <geometry>
+        <mesh filename="meshes/part_138.stl" />
+      </geometry>
+      <material name="part_138">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_139">
+      <geometry>
+        <mesh filename="meshes/part_139.stl" />
+      </geometry>
+      <material name="part_139">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_140">
+      <geometry>
+        <mesh filename="meshes/part_140.stl" />
+      </geometry>
+      <material name="part_140">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_141">
+      <geometry>
+        <mesh filename="meshes/part_141.stl" />
+      </geometry>
+      <material name="part_141">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_142">
+      <geometry>
+        <mesh filename="meshes/part_142.stl" />
+      </geometry>
+      <material name="part_142">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_143">
+      <geometry>
+        <mesh filename="meshes/part_143.stl" />
+      </geometry>
+      <material name="part_143">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_144">
+      <geometry>
+        <mesh filename="meshes/part_144.stl" />
+      </geometry>
+      <material name="part_144">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_145">
+      <geometry>
+        <mesh filename="meshes/part_145.stl" />
+      </geometry>
+      <material name="part_145">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_146">
+      <geometry>
+        <mesh filename="meshes/part_146.stl" />
+      </geometry>
+      <material name="part_146">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_147">
+      <geometry>
+        <mesh filename="meshes/part_147.stl" />
+      </geometry>
+      <material name="part_147">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_148">
+      <geometry>
+        <mesh filename="meshes/part_148.stl" />
+      </geometry>
+      <material name="part_148">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_149">
+      <geometry>
+        <mesh filename="meshes/part_149.stl" />
+      </geometry>
+      <material name="part_149">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_150">
+      <geometry>
+        <mesh filename="meshes/part_150.stl" />
+      </geometry>
+      <material name="part_150">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_151">
+      <geometry>
+        <mesh filename="meshes/part_151.stl" />
+      </geometry>
+      <material name="part_151">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_152">
+      <geometry>
+        <mesh filename="meshes/part_152.stl" />
+      </geometry>
+      <material name="part_152">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_153">
+      <geometry>
+        <mesh filename="meshes/part_153.stl" />
+      </geometry>
+      <material name="part_153">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_154">
+      <geometry>
+        <mesh filename="meshes/part_154.stl" />
+      </geometry>
+      <material name="part_154">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_155">
+      <geometry>
+        <mesh filename="meshes/part_155.stl" />
+      </geometry>
+      <material name="part_155">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_156">
+      <geometry>
+        <mesh filename="meshes/part_156.stl" />
+      </geometry>
+      <material name="part_156">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_157">
+      <geometry>
+        <mesh filename="meshes/part_157.stl" />
+      </geometry>
+      <material name="part_157">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_158">
+      <geometry>
+        <mesh filename="meshes/part_158.stl" />
+      </geometry>
+      <material name="part_158">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_159">
+      <geometry>
+        <mesh filename="meshes/part_159.stl" />
+      </geometry>
+      <material name="part_159">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_160">
+      <geometry>
+        <mesh filename="meshes/part_160.stl" />
+      </geometry>
+      <material name="part_160">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_161">
+      <geometry>
+        <mesh filename="meshes/part_161.stl" />
+      </geometry>
+      <material name="part_161">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_162">
+      <geometry>
+        <mesh filename="meshes/part_162.stl" />
+      </geometry>
+      <material name="part_162">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_163">
+      <geometry>
+        <mesh filename="meshes/part_163.stl" />
+      </geometry>
+      <material name="part_163">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_164">
+      <geometry>
+        <mesh filename="meshes/part_164.stl" />
+      </geometry>
+      <material name="part_164">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_165">
+      <geometry>
+        <mesh filename="meshes/part_165.stl" />
+      </geometry>
+      <material name="part_165">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_166">
+      <geometry>
+        <mesh filename="meshes/part_166.stl" />
+      </geometry>
+      <material name="part_166">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_167">
+      <geometry>
+        <mesh filename="meshes/part_167.stl" />
+      </geometry>
+      <material name="part_167">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_168">
+      <geometry>
+        <mesh filename="meshes/part_168.stl" />
+      </geometry>
+      <material name="part_168">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_169">
+      <geometry>
+        <mesh filename="meshes/part_169.stl" />
+      </geometry>
+      <material name="part_169">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_170">
+      <geometry>
+        <mesh filename="meshes/part_170.stl" />
+      </geometry>
+      <material name="part_170">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_171">
+      <geometry>
+        <mesh filename="meshes/part_171.stl" />
+      </geometry>
+      <material name="part_171">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_172">
+      <geometry>
+        <mesh filename="meshes/part_172.stl" />
+      </geometry>
+      <material name="part_172">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_173">
+      <geometry>
+        <mesh filename="meshes/part_173.stl" />
+      </geometry>
+      <material name="part_173">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_174">
+      <geometry>
+        <mesh filename="meshes/part_174.stl" />
+      </geometry>
+      <material name="part_174">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_175">
+      <geometry>
+        <mesh filename="meshes/part_175.stl" />
+      </geometry>
+      <material name="part_175">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_176">
+      <geometry>
+        <mesh filename="meshes/part_176.stl" />
+      </geometry>
+      <material name="part_176">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_177">
+      <geometry>
+        <mesh filename="meshes/part_177.stl" />
+      </geometry>
+      <material name="part_177">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_178">
+      <geometry>
+        <mesh filename="meshes/part_178.stl" />
+      </geometry>
+      <material name="part_178">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_179">
+      <geometry>
+        <mesh filename="meshes/part_179.stl" />
+      </geometry>
+      <material name="part_179">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_180">
+      <geometry>
+        <mesh filename="meshes/part_180.stl" />
+      </geometry>
+      <material name="part_180">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_181">
+      <geometry>
+        <mesh filename="meshes/part_181.stl" />
+      </geometry>
+      <material name="part_181">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_182">
+      <geometry>
+        <mesh filename="meshes/part_182.stl" />
+      </geometry>
+      <material name="part_182">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_183">
+      <geometry>
+        <mesh filename="meshes/part_183.stl" />
+      </geometry>
+      <material name="part_183">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_184">
+      <geometry>
+        <mesh filename="meshes/part_184.stl" />
+      </geometry>
+      <material name="part_184">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_185">
+      <geometry>
+        <mesh filename="meshes/part_185.stl" />
+      </geometry>
+      <material name="part_185">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_186">
+      <geometry>
+        <mesh filename="meshes/part_186.stl" />
+      </geometry>
+      <material name="part_186">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_187">
+      <geometry>
+        <mesh filename="meshes/part_187.stl" />
+      </geometry>
+      <material name="part_187">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_188">
+      <geometry>
+        <mesh filename="meshes/part_188.stl" />
+      </geometry>
+      <material name="part_188">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_189">
+      <geometry>
+        <mesh filename="meshes/part_189.stl" />
+      </geometry>
+      <material name="part_189">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_190">
+      <geometry>
+        <mesh filename="meshes/part_190.stl" />
+      </geometry>
+      <material name="part_190">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_191">
+      <geometry>
+        <mesh filename="meshes/part_191.stl" />
+      </geometry>
+      <material name="part_191">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_192">
+      <geometry>
+        <mesh filename="meshes/part_192.stl" />
+      </geometry>
+      <material name="part_192">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_193">
+      <geometry>
+        <mesh filename="meshes/part_193.stl" />
+      </geometry>
+      <material name="part_193">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_194">
+      <geometry>
+        <mesh filename="meshes/part_194.stl" />
+      </geometry>
+      <material name="part_194">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_195">
+      <geometry>
+        <mesh filename="meshes/part_195.stl" />
+      </geometry>
+      <material name="part_195">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_196">
+      <geometry>
+        <mesh filename="meshes/part_196.stl" />
+      </geometry>
+      <material name="part_196">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_197">
+      <geometry>
+        <mesh filename="meshes/part_197.stl" />
+      </geometry>
+      <material name="part_197">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_198">
+      <geometry>
+        <mesh filename="meshes/part_198.stl" />
+      </geometry>
+      <material name="part_198">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_199">
+      <geometry>
+        <mesh filename="meshes/part_199.stl" />
+      </geometry>
+      <material name="part_199">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_200">
+      <geometry>
+        <mesh filename="meshes/part_200.stl" />
+      </geometry>
+      <material name="part_200">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_201">
+      <geometry>
+        <mesh filename="meshes/part_201.stl" />
+      </geometry>
+      <material name="part_201">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_202">
+      <geometry>
+        <mesh filename="meshes/part_202.stl" />
+      </geometry>
+      <material name="part_202">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_203">
+      <geometry>
+        <mesh filename="meshes/part_203.stl" />
+      </geometry>
+      <material name="part_203">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_204">
+      <geometry>
+        <mesh filename="meshes/part_204.stl" />
+      </geometry>
+      <material name="part_204">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_205">
+      <geometry>
+        <mesh filename="meshes/part_205.stl" />
+      </geometry>
+      <material name="part_205">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_206">
+      <geometry>
+        <mesh filename="meshes/part_206.stl" />
+      </geometry>
+      <material name="part_206">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_207">
+      <geometry>
+        <mesh filename="meshes/part_207.stl" />
+      </geometry>
+      <material name="part_207">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_208">
+      <geometry>
+        <mesh filename="meshes/part_208.stl" />
+      </geometry>
+      <material name="part_208">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_209">
+      <geometry>
+        <mesh filename="meshes/part_209.stl" />
+      </geometry>
+      <material name="part_209">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_210">
+      <geometry>
+        <mesh filename="meshes/part_210.stl" />
+      </geometry>
+      <material name="part_210">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_211">
+      <geometry>
+        <mesh filename="meshes/part_211.stl" />
+      </geometry>
+      <material name="part_211">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_212">
+      <geometry>
+        <mesh filename="meshes/part_212.stl" />
+      </geometry>
+      <material name="part_212">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_213">
+      <geometry>
+        <mesh filename="meshes/part_213.stl" />
+      </geometry>
+      <material name="part_213">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_214">
+      <geometry>
+        <mesh filename="meshes/part_214.stl" />
+      </geometry>
+      <material name="part_214">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_215">
+      <geometry>
+        <mesh filename="meshes/part_215.stl" />
+      </geometry>
+      <material name="part_215">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_216">
+      <geometry>
+        <mesh filename="meshes/part_216.stl" />
+      </geometry>
+      <material name="part_216">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_217">
+      <geometry>
+        <mesh filename="meshes/part_217.stl" />
+      </geometry>
+      <material name="part_217">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_218">
+      <geometry>
+        <mesh filename="meshes/part_218.stl" />
+      </geometry>
+      <material name="part_218">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link1">
+    <visual name="part_000">
+      <geometry>
+        <mesh filename="meshes/part_000.stl" />
+      </geometry>
+      <material name="part_000">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_000">
+      <geometry>
+        <mesh filename="meshes/part_000.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_001">
+      <geometry>
+        <mesh filename="meshes/part_001.stl" />
+      </geometry>
+      <material name="part_001">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_001">
+      <geometry>
+        <mesh filename="meshes/part_001.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_002">
+      <geometry>
+        <mesh filename="meshes/part_002.stl" />
+      </geometry>
+      <material name="part_002">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_002">
+      <geometry>
+        <mesh filename="meshes/part_002.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_003">
+      <geometry>
+        <mesh filename="meshes/part_003.stl" />
+      </geometry>
+      <material name="part_003">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_003">
+      <geometry>
+        <mesh filename="meshes/part_003.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_005">
+      <geometry>
+        <mesh filename="meshes/part_005.stl" />
+      </geometry>
+      <material name="part_005">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_006">
+      <geometry>
+        <mesh filename="meshes/part_006.stl" />
+      </geometry>
+      <material name="part_006">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_007">
+      <geometry>
+        <mesh filename="meshes/part_007.stl" />
+      </geometry>
+      <material name="part_007">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_008">
+      <geometry>
+        <mesh filename="meshes/part_008.stl" />
+      </geometry>
+      <material name="part_008">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_009">
+      <geometry>
+        <mesh filename="meshes/part_009.stl" />
+      </geometry>
+      <material name="part_009">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_010">
+      <geometry>
+        <mesh filename="meshes/part_010.stl" />
+      </geometry>
+      <material name="part_010">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_011">
+      <geometry>
+        <mesh filename="meshes/part_011.stl" />
+      </geometry>
+      <material name="part_011">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_012">
+      <geometry>
+        <mesh filename="meshes/part_012.stl" />
+      </geometry>
+      <material name="part_012">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_065">
+      <geometry>
+        <mesh filename="meshes/part_065.stl" />
+      </geometry>
+      <material name="part_065">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_065">
+      <geometry>
+        <mesh filename="meshes/part_065.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_071">
+      <geometry>
+        <mesh filename="meshes/part_071.stl" />
+      </geometry>
+      <material name="part_071">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_071">
+      <geometry>
+        <mesh filename="meshes/part_071.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_089">
+      <geometry>
+        <mesh filename="meshes/part_089.stl" />
+      </geometry>
+      <material name="part_089">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_098">
+      <geometry>
+        <mesh filename="meshes/part_098.stl" />
+      </geometry>
+      <material name="part_098">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_098">
+      <geometry>
+        <mesh filename="meshes/part_098.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_219">
+      <geometry>
+        <mesh filename="meshes/part_219.stl" />
+      </geometry>
+      <material name="part_219">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link2">
+    <visual name="part_004">
+      <geometry>
+        <mesh filename="meshes/part_004.stl" />
+      </geometry>
+      <material name="part_004">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_013">
+      <geometry>
+        <mesh filename="meshes/part_013.stl" />
+      </geometry>
+      <material name="part_013">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_013">
+      <geometry>
+        <mesh filename="meshes/part_013.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_014">
+      <geometry>
+        <mesh filename="meshes/part_014.stl" />
+      </geometry>
+      <material name="part_014">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_014">
+      <geometry>
+        <mesh filename="meshes/part_014.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_015">
+      <geometry>
+        <mesh filename="meshes/part_015.stl" />
+      </geometry>
+      <material name="part_015">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_015">
+      <geometry>
+        <mesh filename="meshes/part_015.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_016">
+      <geometry>
+        <mesh filename="meshes/part_016.stl" />
+      </geometry>
+      <material name="part_016">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_016">
+      <geometry>
+        <mesh filename="meshes/part_016.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_017">
+      <geometry>
+        <mesh filename="meshes/part_017.stl" />
+      </geometry>
+      <material name="part_017">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_017">
+      <geometry>
+        <mesh filename="meshes/part_017.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_018">
+      <geometry>
+        <mesh filename="meshes/part_018.stl" />
+      </geometry>
+      <material name="part_018">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_018">
+      <geometry>
+        <mesh filename="meshes/part_018.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_020">
+      <geometry>
+        <mesh filename="meshes/part_020.stl" />
+      </geometry>
+      <material name="part_020">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_021">
+      <geometry>
+        <mesh filename="meshes/part_021.stl" />
+      </geometry>
+      <material name="part_021">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_022">
+      <geometry>
+        <mesh filename="meshes/part_022.stl" />
+      </geometry>
+      <material name="part_022">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_023">
+      <geometry>
+        <mesh filename="meshes/part_023.stl" />
+      </geometry>
+      <material name="part_023">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_024">
+      <geometry>
+        <mesh filename="meshes/part_024.stl" />
+      </geometry>
+      <material name="part_024">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_025">
+      <geometry>
+        <mesh filename="meshes/part_025.stl" />
+      </geometry>
+      <material name="part_025">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_026">
+      <geometry>
+        <mesh filename="meshes/part_026.stl" />
+      </geometry>
+      <material name="part_026">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_027">
+      <geometry>
+        <mesh filename="meshes/part_027.stl" />
+      </geometry>
+      <material name="part_027">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_066">
+      <geometry>
+        <mesh filename="meshes/part_066.stl" />
+      </geometry>
+      <material name="part_066">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_066">
+      <geometry>
+        <mesh filename="meshes/part_066.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link3">
+    <visual name="part_019">
+      <geometry>
+        <mesh filename="meshes/part_019.stl" />
+      </geometry>
+      <material name="part_019">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_028">
+      <geometry>
+        <mesh filename="meshes/part_028.stl" />
+      </geometry>
+      <material name="part_028">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_028">
+      <geometry>
+        <mesh filename="meshes/part_028.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_029">
+      <geometry>
+        <mesh filename="meshes/part_029.stl" />
+      </geometry>
+      <material name="part_029">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_029">
+      <geometry>
+        <mesh filename="meshes/part_029.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_030">
+      <geometry>
+        <mesh filename="meshes/part_030.stl" />
+      </geometry>
+      <material name="part_030">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_030">
+      <geometry>
+        <mesh filename="meshes/part_030.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_031">
+      <geometry>
+        <mesh filename="meshes/part_031.stl" />
+      </geometry>
+      <material name="part_031">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_031">
+      <geometry>
+        <mesh filename="meshes/part_031.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_032">
+      <geometry>
+        <mesh filename="meshes/part_032.stl" />
+      </geometry>
+      <material name="part_032">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_032">
+      <geometry>
+        <mesh filename="meshes/part_032.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_033">
+      <geometry>
+        <mesh filename="meshes/part_033.stl" />
+      </geometry>
+      <material name="part_033">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_033">
+      <geometry>
+        <mesh filename="meshes/part_033.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_035">
+      <geometry>
+        <mesh filename="meshes/part_035.stl" />
+      </geometry>
+      <material name="part_035">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_036">
+      <geometry>
+        <mesh filename="meshes/part_036.stl" />
+      </geometry>
+      <material name="part_036">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_037">
+      <geometry>
+        <mesh filename="meshes/part_037.stl" />
+      </geometry>
+      <material name="part_037">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_038">
+      <geometry>
+        <mesh filename="meshes/part_038.stl" />
+      </geometry>
+      <material name="part_038">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_039">
+      <geometry>
+        <mesh filename="meshes/part_039.stl" />
+      </geometry>
+      <material name="part_039">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_040">
+      <geometry>
+        <mesh filename="meshes/part_040.stl" />
+      </geometry>
+      <material name="part_040">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_041">
+      <geometry>
+        <mesh filename="meshes/part_041.stl" />
+      </geometry>
+      <material name="part_041">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_042">
+      <geometry>
+        <mesh filename="meshes/part_042.stl" />
+      </geometry>
+      <material name="part_042">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_072">
+      <geometry>
+        <mesh filename="meshes/part_072.stl" />
+      </geometry>
+      <material name="part_072">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_073">
+      <geometry>
+        <mesh filename="meshes/part_073.stl" />
+      </geometry>
+      <material name="part_073">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_074">
+      <geometry>
+        <mesh filename="meshes/part_074.stl" />
+      </geometry>
+      <material name="part_074">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_075">
+      <geometry>
+        <mesh filename="meshes/part_075.stl" />
+      </geometry>
+      <material name="part_075">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_076">
+      <geometry>
+        <mesh filename="meshes/part_076.stl" />
+      </geometry>
+      <material name="part_076">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_077">
+      <geometry>
+        <mesh filename="meshes/part_077.stl" />
+      </geometry>
+      <material name="part_077">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_078">
+      <geometry>
+        <mesh filename="meshes/part_078.stl" />
+      </geometry>
+      <material name="part_078">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_079">
+      <geometry>
+        <mesh filename="meshes/part_079.stl" />
+      </geometry>
+      <material name="part_079">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_080">
+      <geometry>
+        <mesh filename="meshes/part_080.stl" />
+      </geometry>
+      <material name="part_080">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_081">
+      <geometry>
+        <mesh filename="meshes/part_081.stl" />
+      </geometry>
+      <material name="part_081">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_082">
+      <geometry>
+        <mesh filename="meshes/part_082.stl" />
+      </geometry>
+      <material name="part_082">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_082">
+      <geometry>
+        <mesh filename="meshes/part_082.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_083">
+      <geometry>
+        <mesh filename="meshes/part_083.stl" />
+      </geometry>
+      <material name="part_083">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_084">
+      <geometry>
+        <mesh filename="meshes/part_084.stl" />
+      </geometry>
+      <material name="part_084">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link4">
+    <visual name="part_034">
+      <geometry>
+        <mesh filename="meshes/part_034.stl" />
+      </geometry>
+      <material name="part_034">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_043">
+      <geometry>
+        <mesh filename="meshes/part_043.stl" />
+      </geometry>
+      <material name="part_043">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_043">
+      <geometry>
+        <mesh filename="meshes/part_043.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_044">
+      <geometry>
+        <mesh filename="meshes/part_044.stl" />
+      </geometry>
+      <material name="part_044">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_044">
+      <geometry>
+        <mesh filename="meshes/part_044.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_048">
+      <geometry>
+        <mesh filename="meshes/part_048.stl" />
+      </geometry>
+      <material name="part_048">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_058">
+      <geometry>
+        <mesh filename="meshes/part_058.stl" />
+      </geometry>
+      <material name="part_058">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_058">
+      <geometry>
+        <mesh filename="meshes/part_058.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link5">
+    <visual name="part_045">
+      <geometry>
+        <mesh filename="meshes/part_045.stl" />
+      </geometry>
+      <material name="part_045">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_045">
+      <geometry>
+        <mesh filename="meshes/part_045.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_046">
+      <geometry>
+        <mesh filename="meshes/part_046.stl" />
+      </geometry>
+      <material name="part_046">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_046">
+      <geometry>
+        <mesh filename="meshes/part_046.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_047">
+      <geometry>
+        <mesh filename="meshes/part_047.stl" />
+      </geometry>
+      <material name="part_047">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_047">
+      <geometry>
+        <mesh filename="meshes/part_047.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_049">
+      <geometry>
+        <mesh filename="meshes/part_049.stl" />
+      </geometry>
+      <material name="part_049">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_050">
+      <geometry>
+        <mesh filename="meshes/part_050.stl" />
+      </geometry>
+      <material name="part_050">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_051">
+      <geometry>
+        <mesh filename="meshes/part_051.stl" />
+      </geometry>
+      <material name="part_051">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_052">
+      <geometry>
+        <mesh filename="meshes/part_052.stl" />
+      </geometry>
+      <material name="part_052">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_053">
+      <geometry>
+        <mesh filename="meshes/part_053.stl" />
+      </geometry>
+      <material name="part_053">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_054">
+      <geometry>
+        <mesh filename="meshes/part_054.stl" />
+      </geometry>
+      <material name="part_054">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_055">
+      <geometry>
+        <mesh filename="meshes/part_055.stl" />
+      </geometry>
+      <material name="part_055">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_056">
+      <geometry>
+        <mesh filename="meshes/part_056.stl" />
+      </geometry>
+      <material name="part_056">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_057">
+      <geometry>
+        <mesh filename="meshes/part_057.stl" />
+      </geometry>
+      <material name="part_057">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_057">
+      <geometry>
+        <mesh filename="meshes/part_057.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_059">
+      <geometry>
+        <mesh filename="meshes/part_059.stl" />
+      </geometry>
+      <material name="part_059">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_059">
+      <geometry>
+        <mesh filename="meshes/part_059.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_064">
+      <geometry>
+        <mesh filename="meshes/part_064.stl" />
+      </geometry>
+      <material name="part_064">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_064">
+      <geometry>
+        <mesh filename="meshes/part_064.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_113">
+      <geometry>
+        <mesh filename="meshes/part_113.stl" />
+      </geometry>
+      <material name="part_113">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_113">
+      <geometry>
+        <mesh filename="meshes/part_113.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_114">
+      <geometry>
+        <mesh filename="meshes/part_114.stl" />
+      </geometry>
+      <material name="part_114">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_114">
+      <geometry>
+        <mesh filename="meshes/part_114.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_115">
+      <geometry>
+        <mesh filename="meshes/part_115.stl" />
+      </geometry>
+      <material name="part_115">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_115">
+      <geometry>
+        <mesh filename="meshes/part_115.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_117">
+      <geometry>
+        <mesh filename="meshes/part_117.stl" />
+      </geometry>
+      <material name="part_117">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_118">
+      <geometry>
+        <mesh filename="meshes/part_118.stl" />
+      </geometry>
+      <material name="part_118">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_119">
+      <geometry>
+        <mesh filename="meshes/part_119.stl" />
+      </geometry>
+      <material name="part_119">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_120">
+      <geometry>
+        <mesh filename="meshes/part_120.stl" />
+      </geometry>
+      <material name="part_120">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_121">
+      <geometry>
+        <mesh filename="meshes/part_121.stl" />
+      </geometry>
+      <material name="part_121">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_122">
+      <geometry>
+        <mesh filename="meshes/part_122.stl" />
+      </geometry>
+      <material name="part_122">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_123">
+      <geometry>
+        <mesh filename="meshes/part_123.stl" />
+      </geometry>
+      <material name="part_123">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_124">
+      <geometry>
+        <mesh filename="meshes/part_124.stl" />
+      </geometry>
+      <material name="part_124">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_125">
+      <geometry>
+        <mesh filename="meshes/part_125.stl" />
+      </geometry>
+      <material name="part_125">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_125">
+      <geometry>
+        <mesh filename="meshes/part_125.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link6">
+    <visual name="part_060">
+      <geometry>
+        <mesh filename="meshes/part_060.stl" />
+      </geometry>
+      <material name="part_060">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <visual name="part_061">
+      <geometry>
+        <mesh filename="meshes/part_061.stl" />
+      </geometry>
+      <material name="part_061">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_061">
+      <geometry>
+        <mesh filename="meshes/part_061.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_099">
+      <geometry>
+        <mesh filename="meshes/part_099.stl" />
+      </geometry>
+      <material name="part_099">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_099">
+      <geometry>
+        <mesh filename="meshes/part_099.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_100">
+      <geometry>
+        <mesh filename="meshes/part_100.stl" />
+      </geometry>
+      <material name="part_100">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_100">
+      <geometry>
+        <mesh filename="meshes/part_100.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_101">
+      <geometry>
+        <mesh filename="meshes/part_101.stl" />
+      </geometry>
+      <material name="part_101">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_101">
+      <geometry>
+        <mesh filename="meshes/part_101.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_103">
+      <geometry>
+        <mesh filename="meshes/part_103.stl" />
+      </geometry>
+      <material name="part_103">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_104">
+      <geometry>
+        <mesh filename="meshes/part_104.stl" />
+      </geometry>
+      <material name="part_104">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_105">
+      <geometry>
+        <mesh filename="meshes/part_105.stl" />
+      </geometry>
+      <material name="part_105">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_106">
+      <geometry>
+        <mesh filename="meshes/part_106.stl" />
+      </geometry>
+      <material name="part_106">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_107">
+      <geometry>
+        <mesh filename="meshes/part_107.stl" />
+      </geometry>
+      <material name="part_107">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_108">
+      <geometry>
+        <mesh filename="meshes/part_108.stl" />
+      </geometry>
+      <material name="part_108">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_109">
+      <geometry>
+        <mesh filename="meshes/part_109.stl" />
+      </geometry>
+      <material name="part_109">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_110">
+      <geometry>
+        <mesh filename="meshes/part_110.stl" />
+      </geometry>
+      <material name="part_110">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_111">
+      <geometry>
+        <mesh filename="meshes/part_111.stl" />
+      </geometry>
+      <material name="part_111">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_111">
+      <geometry>
+        <mesh filename="meshes/part_111.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_116">
+      <geometry>
+        <mesh filename="meshes/part_116.stl" />
+      </geometry>
+      <material name="part_116">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_126">
+      <geometry>
+        <mesh filename="meshes/part_126.stl" />
+      </geometry>
+      <material name="part_126">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_126">
+      <geometry>
+        <mesh filename="meshes/part_126.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link7_left">
+    <visual name="part_062">
+      <geometry>
+        <mesh filename="meshes/part_062.stl" />
+      </geometry>
+      <material name="part_062">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_062">
+      <geometry>
+        <mesh filename="meshes/part_062.stl" />
+      </geometry>
+    </collision>
+    <visual name="part_102">
+      <geometry>
+        <mesh filename="meshes/part_102.stl" />
+      </geometry>
+      <material name="part_102">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <visual name="part_112">
+      <geometry>
+        <mesh filename="meshes/part_112.stl" />
+      </geometry>
+      <material name="part_112">
+        <color rgba="0.2 0.23 0.26 1" />
+      </material>
+    </visual>
+    <collision name="part_112">
+      <geometry>
+        <mesh filename="meshes/part_112.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link7_right">
+    <visual name="part_063">
+      <geometry>
+        <mesh filename="meshes/part_063.stl" />
+      </geometry>
+      <material name="part_063">
+        <color rgba="0.82 0.83 0.86 1" />
+      </material>
+    </visual>
+    <collision name="part_063">
+      <geometry>
+        <mesh filename="meshes/part_063.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="tool0" />
+  <joint name="joint1" type="revolute">
+    <parent link="base_link" />
+    <child link="link1" />
+    <origin xyz="-7.54063478325e-16 -1.51840742292e-15 0.045496" rpy="0 0 0" />
+    <axis xyz="6.12798565398e-15 5.51749900088e-16 -1" />
+    <limit lower="-1.91986217719" upper="1.91986217719" effort="1" velocity="1" />
+  </joint>
+  <joint name="joint2" type="revolute">
+    <parent link="link1" />
+    <child link="link2" />
+    <origin xyz="3.88133969409e-16 1.51840742292e-15 0.046879" rpy="0 0 0" />
+    <axis xyz="5.34818940656e-16 1 -2.13091800825e-15" />
+    <limit lower="0" upper="3.14159265359" effort="1" velocity="1" />
+  </joint>
+  <joint name="joint3" type="revolute">
+    <parent link="link2" />
+    <child link="link3" />
+    <origin xyz="-0.121615 0 0.002" rpy="0 0 0" />
+    <axis xyz="4.1309474308e-15 1 5.34818781058e-16" />
+    <limit lower="-4.71238898038" upper="0" effort="1" velocity="1" />
+  </joint>
+  <joint name="joint4" type="revolute">
+    <parent link="link3" />
+    <child link="link4" />
+    <origin xyz="0.108654056191 0 0.0242194771205" rpy="0 0 0" />
+    <axis xyz="-2.14176639968e-15 1 -2.53476009513e-15" />
+    <limit lower="-1.57079632679" upper="1.57079632679" effort="1" velocity="1" />
+  </joint>
+  <joint name="joint5" type="revolute">
+    <parent link="link4" />
+    <child link="link5" />
+    <origin xyz="0.035 3.81715062357e-15 0" rpy="0 0 0" />
+    <axis xyz="3e-15 -3e-15 -1" />
+    <limit lower="-1.1344640138" upper="1.1344640138" effort="1" velocity="1" />
+  </joint>
+  <joint name="joint6" type="revolute">
+    <parent link="link5" />
+    <child link="link6" />
+    <origin xyz="0.0571569438086 -2.01641672955e-16 0.003845" rpy="0 0 0" />
+    <axis xyz="-1 5.34818940656e-16 -2.13091800825e-15" />
+    <limit lower="-2.61799387799" upper="2.61799387799" effort="1" velocity="1" />
+  </joint>
+  <joint name="joint7_left" type="revolute">
+    <parent link="link6" />
+    <child link="link7_left" />
+    <origin xyz="0.0572430561914 -0.006825 0.00235" rpy="0 0 0" />
+    <axis xyz="-1 4.1309474308e-15 5.34818781058e-16" />
+    <limit lower="0" upper="1.57079632679" effort="1" velocity="1" />
+  </joint>
+  <joint name="joint7_right" type="revolute">
+    <parent link="link6" />
+    <child link="link7_right" />
+    <origin xyz="0.0572430561914 0.015325 0.00235" rpy="0 0 0" />
+    <axis xyz="-1 7.33057312192e-16 -3.07613832216e-15" />
+    <limit lower="-1.57079632679" upper="0" effort="1" velocity="1" />
+    <mimic joint="joint7_left" multiplier="-1" offset="0.0" />
+  </joint>
+  <joint name="handle_reference" type="fixed">
+    <parent link="link6" />
+    <child link="tool0" />
+    <origin xyz="0.0152498482407 0.00285 -0.0808648985623" rpy="2.96705972839 -1.33226762955e-15 -1.57079632679" />
+  </joint>
+</robot>

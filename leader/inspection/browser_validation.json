@@ -1,0 +1,72 @@
+{
+  "description": "Numeric browser checks of the emitted leader model; J5 at 30 degrees and ring opening at 25 degrees.",
+  "armJoints": [
+    {
+      "mimic": null,
+      "name": "joint1",
+      "type": "revolute",
+      "value": 0
+    },
+    {
+      "mimic": null,
+      "name": "joint2",
+      "type": "revolute",
+      "value": 0
+    },
+    {
+      "mimic": null,
+      "name": "joint3",
+      "type": "revolute",
+      "value": 0
+    },
+    {
+      "mimic": null,
+      "name": "joint4",
+      "type": "revolute",
+      "value": 0
+    },
+    {
+      "mimic": null,
+      "name": "joint5",
+      "type": "revolute",
+      "value": 0.5235987755982988
+    },
+    {
+      "mimic": null,
+      "name": "joint6",
+      "type": "revolute",
+      "value": 0
+    }
+  ],
+  "collisionMeshes": 49,
+  "j5UpstreamUnchanged": true,
+  "maxFrameError": 1.1102230246251565e-16,
+  "rings": [
+    {
+      "mimic": null,
+      "name": "joint7_left",
+      "type": "revolute",
+      "value": 0.4363323129985824
+    },
+    {
+      "mimic": {
+        "multiplier": -1,
+        "name": "joint7_left",
+        "offset": 0
+      },
+      "name": "joint7_right",
+      "type": "revolute",
+      "value": -0.4363323129985824
+    }
+  ],
+  "source": "http://100.64.91.4:8776/leader/model/star_arm_102_hd.urdf",
+  "status": "10 links · 7 independent joints · 1 mimic joint · CAD zero",
+  "visualMeshes": 220,
+  "viscous_default_viewer": {
+    "source": "model/viscous_arm.urdf",
+    "links": 10,
+    "independent_joints": 7,
+    "visual_meshes": 60,
+    "collision_meshes": 169
+  }
+}

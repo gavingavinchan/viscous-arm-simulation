@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "urdf_sha256": "d82ddd2d5b9967f419c33ba0a1ecbc5c852f2dcf01dbb2ffc2219336d40c8bf5",
+  "manifest_sha256": "eb3199839cb3a25ffee1f73b5cf5d0ed0bbcadd38221ab1fbf6e5c9ee30559f8",
+  "source_sha256": "4cfea3d4229b8158b7abf9f9507ba5e096fced5b426852e1cb99b0360045c6ad",
+  "links": 10,
+  "arm_dof": 6,
+  "independent_dof": 7,
+  "solid_occurrences": 219,
+  "surface_occurrences": 1,
+  "triangles": 631766,
+  "max_mesh_cad_zero_error_m": 7.4419420938557275e-09,
+  "corroborating_axes": [
+    {
+      "joint": "joint1",
+      "corroborating_part": 70,
+      "radius_mm": 37.5,
+      "axis_line_error_mm": 1.2840544837247557e-12
+    },
+    {
+      "joint": "joint2",
+      "corroborating_part": 66,
+      "radius_mm": 5.0,
+      "axis_line_error_mm": 1.1089972124444448e-12
+    },
+    {
+      "joint": "joint3",
+      "corroborating_part": 82,
+      "radius_mm": 5.0,
+      "axis_line_error_mm": 2.3405732829058157e-12
+    },
+    {
+      "joint": "joint4",
+      "corroborating_part": 58,
+      "radius_mm": 12.5,
+      "axis_line_error_mm": 8.280288573114727e-13
+    },
+    {
+      "joint": "joint5",
+      "corroborating_part": 58,
+      "radius_mm": 11.0,
+      "axis_line_error_mm": 2.609360160018245e-13
+    },
+    {
+      "joint": "joint6",
+      "corroborating_part": 61,
+      "radius_mm": 12.0,
+      "axis_line_error_mm": 3.653209511702143e-12
+    },
+    {
+      "joint": "joint7_right",
+      "corroborating_part": 61,
+      "radius_mm": 1.6,
+      "axis_line_error_mm": 2.376665762226221e-12
+    }
+  ],
+  "configurations_checked": 101,
+  "max_spatial_fk_position_error_m": 3.66897893645803e-13,
+  "max_spatial_fk_rotation_matrix_error": 5.551115123125783e-16,
+  "max_mujoco_urdf_fk_error": 8.881784197001252e-16,
+  "minimum_sampled_hand_jacobian_rank": 6,
+  "j5_30deg_hand_displacement_m": 0.03750953630222016,
+  "ring_com_separation_m_at_0_and_25deg": [
+    0.02775120489398213,
+    0.06127078712225602
+  ],
+  "limits": "Preview only; encoder zeros, signs and physical bounds are unverified",
+  "dynamics": "Not tested; temporary MuJoCo copy uses synthetic inertias for FK only"
+}

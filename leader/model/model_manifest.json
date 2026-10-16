@@ -1,0 +1,2426 @@
+{
+  "name": "Star Arm 102-HD",
+  "scope": "offline geometry and kinematics",
+  "source_sha256": "4cfea3d4229b8158b7abf9f9507ba5e096fced5b426852e1cb99b0360045c6ad",
+  "coordinate_rotation": [
+    [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "base_origin_cad_mm": [
+    0.0,
+    0.0,
+    -7.5
+  ],
+  "units": "metres and radians",
+  "zero_convention": "Exported STEP pose; physical encoder signs and offsets unverified",
+  "joint_evidence": [
+    {
+      "joint": "joint1",
+      "servo_id": 0,
+      "motor_alias": "shoulder_pan",
+      "shaft_part_id": 89,
+      "shaft_component": 14,
+      "shaft_solid": 4,
+      "cylinder_radius_mm": 3.0,
+      "pivot_cad_mm": [
+        1.5184074229166716e-12,
+        45.496,
+        -7.499999999999246
+      ],
+      "axis_cad": [
+        -5.517499000877907e-16,
+        -1.0,
+        -6.127985653984263e-15
+      ],
+      "origin_coordinate": 1,
+      "origin_coordinate_value_mm": 45.496
+    },
+    {
+      "joint": "joint2",
+      "servo_id": 1,
+      "motor_alias": "shoulder_lift",
+      "shaft_part_id": 4,
+      "shaft_component": 0,
+      "shaft_solid": 4,
+      "cylinder_radius_mm": 3.0,
+      "pivot_cad_mm": [
+        0.0,
+        92.37500000000304,
+        -7.499999999999634
+      ],
+      "axis_cad": [
+        -1.0,
+        -2.13091800824863e-15,
+        -5.348189406559707e-16
+      ],
+      "origin_coordinate": 0,
+      "origin_coordinate_value_mm": 0.0
+    },
+    {
+      "joint": "joint3",
+      "servo_id": 2,
+      "motor_alias": "elbow_flex",
+      "shaft_part_id": 19,
+      "shaft_component": 1,
+      "shaft_solid": 4,
+      "cylinder_radius_mm": 3.0,
+      "pivot_cad_mm": [
+        0.0,
+        94.3750000000016,
+        114.11500000000076
+      ],
+      "axis_cad": [
+        -1.0,
+        5.348187810576362e-16,
+        -4.130947430797046e-15
+      ],
+      "origin_coordinate": 0,
+      "origin_coordinate_value_mm": 0.0
+    },
+    {
+      "joint": "joint4",
+      "servo_id": 3,
+      "motor_alias": "wrist_flex",
+      "shaft_part_id": 34,
+      "shaft_component": 2,
+      "shaft_solid": 4,
+      "cylinder_radius_mm": 3.0,
+      "pivot_cad_mm": [
+        0.0,
+        118.59447712046347,
+        5.460943808637274
+      ],
+      "axis_cad": [
+        -1.0,
+        -2.534760095126297e-15,
+        2.1417663996774458e-15
+      ],
+      "origin_coordinate": 0,
+      "origin_coordinate_value_mm": 0.0
+    },
+    {
+      "joint": "joint5",
+      "servo_id": 4,
+      "motor_alias": "wrist_yaw",
+      "shaft_part_id": 48,
+      "shaft_component": 3,
+      "shaft_solid": 3,
+      "cylinder_radius_mm": 3.0,
+      "pivot_cad_mm": [
+        -3.817150623571345e-12,
+        118.59447712046347,
+        -29.539056191362178
+      ],
+      "axis_cad": [
+        3e-15,
+        -1.0,
+        -3e-15
+      ],
+      "origin_coordinate": 1,
+      "origin_coordinate_value_mm": 118.59447712046347
+    },
+    {
+      "joint": "joint6",
+      "servo_id": 5,
+      "motor_alias": "wrist_roll",
+      "shaft_part_id": 116,
+      "shaft_component": 16,
+      "shaft_solid": 3,
+      "cylinder_radius_mm": 3.0,
+      "pivot_cad_mm": [
+        -3.6155089506161215e-12,
+        122.43947712046403,
+        -86.696
+      ],
+      "axis_cad": [
+        -5.348189406559683e-16,
+        -2.1309180082486245e-15,
+        1.0
+      ],
+      "origin_coordinate": 2,
+      "origin_coordinate_value_mm": -86.696
+    },
+    {
+      "joint": "joint7_left",
+      "pivot_cad_mm": [
+        6.825000000000086,
+        124.78947712046264,
+        -143.939056191365
+      ],
+      "axis_cad": [
+        -4.130947430797044e-15,
+        5.348187810576117e-16,
+        1.0
+      ],
+      "shaft_part_id": 102,
+      "cylinder_radius_mm": 3.0
+    },
+    {
+      "joint": "joint7_right",
+      "pivot_cad_mm": [
+        -15.325000000001006,
+        124.789477120465,
+        -143.939056191365
+      ],
+      "axis_cad": [
+        -7.330573121921764e-16,
+        -3.0761383221567893e-15,
+        1.0
+      ],
+      "shaft_part_id": 63,
+      "cylinder_radius_mm": 9.75
+    }
+  ],
+  "joints": [
+    {
+      "name": "joint1",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "link1",
+      "xyz": [
+        -7.540634783254063e-16,
+        -1.5184074229166716e-15,
+        0.045496
+      ],
+      "axis": [
+        6.127985653984263e-15,
+        5.517499000877907e-16,
+        -1.0
+      ],
+      "lower": -1.9198621771937625,
+      "upper": 1.9198621771937625
+    },
+    {
+      "name": "joint2",
+      "type": "revolute",
+      "parent": "link1",
+      "child": "link2",
+      "xyz": [
+        3.881339694089547e-16,
+        1.5184074229166716e-15,
+        0.046879000000003036
+      ],
+      "axis": [
+        5.348189406559707e-16,
+        1.0,
+        -2.13091800824863e-15
+      ],
+      "lower": 0.0,
+      "upper": 3.141592653589793
+    },
+    {
+      "name": "joint3",
+      "type": "revolute",
+      "parent": "link2",
+      "child": "link3",
+      "xyz": [
+        -0.1216150000000004,
+        0.0,
+        0.0019999999999985724
+      ],
+      "axis": [
+        4.130947430797046e-15,
+        1.0,
+        5.348187810576362e-16
+      ],
+      "lower": -4.71238898038469,
+      "upper": 0.0
+    },
+    {
+      "name": "joint4",
+      "type": "revolute",
+      "parent": "link3",
+      "child": "link4",
+      "xyz": [
+        0.1086540561913635,
+        0.0,
+        0.024219477120461852
+      ],
+      "axis": [
+        -2.1417663996774458e-15,
+        1.0,
+        -2.534760095126297e-15
+      ],
+      "lower": -1.5707963267948966,
+      "upper": 1.5707963267948966
+    },
+    {
+      "name": "joint5",
+      "type": "revolute",
+      "parent": "link4",
+      "child": "link5",
+      "xyz": [
+        0.03499999999999945,
+        3.817150623571345e-15,
+        0.0
+      ],
+      "axis": [
+        3e-15,
+        -3e-15,
+        -1.0
+      ],
+      "lower": -1.1344640137963142,
+      "upper": 1.1344640137963142
+    },
+    {
+      "name": "joint6",
+      "type": "revolute",
+      "parent": "link5",
+      "child": "link6",
+      "xyz": [
+        0.057156943808637825,
+        -2.0164167295522397e-16,
+        0.00384500000000057
+      ],
+      "axis": [
+        -1.0,
+        5.348189406559683e-16,
+        -2.1309180082486245e-15
+      ],
+      "lower": -2.6179938779914944,
+      "upper": 2.6179938779914944
+    },
+    {
+      "name": "joint7_left",
+      "type": "revolute",
+      "parent": "link6",
+      "child": "link7_left",
+      "xyz": [
+        0.05724305619136501,
+        -0.006825000000003701,
+        0.002349999999998603
+      ],
+      "axis": [
+        -1.0,
+        4.130947430797044e-15,
+        5.348187810576117e-16
+      ],
+      "lower": 0.0,
+      "upper": 1.5707963267948966
+    },
+    {
+      "name": "joint7_right",
+      "type": "revolute",
+      "parent": "link6",
+      "child": "link7_right",
+      "xyz": [
+        0.05724305619136501,
+        0.015324999999997391,
+        0.0023500000000009624
+      ],
+      "axis": [
+        -1.0,
+        7.330573121921764e-16,
+        -3.0761383221567893e-15
+      ],
+      "lower": -1.5707963267948966,
+      "upper": 0.0,
+      "mimic": {
+        "joint": "joint7_left",
+        "multiplier": -1,
+        "offset": 0.0
+      }
+    },
+    {
+      "name": "handle_reference",
+      "type": "fixed",
+      "parent": "link6",
+      "child": "tool0",
+      "xyz": [
+        0.015249848240689978,
+        0.0028499999999961577,
+        -0.08086489856228513
+      ],
+      "rpy": [
+        2.9670597283903586,
+        -1.3322676295501878e-15,
+        -1.5707963267948966
+      ]
+    }
+  ],
+  "link_origins_world_m": {
+    "base_link": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "link1": [
+      -7.540634783254063e-16,
+      -1.5184074229166716e-15,
+      0.045496
+    ],
+    "link2": [
+      -3.6592950891645162e-16,
+      0.0,
+      0.09237500000000304
+    ],
+    "link3": [
+      -0.12161500000000076,
+      0.0,
+      0.09437500000000161
+    ],
+    "link4": [
+      -0.012960943808637274,
+      0.0,
+      0.11859447712046346
+    ],
+    "link5": [
+      0.022039056191362177,
+      3.817150623571345e-15,
+      0.11859447712046346
+    ],
+    "link6": [
+      0.079196,
+      3.615508950616121e-15,
+      0.12243947712046403
+    ],
+    "link7_left": [
+      0.136439056191365,
+      -0.006825000000000086,
+      0.12478947712046264
+    ],
+    "link7_right": [
+      0.136439056191365,
+      0.015325000000001006,
+      0.124789477120465
+    ],
+    "tool0": [
+      0.09444584824068998,
+      0.0028499999999997733,
+      0.04157457855817891
+    ]
+  },
+  "tool0": {
+    "point_cad_mm": [
+      -2.849999999999773,
+      41.57457855817891,
+      -101.94584824068998
+    ],
+    "rotation_cad": [
+      [
+        1.0,
+        -0.0,
+        2.3674361792615678e-15
+      ],
+      [
+        0.0,
+        0.173648177666931,
+        -0.984807753012208
+      ],
+      [
+        0.0,
+        0.984807753012208,
+        0.173648177666931
+      ]
+    ],
+    "definition": "Midpoint of 16-mm-radius grip cylinder axial extent; +Z down handle, +X along CAD +X"
+  },
+  "parts": [
+    {
+      "id": 0,
+      "component_id": 0,
+      "solid_index": 0,
+      "link": "link1",
+      "mesh": "meshes/part_000.stl",
+      "collision": true,
+      "mesh_sha256": "9c4b02827ce68e3b86181a2042d931588d1233f07791111c3a5807907b0064cc"
+    },
+    {
+      "id": 1,
+      "component_id": 0,
+      "solid_index": 1,
+      "link": "link1",
+      "mesh": "meshes/part_001.stl",
+      "collision": true,
+      "mesh_sha256": "ef572eaf65b929184300cee3f26fb6df261fc4da239c9af81aac8eeecce6385d"
+    },
+    {
+      "id": 2,
+      "component_id": 0,
+      "solid_index": 2,
+      "link": "link1",
+      "mesh": "meshes/part_002.stl",
+      "collision": true,
+      "mesh_sha256": "283a582b5494207b11799145d073980920b239dd45f6c76917daee1478ee399e"
+    },
+    {
+      "id": 3,
+      "component_id": 0,
+      "solid_index": 3,
+      "link": "link1",
+      "mesh": "meshes/part_003.stl",
+      "collision": true,
+      "mesh_sha256": "9e89e2b727d080a56a569e150143218aaf46c237c36a009071be8143cb2e7cb5"
+    },
+    {
+      "id": 4,
+      "component_id": 0,
+      "solid_index": 4,
+      "link": "link2",
+      "mesh": "meshes/part_004.stl",
+      "collision": false,
+      "mesh_sha256": "f483688d6e7c4c700fd52cec08ac2138b5f573b9bc6ae1f55c31e08e5a1f5c8d"
+    },
+    {
+      "id": 5,
+      "component_id": 0,
+      "solid_index": 5,
+      "link": "link1",
+      "mesh": "meshes/part_005.stl",
+      "collision": false,
+      "mesh_sha256": "2430a3608ef1a9c622603e81b8d655095cbd595be5b2bd612a5a1c904a9eeeb2"
+    },
+    {
+      "id": 6,
+      "component_id": 0,
+      "solid_index": 6,
+      "link": "link1",
+      "mesh": "meshes/part_006.stl",
+      "collision": false,
+      "mesh_sha256": "624a73e17d2f38d81ad97e2d10efaa802b607196bdb62fb5421c2ac5b70df7a5"
+    },
+    {
+      "id": 7,
+      "component_id": 0,
+      "solid_index": 7,
+      "link": "link1",
+      "mesh": "meshes/part_007.stl",
+      "collision": false,
+      "mesh_sha256": "6df8804760bce08bc44136fc8bb0ed70155a38b83ae37522d9c27cade5170854"
+    },
+    {
+      "id": 8,
+      "component_id": 0,
+      "solid_index": 8,
+      "link": "link1",
+      "mesh": "meshes/part_008.stl",
+      "collision": false,
+      "mesh_sha256": "b5ba6d14ab81b14643b119e53ad61e3a75635e1a314cb3a9f6e79c0592c673cc"
+    },
+    {
+      "id": 9,
+      "component_id": 0,
+      "solid_index": 9,
+      "link": "link1",
+      "mesh": "meshes/part_009.stl",
+      "collision": false,
+      "mesh_sha256": "b0ec56dbe985da6b4196a819345038154daf549cd4f3065952b00b1d687492ab"
+    },
+    {
+      "id": 10,
+      "component_id": 0,
+      "solid_index": 10,
+      "link": "link1",
+      "mesh": "meshes/part_010.stl",
+      "collision": false,
+      "mesh_sha256": "bfcb24f64040c1eafb802608f0032470e11c4169ac3b69a4251a2235ba5a1f8f"
+    },
+    {
+      "id": 11,
+      "component_id": 0,
+      "solid_index": 11,
+      "link": "link1",
+      "mesh": "meshes/part_011.stl",
+      "collision": false,
+      "mesh_sha256": "b35b03072bdffbb082c9bdd77b6db3727dc4e4069fa4897cc047c1e2c885df9a"
+    },
+    {
+      "id": 12,
+      "component_id": 0,
+      "solid_index": 12,
+      "link": "link1",
+      "mesh": "meshes/part_012.stl",
+      "collision": false,
+      "mesh_sha256": "cc874bcf97557822000b1cf945eefcb0a10aa432200a6377b87a864d6931eb82"
+    },
+    {
+      "id": 13,
+      "component_id": 0,
+      "solid_index": 13,
+      "link": "link2",
+      "mesh": "meshes/part_013.stl",
+      "collision": true,
+      "mesh_sha256": "82fd33b4476010405408c524b1111e78858f081938d8404417f2e2524a9f6d83"
+    },
+    {
+      "id": 14,
+      "component_id": 0,
+      "solid_index": 14,
+      "link": "link2",
+      "mesh": "meshes/part_014.stl",
+      "collision": true,
+      "mesh_sha256": "05f1345412765d1dc8aeb26f6349847fba02e0d957f334b36831925873cc4f09"
+    },
+    {
+      "id": 15,
+      "component_id": 1,
+      "solid_index": 0,
+      "link": "link2",
+      "mesh": "meshes/part_015.stl",
+      "collision": true,
+      "mesh_sha256": "28ea265c2e034c2aa62045b43f19771178aa4d72998e20f712e8194c7d254175"
+    },
+    {
+      "id": 16,
+      "component_id": 1,
+      "solid_index": 1,
+      "link": "link2",
+      "mesh": "meshes/part_016.stl",
+      "collision": true,
+      "mesh_sha256": "61283a7d453b8be24ff528277acf9a8fc59b81f2fd8b6ded8dbdb32ece3b7d40"
+    },
+    {
+      "id": 17,
+      "component_id": 1,
+      "solid_index": 2,
+      "link": "link2",
+      "mesh": "meshes/part_017.stl",
+      "collision": true,
+      "mesh_sha256": "40767540c7a02bdadf609ce0167305b2772291c28592b67616d882ac2d7b3c56"
+    },
+    {
+      "id": 18,
+      "component_id": 1,
+      "solid_index": 3,
+      "link": "link2",
+      "mesh": "meshes/part_018.stl",
+      "collision": true,
+      "mesh_sha256": "5450f5baaf118d522c3fe2cf31813594e7bf134b9fc66fcb9c4f39cf2befe433"
+    },
+    {
+      "id": 19,
+      "component_id": 1,
+      "solid_index": 4,
+      "link": "link3",
+      "mesh": "meshes/part_019.stl",
+      "collision": false,
+      "mesh_sha256": "5ed7028101fa6c32b84813bdfc70c78b79801a4ed19ffde57a29e2c7b0c015fb"
+    },
+    {
+      "id": 20,
+      "component_id": 1,
+      "solid_index": 5,
+      "link": "link2",
+      "mesh": "meshes/part_020.stl",
+      "collision": false,
+      "mesh_sha256": "a20ea2fd0bae7901cf6ff33f6c1904edc9a03723a6242c4019163e748c7b8a81"
+    },
+    {
+      "id": 21,
+      "component_id": 1,
+      "solid_index": 6,
+      "link": "link2",
+      "mesh": "meshes/part_021.stl",
+      "collision": false,
+      "mesh_sha256": "e04772c428a633d89b1c8ab9a9a5fd53155d338e2def80b00905c32e23f8bd0e"
+    },
+    {
+      "id": 22,
+      "component_id": 1,
+      "solid_index": 7,
+      "link": "link2",
+      "mesh": "meshes/part_022.stl",
+      "collision": false,
+      "mesh_sha256": "55a0e4855cbc372a9355203bfc30101eaeaf258c8a244455523b2006b7a1a821"
+    },
+    {
+      "id": 23,
+      "component_id": 1,
+      "solid_index": 8,
+      "link": "link2",
+      "mesh": "meshes/part_023.stl",
+      "collision": false,
+      "mesh_sha256": "16080e27a8e710109052b363eef1016edc2866892619ae902513d3fa648fff06"
+    },
+    {
+      "id": 24,
+      "component_id": 1,
+      "solid_index": 9,
+      "link": "link2",
+      "mesh": "meshes/part_024.stl",
+      "collision": false,
+      "mesh_sha256": "7d00f9a41f38b663e7ae05296d1f65c502771fb71d1c416b8c38591d510e3757"
+    },
+    {
+      "id": 25,
+      "component_id": 1,
+      "solid_index": 10,
+      "link": "link2",
+      "mesh": "meshes/part_025.stl",
+      "collision": false,
+      "mesh_sha256": "e6df1da9694c5310b8aacf00674641b3fea79b8646c54664f6868d16486133c3"
+    },
+    {
+      "id": 26,
+      "component_id": 1,
+      "solid_index": 11,
+      "link": "link2",
+      "mesh": "meshes/part_026.stl",
+      "collision": false,
+      "mesh_sha256": "ea1b62e6045835fafe4fd48c3cfe933f8b584593470283592c96a71d7ab480ea"
+    },
+    {
+      "id": 27,
+      "component_id": 1,
+      "solid_index": 12,
+      "link": "link2",
+      "mesh": "meshes/part_027.stl",
+      "collision": false,
+      "mesh_sha256": "256a41269423c5f3919d661e98253ba463da4a49dda63915d1f267ea76c12323"
+    },
+    {
+      "id": 28,
+      "component_id": 1,
+      "solid_index": 13,
+      "link": "link3",
+      "mesh": "meshes/part_028.stl",
+      "collision": true,
+      "mesh_sha256": "9aa02cbb15932c45487dbc3b10d56f96901004746e57b0d8521fec53d8cbff34"
+    },
+    {
+      "id": 29,
+      "component_id": 1,
+      "solid_index": 14,
+      "link": "link3",
+      "mesh": "meshes/part_029.stl",
+      "collision": true,
+      "mesh_sha256": "c2f07a42b4c49003613d8a85bdcf0b0b0b2de87d21497bd943b67c9e638ee92a"
+    },
+    {
+      "id": 30,
+      "component_id": 2,
+      "solid_index": 0,
+      "link": "link3",
+      "mesh": "meshes/part_030.stl",
+      "collision": true,
+      "mesh_sha256": "49a92985eba78aedb921d76549c7ec02ea5d3f119fc290c11c152569b660edb1"
+    },
+    {
+      "id": 31,
+      "component_id": 2,
+      "solid_index": 1,
+      "link": "link3",
+      "mesh": "meshes/part_031.stl",
+      "collision": true,
+      "mesh_sha256": "547a5faab829338a2bdd059bd95d8f7d8d95c546e2aba780921a1a2c4400dbb7"
+    },
+    {
+      "id": 32,
+      "component_id": 2,
+      "solid_index": 2,
+      "link": "link3",
+      "mesh": "meshes/part_032.stl",
+      "collision": true,
+      "mesh_sha256": "7b3fbb24ef7ddf97b5258bb06c87d9b1f595f9457e1d64e0703c5d16253ac331"
+    },
+    {
+      "id": 33,
+      "component_id": 2,
+      "solid_index": 3,
+      "link": "link3",
+      "mesh": "meshes/part_033.stl",
+      "collision": true,
+      "mesh_sha256": "595a5208db0cd3501f4130d8f54c54b77032d3f7070619bcc3b321113eff9ab8"
+    },
+    {
+      "id": 34,
+      "component_id": 2,
+      "solid_index": 4,
+      "link": "link4",
+      "mesh": "meshes/part_034.stl",
+      "collision": false,
+      "mesh_sha256": "8bc2f0d09146b9d4213618210414dd745559e333c3b17e059c1765c9b1165e18"
+    },
+    {
+      "id": 35,
+      "component_id": 2,
+      "solid_index": 5,
+      "link": "link3",
+      "mesh": "meshes/part_035.stl",
+      "collision": false,
+      "mesh_sha256": "4ea15ea6ea40647b9d014ef59bfccfcc5ffb65cbe8379007e764a783bf38985a"
+    },
+    {
+      "id": 36,
+      "component_id": 2,
+      "solid_index": 6,
+      "link": "link3",
+      "mesh": "meshes/part_036.stl",
+      "collision": false,
+      "mesh_sha256": "6feb7d70cd0a4cd8ae08b88399102c3984904c855b4598fa3789c670fc995d59"
+    },
+    {
+      "id": 37,
+      "component_id": 2,
+      "solid_index": 7,
+      "link": "link3",
+      "mesh": "meshes/part_037.stl",
+      "collision": false,
+      "mesh_sha256": "1effcdf62f34f35fde64e56e3591b59c35e6757b6869b81998d9b3c208639840"
+    },
+    {
+      "id": 38,
+      "component_id": 2,
+      "solid_index": 8,
+      "link": "link3",
+      "mesh": "meshes/part_038.stl",
+      "collision": false,
+      "mesh_sha256": "57549956e50fdbc65cea3221bfa23c0d345c7da7e963ec4ea47ec9b027af373d"
+    },
+    {
+      "id": 39,
+      "component_id": 2,
+      "solid_index": 9,
+      "link": "link3",
+      "mesh": "meshes/part_039.stl",
+      "collision": false,
+      "mesh_sha256": "94e105ef54a61458954489f95ba38fd076dbfabaa34ae28d28e52da5a0fafaca"
+    },
+    {
+      "id": 40,
+      "component_id": 2,
+      "solid_index": 10,
+      "link": "link3",
+      "mesh": "meshes/part_040.stl",
+      "collision": false,
+      "mesh_sha256": "977ced5a4f7cf498f747b5d7900995246fd84bd2e2727dee78772957b707beee"
+    },
+    {
+      "id": 41,
+      "component_id": 2,
+      "solid_index": 11,
+      "link": "link3",
+      "mesh": "meshes/part_041.stl",
+      "collision": false,
+      "mesh_sha256": "3190cf0957df1f157aed9e8951eb6acbe28800e10604af2808fabdb2b1d06c11"
+    },
+    {
+      "id": 42,
+      "component_id": 2,
+      "solid_index": 12,
+      "link": "link3",
+      "mesh": "meshes/part_042.stl",
+      "collision": false,
+      "mesh_sha256": "be2be1fa806a16fba16b968d0919d612e915957617ba6e1fcd6116541a79ef85"
+    },
+    {
+      "id": 43,
+      "component_id": 2,
+      "solid_index": 13,
+      "link": "link4",
+      "mesh": "meshes/part_043.stl",
+      "collision": true,
+      "mesh_sha256": "bfee07fad581405259c509665214d87e5d3b0cba11dbfdcc8c164f1f421d7fb7"
+    },
+    {
+      "id": 44,
+      "component_id": 2,
+      "solid_index": 14,
+      "link": "link4",
+      "mesh": "meshes/part_044.stl",
+      "collision": true,
+      "mesh_sha256": "48cfc73cce8e4910f733ffc331721785f3d5773029d2e947224a0c182f7d3b5b"
+    },
+    {
+      "id": 45,
+      "component_id": 3,
+      "solid_index": 0,
+      "link": "link5",
+      "mesh": "meshes/part_045.stl",
+      "collision": true,
+      "mesh_sha256": "f68e56f1674b49dadc8b0e4c444000d718163b9fa913b538fe5f3c6c056fb9d7"
+    },
+    {
+      "id": 46,
+      "component_id": 3,
+      "solid_index": 1,
+      "link": "link5",
+      "mesh": "meshes/part_046.stl",
+      "collision": true,
+      "mesh_sha256": "1bb9b0febd736699380cd8de11816576c761c06e11cc63c6cd5a9b50b1fec777"
+    },
+    {
+      "id": 47,
+      "component_id": 3,
+      "solid_index": 2,
+      "link": "link5",
+      "mesh": "meshes/part_047.stl",
+      "collision": true,
+      "mesh_sha256": "75babcac9381232016a5c3376147901872c2552e24aaf1d25902c297ed6b6f05"
+    },
+    {
+      "id": 48,
+      "component_id": 3,
+      "solid_index": 3,
+      "link": "link4",
+      "mesh": "meshes/part_048.stl",
+      "collision": false,
+      "mesh_sha256": "3f2c8f9cafdd1f4ee2ec89ac1906539527ede19ebb5d650951214344bca49109"
+    },
+    {
+      "id": 49,
+      "component_id": 3,
+      "solid_index": 4,
+      "link": "link5",
+      "mesh": "meshes/part_049.stl",
+      "collision": false,
+      "mesh_sha256": "8d7cbee6243db24e995f8a91375bfb2f75cc1efec05bde35c6257a523d143fbd"
+    },
+    {
+      "id": 50,
+      "component_id": 3,
+      "solid_index": 5,
+      "link": "link5",
+      "mesh": "meshes/part_050.stl",
+      "collision": false,
+      "mesh_sha256": "646e5ac2138b5e47dee431cddd96ed243f19371e11763791633528cd76d49318"
+    },
+    {
+      "id": 51,
+      "component_id": 3,
+      "solid_index": 6,
+      "link": "link5",
+      "mesh": "meshes/part_051.stl",
+      "collision": false,
+      "mesh_sha256": "1501f807481f17e2648bc8d2c1416a8f0b53f15a66cb6d70f761d86b53189652"
+    },
+    {
+      "id": 52,
+      "component_id": 3,
+      "solid_index": 7,
+      "link": "link5",
+      "mesh": "meshes/part_052.stl",
+      "collision": false,
+      "mesh_sha256": "0eba4fd4462cfc3eb3662c12eb9817ae16304da7c109cdbd5b7c1b192303bebf"
+    },
+    {
+      "id": 53,
+      "component_id": 3,
+      "solid_index": 8,
+      "link": "link5",
+      "mesh": "meshes/part_053.stl",
+      "collision": false,
+      "mesh_sha256": "3b9c16c7dc4a29a22085a52198be592624d7ade947edeeb220a8297972a0434c"
+    },
+    {
+      "id": 54,
+      "component_id": 3,
+      "solid_index": 9,
+      "link": "link5",
+      "mesh": "meshes/part_054.stl",
+      "collision": false,
+      "mesh_sha256": "8b87c29b3f4506e77d7fce7065177eff2af3f517ea70dc5d20336cc08c27a21a"
+    },
+    {
+      "id": 55,
+      "component_id": 3,
+      "solid_index": 10,
+      "link": "link5",
+      "mesh": "meshes/part_055.stl",
+      "collision": false,
+      "mesh_sha256": "2a86acc666fcfca8e640b39c5c2bb7373f74faf3fdaece8761930577532140f3"
+    },
+    {
+      "id": 56,
+      "component_id": 3,
+      "solid_index": 11,
+      "link": "link5",
+      "mesh": "meshes/part_056.stl",
+      "collision": false,
+      "mesh_sha256": "f9204e606e8c7d8cbae25b164c407d6a978ca130becdf91c1fe3a9b06bd232fa"
+    },
+    {
+      "id": 57,
+      "component_id": 3,
+      "solid_index": 12,
+      "link": "link5",
+      "mesh": "meshes/part_057.stl",
+      "collision": true,
+      "mesh_sha256": "38a4d13dc89ff17ebc27c33e3fb54db048c83ef5373994dde3cfb683c00cf2a9"
+    },
+    {
+      "id": 58,
+      "component_id": 4,
+      "solid_index": 0,
+      "link": "link4",
+      "mesh": "meshes/part_058.stl",
+      "collision": true,
+      "mesh_sha256": "483e4afe13af5796ffd4377f631e851699496a731f69b7f365b19340f7765315"
+    },
+    {
+      "id": 59,
+      "component_id": 5,
+      "solid_index": 0,
+      "link": "link5",
+      "mesh": "meshes/part_059.stl",
+      "collision": true,
+      "mesh_sha256": "72d38f9632d4dfb4053b36cbb17e51197ca2f992c3a7fc0468ff44a22532f7d6"
+    },
+    {
+      "id": 60,
+      "component_id": 6,
+      "solid_index": 0,
+      "link": "link6",
+      "mesh": "meshes/part_060.stl",
+      "collision": false,
+      "mesh_sha256": "402921ca476bf6618f90fe545658444f740979a78888d8be0e3bbe08a29952eb"
+    },
+    {
+      "id": 61,
+      "component_id": 6,
+      "solid_index": 1,
+      "link": "link6",
+      "mesh": "meshes/part_061.stl",
+      "collision": true,
+      "mesh_sha256": "7f4a25d3547d15ef07baf7e40b6a25c33b6dbc6bbe6f8c0737f2cdb68a9d9eef"
+    },
+    {
+      "id": 62,
+      "component_id": 7,
+      "solid_index": 0,
+      "link": "link7_left",
+      "mesh": "meshes/part_062.stl",
+      "collision": true,
+      "mesh_sha256": "4af7a46f5ebb476d525b136137fa41826c0ef9980376a181d2622806d14067ca"
+    },
+    {
+      "id": 63,
+      "component_id": 8,
+      "solid_index": 0,
+      "link": "link7_right",
+      "mesh": "meshes/part_063.stl",
+      "collision": true,
+      "mesh_sha256": "7259585b9e4da1f89fd6585e23d9c7c9b09f61e072164cefe3d58846ccf8045e"
+    },
+    {
+      "id": 64,
+      "component_id": 9,
+      "solid_index": 0,
+      "link": "link5",
+      "mesh": "meshes/part_064.stl",
+      "collision": true,
+      "mesh_sha256": "3d16311ebf50c7ffb9cad8a47bc475c748c72c603144cab13f554a6bfb0f9375"
+    },
+    {
+      "id": 65,
+      "component_id": 10,
+      "solid_index": 0,
+      "link": "link1",
+      "mesh": "meshes/part_065.stl",
+      "collision": true,
+      "mesh_sha256": "4c4b69e8c9bf9e02d633a9c61653ee921744147012f20e8d39529e3fa98470b8"
+    },
+    {
+      "id": 66,
+      "component_id": 11,
+      "solid_index": 0,
+      "link": "link2",
+      "mesh": "meshes/part_066.stl",
+      "collision": true,
+      "mesh_sha256": "a1473fab40ce839a617a1f8b758b9013211ebbfcd5b9e373335a799bd899b28f"
+    },
+    {
+      "id": 67,
+      "component_id": 12,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_067.stl",
+      "collision": false,
+      "mesh_sha256": "a2b0cfca159a7971066c5c3374491abbbf414790bcdbe665b2210ef4c7520da9"
+    },
+    {
+      "id": 68,
+      "component_id": 12,
+      "solid_index": 1,
+      "link": "base_link",
+      "mesh": "meshes/part_068.stl",
+      "collision": false,
+      "mesh_sha256": "53ecee8144a45fc139e6525ce88f0ea82b71bab5bf87abeb677c735eb77692eb"
+    },
+    {
+      "id": 69,
+      "component_id": 12,
+      "solid_index": 2,
+      "link": "base_link",
+      "mesh": "meshes/part_069.stl",
+      "collision": true,
+      "mesh_sha256": "4e86f724583e1f9d622ca88ab639a87a610e189f957eb03c53710fe78a21ac04"
+    },
+    {
+      "id": 70,
+      "component_id": 12,
+      "solid_index": 3,
+      "link": "base_link",
+      "mesh": "meshes/part_070.stl",
+      "collision": true,
+      "mesh_sha256": "046b3fb922a551e0b18891dc727dba289f94763fb98ae22d95a24a669c3eb9e2"
+    },
+    {
+      "id": 71,
+      "component_id": 12,
+      "solid_index": 4,
+      "link": "link1",
+      "mesh": "meshes/part_071.stl",
+      "collision": true,
+      "mesh_sha256": "9861396ceeb9af3b38fe57ad4719cef8b3d3ac6c6972fc159aebd745b81e920c"
+    },
+    {
+      "id": 72,
+      "component_id": 13,
+      "solid_index": 0,
+      "link": "link3",
+      "mesh": "meshes/part_072.stl",
+      "collision": false,
+      "mesh_sha256": "269eeac29d11f79381a74d559e5eca04f413e0830510f5b541276099d393f515"
+    },
+    {
+      "id": 73,
+      "component_id": 13,
+      "solid_index": 1,
+      "link": "link3",
+      "mesh": "meshes/part_073.stl",
+      "collision": false,
+      "mesh_sha256": "6707a87495decac599d5c80ab5d3c8a543e6555c5a59c8460ac40cd851549c74"
+    },
+    {
+      "id": 74,
+      "component_id": 13,
+      "solid_index": 2,
+      "link": "link3",
+      "mesh": "meshes/part_074.stl",
+      "collision": false,
+      "mesh_sha256": "d25d2a22fdf0a3c63743cd7d62316c4b4e2e7bf351db6207a220e2070eb01b2b"
+    },
+    {
+      "id": 75,
+      "component_id": 13,
+      "solid_index": 3,
+      "link": "link3",
+      "mesh": "meshes/part_075.stl",
+      "collision": false,
+      "mesh_sha256": "78c30206e5bf178c9133dc22620cccb7516644015a175f0610647746b8a003eb"
+    },
+    {
+      "id": 76,
+      "component_id": 13,
+      "solid_index": 4,
+      "link": "link3",
+      "mesh": "meshes/part_076.stl",
+      "collision": false,
+      "mesh_sha256": "5d2c77a1446ccdf74c47c0fe4d293516177bd8ecb939f2030860e2d2b09d37e1"
+    },
+    {
+      "id": 77,
+      "component_id": 13,
+      "solid_index": 5,
+      "link": "link3",
+      "mesh": "meshes/part_077.stl",
+      "collision": false,
+      "mesh_sha256": "4369ac6f78f3c10f53b030ba25d4dd61c7ec2c9ccc66ea376008bf50df1bc062"
+    },
+    {
+      "id": 78,
+      "component_id": 13,
+      "solid_index": 6,
+      "link": "link3",
+      "mesh": "meshes/part_078.stl",
+      "collision": false,
+      "mesh_sha256": "074f867bc34c7c96a022cca6a6cbe080e9e168755652ead4666ac401263995c8"
+    },
+    {
+      "id": 79,
+      "component_id": 13,
+      "solid_index": 7,
+      "link": "link3",
+      "mesh": "meshes/part_079.stl",
+      "collision": false,
+      "mesh_sha256": "70e69ea559b2ae628e1e02862a14d31ce8c229b3551dd1f3430a21d682da6357"
+    },
+    {
+      "id": 80,
+      "component_id": 13,
+      "solid_index": 8,
+      "link": "link3",
+      "mesh": "meshes/part_080.stl",
+      "collision": false,
+      "mesh_sha256": "c0004e6ef3afffa5eecff701a1ab11996ab094e0fee11027cb474c4ecf910ef2"
+    },
+    {
+      "id": 81,
+      "component_id": 13,
+      "solid_index": 9,
+      "link": "link3",
+      "mesh": "meshes/part_081.stl",
+      "collision": false,
+      "mesh_sha256": "14fbcfc9e958fbaa48e630994b1bc98b93183abab879a4dad5c0e02a99c2c448"
+    },
+    {
+      "id": 82,
+      "component_id": 13,
+      "solid_index": 10,
+      "link": "link3",
+      "mesh": "meshes/part_082.stl",
+      "collision": true,
+      "mesh_sha256": "61f67e1f15a4d8c11540c6aaa2d9c7ec6ae84fb41042c714d15bcdba6715d284"
+    },
+    {
+      "id": 83,
+      "component_id": 13,
+      "solid_index": 11,
+      "link": "link3",
+      "mesh": "meshes/part_083.stl",
+      "collision": false,
+      "mesh_sha256": "d8362ae47ac1989fb564e222598ae96915ec4406c0f15a6fb3683274ab01da7f"
+    },
+    {
+      "id": 84,
+      "component_id": 13,
+      "solid_index": 12,
+      "link": "link3",
+      "mesh": "meshes/part_084.stl",
+      "collision": false,
+      "mesh_sha256": "3b4cff5289c78c006f17608f3cb9566d6273394a6460716a5d99971b70cb4ee5"
+    },
+    {
+      "id": 85,
+      "component_id": 14,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_085.stl",
+      "collision": true,
+      "mesh_sha256": "78fb0e1cf94c84fe6dd4d76958eec7428e27a16e31b2cc614cef665e16a82fe3"
+    },
+    {
+      "id": 86,
+      "component_id": 14,
+      "solid_index": 1,
+      "link": "base_link",
+      "mesh": "meshes/part_086.stl",
+      "collision": true,
+      "mesh_sha256": "2d6c4c549ff1044eb0fa0f7b47a695ec4305062a68ce0a683a8cfd5bf9cd2593"
+    },
+    {
+      "id": 87,
+      "component_id": 14,
+      "solid_index": 2,
+      "link": "base_link",
+      "mesh": "meshes/part_087.stl",
+      "collision": true,
+      "mesh_sha256": "1f2f1a980c55eca32ae780454248923b6661c9ad6a50c059947b28973cbcb967"
+    },
+    {
+      "id": 88,
+      "component_id": 14,
+      "solid_index": 3,
+      "link": "base_link",
+      "mesh": "meshes/part_088.stl",
+      "collision": true,
+      "mesh_sha256": "96ad4a6eb5171426e9a06724751434d1b1e07664425838bbb3bdd03eb367b08b"
+    },
+    {
+      "id": 89,
+      "component_id": 14,
+      "solid_index": 4,
+      "link": "link1",
+      "mesh": "meshes/part_089.stl",
+      "collision": false,
+      "mesh_sha256": "49dc6ce487d2958a22d48dcd1ab0b0a820e97f9ee38bf34d17c905b0293b7eb7"
+    },
+    {
+      "id": 90,
+      "component_id": 14,
+      "solid_index": 5,
+      "link": "base_link",
+      "mesh": "meshes/part_090.stl",
+      "collision": false,
+      "mesh_sha256": "72ee9f63e8f229549afde0ca3e224adac0632c818f163c1d84a01581c3bd72e0"
+    },
+    {
+      "id": 91,
+      "component_id": 14,
+      "solid_index": 6,
+      "link": "base_link",
+      "mesh": "meshes/part_091.stl",
+      "collision": false,
+      "mesh_sha256": "23f41c1ff2461454aca1f68c473362850471bc99118b86d0f251bf50f8c581e2"
+    },
+    {
+      "id": 92,
+      "component_id": 14,
+      "solid_index": 7,
+      "link": "base_link",
+      "mesh": "meshes/part_092.stl",
+      "collision": false,
+      "mesh_sha256": "a9b00529f966da01e90f0c0b1eac2466e966ec1ee7ee648c5914002567729c42"
+    },
+    {
+      "id": 93,
+      "component_id": 14,
+      "solid_index": 8,
+      "link": "base_link",
+      "mesh": "meshes/part_093.stl",
+      "collision": false,
+      "mesh_sha256": "8680bed1f8e93a4084f74bacd33d0afb78032809dd9a06fde4d76afbe0bfbac4"
+    },
+    {
+      "id": 94,
+      "component_id": 14,
+      "solid_index": 9,
+      "link": "base_link",
+      "mesh": "meshes/part_094.stl",
+      "collision": false,
+      "mesh_sha256": "bf96fe94e9df0765b4b758ff7ea607aef9bbc90998ab66966d7386f957af0a03"
+    },
+    {
+      "id": 95,
+      "component_id": 14,
+      "solid_index": 10,
+      "link": "base_link",
+      "mesh": "meshes/part_095.stl",
+      "collision": false,
+      "mesh_sha256": "8af72c2af0d1d3a68f8de21758e587222834165f15513be4803e3340915be0b1"
+    },
+    {
+      "id": 96,
+      "component_id": 14,
+      "solid_index": 11,
+      "link": "base_link",
+      "mesh": "meshes/part_096.stl",
+      "collision": false,
+      "mesh_sha256": "4af3275663ceff6a958df8fe7f9ac36ad79e8a631b03bcf0c1ea636bd5ea928c"
+    },
+    {
+      "id": 97,
+      "component_id": 14,
+      "solid_index": 12,
+      "link": "base_link",
+      "mesh": "meshes/part_097.stl",
+      "collision": false,
+      "mesh_sha256": "e716ea1ff08f3fc48dfc9c2e16c22835ffd8ee797597f9cf600b120515baa843"
+    },
+    {
+      "id": 98,
+      "component_id": 14,
+      "solid_index": 13,
+      "link": "link1",
+      "mesh": "meshes/part_098.stl",
+      "collision": true,
+      "mesh_sha256": "d42162c6dad974c3c4862e15c92aeae98f7819bbc1004fdb0a3e1148f47ca1df"
+    },
+    {
+      "id": 99,
+      "component_id": 15,
+      "solid_index": 0,
+      "link": "link6",
+      "mesh": "meshes/part_099.stl",
+      "collision": true,
+      "mesh_sha256": "b961e3f2852137e4af68288ec1afb3597675d10772392121414e76abc8294898"
+    },
+    {
+      "id": 100,
+      "component_id": 15,
+      "solid_index": 1,
+      "link": "link6",
+      "mesh": "meshes/part_100.stl",
+      "collision": true,
+      "mesh_sha256": "5b0405b35d6b6692c76dd302bb73182c75e969f8b81fe8fa4c2272b2a7d7f47d"
+    },
+    {
+      "id": 101,
+      "component_id": 15,
+      "solid_index": 2,
+      "link": "link6",
+      "mesh": "meshes/part_101.stl",
+      "collision": true,
+      "mesh_sha256": "c2e9ef2682291e96261c8f6d40a6ba9670af0958002c542bc2e519ead0af021c"
+    },
+    {
+      "id": 102,
+      "component_id": 15,
+      "solid_index": 3,
+      "link": "link7_left",
+      "mesh": "meshes/part_102.stl",
+      "collision": false,
+      "mesh_sha256": "4ad135cc81f17062ed93fe608f81b761befefa6dc040a75189fd43b399fdb2db"
+    },
+    {
+      "id": 103,
+      "component_id": 15,
+      "solid_index": 4,
+      "link": "link6",
+      "mesh": "meshes/part_103.stl",
+      "collision": false,
+      "mesh_sha256": "293d9d4044534fd426f11f74742365740c668bf5a7698f9a6258391618605153"
+    },
+    {
+      "id": 104,
+      "component_id": 15,
+      "solid_index": 5,
+      "link": "link6",
+      "mesh": "meshes/part_104.stl",
+      "collision": false,
+      "mesh_sha256": "9f48cc7df2fba570e262eafd7d4778066c75e1b6c4ce006aed7bf5debaf81bc1"
+    },
+    {
+      "id": 105,
+      "component_id": 15,
+      "solid_index": 6,
+      "link": "link6",
+      "mesh": "meshes/part_105.stl",
+      "collision": false,
+      "mesh_sha256": "5b21f3dd4508e8adf253b04a55cdd580ec25ee0d5f5f9c74ba5067a50f97e141"
+    },
+    {
+      "id": 106,
+      "component_id": 15,
+      "solid_index": 7,
+      "link": "link6",
+      "mesh": "meshes/part_106.stl",
+      "collision": false,
+      "mesh_sha256": "60491a4019035c22822f4b0ce6bee516945a318b9c3c0482124d658599de5e1c"
+    },
+    {
+      "id": 107,
+      "component_id": 15,
+      "solid_index": 8,
+      "link": "link6",
+      "mesh": "meshes/part_107.stl",
+      "collision": false,
+      "mesh_sha256": "d6d26a00fedd1de5350775d01db4d52f77386c437841ddcadf72b8a5facdb20f"
+    },
+    {
+      "id": 108,
+      "component_id": 15,
+      "solid_index": 9,
+      "link": "link6",
+      "mesh": "meshes/part_108.stl",
+      "collision": false,
+      "mesh_sha256": "b8e5667ae78bd7e9859a6e88a69de32e25098a73fd11bdb43f71d9b1780b7efb"
+    },
+    {
+      "id": 109,
+      "component_id": 15,
+      "solid_index": 10,
+      "link": "link6",
+      "mesh": "meshes/part_109.stl",
+      "collision": false,
+      "mesh_sha256": "43a9cb485036d26c8ce939e772114d6726e1a04be13f64d1daff019a22020cdb"
+    },
+    {
+      "id": 110,
+      "component_id": 15,
+      "solid_index": 11,
+      "link": "link6",
+      "mesh": "meshes/part_110.stl",
+      "collision": false,
+      "mesh_sha256": "018bbf3281c444176678244cf70edf490e4b15341f7d8a14b392813b41c0e804"
+    },
+    {
+      "id": 111,
+      "component_id": 15,
+      "solid_index": 12,
+      "link": "link6",
+      "mesh": "meshes/part_111.stl",
+      "collision": true,
+      "mesh_sha256": "f5f98fe3e083ecbf05053e2925d3afcbc6a319179c906bad3c8a65d4476b7811"
+    },
+    {
+      "id": 112,
+      "component_id": 15,
+      "solid_index": 13,
+      "link": "link7_left",
+      "mesh": "meshes/part_112.stl",
+      "collision": true,
+      "mesh_sha256": "499e09959d5fb5a4eb2869025d91d1c5e319e4b56c2b305020bb66ecbd8d8157"
+    },
+    {
+      "id": 113,
+      "component_id": 16,
+      "solid_index": 0,
+      "link": "link5",
+      "mesh": "meshes/part_113.stl",
+      "collision": true,
+      "mesh_sha256": "a7333a23c5baf98c687d2c0d4f7f576cf6268c0d0906c1d6f3bcf68822c882cc"
+    },
+    {
+      "id": 114,
+      "component_id": 16,
+      "solid_index": 1,
+      "link": "link5",
+      "mesh": "meshes/part_114.stl",
+      "collision": true,
+      "mesh_sha256": "63092f7849d7bd9101f4494a26191cf02d5fe12f1fef04421fe82297b47fa3e2"
+    },
+    {
+      "id": 115,
+      "component_id": 16,
+      "solid_index": 2,
+      "link": "link5",
+      "mesh": "meshes/part_115.stl",
+      "collision": true,
+      "mesh_sha256": "9a631422dcfdb3edcb5f1fdda8a3141a312e24964217164dd27c5de8e85e7ce6"
+    },
+    {
+      "id": 116,
+      "component_id": 16,
+      "solid_index": 3,
+      "link": "link6",
+      "mesh": "meshes/part_116.stl",
+      "collision": false,
+      "mesh_sha256": "05f6b9c1bfae365ed56e12efcc86af86b06ac45b01b6925f23c602fc80e3f034"
+    },
+    {
+      "id": 117,
+      "component_id": 16,
+      "solid_index": 4,
+      "link": "link5",
+      "mesh": "meshes/part_117.stl",
+      "collision": false,
+      "mesh_sha256": "e395a9ddd49cc17b03fab206b15283de68a0ef9b2928171864c75b5537aa83af"
+    },
+    {
+      "id": 118,
+      "component_id": 16,
+      "solid_index": 5,
+      "link": "link5",
+      "mesh": "meshes/part_118.stl",
+      "collision": false,
+      "mesh_sha256": "9deff2ad94c26029bcf12fcf075ab019115e1c25f416974133d936ca99869557"
+    },
+    {
+      "id": 119,
+      "component_id": 16,
+      "solid_index": 6,
+      "link": "link5",
+      "mesh": "meshes/part_119.stl",
+      "collision": false,
+      "mesh_sha256": "5c6d177171be1d134d6a1b739e3c03d1308d5004e2ce09e2ea6ed6dfbe19bf07"
+    },
+    {
+      "id": 120,
+      "component_id": 16,
+      "solid_index": 7,
+      "link": "link5",
+      "mesh": "meshes/part_120.stl",
+      "collision": false,
+      "mesh_sha256": "94f157a3df1de6f6a6ea6c536fc231f55b1af4b1a4627721fc27f32ce3ffd8b4"
+    },
+    {
+      "id": 121,
+      "component_id": 16,
+      "solid_index": 8,
+      "link": "link5",
+      "mesh": "meshes/part_121.stl",
+      "collision": false,
+      "mesh_sha256": "26f198ddb69d5a240ee62ed10b269f339146bb4c06f32e0f927ea4ec39c07d8c"
+    },
+    {
+      "id": 122,
+      "component_id": 16,
+      "solid_index": 9,
+      "link": "link5",
+      "mesh": "meshes/part_122.stl",
+      "collision": false,
+      "mesh_sha256": "d3a212e8f3cd688e25154d8ad882c894fc45ee970bd3ae09b6edbf603c6ba50b"
+    },
+    {
+      "id": 123,
+      "component_id": 16,
+      "solid_index": 10,
+      "link": "link5",
+      "mesh": "meshes/part_123.stl",
+      "collision": false,
+      "mesh_sha256": "f611138260278a43bc893f7b8d70b87b32c62a75f68a576b4721d6847d68b7a1"
+    },
+    {
+      "id": 124,
+      "component_id": 16,
+      "solid_index": 11,
+      "link": "link5",
+      "mesh": "meshes/part_124.stl",
+      "collision": false,
+      "mesh_sha256": "b462e1ae4f0c23c152a097392322e5b05de0c3be0543af851db5ad5a82cbfa2f"
+    },
+    {
+      "id": 125,
+      "component_id": 16,
+      "solid_index": 12,
+      "link": "link5",
+      "mesh": "meshes/part_125.stl",
+      "collision": true,
+      "mesh_sha256": "01945571dff3cc776b333dc4d696ab27db35673d8e6962c638955f331f21d860"
+    },
+    {
+      "id": 126,
+      "component_id": 16,
+      "solid_index": 13,
+      "link": "link6",
+      "mesh": "meshes/part_126.stl",
+      "collision": true,
+      "mesh_sha256": "5fb5f7ba50ee7c539dd0a81d5c16d31e5828b77f54fcecdc6757b5f8c3c985aa"
+    },
+    {
+      "id": 127,
+      "component_id": 17,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_127.stl",
+      "collision": false,
+      "mesh_sha256": "71ba6dda315db5f2c89c2497f227ee854626d2bcb97f88b6c44b267e30fcd150"
+    },
+    {
+      "id": 128,
+      "component_id": 18,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_128.stl",
+      "collision": false,
+      "mesh_sha256": "5aefe9ee9e088073c3b35dcd162f28209784a5d5e677f1bef7239fdee975960c"
+    },
+    {
+      "id": 129,
+      "component_id": 18,
+      "solid_index": 1,
+      "link": "base_link",
+      "mesh": "meshes/part_129.stl",
+      "collision": false,
+      "mesh_sha256": "e62225d38ed5992293e4da5b45c801e7ca1bb0f999aebb8af700a6441eeef5c6"
+    },
+    {
+      "id": 130,
+      "component_id": 18,
+      "solid_index": 2,
+      "link": "base_link",
+      "mesh": "meshes/part_130.stl",
+      "collision": false,
+      "mesh_sha256": "25a5cb65a96e346c249cfcdceaf231d6c969090debf1de760114e3e9ca78086c"
+    },
+    {
+      "id": 131,
+      "component_id": 18,
+      "solid_index": 3,
+      "link": "base_link",
+      "mesh": "meshes/part_131.stl",
+      "collision": false,
+      "mesh_sha256": "e854e0358f2c18502a91fcd087e9780681e2c3b7edd9e17a600a85eb54c5c3e3"
+    },
+    {
+      "id": 132,
+      "component_id": 18,
+      "solid_index": 4,
+      "link": "base_link",
+      "mesh": "meshes/part_132.stl",
+      "collision": false,
+      "mesh_sha256": "456aa0d6fa78a10056604c6ce74b92499688604a75c5dd917eff940e12ec3c99"
+    },
+    {
+      "id": 133,
+      "component_id": 18,
+      "solid_index": 5,
+      "link": "base_link",
+      "mesh": "meshes/part_133.stl",
+      "collision": false,
+      "mesh_sha256": "f0ccb487d2a786a3084f0ba781749e73978d21411cdfed44eecc5473ac206cf0"
+    },
+    {
+      "id": 134,
+      "component_id": 18,
+      "solid_index": 6,
+      "link": "base_link",
+      "mesh": "meshes/part_134.stl",
+      "collision": false,
+      "mesh_sha256": "dcf1e02287e16fe54a5f7d818e8b810953c596c94709104a6b455a4991cb493a"
+    },
+    {
+      "id": 135,
+      "component_id": 18,
+      "solid_index": 7,
+      "link": "base_link",
+      "mesh": "meshes/part_135.stl",
+      "collision": false,
+      "mesh_sha256": "c4ce40ed495ca07ca77e7a6928c5eb654ca791b9d5d5e300b3fbbe631b322a5b"
+    },
+    {
+      "id": 136,
+      "component_id": 18,
+      "solid_index": 8,
+      "link": "base_link",
+      "mesh": "meshes/part_136.stl",
+      "collision": false,
+      "mesh_sha256": "6f05f4c566eb481eb8fee1c46a256185b8e8589c8ef9b9c1cc5937e58f7d0214"
+    },
+    {
+      "id": 137,
+      "component_id": 18,
+      "solid_index": 9,
+      "link": "base_link",
+      "mesh": "meshes/part_137.stl",
+      "collision": false,
+      "mesh_sha256": "3a1ff8923fbbc11faba27093bd0af9d87cb4904e40fe2e309011cdaf37408204"
+    },
+    {
+      "id": 138,
+      "component_id": 18,
+      "solid_index": 10,
+      "link": "base_link",
+      "mesh": "meshes/part_138.stl",
+      "collision": false,
+      "mesh_sha256": "87b2750eb74faba21059576a9df32d6ab0686d0cfdc72b444e553f79ad84fda7"
+    },
+    {
+      "id": 139,
+      "component_id": 18,
+      "solid_index": 11,
+      "link": "base_link",
+      "mesh": "meshes/part_139.stl",
+      "collision": false,
+      "mesh_sha256": "64e54ba9e01018dd9fdb70c9392b25925009172963e978a444b412a9c12809f7"
+    },
+    {
+      "id": 140,
+      "component_id": 18,
+      "solid_index": 12,
+      "link": "base_link",
+      "mesh": "meshes/part_140.stl",
+      "collision": false,
+      "mesh_sha256": "c22eb8752672c6aa60ca5473afa665d066019dca3d3a87e553765fe48e265d6b"
+    },
+    {
+      "id": 141,
+      "component_id": 18,
+      "solid_index": 13,
+      "link": "base_link",
+      "mesh": "meshes/part_141.stl",
+      "collision": false,
+      "mesh_sha256": "02fc72dfc6da5a438d02fa232875c31bcbb07782ad3378c5000f56e60e167349"
+    },
+    {
+      "id": 142,
+      "component_id": 19,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_142.stl",
+      "collision": false,
+      "mesh_sha256": "11838f20be26eb74aab9ac6a0656edbce4e6d66297dc9acad9b248b1baa93c87"
+    },
+    {
+      "id": 143,
+      "component_id": 20,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_143.stl",
+      "collision": false,
+      "mesh_sha256": "3a1314a9d3d4e7f5769c366e2be7f12c0ba9ace49677fcb6d4b11e9732e0a9bd"
+    },
+    {
+      "id": 144,
+      "component_id": 21,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_144.stl",
+      "collision": false,
+      "mesh_sha256": "383f55e39d9863b93c17397c2bf319bc8b7ec94269a3876ae343e713bb8cc501"
+    },
+    {
+      "id": 145,
+      "component_id": 22,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_145.stl",
+      "collision": false,
+      "mesh_sha256": "38ccb8620e7c1c76052cd475180f4ce2b2565c2e328bd52f8bd010208106d633"
+    },
+    {
+      "id": 146,
+      "component_id": 22,
+      "solid_index": 1,
+      "link": "base_link",
+      "mesh": "meshes/part_146.stl",
+      "collision": false,
+      "mesh_sha256": "648c2a144953d0a708785f52ef18a7c4f9cfb17dab3f8c338dc942ff91986a9a"
+    },
+    {
+      "id": 147,
+      "component_id": 22,
+      "solid_index": 2,
+      "link": "base_link",
+      "mesh": "meshes/part_147.stl",
+      "collision": false,
+      "mesh_sha256": "300b7e6c0ccad565d02454c5a2955d3a88712e134007c9c3e8977076e0316835"
+    },
+    {
+      "id": 148,
+      "component_id": 22,
+      "solid_index": 3,
+      "link": "base_link",
+      "mesh": "meshes/part_148.stl",
+      "collision": false,
+      "mesh_sha256": "f19b864a441a0ec3be2d76c5d96b9382fbb820adea2ea1b4a9792241f6e59d28"
+    },
+    {
+      "id": 149,
+      "component_id": 22,
+      "solid_index": 4,
+      "link": "base_link",
+      "mesh": "meshes/part_149.stl",
+      "collision": false,
+      "mesh_sha256": "e72aa7488d8aefe65db20342abbf055caf140f660cc70e6af9a80f14d472f4bd"
+    },
+    {
+      "id": 150,
+      "component_id": 22,
+      "solid_index": 5,
+      "link": "base_link",
+      "mesh": "meshes/part_150.stl",
+      "collision": false,
+      "mesh_sha256": "a3cecf55d9fbcbc5a51b97c106ec2193b6a1857e9e01ae1fdc79de0fb2b29feb"
+    },
+    {
+      "id": 151,
+      "component_id": 22,
+      "solid_index": 6,
+      "link": "base_link",
+      "mesh": "meshes/part_151.stl",
+      "collision": false,
+      "mesh_sha256": "1a8b5422a112309c121a52b6124d4156a7d0327a55f476b66a1dd5a8ea04e12c"
+    },
+    {
+      "id": 152,
+      "component_id": 22,
+      "solid_index": 7,
+      "link": "base_link",
+      "mesh": "meshes/part_152.stl",
+      "collision": false,
+      "mesh_sha256": "04d9ed0da4ed101682350f02e721e66332908360c9778ed999c71ca8e2d17330"
+    },
+    {
+      "id": 153,
+      "component_id": 22,
+      "solid_index": 8,
+      "link": "base_link",
+      "mesh": "meshes/part_153.stl",
+      "collision": false,
+      "mesh_sha256": "e6196f470eee9d75a3a43108ed553ebc9f89030b3a1b78397afb128f8ea130e5"
+    },
+    {
+      "id": 154,
+      "component_id": 22,
+      "solid_index": 9,
+      "link": "base_link",
+      "mesh": "meshes/part_154.stl",
+      "collision": false,
+      "mesh_sha256": "6c43cdedfb9c555352b500a2a27da475aa82f4fe63f8eb99841f8cf1f9582402"
+    },
+    {
+      "id": 155,
+      "component_id": 22,
+      "solid_index": 10,
+      "link": "base_link",
+      "mesh": "meshes/part_155.stl",
+      "collision": false,
+      "mesh_sha256": "c1e7fe273e8377130b481bf1478efa3e7ae9baa317b3d5f1ea23bf863df0b986"
+    },
+    {
+      "id": 156,
+      "component_id": 22,
+      "solid_index": 11,
+      "link": "base_link",
+      "mesh": "meshes/part_156.stl",
+      "collision": false,
+      "mesh_sha256": "b7743e4825a120ad0ae3f35928dbd0e007c68df68b91b5efe6485b2140199cbe"
+    },
+    {
+      "id": 157,
+      "component_id": 22,
+      "solid_index": 12,
+      "link": "base_link",
+      "mesh": "meshes/part_157.stl",
+      "collision": false,
+      "mesh_sha256": "750d054b415046824d447b3e7c6284dc104b1b1500f9bf53c6d8088c6e4854ee"
+    },
+    {
+      "id": 158,
+      "component_id": 22,
+      "solid_index": 13,
+      "link": "base_link",
+      "mesh": "meshes/part_158.stl",
+      "collision": false,
+      "mesh_sha256": "3df8cb085077282ca43aa5a0c9ec5c1d3848d6462817d8df2b8f20a27576626e"
+    },
+    {
+      "id": 159,
+      "component_id": 23,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_159.stl",
+      "collision": false,
+      "mesh_sha256": "9d6b22bcced3a77966149aca09f88d7f6fad70774ca80176c99a99100f57cc61"
+    },
+    {
+      "id": 160,
+      "component_id": 24,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_160.stl",
+      "collision": false,
+      "mesh_sha256": "0680147388cd01c68f83a327c82c973a6d36975d0d13d88f0279cf5aee932127"
+    },
+    {
+      "id": 161,
+      "component_id": 25,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_161.stl",
+      "collision": false,
+      "mesh_sha256": "2520db17f14ddd7229ba20a8623a61c358850deb317fbe66e8f59f1de24f6709"
+    },
+    {
+      "id": 162,
+      "component_id": 25,
+      "solid_index": 1,
+      "link": "base_link",
+      "mesh": "meshes/part_162.stl",
+      "collision": false,
+      "mesh_sha256": "f28e1a7fe732e336513068c509f2cc26afffa8834603d81085bdff2d11fceaa1"
+    },
+    {
+      "id": 163,
+      "component_id": 25,
+      "solid_index": 2,
+      "link": "base_link",
+      "mesh": "meshes/part_163.stl",
+      "collision": false,
+      "mesh_sha256": "1b65849e7c4c7d986e355fa689c03e7500d537656ba91e8b0def30a6b761fbab"
+    },
+    {
+      "id": 164,
+      "component_id": 25,
+      "solid_index": 3,
+      "link": "base_link",
+      "mesh": "meshes/part_164.stl",
+      "collision": false,
+      "mesh_sha256": "02966cd7c011737ea618d3d27d520555bdb02b0591a7abe54cceb6e3d2cf9bf3"
+    },
+    {
+      "id": 165,
+      "component_id": 25,
+      "solid_index": 4,
+      "link": "base_link",
+      "mesh": "meshes/part_165.stl",
+      "collision": false,
+      "mesh_sha256": "1fd8f0bce976f962ce76706995f3d8e37d4f7a9ffa2a41f1363e3586628f0107"
+    },
+    {
+      "id": 166,
+      "component_id": 25,
+      "solid_index": 5,
+      "link": "base_link",
+      "mesh": "meshes/part_166.stl",
+      "collision": false,
+      "mesh_sha256": "545f0de13ba9b3e38af7d18c584eb3e85f727e9f4c9707f02097ac9ed1630b63"
+    },
+    {
+      "id": 167,
+      "component_id": 25,
+      "solid_index": 6,
+      "link": "base_link",
+      "mesh": "meshes/part_167.stl",
+      "collision": false,
+      "mesh_sha256": "51fd152c21072c7af628c55120ca24feb5eae3bf65144a2fe975ea61f32c65e0"
+    },
+    {
+      "id": 168,
+      "component_id": 25,
+      "solid_index": 7,
+      "link": "base_link",
+      "mesh": "meshes/part_168.stl",
+      "collision": false,
+      "mesh_sha256": "7c076dcb507bb8c4e985123664abda9e35581b3641b30853dcb784dc690186d5"
+    },
+    {
+      "id": 169,
+      "component_id": 25,
+      "solid_index": 8,
+      "link": "base_link",
+      "mesh": "meshes/part_169.stl",
+      "collision": false,
+      "mesh_sha256": "f58b5f2b3701d23c14ff4d8f0b102834c7b6abd3de4001b7d805fdd10ce05e21"
+    },
+    {
+      "id": 170,
+      "component_id": 25,
+      "solid_index": 9,
+      "link": "base_link",
+      "mesh": "meshes/part_170.stl",
+      "collision": false,
+      "mesh_sha256": "502bdb5b0ecf14f202434e04e97fb484c22f3184d43eef572afc67c3a515daa6"
+    },
+    {
+      "id": 171,
+      "component_id": 25,
+      "solid_index": 10,
+      "link": "base_link",
+      "mesh": "meshes/part_171.stl",
+      "collision": false,
+      "mesh_sha256": "53433695e4b78e398b58daea227ff1ca2755d84300df217bc19c65e95635c0fd"
+    },
+    {
+      "id": 172,
+      "component_id": 25,
+      "solid_index": 11,
+      "link": "base_link",
+      "mesh": "meshes/part_172.stl",
+      "collision": false,
+      "mesh_sha256": "e7523cb16c8388754a2b23105b3cc1392a5b0729c113848a32397dd3a9010b68"
+    },
+    {
+      "id": 173,
+      "component_id": 25,
+      "solid_index": 12,
+      "link": "base_link",
+      "mesh": "meshes/part_173.stl",
+      "collision": false,
+      "mesh_sha256": "8b77e85ecafb9e788a33ac4d1459e90dcd64d7bc2ab09811cabb29c9439a719d"
+    },
+    {
+      "id": 174,
+      "component_id": 25,
+      "solid_index": 13,
+      "link": "base_link",
+      "mesh": "meshes/part_174.stl",
+      "collision": false,
+      "mesh_sha256": "603d92877fd9e5448d62cfde758a0f9d274c8dd1be295adb714a2f83113320a1"
+    },
+    {
+      "id": 175,
+      "component_id": 25,
+      "solid_index": 14,
+      "link": "base_link",
+      "mesh": "meshes/part_175.stl",
+      "collision": false,
+      "mesh_sha256": "a7c216d216d3ae2bd268e6db921a3581e45d218c15d0c11e602c267b0f6f6c42"
+    },
+    {
+      "id": 176,
+      "component_id": 25,
+      "solid_index": 15,
+      "link": "base_link",
+      "mesh": "meshes/part_176.stl",
+      "collision": false,
+      "mesh_sha256": "430061540f544e1e8cd5631756594dbdace16db14abba3ac7e3b6b4e9d68cd21"
+    },
+    {
+      "id": 177,
+      "component_id": 25,
+      "solid_index": 16,
+      "link": "base_link",
+      "mesh": "meshes/part_177.stl",
+      "collision": false,
+      "mesh_sha256": "4a55f7e339dcab173c44652279840ecf3d300676fe873aef5537c114e63e49ed"
+    },
+    {
+      "id": 178,
+      "component_id": 25,
+      "solid_index": 17,
+      "link": "base_link",
+      "mesh": "meshes/part_178.stl",
+      "collision": false,
+      "mesh_sha256": "943ab8125830c8c62f798f2d339c209806551f0bbd4be8d6a4aa1c08f86a0407"
+    },
+    {
+      "id": 179,
+      "component_id": 25,
+      "solid_index": 18,
+      "link": "base_link",
+      "mesh": "meshes/part_179.stl",
+      "collision": false,
+      "mesh_sha256": "07cdea01edd10c83a7ad0535f180ed5b117a6baf80117433c3d186e597efac9a"
+    },
+    {
+      "id": 180,
+      "component_id": 25,
+      "solid_index": 19,
+      "link": "base_link",
+      "mesh": "meshes/part_180.stl",
+      "collision": false,
+      "mesh_sha256": "2e9975e34fdbf8aaec2c39ec9affc63b3e4029208bfdbcfdbc6197d8eeb044cb"
+    },
+    {
+      "id": 181,
+      "component_id": 25,
+      "solid_index": 20,
+      "link": "base_link",
+      "mesh": "meshes/part_181.stl",
+      "collision": false,
+      "mesh_sha256": "459d39f65ddb0b787726045a6abe0aa882b774e5dece65a75bb59aeb77fbade0"
+    },
+    {
+      "id": 182,
+      "component_id": 25,
+      "solid_index": 21,
+      "link": "base_link",
+      "mesh": "meshes/part_182.stl",
+      "collision": false,
+      "mesh_sha256": "1fed6bd737046d125b19ee2505d2581dae753434a4a073280ee5e51b333c3233"
+    },
+    {
+      "id": 183,
+      "component_id": 25,
+      "solid_index": 22,
+      "link": "base_link",
+      "mesh": "meshes/part_183.stl",
+      "collision": false,
+      "mesh_sha256": "d85cccef71800a19c2b1c148449eba870ec7eec432cb58632d9963696822aac6"
+    },
+    {
+      "id": 184,
+      "component_id": 25,
+      "solid_index": 23,
+      "link": "base_link",
+      "mesh": "meshes/part_184.stl",
+      "collision": false,
+      "mesh_sha256": "20ad769b3adf8c68de3df8a67d96fe2d8f8df6342275118973c75d79f54d402b"
+    },
+    {
+      "id": 185,
+      "component_id": 26,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_185.stl",
+      "collision": false,
+      "mesh_sha256": "2858c956028b850e36bdf787a4f1b48f61c87221ce3f5760a51cf7e62fa85b87"
+    },
+    {
+      "id": 186,
+      "component_id": 26,
+      "solid_index": 1,
+      "link": "base_link",
+      "mesh": "meshes/part_186.stl",
+      "collision": false,
+      "mesh_sha256": "f5e7805563d120d8606d6c7afaf7c62edb6d555ee8ce71cc32408d8dec66a888"
+    },
+    {
+      "id": 187,
+      "component_id": 26,
+      "solid_index": 2,
+      "link": "base_link",
+      "mesh": "meshes/part_187.stl",
+      "collision": false,
+      "mesh_sha256": "40c2147f59f976a967b0d693c95f5157b465dc7262fedbb820251e9d498e1969"
+    },
+    {
+      "id": 188,
+      "component_id": 27,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_188.stl",
+      "collision": false,
+      "mesh_sha256": "9a240182575859734250ea5275f1173df51bc7dcf0d861b808ba682d8dfab93d"
+    },
+    {
+      "id": 189,
+      "component_id": 27,
+      "solid_index": 1,
+      "link": "base_link",
+      "mesh": "meshes/part_189.stl",
+      "collision": false,
+      "mesh_sha256": "84c01643c799d018a42fd51f43852eee2b07467a544ed429ed5c86790765447b"
+    },
+    {
+      "id": 190,
+      "component_id": 27,
+      "solid_index": 2,
+      "link": "base_link",
+      "mesh": "meshes/part_190.stl",
+      "collision": false,
+      "mesh_sha256": "a66638b8c16b2e503ed1ceee4fdf563fb01b8970265f12d9664de5c9db87fb37"
+    },
+    {
+      "id": 191,
+      "component_id": 27,
+      "solid_index": 3,
+      "link": "base_link",
+      "mesh": "meshes/part_191.stl",
+      "collision": false,
+      "mesh_sha256": "c02e72d854b53a9d3b17639cd5c32f55ac6f5f9b1d944fb33953f74045ac3054"
+    },
+    {
+      "id": 192,
+      "component_id": 27,
+      "solid_index": 4,
+      "link": "base_link",
+      "mesh": "meshes/part_192.stl",
+      "collision": false,
+      "mesh_sha256": "702bcbdfab3cc6025b0049334bf65ea49d7119b72922516f30f10af704dbb03e"
+    },
+    {
+      "id": 193,
+      "component_id": 27,
+      "solid_index": 5,
+      "link": "base_link",
+      "mesh": "meshes/part_193.stl",
+      "collision": false,
+      "mesh_sha256": "2a08bc9f4defb05f4e7af745f23d2d44614aa930dbe6918ca01037b27a517737"
+    },
+    {
+      "id": 194,
+      "component_id": 27,
+      "solid_index": 6,
+      "link": "base_link",
+      "mesh": "meshes/part_194.stl",
+      "collision": false,
+      "mesh_sha256": "8a3072bf264fc49b435df99a59c1c755b5f2b7a3bc1533f47d558998797a876a"
+    },
+    {
+      "id": 195,
+      "component_id": 27,
+      "solid_index": 7,
+      "link": "base_link",
+      "mesh": "meshes/part_195.stl",
+      "collision": false,
+      "mesh_sha256": "7bda4528af9026168ec83a18d1dea37ce9b7822e08d910ae2241c8cf457ccd96"
+    },
+    {
+      "id": 196,
+      "component_id": 27,
+      "solid_index": 8,
+      "link": "base_link",
+      "mesh": "meshes/part_196.stl",
+      "collision": false,
+      "mesh_sha256": "a32126aa7ee732488027cc571369a4e3feebac0615710b4efc9b09d57c9ad4ad"
+    },
+    {
+      "id": 197,
+      "component_id": 27,
+      "solid_index": 9,
+      "link": "base_link",
+      "mesh": "meshes/part_197.stl",
+      "collision": false,
+      "mesh_sha256": "a4c8b539d97a2f34e1063879143fc59e7903594462e5faace29b2629513bdccb"
+    },
+    {
+      "id": 198,
+      "component_id": 27,
+      "solid_index": 10,
+      "link": "base_link",
+      "mesh": "meshes/part_198.stl",
+      "collision": false,
+      "mesh_sha256": "82ab210e136ed13352099e19260302217674ddda0fd3ee3770be99cc123e78b9"
+    },
+    {
+      "id": 199,
+      "component_id": 27,
+      "solid_index": 11,
+      "link": "base_link",
+      "mesh": "meshes/part_199.stl",
+      "collision": false,
+      "mesh_sha256": "dc13ce57b4c199ceec5cc79f737e7ee49f7a1b86d7f63216e9a20b6cc5aab91c"
+    },
+    {
+      "id": 200,
+      "component_id": 27,
+      "solid_index": 12,
+      "link": "base_link",
+      "mesh": "meshes/part_200.stl",
+      "collision": false,
+      "mesh_sha256": "bd4e2d2c6a5b3a4943fb0670007b34b345cab1460f4b8d51f65952d2a1b75b89"
+    },
+    {
+      "id": 201,
+      "component_id": 27,
+      "solid_index": 13,
+      "link": "base_link",
+      "mesh": "meshes/part_201.stl",
+      "collision": false,
+      "mesh_sha256": "f15b9534f4c08dddf2d163f1445958f4af9c7e3e52444dc3f7d192d3b9995652"
+    },
+    {
+      "id": 202,
+      "component_id": 27,
+      "solid_index": 14,
+      "link": "base_link",
+      "mesh": "meshes/part_202.stl",
+      "collision": false,
+      "mesh_sha256": "7e0e29dfaf2c5cedbd83653eb0c46f8dfa3555a1dd3c0c0ddaa39448641617b5"
+    },
+    {
+      "id": 203,
+      "component_id": 27,
+      "solid_index": 15,
+      "link": "base_link",
+      "mesh": "meshes/part_203.stl",
+      "collision": false,
+      "mesh_sha256": "461d7c246c522c2e9b0b1da7730cb531778bee4ff5d32bbc8d107f26be3bc711"
+    },
+    {
+      "id": 204,
+      "component_id": 27,
+      "solid_index": 16,
+      "link": "base_link",
+      "mesh": "meshes/part_204.stl",
+      "collision": false,
+      "mesh_sha256": "4f646e841aaabebe5a4a7f240a8b5ae7ecf9d00bb9b9cb1d2b000104c5119c8b"
+    },
+    {
+      "id": 205,
+      "component_id": 27,
+      "solid_index": 17,
+      "link": "base_link",
+      "mesh": "meshes/part_205.stl",
+      "collision": false,
+      "mesh_sha256": "9cb6106986e0826734de21e693b0e7f35615072bad8e33e79b8ee15bdc80e56b"
+    },
+    {
+      "id": 206,
+      "component_id": 27,
+      "solid_index": 18,
+      "link": "base_link",
+      "mesh": "meshes/part_206.stl",
+      "collision": false,
+      "mesh_sha256": "be65e7197930619825aef89b125b1470c2880f899c871e8a64f461582e76dd72"
+    },
+    {
+      "id": 207,
+      "component_id": 27,
+      "solid_index": 19,
+      "link": "base_link",
+      "mesh": "meshes/part_207.stl",
+      "collision": false,
+      "mesh_sha256": "f157800d6d6497677e8db2be5012173dfc5a2934cf18b59a9f7471dfa724ce5f"
+    },
+    {
+      "id": 208,
+      "component_id": 27,
+      "solid_index": 20,
+      "link": "base_link",
+      "mesh": "meshes/part_208.stl",
+      "collision": false,
+      "mesh_sha256": "314c6761ed5abb90629334b8bb2be805b1d331f8c356df14417992b240f760db"
+    },
+    {
+      "id": 209,
+      "component_id": 27,
+      "solid_index": 21,
+      "link": "base_link",
+      "mesh": "meshes/part_209.stl",
+      "collision": false,
+      "mesh_sha256": "48349653e3aa9cb0bd6eb81a593df5d1dc04ee7f85e0ae4e386dab717b1613c6"
+    },
+    {
+      "id": 210,
+      "component_id": 27,
+      "solid_index": 22,
+      "link": "base_link",
+      "mesh": "meshes/part_210.stl",
+      "collision": false,
+      "mesh_sha256": "9d314104cec906e6973a806cfe42af7701794d52ccc35fb67eec33b9b3036a10"
+    },
+    {
+      "id": 211,
+      "component_id": 27,
+      "solid_index": 23,
+      "link": "base_link",
+      "mesh": "meshes/part_211.stl",
+      "collision": false,
+      "mesh_sha256": "73bc03a1234cd9ab01a3d22000d10f2f69da2f673d3196fe2d320356b90afd6c"
+    },
+    {
+      "id": 212,
+      "component_id": 27,
+      "solid_index": 24,
+      "link": "base_link",
+      "mesh": "meshes/part_212.stl",
+      "collision": false,
+      "mesh_sha256": "a61856ef24bceaef4bc8e4e0ff001ee5bd59905ca60aec403668820b3322d60c"
+    },
+    {
+      "id": 213,
+      "component_id": 27,
+      "solid_index": 25,
+      "link": "base_link",
+      "mesh": "meshes/part_213.stl",
+      "collision": false,
+      "mesh_sha256": "3ca3b43b0c5d503333b1981c558167657da2599afd00567822a8a5795b899816"
+    },
+    {
+      "id": 214,
+      "component_id": 27,
+      "solid_index": 26,
+      "link": "base_link",
+      "mesh": "meshes/part_214.stl",
+      "collision": false,
+      "mesh_sha256": "63172dbdc2f7ee0a82a310b5017efb56bdc30c92977a1978891adbc3e67f4ee0"
+    },
+    {
+      "id": 215,
+      "component_id": 27,
+      "solid_index": 27,
+      "link": "base_link",
+      "mesh": "meshes/part_215.stl",
+      "collision": false,
+      "mesh_sha256": "8defc531313f6d396219bcc42509f2f2ae792d87777a776afdbfdef51cbcdab7"
+    },
+    {
+      "id": 216,
+      "component_id": 27,
+      "solid_index": 28,
+      "link": "base_link",
+      "mesh": "meshes/part_216.stl",
+      "collision": false,
+      "mesh_sha256": "874e7d2197398c76662e70f1e940b65fc00abe07e7e26c1f32a68c6de0571089"
+    },
+    {
+      "id": 217,
+      "component_id": 27,
+      "solid_index": 29,
+      "link": "base_link",
+      "mesh": "meshes/part_217.stl",
+      "collision": false,
+      "mesh_sha256": "1fae5bc8000882d469a584f6d115ca4ed900ed51651e2257d61c5944f132fac6"
+    },
+    {
+      "id": 218,
+      "component_id": 28,
+      "solid_index": 0,
+      "link": "base_link",
+      "mesh": "meshes/part_218.stl",
+      "collision": false,
+      "mesh_sha256": "a397e7ba21914263cd2ae420c7ceb3ff8a8dc1cabeb66585192aca4b076ad888"
+    },
+    {
+      "id": 219,
+      "component_id": 29,
+      "solid_index": 0,
+      "link": "link1",
+      "mesh": "meshes/part_219.stl",
+      "collision": false,
+      "mesh_sha256": "6c5ff93bdb8977dd400c25d433d4f4b2a687d4648a8cb85d9ace6efc9fd8b597"
+    }
+  ],
+  "assumptions": [
+    "Standard manufacturer handle and finger rings, confirmed by Gavin.",
+    "All 219 solids and one terminal-block surface occurrence are retained exactly once.",
+    "J5's shaft is attached to link4; its case and downstream wrist are attached to link5.",
+    "Equal opposing ring-gear rotation is a kinematic coupling; backlash and compliance are not modeled.",
+    "Left ring bore is offset 0.15 mm laterally from its servo shaft in the supplied CAD; assembled geometry is preserved, joint axis follows servo shaft.",
+    "CAD axis signs follow the earlier reference convention; they are not measured servo signs.",
+    "Preview limits use nominal manufacturer travel; J2/J3 interval placement assumes folded CAD zero. These are not hardware soft limits.",
+    "Effort=1 Nm and velocity=1 rad/s are required URDF preview metadata, not identified actuator ratings.",
+    "No inertial properties are supplied: LD/HD masses and inertias need identification before dynamics or gravity compensation.",
+    "Collision elements use selected CAD surface meshes; physics engines may convexify them. No contact-dynamics validation is claimed.",
+    "Cables and the HD button assembly are absent from this STEP and are not invented."
+  ]
+}

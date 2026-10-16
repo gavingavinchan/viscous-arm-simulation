@@ -16,3 +16,7 @@ __pycache__/
 /model/meshes/part_045.stl
 /model/meshes/collision_044.stl
 /model/meshes/collision_045.stl
+
+# Regenerable leader inspection meshes and renders
+/leader/inspection/*.stl
+/leader/inspection/*.png

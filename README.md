@@ -12,6 +12,7 @@ See [CAD to URDF: repeatable workflow for another robot arm](docs/CAD_TO_URDF_WO
 
 - Browser explorer: start `python viewer/server.py`, then open http://127.0.0.1:8766/viewer/
 - URDF: `model/viscous_arm.urdf`
+- Star Arm 102-HD leader: [model and rebuild notes](leader/README.md), [URDF](leader/model/star_arm_102_hd.urdf); preview at `/viewer/?model=leader`
 - MuJoCo: `model/viscous_arm.xml`
 - Complete assumptions, per-part ownership and physical properties: `model/model_manifest.json`
 - Editable mass/material assumptions: `materials.json`

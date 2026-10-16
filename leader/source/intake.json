@@ -1,0 +1,48 @@
+{
+  "repository": "https://github.com/servodevelop/Star-Arm-102",
+  "revision": "b6eae72210082778976643c636655502ebb17417",
+  "files": [
+    {
+      "file": "hd_assembly.STEP",
+      "upstream_path": "hardware/102-hd/step/assembly/star-arm-102-hd-assembly-export-2026-10-12.STEP",
+      "sha256": "4cfea3d4229b8158b7abf9f9507ba5e096fced5b426852e1cb99b0360045c6ad",
+      "bytes": 29089340
+    },
+    {
+      "file": "ld_hd.urdf",
+      "upstream_path": "hardware/102-hd/robot-description/stararm102_ld_hd_description/urdf/stararm102_ld_hd_description.urdf",
+      "sha256": "20eafa2e943698ba546af93f3d879a5670a3679750aeec84bf6aac74bea681ca",
+      "bytes": 11333
+    },
+    {
+      "file": "ros2.urdf",
+      "upstream_path": "ros2-humble/src/stararm102_description/urdf/star-arm-102.urdf",
+      "sha256": "dbcb9c50336292addf2e89f0cc7e1b899aae107e9b447c20f458e6e7e813e5ff",
+      "bytes": 12608
+    },
+    {
+      "file": "description_README.md",
+      "upstream_path": "hardware/102-hd/robot-description/README.md",
+      "sha256": "9f798b28d5007c7da3ea2e1df5a6186a65bafce55748e50402cdf5837264f13b",
+      "bytes": 1204
+    },
+    {
+      "file": "hardware_README.md",
+      "upstream_path": "hardware/102-hd/README.md",
+      "sha256": "066c74f12fcf6d5944c97dee06ebc475793d0f6e4242be613a54af46f4e8bd45",
+      "bytes": 10748
+    },
+    {
+      "file": "LICENSE-scope.md",
+      "upstream_path": "LICENSE.md",
+      "sha256": "23317ab0d59a4fb594d76e72faff7835a369933131c0fe070950a8267384134a",
+      "bytes": 1076
+    },
+    {
+      "file": "series_README.md",
+      "upstream_path": "README.md",
+      "sha256": "0e34a4b7c7f07b4407cf60ea538bc0b092394893874f1767288c90351f0383ab",
+      "bytes": 14306
+    }
+  ]
+}
