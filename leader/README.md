@@ -1,5 +1,8 @@
 # Star Arm 102-HD leader model
 
+Continuing the physical mapping work from another session or the MacBook? Read
+[the session handoff](HANDOFF.md) first.
+
 CAD-derived replacement for the manufacturer's shared LD/HD URDF, for Gavin's
 standard purple 102-HD with its original handle and finger rings. The standard
 mechanical configuration was confirmed by Gavin on 15 October 2026.

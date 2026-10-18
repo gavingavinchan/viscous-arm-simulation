@@ -15,7 +15,7 @@ def main():
     assert report["manifest_sha256"] == hashlib.sha256(manifest_path.read_bytes()).hexdigest()
     for part in json.loads(manifest_path.read_text())["parts"]:
         assert part["mesh_sha256"] == hashlib.sha256((ROOT / "model" / part["mesh"]).read_bytes()).hexdigest()
-    paths = [ROOT / "README.md", ROOT / "MAPPING.md", ROOT / "inspection/validation_report.json",
+    paths = [ROOT / "README.md", ROOT / "HANDOFF.md", ROOT / "MAPPING.md", ROOT / "inspection/validation_report.json",
              ROOT / "source/intake.json", ROOT / "source/LICENSE-scope.md"]
     mapping_report_path = ROOT / "inspection/joint_mapping_validation.json"
     mapping_report = json.loads(mapping_report_path.read_text())
