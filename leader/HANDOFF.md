@@ -1,5 +1,16 @@
 # Continue here: Star leader → Viscous physical mapping checks
 
+Mac continuation on 18 October: see [URDF comparison, physical capture and Mac
+posture trial](POSTURE_COMPARISON.md), including its final section. The CAD
+models now align corresponding link directions/axes with derived CAD offsets.
+The Mac paired MIT-feedback capture succeeded without torque enable. Gavin
+subsequently clarified that obstructed starting poses should gradually converge
+to fixed matching targets; do not preserve starting mismatch with relative
+control. A 1:1 posture trial with non-expiring bounded warm-up is loaded in the
+Mac GUI, awaiting Gavin's powered motion feedback. Physical fixed encoder
+offsets remain provisional; do not equate CAD offsets with encoder offsets.
+Saved profiles/motor zeros and the Linux Lab deployment remain unchanged.
+
 Updated 18 October 2026. This is the handoff requested by Gavin for a new agent
 session, including a session running on his MacBook.
 
