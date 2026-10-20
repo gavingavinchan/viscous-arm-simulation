@@ -1,0 +1,41 @@
+{
+  "scope": "URDF geometry only; no encoder conversion, motor commands, collision or hardware-limit validation",
+  "base_alignment": "CAD base X/Y directions aligned; no world-position or tool-pose matching",
+  "roll_datum": "Model body roll zero retained; handle and jaw tool frames are different",
+  "physically_verified": false,
+  "poses_checked": 102,
+  "formula": "follower_CAD_deg = direction * leader_CAD_deg + offset_deg",
+  "rules": {
+    "shoulder_pan": {
+      "direction": 1.0,
+      "offset_deg": 0.0
+    },
+    "shoulder_lift": {
+      "direction": -1.0,
+      "offset_deg": -0.94216312815902
+    },
+    "elbow_flex": {
+      "direction": -1.0,
+      "offset_deg": -9.565702639175095
+    },
+    "wrist_flex": {
+      "direction": -1.0,
+      "offset_deg": 19.759766814462253
+    },
+    "wrist_yaw": {
+      "direction": 1.0,
+      "offset_deg": 0.0
+    },
+    "wrist_roll": {
+      "direction": 1.0,
+      "offset_deg": 0.0
+    }
+  },
+  "max_axis_direction_error_deg": 2.419413327909926e-12,
+  "max_upper_arm_direction_error_deg": 4.52659532406492e-13,
+  "max_forearm_direction_error_deg": 4.2759242761078273e-13,
+  "urdf_sha256": {
+    "leader/model/star_arm_102_hd.urdf": "d82ddd2d5b9967f419c33ba0a1ecbc5c852f2dcf01dbb2ffc2219336d40c8bf5",
+    "model/viscous_arm.urdf": "c1e6c3876a67ce2a2e229bdd8a80960e68f085e08833d699536b1feddefb6ff7"
+  }
+}
