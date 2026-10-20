@@ -1,0 +1,730 @@
+{
+  "record_type": "paired_encoder_capture",
+  "protocol": "mit-feedback",
+  "created_at": "2026-10-18T17:07:16.415527-05:00",
+  "unit": "viscous_waterproof_01",
+  "pose_description": "First roughly matched physical reference, repeated after an unreliable first wrist-yaw read. Gavin confirms supported arms and Teleop stopped. No exact-angle accuracy assumed.",
+  "physically_matched": false,
+  "source": "Fresh leader raw read_angle; follower native parameters or explicit non-enabling zero-gain MIT feedback requests; sequential, not simultaneous",
+  "frame_caution": "Raw follower values retain their reported turn branch. Native parameters are not automatically equated to MIT coordinates. No automatic fitting or branch selection.",
+  "leader_port": "/dev/cu.wchusbserial10",
+  "follower_port": "/dev/cu.usbmodem2050389538461",
+  "motor_configuration_changed": false,
+  "samples": [
+    {
+      "started_at": 1792361236.541787,
+      "leader": {
+        "shoulder_pan": {
+          "raw_deg": -2.5,
+          "received_at": 1792361236.543076,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -2.5,
+              "reliable": true,
+              "received_at": 1792361236.543073
+            }
+          ]
+        },
+        "shoulder_lift": {
+          "raw_deg": 90.69999694824219,
+          "received_at": 1792361236.5553339,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": 90.69999694824219,
+              "reliable": true,
+              "received_at": 1792361236.5553322
+            }
+          ]
+        },
+        "elbow_flex": {
+          "raw_deg": -8.800000190734863,
+          "received_at": 1792361236.5690188,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -8.800000190734863,
+              "reliable": true,
+              "received_at": 1792361236.5690181
+            }
+          ]
+        },
+        "wrist_flex": {
+          "raw_deg": -67.69999694824219,
+          "received_at": 1792361236.582767,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -67.69999694824219,
+              "reliable": true,
+              "received_at": 1792361236.582766
+            }
+          ]
+        },
+        "wrist_yaw": {
+          "raw_deg": 3.5999999046325684,
+          "received_at": 1792361236.596542,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": 3.5999999046325684,
+              "reliable": true,
+              "received_at": 1792361236.59654
+            }
+          ]
+        },
+        "wrist_roll": {
+          "raw_deg": 5.400000095367432,
+          "received_at": 1792361236.6104052,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": 5.400000095367432,
+              "reliable": true,
+              "received_at": 1792361236.610404
+            }
+          ]
+        },
+        "gripper": {
+          "raw_deg": -0.8999999761581421,
+          "received_at": 1792361236.624203,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -0.8999999761581421,
+              "reliable": true,
+              "received_at": 1792361236.624201
+            }
+          ]
+        }
+      },
+      "follower": {
+        "shoulder_pan": {
+          "mit_feedback": {
+            "radians": 0.09762920576791068,
+            "degrees": 5.593741447715555,
+            "velocity_rad_s": -0.0402930402930437,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.554048
+          }
+        },
+        "shoulder_lift": {
+          "mit_feedback": {
+            "radians": 4.592792401007095,
+            "degrees": 263.1476207574625,
+            "velocity_rad_s": -0.0402930402930437,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.567771
+          }
+        },
+        "elbow_flex": {
+          "mit_feedback": {
+            "radians": 0.07921583886472838,
+            "degrees": 4.538733237537335,
+            "velocity_rad_s": -0.0402930402930437,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.581496
+          }
+        },
+        "wrist_flex": {
+          "mit_feedback": {
+            "radians": 7.62562737468528,
+            "degrees": 436.9162647088926,
+            "velocity_rad_s": -0.0402930402930437,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.5952482
+          }
+        },
+        "wrist_yaw": {
+          "mit_feedback": {
+            "radians": -0.003260700389105864,
+            "degrees": -0.1868243705524313,
+            "velocity_rad_s": -0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.6090481
+          }
+        },
+        "wrist_roll": {
+          "mit_feedback": {
+            "radians": -0.008631265735866478,
+            "degrees": -0.49453509852102795,
+            "velocity_rad_s": -0.0402930402930437,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.622925
+          }
+        },
+        "gripper": {
+          "mit_feedback": {
+            "radians": 6.21355230029755,
+            "degrees": 356.01032259085395,
+            "velocity_rad_s": 0.0402930402930437,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.636699
+          }
+        }
+      },
+      "finished_at": 1792361236.636704
+    },
+    {
+      "started_at": 1792361236.639586,
+      "leader": {
+        "shoulder_pan": {
+          "raw_deg": -2.5,
+          "received_at": 1792361236.640961,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -2.5,
+              "reliable": true,
+              "received_at": 1792361236.640956
+            }
+          ]
+        },
+        "shoulder_lift": {
+          "raw_deg": 90.69999694824219,
+          "received_at": 1792361236.6536598,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": 90.69999694824219,
+              "reliable": true,
+              "received_at": 1792361236.653656
+            }
+          ]
+        },
+        "elbow_flex": {
+          "raw_deg": -8.800000190734863,
+          "received_at": 1792361236.6674712,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -8.800000190734863,
+              "reliable": true,
+              "received_at": 1792361236.667466
+            }
+          ]
+        },
+        "wrist_flex": {
+          "raw_deg": -67.69999694824219,
+          "received_at": 1792361236.6814349,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -67.69999694824219,
+              "reliable": true,
+              "received_at": 1792361236.681431
+            }
+          ]
+        },
+        "wrist_yaw": {
+          "raw_deg": 3.5999999046325684,
+          "received_at": 1792361236.695436,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": 3.5999999046325684,
+              "reliable": true,
+              "received_at": 1792361236.6954272
+            }
+          ]
+        },
+        "wrist_roll": {
+          "raw_deg": 5.400000095367432,
+          "received_at": 1792361236.707242,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": 5.400000095367432,
+              "reliable": true,
+              "received_at": 1792361236.707236
+            }
+          ]
+        },
+        "gripper": {
+          "raw_deg": -0.8999999761581421,
+          "received_at": 1792361236.721241,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -0.8999999761581421,
+              "reliable": true,
+              "received_at": 1792361236.721235
+            }
+          ]
+        }
+      },
+      "follower": {
+        "shoulder_pan": {
+          "mit_feedback": {
+            "radians": 0.09762920576791068,
+            "degrees": 5.593741447715555,
+            "velocity_rad_s": 0.07252747252747582,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.6523058
+          }
+        },
+        "shoulder_lift": {
+          "mit_feedback": {
+            "radians": 4.59317601281758,
+            "degrees": 263.16960009517464,
+            "velocity_rad_s": -0.008058608058611583,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.666102
+          }
+        },
+        "elbow_flex": {
+          "mit_feedback": {
+            "radians": 0.07921583886472838,
+            "degrees": 4.538733237537335,
+            "velocity_rad_s": -0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.680058
+          }
+        },
+        "wrist_flex": {
+          "mit_feedback": {
+            "radians": 7.626010986495768,
+            "degrees": 436.9382440466049,
+            "velocity_rad_s": -0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.693973
+          }
+        },
+        "wrist_yaw": {
+          "mit_feedback": {
+            "radians": -0.0036443121995883843,
+            "degrees": -0.20880370826445213,
+            "velocity_rad_s": -0.08864468864469188,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.7058141
+          }
+        },
+        "wrist_roll": {
+          "mit_feedback": {
+            "radians": -0.009014877546348998,
+            "degrees": -0.5165144362330488,
+            "velocity_rad_s": 0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.719751
+          }
+        },
+        "gripper": {
+          "mit_feedback": {
+            "radians": 6.213168688487066,
+            "degrees": 355.9883432531418,
+            "velocity_rad_s": -0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.733541
+          }
+        }
+      },
+      "finished_at": 1792361236.733548
+    },
+    {
+      "started_at": 1792361236.735865,
+      "leader": {
+        "shoulder_pan": {
+          "raw_deg": -2.5,
+          "received_at": 1792361236.737365,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -2.5,
+              "reliable": true,
+              "received_at": 1792361236.737361
+            }
+          ]
+        },
+        "shoulder_lift": {
+          "raw_deg": 90.69999694824219,
+          "received_at": 1792361236.7507598,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": 90.69999694824219,
+              "reliable": true,
+              "received_at": 1792361236.750756
+            }
+          ]
+        },
+        "elbow_flex": {
+          "raw_deg": -8.800000190734863,
+          "received_at": 1792361236.7632692,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -8.800000190734863,
+              "reliable": true,
+              "received_at": 1792361236.763266
+            }
+          ]
+        },
+        "wrist_flex": {
+          "raw_deg": -67.69999694824219,
+          "received_at": 1792361236.777376,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -67.69999694824219,
+              "reliable": true,
+              "received_at": 1792361236.777374
+            }
+          ]
+        },
+        "wrist_yaw": {
+          "raw_deg": 3.5999999046325684,
+          "received_at": 1792361236.7912,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": 3.5999999046325684,
+              "reliable": true,
+              "received_at": 1792361236.791198
+            }
+          ]
+        },
+        "wrist_roll": {
+          "raw_deg": 5.400000095367432,
+          "received_at": 1792361236.805074,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": 5.400000095367432,
+              "reliable": true,
+              "received_at": 1792361236.805071
+            }
+          ]
+        },
+        "gripper": {
+          "raw_deg": -0.8999999761581421,
+          "received_at": 1792361236.8189702,
+          "reliable": true,
+          "attempts": [
+            {
+              "raw_deg": -0.8999999761581421,
+              "reliable": true,
+              "received_at": 1792361236.818968
+            }
+          ]
+        }
+      },
+      "follower": {
+        "shoulder_pan": {
+          "mit_feedback": {
+            "radians": 0.09762920576791068,
+            "degrees": 5.593741447715555,
+            "velocity_rad_s": -0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.749396
+          }
+        },
+        "shoulder_lift": {
+          "mit_feedback": {
+            "radians": 4.59317601281758,
+            "degrees": 263.16960009517464,
+            "velocity_rad_s": -0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.761863
+          }
+        },
+        "elbow_flex": {
+          "mit_feedback": {
+            "radians": 0.07921583886472838,
+            "degrees": 4.538733237537335,
+            "velocity_rad_s": 0.008058608058611583,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.7759502
+          }
+        },
+        "wrist_flex": {
+          "mit_feedback": {
+            "radians": 7.626010986495768,
+            "degrees": 436.9382440466049,
+            "velocity_rad_s": 0.07252747252747582,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.789896
+          }
+        },
+        "wrist_yaw": {
+          "mit_feedback": {
+            "radians": -0.0036443121995883843,
+            "degrees": -0.20880370826445213,
+            "velocity_rad_s": -0.08864468864469188,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.803744
+          }
+        },
+        "wrist_roll": {
+          "mit_feedback": {
+            "radians": -0.008631265735866478,
+            "degrees": -0.49453509852102795,
+            "velocity_rad_s": -0.0402930402930437,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.8176498
+          }
+        },
+        "gripper": {
+          "mit_feedback": {
+            "radians": 6.213168688487066,
+            "degrees": 355.9883432531418,
+            "velocity_rad_s": 0.008058608058611583,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361236.830567
+          }
+        }
+      },
+      "finished_at": 1792361236.8305762
+    }
+  ],
+  "frames": [
+    {
+      "direction": "tx",
+      "at": 1792361236.5431108,
+      "slcan": "t00187FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.554028,
+      "slcan": "t0FD80180FE7FD7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.555358,
+      "slcan": "t00287FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.567758,
+      "slcan": "t0FD802AEC47FD7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.569033,
+      "slcan": "t00387FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.581486,
+      "slcan": "t0FD80380CE7FD7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.582784,
+      "slcan": "t00487FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.595231,
+      "slcan": "t0FD804CDA67FD7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.5965629,
+      "slcan": "t00587FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.609024,
+      "slcan": "t0FD8057FF77FE7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.610434,
+      "slcan": "t00687FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.622907,
+      "slcan": "t0FD8067FE97FD7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.6242309,
+      "slcan": "t00787FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.6366851,
+      "slcan": "t0FD807BF458027FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.6410081,
+      "slcan": "t00187FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.652283,
+      "slcan": "t0FD80180FE8047FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.653704,
+      "slcan": "t00287FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.666079,
+      "slcan": "t0FD802AEC57FF7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.667511,
+      "slcan": "t00387FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.680035,
+      "slcan": "t0FD80380CE7FE7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.681472,
+      "slcan": "t00487FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.6939478,
+      "slcan": "t0FD804CDA77FE7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.695503,
+      "slcan": "t00587FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.705785,
+      "slcan": "t0FD8057FF67FA7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.7072902,
+      "slcan": "t00687FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.719729,
+      "slcan": "t0FD8067FE88017FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.721288,
+      "slcan": "t00787FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.7335181,
+      "slcan": "t0FD807BF447FE7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.737567,
+      "slcan": "t00187FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.749373,
+      "slcan": "t0FD80180FE7FE7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.7508008,
+      "slcan": "t00287FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.7618198,
+      "slcan": "t0FD802AEC57FE7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.7633011,
+      "slcan": "t00387FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.775876,
+      "slcan": "t0FD80380CE8007FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.777407,
+      "slcan": "t00487FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.78988,
+      "slcan": "t0FD804CDA78047FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.791235,
+      "slcan": "t00587FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.803731,
+      "slcan": "t0FD8057FF67FA7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.8051121,
+      "slcan": "t00687FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.81763,
+      "slcan": "t0FD8067FE97FD7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361236.8189929,
+      "slcan": "t00787FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361236.830543,
+      "slcan": "t0FD807BF448007FF00D2"
+    }
+  ],
+  "complete": true,
+  "source_sha256": {
+    "/Users/gavin/.makermods/makermodslab-viscous/robots/viscous_waterproof_01.json": "2edabba18fa5989a4ffa8ba4e157e55431ddf8d87e74a6f5ec845269a61eaccf",
+    "/Users/gavin/.makermods/makermodslab-viscous/viscous_profiles/viscous_waterproof_01.json": "cfc984192e224b6a591b5c66cdd24734a4003522d3de7105ff2dcc80aa1dbdde",
+    "/Users/gavin/.cache/huggingface/lerobot/calibration/robots/viscous_follower/viscous_waterproof_01.json": "d79074b685bb7bbdad6044a2ca990468bf043690ea3aca7544853deb5b040424",
+    "/Users/gavin/.cache/huggingface/lerobot/calibration/teleoperators/rebot_102_leader/star_viscous_waterproof_01.json": "5ffb5127d517b05e603692b237bf35b36e44c0fcb3ad934ca0709e2113473449"
+  },
+  "leader_median_raw_deg": {
+    "shoulder_pan": -2.5,
+    "shoulder_lift": 90.69999694824219,
+    "elbow_flex": -8.800000190734863,
+    "wrist_flex": -67.69999694824219,
+    "wrist_yaw": 3.5999999046325684,
+    "wrist_roll": 5.400000095367432,
+    "gripper": -0.8999999761581421
+  },
+  "finished_at": "2026-10-18T17:07:16.832270-05:00"
+}

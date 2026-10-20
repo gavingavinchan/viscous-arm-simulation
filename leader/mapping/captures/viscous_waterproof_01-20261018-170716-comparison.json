@@ -1,0 +1,93 @@
+{
+  "capture_file": "viscous_waterproof_01-20261018-170716.json",
+  "physical_reference_accuracy": "rough user-positioned correspondence; numerical mismatch includes manual positioning error",
+  "live_profile_source": "leader/mapping/mac_waterproof_20261018.json",
+  "follower_turn_rule": "same zero/one-turn correction as installed follower with 30-degree wrap grace; all branches unique in this capture",
+  "rows": {
+    "shoulder_pan": {
+      "leader_raw_deg": -2.5,
+      "follower_motor_raw_deg": 5.593741447715555,
+      "follower_commissioned_deg": 5.593741447715555,
+      "current_mapping_requested_deg": -3.6152475,
+      "current_follower_target_deg": -3.6152475,
+      "target_minus_measured_deg": -9.208988947715556,
+      "leader_span_deg": 0.0,
+      "follower_span_deg": 0.0,
+      "candidate_unit_gain_sign": 1,
+      "candidate_unit_gain_offset_deg": 8.093741447715555
+    },
+    "shoulder_lift": {
+      "leader_raw_deg": 90.69999694824219,
+      "follower_motor_raw_deg": 263.16960009517464,
+      "follower_commissioned_deg": -96.83039990482536,
+      "current_mapping_requested_deg": -89.04227310401916,
+      "current_follower_target_deg": -89.04227310401916,
+      "target_minus_measured_deg": 7.788126800806197,
+      "leader_span_deg": 0.0,
+      "follower_span_deg": 0.021979337712139113,
+      "candidate_unit_gain_sign": -1,
+      "candidate_unit_gain_offset_deg": -6.130402956583168
+    },
+    "elbow_flex": {
+      "leader_raw_deg": -8.800000190734863,
+      "follower_motor_raw_deg": 4.538733237537335,
+      "follower_commissioned_deg": 4.538733237537335,
+      "current_mapping_requested_deg": 8.026312973965645,
+      "current_follower_target_deg": 8.026312973965645,
+      "target_minus_measured_deg": 3.4875797364283097,
+      "leader_span_deg": 0.0,
+      "follower_span_deg": 0.0,
+      "candidate_unit_gain_sign": -1,
+      "candidate_unit_gain_offset_deg": -4.261266953197528
+    },
+    "wrist_flex": {
+      "leader_raw_deg": -67.69999694824219,
+      "follower_motor_raw_deg": 436.9382440466049,
+      "follower_commissioned_deg": 76.9382440466049,
+      "current_mapping_requested_deg": 70.4128035259552,
+      "current_follower_target_deg": 70.4128035259552,
+      "target_minus_measured_deg": -6.5254405206496955,
+      "leader_span_deg": 0.0,
+      "follower_span_deg": 0.021979337712309643,
+      "candidate_unit_gain_sign": -1,
+      "candidate_unit_gain_offset_deg": 9.238247098362706
+    },
+    "wrist_yaw": {
+      "leader_raw_deg": 3.5999999046325684,
+      "follower_motor_raw_deg": -0.20880370826445213,
+      "follower_commissioned_deg": -0.20880370826445213,
+      "current_mapping_requested_deg": -4.487111881132126,
+      "current_follower_target_deg": -4.487111881132126,
+      "target_minus_measured_deg": -4.278308172867674,
+      "leader_span_deg": 0.0,
+      "follower_span_deg": 0.02197933771202082,
+      "candidate_unit_gain_sign": -1,
+      "candidate_unit_gain_offset_deg": 3.3911961963681163
+    },
+    "wrist_roll": {
+      "leader_raw_deg": 5.400000095367432,
+      "follower_motor_raw_deg": -0.49453509852102795,
+      "follower_commissioned_deg": -0.49453509852102795,
+      "current_mapping_requested_deg": 5.106731490188121,
+      "current_follower_target_deg": 5.106731490188121,
+      "target_minus_measured_deg": 5.601266588709149,
+      "leader_span_deg": 0.0,
+      "follower_span_deg": 0.021979337712020874,
+      "candidate_unit_gain_sign": 1,
+      "candidate_unit_gain_offset_deg": -5.894535193888459
+    },
+    "gripper": {
+      "leader_raw_deg": -0.8999999761581421,
+      "follower_motor_raw_deg": 355.9883432531418,
+      "follower_commissioned_deg": -4.011656746858193,
+      "current_mapping_requested_deg": 1.5321185594127178,
+      "current_follower_target_deg": -0.03437746770784939,
+      "target_minus_measured_deg": 3.977279279150344,
+      "leader_span_deg": 0.0,
+      "follower_span_deg": 0.021979337712139113,
+      "candidate_unit_gain_sign": -1,
+      "candidate_unit_gain_offset_deg": -4.9116567230163355
+    }
+  },
+  "live_configuration_modified": false
+}

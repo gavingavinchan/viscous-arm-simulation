@@ -1,0 +1,40 @@
+{
+  "record_type": "read_only_paired_parameter_capture",
+  "created_at": "2026-10-18T17:04:15.437560-05:00",
+  "unit": "viscous_waterproof_01",
+  "pose_description": "Transport check only. User has not asserted that the current arms are matched; do not fit reference offsets from this sample.",
+  "physically_matched": false,
+  "source": "Fresh leader raw read_angle and follower native read parameters; sequential, not simultaneous",
+  "frame_caution": "Follower native parameters are preserved raw. Equivalence to commissioned MIT feedback has not been established by this tool. No automatic fitting or branch selection.",
+  "leader_port": "/dev/cu.wchusbserial10",
+  "follower_port": "/dev/cu.usbmodem2050389538461",
+  "motor_configuration_changed": false,
+  "samples": [
+    {
+      "started_at": 1792361055.5734808,
+      "leader": {
+        "shoulder_pan": {
+          "raw_deg": -4.300000190734863,
+          "received_at": 1792361055.574741
+        }
+      },
+      "follower": {}
+    }
+  ],
+  "frames": [
+    {
+      "direction": "tx",
+      "at": 1792361055.574754,
+      "slcan": "T1100FD0181630000000000000"
+    }
+  ],
+  "complete": false,
+  "source_sha256": {
+    "/Users/gavin/.makermods/makermodslab-viscous/robots/viscous_waterproof_01.json": "2edabba18fa5989a4ffa8ba4e157e55431ddf8d87e74a6f5ec845269a61eaccf",
+    "/Users/gavin/.makermods/makermodslab-viscous/viscous_profiles/viscous_waterproof_01.json": "cfc984192e224b6a591b5c66cdd24734a4003522d3de7105ff2dcc80aa1dbdde",
+    "/Users/gavin/.cache/huggingface/lerobot/calibration/robots/viscous_follower/viscous_waterproof_01.json": "d79074b685bb7bbdad6044a2ca990468bf043690ea3aca7544853deb5b040424",
+    "/Users/gavin/.cache/huggingface/lerobot/calibration/teleoperators/rebot_102_leader/star_viscous_waterproof_01.json": "5ffb5127d517b05e603692b237bf35b36e44c0fcb3ad934ca0709e2113473449"
+  },
+  "error": "No native position-parameter reply from motor 1, 0x3016. No torque or mode-changing fallback was attempted.",
+  "finished_at": "2026-10-18T17:04:15.930147-05:00"
+}

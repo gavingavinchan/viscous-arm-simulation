@@ -1,0 +1,139 @@
+{
+  "captured_at": "2026-10-18T17:01:12.282695-05:00",
+  "source_path": "/Users/gavin/.makermods/makermodslab-viscous/viscous_profiles/viscous_waterproof_01.json",
+  "source_sha256": "cfc984192e224b6a591b5c66cdd24734a4003522d3de7105ff2dcc80aa1dbdde",
+  "profile": {
+    "follower": {
+      "joint_limits": {
+        "shoulder_pan": [
+          -126.85285584196426,
+          187.52908634631845
+        ],
+        "shoulder_lift": [
+          -199.44660848503955,
+          -2.807493196141034
+        ],
+        "elbow_flex": [
+          2.8647889756541165,
+          250.03878179509124
+        ],
+        "wrist_flex": [
+          -122.26919348091766,
+          82.10485204224697
+        ],
+        "wrist_yaw": [
+          -86.05826082864965,
+          87.31876797793745
+        ],
+        "wrist_roll": [
+          -154.98508358288768,
+          150.00035076524952
+        ],
+        "gripper": [
+          -115.10722104178238,
+          -0.03437746770784939
+        ]
+      }
+    },
+    "leader": {
+      "joint_directions": {
+        "shoulder_pan": 1.446099,
+        "shoulder_lift": -0.981723,
+        "elbow_flex": -0.912081,
+        "wrist_flex": -1.040071,
+        "wrist_yaw": -1.24642,
+        "wrist_roll": 0.945691,
+        "gripper": -1.702354
+      },
+      "joint_ranges": {
+        "shoulder_pan": [
+          -126,
+          187
+        ],
+        "shoulder_lift": [
+          -199,
+          -3
+        ],
+        "elbow_flex": [
+          3,
+          250
+        ],
+        "wrist_flex": [
+          -122,
+          82
+        ],
+        "wrist_yaw": [
+          -86,
+          87
+        ],
+        "wrist_roll": [
+          -154,
+          150
+        ],
+        "gripper": [
+          -115,
+          0
+        ]
+      },
+      "joint_offsets": {
+        "shoulder_pan": 0.0,
+        "shoulder_lift": 0.0,
+        "elbow_flex": 0.0,
+        "wrist_flex": 0.0,
+        "wrist_yaw": 0.0,
+        "wrist_roll": 0.0,
+        "gripper": 0.0
+      },
+      "max_start_offset_deg": 30.0
+    }
+  },
+  "aquarium_neutral_reference": {
+    "record_type": "aquarium_confirmed_neutral_reference",
+    "recorded_at": "2026-10-18T16:42:37.397722-05:00",
+    "robot": "viscous_waterproof_01",
+    "source_capture": "aquarium-neutral-candidate-20261018-163916.json",
+    "source_j1_rezero": "j1-rezero-2026-10-11.json",
+    "status": "confirmed reference; not applied to hardware or runtime settings",
+    "applied": false,
+    "hardware_commands_sent": false,
+    "calibration_limits_profiles_modified": false,
+    "coordinate_frame": "current follower coordinates after the 2026-10-11 ROV J1 motor re-zero",
+    "instructions": {
+      "shoulder_lift": "Keep captured J2",
+      "elbow_flex": "Keep captured J3; current lower soft limit is +2.8647889756541165 deg and remains unchanged",
+      "wrist_flex": "Keep captured J4",
+      "wrist_yaw": "Use zero",
+      "wrist_roll": "Use zero",
+      "gripper": "Use existing commissioned closed endpoint",
+      "shoulder_pan": "Confirmed: -90 deg in original commissioning frame equals +4.48 deg in the current post-ROV-rezero frame."
+    },
+    "j1_conversion": {
+      "rov_neutral_original_frame_deg": -94.48,
+      "aquarium_neutral_current_frame_deg": 4.480000000000004,
+      "formula": "current_frame = original_frame + 94.48",
+      "aquarium_neutral_original_frame_deg": -90.0
+    },
+    "scope_note": "Reference pose only. Does not set motor flash zero, move the arm, change leader mapping or apply a startup/return pose.",
+    "confirmed_at": "2026-10-18T16:44:08.010375-05:00",
+    "source_draft": "aquarium-requested-neutral-20261018.json",
+    "user_confirmation": "Gavin confirmed J1 corrects the prior 94.48-degree ROV orientation to exactly 90 degrees in the same direction, gripper closed, and all other proposed joint values accepted.",
+    "unresolved_runtime_constraints": [
+      {
+        "joint": "elbow_flex",
+        "neutral_deg": 0.5384937739450696,
+        "current_lower_limit_deg": 2.8647889756541165,
+        "note": "Confirmed reference is below current startup soft limit; no limits changed by recording this reference."
+      }
+    ],
+    "neutral_pose_deg": {
+      "shoulder_pan": 4.480000000000004,
+      "shoulder_lift": -78.34577688899543,
+      "elbow_flex": 0.5384937739450696,
+      "wrist_flex": 75.90521517413885,
+      "wrist_yaw": 0.0,
+      "wrist_roll": 0.0,
+      "gripper": -0.03437746770784939
+    }
+  },
+  "purpose": "Offline current-Mac mapping comparison only; no live configuration changes"
+}

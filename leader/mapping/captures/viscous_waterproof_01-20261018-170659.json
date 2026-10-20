@@ -1,0 +1,310 @@
+{
+  "record_type": "paired_encoder_capture",
+  "protocol": "mit-feedback",
+  "created_at": "2026-10-18T17:06:59.889177-05:00",
+  "unit": "viscous_waterproof_01",
+  "pose_description": "First physical reference: Gavin confirms both arms roughly matched and supported, Teleop stopped. Approximate corresponding link posture; not an exact angular calibration.",
+  "physically_matched": false,
+  "source": "Fresh leader raw read_angle; follower native parameters or explicit non-enabling zero-gain MIT feedback requests; sequential, not simultaneous",
+  "frame_caution": "Raw follower values retain their reported turn branch. Native parameters are not automatically equated to MIT coordinates. No automatic fitting or branch selection.",
+  "leader_port": "/dev/cu.wchusbserial10",
+  "follower_port": "/dev/cu.usbmodem2050389538461",
+  "motor_configuration_changed": false,
+  "samples": [
+    {
+      "started_at": 1792361220.021281,
+      "leader": {
+        "shoulder_pan": {
+          "raw_deg": -4.599999904632568,
+          "received_at": 1792361220.022549
+        },
+        "shoulder_lift": {
+          "raw_deg": 76.5999984741211,
+          "received_at": 1792361220.031295
+        },
+        "elbow_flex": {
+          "raw_deg": -8.5,
+          "received_at": 1792361220.044458
+        },
+        "wrist_flex": {
+          "raw_deg": -54.599998474121094,
+          "received_at": 1792361220.058236
+        },
+        "wrist_yaw": {
+          "raw_deg": 0.20000000298023224,
+          "received_at": 1792361220.072012
+        },
+        "wrist_roll": {
+          "raw_deg": -3.299999952316284,
+          "received_at": 1792361220.0858638
+        },
+        "gripper": {
+          "raw_deg": -1.0,
+          "received_at": 1792361220.099773
+        }
+      },
+      "follower": {
+        "shoulder_pan": {
+          "mit_feedback": {
+            "radians": 0.09762920576791068,
+            "degrees": 5.593741447715555,
+            "velocity_rad_s": 0.0402930402930437,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.030039
+          }
+        },
+        "shoulder_lift": {
+          "mit_feedback": {
+            "radians": 4.59317601281758,
+            "degrees": 263.16960009517464,
+            "velocity_rad_s": -0.008058608058611583,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.0431669
+          }
+        },
+        "elbow_flex": {
+          "mit_feedback": {
+            "radians": 0.07921583886472838,
+            "degrees": 4.538733237537335,
+            "velocity_rad_s": 0.008058608058611583,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.056957
+          }
+        },
+        "wrist_flex": {
+          "mit_feedback": {
+            "radians": 7.626010986495768,
+            "degrees": 436.9382440466049,
+            "velocity_rad_s": 0.07252747252747582,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.070722
+          }
+        },
+        "wrist_yaw": {
+          "mit_feedback": {
+            "radians": -0.003260700389105864,
+            "degrees": -0.1868243705524313,
+            "velocity_rad_s": 0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.084534
+          }
+        },
+        "wrist_roll": {
+          "mit_feedback": {
+            "radians": -0.009014877546348998,
+            "degrees": -0.5165144362330488,
+            "velocity_rad_s": -0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.098407
+          }
+        },
+        "gripper": {
+          "mit_feedback": {
+            "radians": 6.213168688487066,
+            "degrees": 355.9883432531418,
+            "velocity_rad_s": 0.008058608058611583,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.1125
+          }
+        }
+      },
+      "finished_at": 1792361220.112511
+    },
+    {
+      "started_at": 1792361220.145036,
+      "leader": {
+        "shoulder_pan": {
+          "raw_deg": -4.599999904632568,
+          "received_at": 1792361220.1463628
+        },
+        "shoulder_lift": {
+          "raw_deg": 76.5999984741211,
+          "received_at": 1792361220.160435
+        },
+        "elbow_flex": {
+          "raw_deg": -8.5,
+          "received_at": 1792361220.1744251
+        },
+        "wrist_flex": {
+          "raw_deg": -54.599998474121094,
+          "received_at": 1792361220.188511
+        }
+      },
+      "follower": {
+        "shoulder_pan": {
+          "mit_feedback": {
+            "radians": 0.09762920576791068,
+            "degrees": 5.593741447715555,
+            "velocity_rad_s": -0.07252747252747582,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.159013
+          }
+        },
+        "shoulder_lift": {
+          "mit_feedback": {
+            "radians": 4.59317601281758,
+            "degrees": 263.16960009517464,
+            "velocity_rad_s": -0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.173055
+          }
+        },
+        "elbow_flex": {
+          "mit_feedback": {
+            "radians": 0.07921583886472838,
+            "degrees": 4.538733237537335,
+            "velocity_rad_s": 0.024175824175827643,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.187184
+          }
+        },
+        "wrist_flex": {
+          "mit_feedback": {
+            "radians": 7.626010986495768,
+            "degrees": 436.9382440466049,
+            "velocity_rad_s": -0.008058608058611583,
+            "torque_nm": -0.0034188034188034067,
+            "temperature_c": 21.0,
+            "received_at": 1792361220.201132
+          }
+        }
+      }
+    }
+  ],
+  "frames": [
+    {
+      "direction": "tx",
+      "at": 1792361220.022578,
+      "slcan": "t00187FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.0300212,
+      "slcan": "t0FD80180FE8027FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361220.031318,
+      "slcan": "t00287FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.043147,
+      "slcan": "t0FD80180FE8027FF00D2"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.043156,
+      "slcan": "t0FD802AEC57FF7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361220.044482,
+      "slcan": "t00387FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.056948,
+      "slcan": "t0FD80380CE8007FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361220.058256,
+      "slcan": "t00487FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.070714,
+      "slcan": "t0FD804CDA78047FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361220.0720341,
+      "slcan": "t00587FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.084511,
+      "slcan": "t0FD8057FF78017FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361220.0858932,
+      "slcan": "t00687FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.0983858,
+      "slcan": "t0FD8067FE87FE7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361220.099811,
+      "slcan": "t00787FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.1124659,
+      "slcan": "t0FD807BF448007FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361220.146395,
+      "slcan": "t00187FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.158933,
+      "slcan": "t0FD80180FE7FB7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361220.160504,
+      "slcan": "t00287FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.173035,
+      "slcan": "t0FD802AEC57FE7FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361220.1745121,
+      "slcan": "t00387FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.1871629,
+      "slcan": "t0FD80380CE8017FF00D2"
+    },
+    {
+      "direction": "tx",
+      "at": 1792361220.188551,
+      "slcan": "t00487FFF7FF0000007FF"
+    },
+    {
+      "direction": "rx",
+      "at": 1792361220.201107,
+      "slcan": "t0FD804CDA77FF7FF00D2"
+    }
+  ],
+  "complete": false,
+  "source_sha256": {
+    "/Users/gavin/.makermods/makermodslab-viscous/robots/viscous_waterproof_01.json": "2edabba18fa5989a4ffa8ba4e157e55431ddf8d87e74a6f5ec845269a61eaccf",
+    "/Users/gavin/.makermods/makermodslab-viscous/viscous_profiles/viscous_waterproof_01.json": "cfc984192e224b6a591b5c66cdd24734a4003522d3de7105ff2dcc80aa1dbdde",
+    "/Users/gavin/.cache/huggingface/lerobot/calibration/robots/viscous_follower/viscous_waterproof_01.json": "d79074b685bb7bbdad6044a2ca990468bf043690ea3aca7544853deb5b040424",
+    "/Users/gavin/.cache/huggingface/lerobot/calibration/teleoperators/rebot_102_leader/star_viscous_waterproof_01.json": "5ffb5127d517b05e603692b237bf35b36e44c0fcb3ad934ca0709e2113473449"
+  },
+  "error": "No reliable leader reading for wrist_yaw",
+  "finished_at": "2026-10-18T17:07:00.203862-05:00"
+}
