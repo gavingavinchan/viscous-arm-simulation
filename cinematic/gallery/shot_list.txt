@@ -1,0 +1,34 @@
+01 — Front port quarter — At work — 1920x1080
+02 — Front port, low angle — At work — 1920x1080
+03 — Port side profile — At work — 1920x1080
+04 — High port quarter — At work — 1920x1080
+05 — Rear port quarter — At work — 1920x1080
+06 — Low rear view — At work — 1920x1080
+07 — Rear starboard quarter — At work — 1920x1080
+08 — Starboard side profile — At work — 1920x1080
+09 — Low starboard angle — At work — 1920x1080
+10 — High starboard overview — At work — 1920x1080
+11 — Starboard underside — At work — 1920x1080
+12 — Below the arms — At work — 1920x1080
+13 — Hero / room for text on left — At work — 1920x1080
+14 — Hero / room for text on right — At work — 1920x1080
+15 — Gripper on the blade edge — Details — 1920x1080
+16 — Rotating pad / port side — Details — 1920x1080
+17 — Rotating pad / starboard side — Details — 1920x1080
+18 — Both arms / low front angle — Details — 1920x1080
+19 — Twin screws and centre rudder — Ship context — 1920x1080
+20 — ROV and complete port propeller — Ship context — 1920x1080
+21 — Port stern quarter — Ship context — 1920x1080
+22 — Below the large propellers — Ship context — 1920x1080
+23 — ROV / front — ROV only — 1920x1080
+24 — ROV / front port quarter — ROV only — 1920x1080
+25 — ROV / front starboard quarter — ROV only — 1920x1080
+26 — ROV / port profile — ROV only — 1920x1080
+27 — ROV / starboard profile — ROV only — 1920x1080
+28 — ROV / rear — ROV only — 1920x1080
+29 — ROV / overhead — ROV only — 1920x1080
+30 — ROV / underside — ROV only — 1920x1080
+31 — ROV / portrait composition — ROV only — 1440x1800
+32 — ROV / square composition — ROV only — 1800x1800
+33 — Cleaned bronze / wider reveal — At work — 1920x1080
+34 — ROV / wide website banner — ROV only — 2560x1080

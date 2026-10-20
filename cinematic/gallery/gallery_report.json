@@ -1,0 +1,13 @@
+{
+  "shot_count": 34,
+  "groups": {
+    "At work": 15,
+    "Details": 4,
+    "ROV only": 11,
+    "Ship context": 4
+  },
+  "png_and_jpg_dimensions_verified": true,
+  "jpeg_zip_bytes": 10671372,
+  "source_scene": "cinematic/rov_ship/viscous_rov_ship_cleaning.blend",
+  "video_changed": false
+}

@@ -1,0 +1,30 @@
+{
+  "duration_seconds": 20.0,
+  "fps": 24,
+  "rendered_frames": 480,
+  "arm_source": "/home/gavin/Documents/viscous-rov-model/model/viscous_rov.urdf",
+  "max_ik_residual": 8.417587769207524e-11,
+  "physics_scope": "Native mounted ROV rig; cinematic joint animation, not underwater dynamics.",
+  "outputs": {
+    "viscous_propeller_cleaning.mp4": {
+      "bytes": 4856269,
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24.0,
+      "duration": 20.0,
+      "full_decode_passed": true
+    },
+    "viscous_propeller_cleaning_web.mp4": {
+      "bytes": 1114813,
+      "size": [
+        960,
+        540
+      ],
+      "fps": 24.0,
+      "duration": 20.0,
+      "full_decode_passed": true
+    }
+  }
+}

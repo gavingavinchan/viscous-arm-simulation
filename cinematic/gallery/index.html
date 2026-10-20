@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06191e">
+  <title>Viscous / Choose your views</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<main>
+  <header>
+    <div><p class="eyebrow">VISCOUS / IMAGE EXPLORATION</p><h1>Choose your views.</h1>
+      <p class="intro">Different angles of your ROV, at work and on its own. Open any image to inspect it, save favourites, and download the full-size render.</p></div>
+    <a class="back" href="../">Watch the current video ↗</a>
+  </header>
+  <section class="toolbar" aria-label="Gallery controls">
+    <nav id="filters" aria-label="Image categories"></nav>
+    <div class="selection-tools">
+      <button id="selected-filter" aria-pressed="false">Favourites <span id="selection-count">0</span></button>
+      <button id="copy-selection">Copy favourite numbers</button>
+      <button id="clear-selection" class="quiet">Clear</button>
+    </div>
+  </section>
+  <p class="selection-line"><span id="selection-summary">No favourites yet. Use the heart beside an image.</span> <span id="status" role="status" aria-live="polite"></span></p>
+  <div id="grid" class="grid" aria-label="Rendered perspectives"><p>Loading views…</p></div>
+  <p id="empty" hidden>No images in this selection. Choose a category or mark some favourites.</p>
+  <footer><p>Your favourites stay in this browser. Copy their numbers and send them back here when you’re ready.</p><div class="downloads"><a href="viscous_rov_stills_jpg.zip" download>Download all JPGs</a><a href="contact_sheet.jpg" target="_blank" rel="noopener">Contact sheet ↗</a></div></footer>
+</main>
+<dialog id="viewer" aria-labelledby="viewer-title">
+  <div class="viewer-top"><div><span id="viewer-number" class="number"></span><h2 id="viewer-title"></h2><p id="viewer-meta"></p></div><button id="close-viewer" aria-label="Close full-size view">✕</button></div>
+  <div class="viewer-image"><button id="previous" class="arrow" aria-label="Previous image">‹</button><img id="large-image" alt=""><button id="next" class="arrow" aria-label="Next image">›</button></div>
+  <div class="viewer-bottom"><button id="viewer-favourite" aria-pressed="false">♡ Favourite</button><div><a id="download-jpg" download>Download JPG</a><a id="download-png" download>Download PNG</a></div><span>← → to compare · Esc to close</span></div>
+</dialog>
+<script src="gallery.js"></script>
+</body>
+</html>

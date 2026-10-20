@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#031719">
+<title>Viscous — Propeller cleaning</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #031719; color: #e0eeeb; font: 15px/1.6 system-ui, sans-serif; }
+  main { width: min(1440px, 94vw); margin: 4vh auto; }
+  header, footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  header { margin-bottom: 1.2rem; }
+  h1 { margin: 0; font-size: 15px; letter-spacing: .16em; text-transform: uppercase; font-weight: 550; }
+  span, p { color: #97b5b3; font-size: 13px; }
+  video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #061b1d; border-radius: 5px; }
+  a { color: #c0d7d0; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  footer { margin-top: 1rem; flex-wrap: wrap; }
+  nav { display: flex; gap: 1.5rem; }
+  .gallery-link { display: block; padding: 1rem 1.25rem; margin-bottom: 1.2rem; border: 1px solid #426763; border-radius: 5px; background: #0d292c; font-size: 17px; }
+  @media(max-width: 600px) { header { align-items: start; flex-direction: column; } main { margin-top: 2vh; } }
+</style>
+<main>
+  <header><h1>Viscous / Propeller cleaning</h1><span>20 seconds · BlueROV2 Heavy</span></header>
+  <a class="gallery-link" href="gallery/">Browse 34 still views — working and standalone ROV ↗</a>
+  <video controls playsinline preload="metadata" poster="rov_ship/poster.jpg" aria-label="Two Viscous robot arms cleaning a ship propeller underwater">
+    <source src="rov_ship/viscous_propeller_cleaning.mp4" type="video/mp4">
+    <a href="rov_ship/viscous_propeller_cleaning.mp4">Watch the cleaning animation</a>
+  </video>
+  <footer>
+    <p>Existing BlueROV2 Heavy assembly. Twin ship propellers. One centre rudder.</p>
+    <nav aria-label="Download assets">
+      <a href="rov_ship/viscous_propeller_cleaning_web.mp4" download>Website video</a>
+      <a href="rov_ship/viscous_rov_ship_cleaning.blend" download>Blender scene</a>
+    </nav>
+  </footer>
+</main>
+</html>

@@ -1,0 +1,11 @@
+{
+  "frames": 432,
+  "all_transforms_finite": true,
+  "max_rotation_orthogonality_error": 2.25161847806173e-15,
+  "anchor_tool_drift_after_grasp": 0.0,
+  "pad_front_compression_m": [
+    0.0024999999989052963,
+    0.0025000000000006475
+  ],
+  "max_ik_residual": 1.606117838610711e-11
+}

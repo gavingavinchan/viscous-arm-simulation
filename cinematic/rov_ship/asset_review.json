@@ -1,0 +1,19 @@
+{
+  "source_rig": "/home/gavin/Documents/viscous-rov-model/blender/viscous_rov.blend",
+  "original_mesh_instances": 100,
+  "mesh_or_parent_differences": [],
+  "max_mount_basis_difference": 0.0,
+  "propellers": [
+    "SHIP / PORT cast bronze hub",
+    "SHIP / STARBOARD cast bronze hub"
+  ],
+  "rudder_foils": [
+    "SHIP / CENTER single rudder foil"
+  ],
+  "vehicle_scale_error": 5.960464477539063e-08,
+  "max_joint_limit_excursion": 0,
+  "max_pad_target_error_m": 3.3465298628237784e-08,
+  "anchor_drift_after_grasp": 0.0,
+  "max_ik_residual": 8.417587769207524e-11,
+  "passed": true
+}

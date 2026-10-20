@@ -17,6 +17,39 @@ __pycache__/
 /model/meshes/collision_044.stl
 /model/meshes/collision_045.stl
 
+# Local Blender runtime and reproducible cinematic renders
+.blender-venv/
+/cinematic/frames/
+/cinematic/*.blend
+/cinematic/*.blend1
+/cinematic/preview_*.png
+/cinematic/motion.json
+/cinematic/*.webm
+/cinematic/rov_ship/frames/
+/cinematic/rov_ship/*.blend
+/cinematic/rov_ship/*.blend1
+/cinematic/rov_ship/preview_*.png
+/cinematic/rov_ship/motion.json
+/cinematic/previous_draft/
+/cinematic/gallery/draft/
+/cinematic/gallery/png/
+/cinematic/gallery/full/
+/cinematic/gallery/thumbs/
+/cinematic/gallery/review_*.jpg
+/cinematic/gallery/contact_sheet.jpg
+# Cinematic outputs stay local (several GB): only text sources, pages and
+# reports are tracked. Renders, scenes, audio and the third-party reference
+# clip with its metadata are regenerable or not ours to redistribute.
+/cinematic/**/frames/
+/cinematic/**/*.png
+/cinematic/**/*.jpg
+/cinematic/**/*.blend
+/cinematic/**/*.blend1
+/cinematic/**/*.wav
+/cinematic/**/*.webm
+/cinematic/**/motion.json
+/cinematic/launch/reference/apple_reference*
+
 # Regenerable leader inspection meshes and renders
 /leader/inspection/*.stl
 /leader/inspection/*.png
