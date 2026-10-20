@@ -1,0 +1,40 @@
+{
+  "render_settings": {
+    "width": 1920,
+    "samples": 48,
+    "gpu_denoise": true,
+    "blend_mtime_ns": 1792408436589256763
+  },
+  "render_device": [
+    "NVIDIA GeForce RTX 5070 Ti"
+  ],
+  "rendered_frames": 768,
+  "frame_dimensions": [
+    1920,
+    1080
+  ],
+  "outputs": {
+    "viscous_launch.mp4": {
+      "size": [
+        1920,
+        1080
+      ],
+      "fps": 24.0,
+      "duration": 32.0,
+      "bytes": 7637534,
+      "full_decode_passed": true
+    },
+    "viscous_launch_web.mp4": {
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24.0,
+      "duration": 32.0,
+      "bytes": 1939755,
+      "full_decode_passed": true
+    }
+  },
+  "sound": "Original procedural stereo score; no borrowed music.",
+  "source": "model/viscous_arm.urdf"
+}

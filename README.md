@@ -2,6 +2,10 @@
 
 CAD-derived URDF, MuJoCo simulation, and a browser model explorer for the Viscous Arm. Built from Gavin's 18 September 2026 STEP/F3Z exports. These are already the shorter Viscous assembly, despite their Maker Arm filenames.
 
+For the cinematic website film using these same CAD arms, see [Propeller-cleaning animation](cinematic/README.md). Its editable Blender scene shows a twin-arm underwater robot anchoring to and polishing a ship propeller; [the local playback page](cinematic/index.html) includes the rendered video and download links.
+
+For standalone product-launch films in **silver and anodized black**, see the [Viscous launch comparison page](cinematic/launch/index.html) and [production notes](cinematic/launch/README.md). Both variants include a 1080p/24 fps master, web copy, editable Blender scene and shot-review stills.
+
 This is an offline model for inspection, kinematics, collision queries, and initial simulation. It does not contain a hardware controller or a verified encoder-to-URDF mapping.
 
 ## How this model was made

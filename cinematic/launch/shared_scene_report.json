@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "identical_between_finishes": {
+    "rig_animation_sha256": "e54f2d1613bacc1a20f0178de02014bdb0a0497feff592f3d27489cdc55901ac",
+    "camera_animation_sha256": "5348fb6c9ac45e9f67687c5af70ec3594a7b79bf5113668562a8ab9bb56e7d0e",
+    "geometry_sha256": "6e2b25380fc96db92421ee5d0252135bc439eeb02ad88e3871aeb9a1f238d490"
+  }
+}

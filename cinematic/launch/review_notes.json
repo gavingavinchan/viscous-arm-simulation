@@ -1,0 +1,49 @@
+{
+  "reviewed_at_utc": "2026-10-19T11:14:38.185610+00:00",
+  "finishes": [
+    "silver",
+    "black"
+  ],
+  "review_resolution": [
+    1280,
+    720
+  ],
+  "shots_reviewed": [
+    48,
+    144,
+    228,
+    300,
+    372,
+    444,
+    516,
+    588,
+    696
+  ],
+  "additional_checks": [
+    1,
+    96,
+    116,
+    152,
+    188,
+    625,
+    768
+  ],
+  "corrections": [
+    "Removed unstable mesh modifiers; kept original CAD geometry and sharp boundaries.",
+    "Corrected material identification to manifest material basis rather than CAD ancestry names.",
+    "Adjusted macro focus toward the visible surface.",
+    "Widened hero camera and checked the full animated silhouette.",
+    "Removed the bright floor reflection.",
+    "Moved titles into packed compositor artwork and away from product silhouettes.",
+    "Added black-specific key/rim fill power to reveal dark surfaces.",
+    "Smoothed gripper keys to stay within URDF speed metadata."
+  ],
+  "result": "Approved for full-resolution renders by visual inspection and numerical rig/framing checks.",
+  "full_resolution_spot_checks": [
+    "silver opening macro, gripper cycle, all-shot contact sheet, encoded hero",
+    "black J2\u2013J3 edge visibility",
+    "black all-shot contact sheet, encoded hero and matching-finish comparison"
+  ],
+  "page_review_method": "Static asset/link checks and comparison image review. No browser was available through the computer-use tool for interactive playback QA.",
+  "delivery_audit": "All linked assets present; all four MP4 files fully decoded; 768 source frames and nine 1080p shot stills per finish."
+}

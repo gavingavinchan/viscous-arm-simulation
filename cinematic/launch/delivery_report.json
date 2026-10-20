@@ -1,0 +1,181 @@
+{
+  "completed_utc": "2026-10-19T11:42:00.374382+00:00",
+  "page_local_links_checked": 49,
+  "missing_links": [],
+  "variants": {
+    "silver": {
+      "files": {
+        "viscous_launch.blend": {
+          "bytes": 21538681,
+          "sha256": "c23b33c43fca01a9a127217ef6ea732c00244c4670e919c6c67545cdba89971d"
+        },
+        "viscous_launch.mp4": {
+          "bytes": 8304257,
+          "sha256": "1d74106093413247f4e04e5bd43fcc6279938c26c5246827d812c29b6a96cdcd"
+        },
+        "viscous_launch_web.mp4": {
+          "bytes": 2120943,
+          "sha256": "227dab9cdd153f3458d823d40de8dced39ca8e8b4002dda5f47e36bf3c3cbe32"
+        },
+        "poster.jpg": {
+          "bytes": 194979,
+          "sha256": "a46f260c53747eaffa69284e064226f3d785870168155ccac8d5442c48634f51"
+        },
+        "review/01_surface.png": {
+          "bytes": 1510291,
+          "sha256": "8d588e559ebb4fa30d98c821dbde5226859f491b955aaf88a53e6af00c30b367"
+        },
+        "review/02_grip.png": {
+          "bytes": 1769967,
+          "sha256": "a6551f0565bd44b384b776c0193047233c0aaf1cc053670e916425e86388f468"
+        },
+        "review/03_base.png": {
+          "bytes": 1817526,
+          "sha256": "0de12685edd021a946da71fad005a544886fbf77361757bb89ff7ce11f061d0e"
+        },
+        "review/04_upper.png": {
+          "bytes": 1445014,
+          "sha256": "002d36cbd49107a53cf17880a9336d15bf367634a4b1ce8db15854e8217866a7"
+        },
+        "review/05_forearm.png": {
+          "bytes": 1487361,
+          "sha256": "32c028e898ddcbe5c132595615aaeeac2b52f83feb6c133cf1190f29ca3f2e03"
+        },
+        "review/06_motor.png": {
+          "bytes": 1596119,
+          "sha256": "a69a38c8be9010930c54ddef22377f63cd80d4375872dcf03cd28fc5f3979af0"
+        },
+        "review/07_wrist.png": {
+          "bytes": 1792041,
+          "sha256": "6cc9a4c902fbfff33c3785ba87eda496086544708d2d1965940da2768948f2a4"
+        },
+        "review/08_fingers.png": {
+          "bytes": 1517482,
+          "sha256": "c2e648d534fba91037a1c668bb0e385549c7244b69b6113b56158a17212c1ecb"
+        },
+        "review/09_hero.png": {
+          "bytes": 1372386,
+          "sha256": "6adf0321338cf1e8fa91d11a7ac7c58fa28ea4368e3170027188874a07cc1dcd"
+        }
+      },
+      "videos": {
+        "viscous_launch.mp4": {
+          "size": [
+            1920,
+            1080
+          ],
+          "fps": 24.0,
+          "duration": 32.0,
+          "bytes": 8304257,
+          "full_decode_passed": true
+        },
+        "viscous_launch_web.mp4": {
+          "size": [
+            1280,
+            720
+          ],
+          "fps": 24.0,
+          "duration": 32.0,
+          "bytes": 2120943,
+          "full_decode_passed": true
+        }
+      },
+      "frames": 768
+    },
+    "black": {
+      "files": {
+        "viscous_launch.blend": {
+          "bytes": 21536888,
+          "sha256": "4262a8419a7b42eb7c144f3a70e555abeba9bb4b1dae3692c3f76a2784698dbe"
+        },
+        "viscous_launch.mp4": {
+          "bytes": 7637534,
+          "sha256": "b90fff22b63b9340b6aa544ea469c2e43c9a8462147fe4fc5a5dee19c2b50587"
+        },
+        "viscous_launch_web.mp4": {
+          "bytes": 1939755,
+          "sha256": "d6edce40bcfc00701ecdf56fa98c3abee0ed1c7ebaf108b30305c261d552e62b"
+        },
+        "poster.jpg": {
+          "bytes": 186163,
+          "sha256": "53ac37f48265e1dec33a848de1927724fe651eebc2b82a718c8b2b5cb2d320b4"
+        },
+        "review/01_surface.png": {
+          "bytes": 1428520,
+          "sha256": "48a2476459f6e6d224b0b34892354fd1c7db77ad1ecce47961d75089ead873e3"
+        },
+        "review/02_grip.png": {
+          "bytes": 1755990,
+          "sha256": "60879f65f4b2e7cf8783ee086fe226eb7fbfeaddad6daf17b41580938bd4f709"
+        },
+        "review/03_base.png": {
+          "bytes": 1734196,
+          "sha256": "5264ef4513fd9b6c234a3b6b4492451aed699bd4179a843024d243d3ffe020cc"
+        },
+        "review/04_upper.png": {
+          "bytes": 1454020,
+          "sha256": "6dd2569c1efc93c87accdc506eb11464a2ca81279151bde421b6e3816b629066"
+        },
+        "review/05_forearm.png": {
+          "bytes": 1528599,
+          "sha256": "14dc1ae1257491f81131eb172fa604291bd250501177bf4067daaa79771b0b3b"
+        },
+        "review/06_motor.png": {
+          "bytes": 1633181,
+          "sha256": "b890f2600ce5a1a3da49e222edc032bb88fa59330183b31d94dfafd1b56501d3"
+        },
+        "review/07_wrist.png": {
+          "bytes": 1772316,
+          "sha256": "ff7228cfebc1a7964b719ccd94941d823403a3926d06d2dcff773ce61c7d8652"
+        },
+        "review/08_fingers.png": {
+          "bytes": 1577426,
+          "sha256": "74783cfe9883ead54614a0cc403377a1cb9c8afc6cead6d9febcc86804a20195"
+        },
+        "review/09_hero.png": {
+          "bytes": 1392166,
+          "sha256": "a0bb2e3773988dc576d04e8c9def7f728faee37a5f4ae45b201369b1d2a7719e"
+        }
+      },
+      "videos": {
+        "viscous_launch.mp4": {
+          "size": [
+            1920,
+            1080
+          ],
+          "fps": 24.0,
+          "duration": 32.0,
+          "bytes": 7637534,
+          "full_decode_passed": true
+        },
+        "viscous_launch_web.mp4": {
+          "size": [
+            1280,
+            720
+          ],
+          "fps": 24.0,
+          "duration": 32.0,
+          "bytes": 1939755,
+          "full_decode_passed": true
+        }
+      },
+      "frames": 768
+    }
+  },
+  "shared_scene": {
+    "passed": true,
+    "identical_between_finishes": {
+      "rig_animation_sha256": "e54f2d1613bacc1a20f0178de02014bdb0a0497feff592f3d27489cdc55901ac",
+      "camera_animation_sha256": "5348fb6c9ac45e9f67687c5af70ec3594a7b79bf5113668562a8ab9bb56e7d0e",
+      "geometry_sha256": "6e2b25380fc96db92421ee5d0252135bc439eeb02ad88e3871aeb9a1f238d490"
+    }
+  },
+  "assumptions": [
+    "32-second nine-shot edit",
+    "Original procedural electronic soundtrack",
+    "Source URDF simplified mimic gripper and provisional hardware limits",
+    "Procedural surface finishes; not measured material scans",
+    "Titles are packed image artwork with editable Python source"
+  ],
+  "uncommitted": true
+}
